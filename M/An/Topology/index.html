@@ -565,8 +565,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#boules-ferme" class="md-nav__link">
-    Boules, Fermé
+  <a href="#boules-fermees" class="md-nav__link">
+    Boules, Fermées
   </a>
   
 </li>
@@ -643,11 +643,19 @@
 <li>
 <p>Soit <span class="arithmatex">\(E\)</span> un <span class="arithmatex">\(\mathbb K\)</span>-<em>espace vectoriel</em>, on dit que l'application <span class="arithmatex">\(N\)</span> définit une <strong>norme sur</strong> <span class="arithmatex">\(E\)</span>, si elle vérifie :</p>
 <ul>
-<li><em>définie positive</em></li>
-<li><em>homogénéité</em> :
+<li>
+<p><em>définie positive</em> : 
+    <script type="math/tex; mode=display">
+    N: E \to \mathbb R_+ \text{ et } [N(x) = 0] \implies [x=0_E]
+    </script>
+</p>
+</li>
+<li>
+<p><em>homogénéité</em> :
     <script type="math/tex; mode=display">
     \forall x \in E, \; \forall \lambda \in \mathbb K, \;N(\lambda x)=|\lambda|N(x)
     </script>
+</p>
 </li>
 <li><em>Inégalité triangulaire</em> : 
     <script type="math/tex; mode=display">
@@ -656,11 +664,28 @@
 </li>
 </ul>
 </li>
+<li>
+<p>Si <span class="arithmatex">\((E,N)\)</span> est un espace vectoriel normé, alors l'application définie par : 
+    <script type="math/tex; mode=display">
+    d_N:(x,y) \in E^2 \mapsto N(x-y)
+    </script>
+    définit une <em>distance</em> de <span class="arithmatex">\(E\)</span>, cette distance est appelée <strong>sous-jacente</strong> à la norme.</p>
+</li>
+<li>
+<p>Exemples des normes :
+    <script type="math/tex; mode=display">
+    N_1(\underline x) = \sum_{k=1}^n|x_k|,\quad N_p(\underline x) = \left(\sum_{k=1}^nx_k^p\right)^{1/p},\quad N_{\infty}(\underline x) = \max_k|x_k|
+    </script>
+</p>
+</li>
 </ul>
-<h2 id="boules-ferme">Boules, Fermé</h2>
+<h2 id="boules-fermees">Boules, Fermées</h2>
+<blockquote>
+<p>On soit <span class="arithmatex">\((E,d)\)</span> un espace métrique.</p>
+</blockquote>
 <ul>
 <li>
-<p>Soit <span class="arithmatex">\((E,d)\)</span> un espace métrique, <span class="arithmatex">\(a ∈ E\)</span> et <span class="arithmatex">\(r ∈ R_+\)</span>. On appelle <strong>boule fermée de centre <span class="arithmatex">\(a\)</span> et de rayon <span class="arithmatex">\(r\)</span></strong> l’ensemble
+<p>Soit <span class="arithmatex">\(a ∈ E\)</span> et <span class="arithmatex">\(r ∈ R_+\)</span>. On appelle <strong>boule fermée de centre <span class="arithmatex">\(a\)</span> et de rayon <span class="arithmatex">\(r\)</span></strong> l’ensemble
     <script type="math/tex; mode=display">
     BF(a,r) = \{x ∈ E, d(a,x) ≤ r\}
     </script>
@@ -684,21 +709,69 @@
 <p>On parle de <strong>boule (ou de sphère) unité</strong> si <span class="arithmatex">\(r=1\)</span>.</p>
 </li>
 <li>
-<p>Soit <span class="arithmatex">\((E,d)\)</span> un espace métrique et <span class="arithmatex">\(F\)</span> une partie de <span class="arithmatex">\(E\)</span>. Alors <span class="arithmatex">\(F\)</span> est <strong>fermé</strong> dans <span class="arithmatex">\(E\)</span> si, et seulement si 
+<p>Soit <span class="arithmatex">\(A\)</span> est une partie de <span class="arithmatex">\((E,d)\)</span>, on dit que <span class="arithmatex">\(A\)</span> est <strong>bornée</strong> si
     <script type="math/tex; mode=display">
-    \forall x\in E, [x\in F] \iff [d(x,F)=0]
+    \exists (x,r) \in (E,\mathbb R_+^*),\;A \subset BO(x,r)
+    </script>
+    ou <span class="arithmatex">\(\mathrm{diam}(A)&lt; + \infty\)</span>.</p>
+</li>
+<li>
+<p>Soit <span class="arithmatex">\((x_n)\)</span> une suite d'éléments de <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\lambda \in E\)</span>. On dit que la suite <strong>converge vers</strong> <span class="arithmatex">\(\lambda\)</span> si 
+    <script type="math/tex; mode=display">
+    d(x_n,\lambda) \underset{n \to +\infty}{\longrightarrow}0
+    </script>
+</p>
+<ul>
+<li><span class="arithmatex">\(\lambda\)</span> est appelée <strong>limite de la suite</strong>.</li>
+<li>On note :
+    <script type="math/tex; mode=display">
+    x_n \underset{n\to +\infty}{\longrightarrow} \lambda
+    </script>
+</li>
+</ul>
+</li>
+<li>
+<p>Soit <span class="arithmatex">\(F\subset E\)</span>. On dit <span class="arithmatex">\(F\)</span> est <strong>fermé</strong> dans <span class="arithmatex">\(E\)</span> si
+    <script type="math/tex; mode=display">
+    \forall (x_n) \in F^\mathbb N,\;\forall \lambda \in E, \; [x_n \underset{n\to +\infty}{\longrightarrow} \lambda] \iff [\lambda \in F]
+    </script>
+<script type="math/tex; mode=display">
+    \forall x\in E,\;[x\in F] \iff [d(x,F)=0]
     </script>
 </p>
 </li>
 <li>
-<p>Soit <span class="arithmatex">\((E,d)\)</span> un espace métrique et <span class="arithmatex">\(A \subset E\)</span>, on appelle <strong>adhérence de <span class="arithmatex">\(A\)</span> dans <span class="arithmatex">\(E\)</span></strong> le <em>plus petit fermé de</em> <span class="arithmatex">\(E\)</span> <em>contenant</em> <span class="arithmatex">\(A\)</span>, et on le note <span class="arithmatex">\(\bar A\)</span>.</p>
+<p><strong>Propriétés</strong> :</p>
+<ul>
+<li><span class="arithmatex">\((F_i)\)</span> une famille q.q. de fermés de <span class="arithmatex">\(E\)</span>, alors <span class="arithmatex">\(\bigcap F_i\)</span> est fermée dans <span class="arithmatex">\(E\)</span></li>
+<li><span class="arithmatex">\((F_i)\)</span> une famille finie de fermés de <span class="arithmatex">\(E\)</span>, alors <span class="arithmatex">\(\bigcup F_i\)</span> est fermée dans <span class="arithmatex">\(E\)</span></li>
+</ul>
+</li>
+<li>
+<p>Soit <span class="arithmatex">\(A \subset E\)</span>, on appelle <strong>adhérence de <span class="arithmatex">\(A\)</span> dans <span class="arithmatex">\(E\)</span></strong> le <em>plus petit fermé de</em> <span class="arithmatex">\(E\)</span> <em>contenant</em> <span class="arithmatex">\(A\)</span>, et on le note <span class="arithmatex">\(\bar A\)</span>.</p>
 </li>
 <li>
 <p>Soit <span class="arithmatex">\(x\in E\)</span>, 
     <script type="math/tex; mode=display">
     x \in \bar{B} \iff \exists \;(x_n)\in B^\mathbb N,\; x_n \underset{n \to +\infty}{\longrightarrow} x
     </script>
+<script type="math/tex; mode=display">
+    x \in \bar{B} \iff \forall \varepsilon>0,\; \exists \;a\in B,\; a\in BO(x, \varepsilon) 
+    </script>
 </p>
+<ul>
+<li>L'ensemble <span class="arithmatex">\(\bar A\)</span> est donc l'ensemble des limites des suites d'éléments de <span class="arithmatex">\(A\)</span>.</li>
+</ul>
+</li>
+<li>
+<p>Soit <span class="arithmatex">\((E,d)\)</span> un espace <em>métrique</em>, alors :
+    <script type="math/tex; mode=display">
+    \forall (a,r)\in(E, \mathbb R_+^*),\; \overline{BO(a,r)} \subset BF(a,r)
+    </script>
+</p>
+<ul>
+<li>L'égalité est pris lorsque <span class="arithmatex">\((E, N)\)</span> est un espace <em>normée</em>.</li>
+</ul>
 </li>
 </ul>
 
