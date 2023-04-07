@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#convolution-operation" class="md-skip">
+        <a href="#convolutional-network" class="md-skip">
           Skip to content
         </a>
       
@@ -329,6 +329,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           CNN
@@ -345,6 +347,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -353,8 +357,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#convolution-operation" class="md-nav__link">
-    Convolution operation
+  <a href="#convolution-operation-and-cross-correlation" class="md-nav__link">
+    Convolution operation and cross-correlation
   </a>
   
 </li>
@@ -367,8 +371,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variances" class="md-nav__link">
-    Variances
+  <a href="#process" class="md-nav__link">
+    Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pooling" class="md-nav__link">
+    Pooling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-for-the-task" class="md-nav__link">
+    Requirements for the task
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improvements-from-convolutional-operations-in-math" class="md-nav__link">
+    Improvements from convolutional operations in math
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
   </a>
   
 </li>
@@ -528,6 +560,68 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          Analyse
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Analyse
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M/An/Convexit%C3%A9/" class="md-nav__link">
+        Convexité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../M/An/Topology/" class="md-nav__link">
+        Topology
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -549,30 +643,27 @@
                   
 
 
-  <h1>CNN</h1>
-
-<h2 id="convolution-operation">Convolution operation</h2>
+<h1 id="convolutional-network">Convolutional Network</h1>
+<p><img alt="" src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*vkQ0hXDaQv57sALXAJquxA.jpeg" /></p>
+<h2 id="convolution-operation-and-cross-correlation">Convolution operation and cross-correlation</h2>
 <ul>
 <li>
-<p><strong>Convolution operation</strong>: To predict the position of a special object <span class="arithmatex">\(x=x(t)\)</span>, we do an average to the measurements in a period of time. However, the more recent the measurement is, the more weight it is given. Therefore, we obtain a smooth estimating function <span class="arithmatex">\(s=s(t)\)</span>: 
+<p><strong>Convolution operation</strong>: To predict the position of a special object <span class="arithmatex">\(x=x(t)\)</span>, we do an average to the measurements in a period of time. The more recent the measurement is, the more weight it is given. Therefore, we obtain a smooth estimating function <span class="arithmatex">\(s=s(t)\)</span>: 
     <script type="math/tex; mode=display">
     s(t) = \int x(a) w(t-a)\, \mathrm{d}a =(x*w)(t)
     </script>
 </p>
 <ul>
-<li><span class="arithmatex">\(w\)</span> is an effective <a href="https://en.wikipedia.org/wiki/Probability_density_function">probability density function</a>, and <span class="arithmatex">\(w(x&lt;0)=0\)</span>.</li>
+<li>Only in our example, <span class="arithmatex">\(w\)</span> is an effective <a href="https://en.wikipedia.org/wiki/Probability_density_function">probability density function</a>, and <span class="arithmatex">\(w(x&lt;0)=0\)</span>.</li>
 <li><span class="arithmatex">\(x\)</span> is the <strong>input</strong>, <span class="arithmatex">\(w\)</span> is the <strong>kernel function</strong>, and <span class="arithmatex">\(f\)</span> is refered to as <strong>feature map</strong>.</li>
 </ul>
 </li>
 <li>
-<p>A discrete version of the operation could be written as: 
+<p>A <em>discrete version</em> of the operation could be written as: 
     <script type="math/tex; mode=display">
-    s(t) = (x*w)(t) = \sum_{-\infty}^{+\infty} x(a)w(t-a)
+    s(t) = (x*w)(t) = \sum_{a=-\infty}^{+\infty} x(a)w(t-a)
     </script>
 </p>
-</li>
-<li>
-<p><strong>Convolution operations</strong> are commutative, it is because we have flipped the kernel.</p>
 </li>
 <li>
 <p>For a two dimensional figure <span class="arithmatex">\(I\)</span>, using a two-dimensional kernel <span class="arithmatex">\(K\)</span>, the equivalent form is: 
@@ -589,40 +680,145 @@
     S(i,j) = (I*K)(i,j) = \sum_{m}\sum_{n}I(i+m,j+n)K(m,n)
     </script>
 </p>
+<ul>
+<li>Convolution = Cross-correlation + flipping the kernel<ul>
+<li>Example of kernel flipping:
+    <script type="math/tex; mode=display">
+    \begin{bmatrix}
+    1 & 2 & 3 \\ 
+    4 & 5 & 6 \\ 
+    7 & 8 & 9
+    \end{bmatrix} \implies 
+    \begin{bmatrix}
+    9 & 8 & 7 \\ 
+    6 & 5 & 4 \\ 
+    3 & 2 & 1
+    \end{bmatrix}
+    </script>
+</li>
+</ul>
+</li>
+<li><strong>Convolution operations (Math)</strong> are commutative, it is because we have <em>flipped the kernel</em>, which refers to the decrease of the index of the kernel while the index of the input is increasing. We ignore the flip as we have abandoned the <em>commutative</em> property.</li>
+<li>In deep-learning, <strong>convolution (DL)</strong> refers to the mathematical operation <strong>cross-correlation (Math)</strong>, lacking a flip to the kernel. </li>
+</ul>
 </li>
 </ul>
 <h2 id="motivations">Motivations</h2>
 <ul>
-<li><strong>Sparse Interactions</strong><ul>
+<li>
+<p><strong>Sparse Interactions</strong></p>
+<ul>
 <li>The size of the kernel <span class="arithmatex">\(\ll\)</span> The size of the input, we use small amount of kernels to detect some small features.</li>
+<li>For a <span class="arithmatex">\(m\)</span>-dimensional input and a <span class="arithmatex">\(n\)</span>-dimensional output, a full-connection network have a <span class="arithmatex">\(m\times n\)</span> matrix to store the parameters. However, by limiting the number of connections to <span class="arithmatex">\(k&lt;m\)</span>, the matrix is reduced to <span class="arithmatex">\(k \times n\)</span>.</li>
 </ul>
 </li>
-<li><strong>Parameter sharing</strong><ul>
-<li>Equivariance: <span class="arithmatex">\(f(g(x))=g(f(x))\)</span>, for example translation of certain functions. (Rotations or other operations may not be equivariant)</li>
-</ul>
-</li>
-<li><strong>Pooling function</strong><ul>
-<li>When the input are slightly translated, the pooling function helps to make the expression of input invariant.</li>
-<li>We care about it a feature exists, but the position is unimportant.</li>
-</ul>
-</li>
-</ul>
-<h2 id="variances">Variances</h2>
+<li>
+<p><strong>Parameter sharing</strong></p>
 <ul>
-<li>Multiple convolution processing in the same time: multiple features to be extracted.</li>
-<li>Input as three dimension, <span class="arithmatex">\((x,y)\)</span> coordinates and the tunel (RGB).</li>
-<li>Applying a kernel to a certain input:
+<li>Using same parameters (connected to the kernel elements) to different areas of the input.</li>
+</ul>
+</li>
+<li>
+<p><strong>Equivariant representations</strong></p>
+<ul>
+<li><strong>Equivariance</strong>: <span class="arithmatex">\(f(g(x))=g(f(x))\)</span>, for example translation of certain functions. (Rotations or other operations may not be equivariant)</li>
+</ul>
+</li>
+</ul>
+<h2 id="process">Process</h2>
+<ul>
+<li>The first stage, <strong>convolutional layer</strong> trigger a linear activation response,
+    <img alt="" src="https://windmissing.github.io/Bible-DeepLearning/assets/images/Chapter9/38.png" /></li>
+<li>
+<p>The second stage, the <strong>detector stage</strong> using a non-linear activation function to make the previous output pass through the architecture.</p>
+</li>
+<li>
+<p>The third stage, we use the <strong>pooling function</strong> to adjust the input.</p>
+</li>
+</ul>
+<h2 id="pooling">Pooling</h2>
+<ul>
+<li>
+<p>The pooling function uses the <em>overall statistical characteristics</em> of the adjacent output at a certain position to replace the output of the network at that location.</p>
+</li>
+<li>
+<p>When the input are slightly translated, the pooling function helps to make the expression of input <strong>invariant</strong>.</p>
+</li>
+<li>
+<p>We care if a certain feature <strong>exists</strong>, but the specific <strong>position is unimportant</strong>.</p>
+</li>
+<li>
+<p>Advantages:</p>
+</li>
+<li><strong>Produce a same-sized output for different kinds of input</strong></li>
+<li>Because the pooling integrates the feedback of all neighbors, it makes it possible that the pooling unit is <strong>smaller</strong> than the detection unit. We can use the integrated pooling area.</li>
+</ul>
+<h2 id="requirements-for-the-task">Requirements for the task</h2>
+<ul>
+<li>
+<p>There is no evident or significant relationship between two locations that are separated by a considerable distance. (Convolution Layer)</p>
+</li>
+<li>
+<p>The task requires focus on a specific location. (Pooling Layer)</p>
+</li>
+</ul>
+<h2 id="improvements-from-convolutional-operations-in-math">Improvements from convolutional operations in math</h2>
+<ul>
+<li>
+<p>Differences:</p>
+<ul>
+<li><strong>Multiple convolution processing in the same time</strong>: multiple features to be extracted.</li>
+<li>Input as four dimension: <span class="arithmatex">\((ind,i,j,k)\)</span><ul>
+<li><span class="arithmatex">\((j,k)\)</span> coordinates in the picture</li>
+<li><span class="arithmatex">\(i\)</span> the tunnel (RGB)</li>
+<li><span class="arithmatex">\(ind\)</span> the index in the whole batch</li>
+</ul>
+</li>
+<li>Not necessarily invariant</li>
+</ul>
+</li>
+<li>
+<p>Partially connected networks = <strong>Unshared Convolution</strong>, cases when we are guaranteed that a certain feature will only appear in a certain part of the picture:
     <script type="math/tex; mode=display">
-    Z_{{i,j,k}}=\sum_{l,m,n}V_{l,j+m-1,k+n-1}K_{i,l,m,n}
+    Z_{i,j,k} = \sum_{l,m,n} [V_{l, j+m-1,k+n-1}\;W_{i,j,k,l,m,n}]
     </script>
+</p>
 <ul>
-<li>Input: <span class="arithmatex">\(V_{i,j,k}\)</span>, <span class="arithmatex">\(i\)</span> tunel, position <span class="arithmatex">\((j,k)\)</span></li>
-<li>Kernel: <span class="arithmatex">\(K_{i,j,k,l}\)</span>, <span class="arithmatex">\(i\)</span> tunel, connection with the <span class="arithmatex">\(j\)</span> tunel, positioned <span class="arithmatex">\((k,l)\)</span>, </li>
-<li>Output: Same as input</li>
+<li><span class="arithmatex">\(V_{l,x,y}\)</span>: Input, the value of the position <span class="arithmatex">\((x,y)\)</span> of the input and <span class="arithmatex">\(l\)</span> tunnel.</li>
+<li><span class="arithmatex">\(W_{i,j,k,l,m,n}\)</span>: The weight matrix (6-dimensional), output <span class="arithmatex">\((i,j,k)\)</span>: <span class="arithmatex">\(i\)</span> tunnel and position <span class="arithmatex">\((j,k)\)</span>, input <span class="arithmatex">\((l,m,n)\)</span>: <span class="arithmatex">\(l\)</span> tunnel, <span class="arithmatex">\((m,n)\)</span> the difference of index</li>
+<li><span class="arithmatex">\(Z_{l,x,y}\)</span>: The output, same form with the input</li>
 </ul>
 </li>
-<li>Note: <span class="arithmatex">\(-1\)</span> comes from the index problem, modern computer ususally begins its index from 0.</li>
+<li>
+<p>Note: <span class="arithmatex">\(-1\)</span> comes from the index problem, modern computer usually begins its index from 0.</p>
+</li>
+<li>
+<p><strong>Basic Convolution</strong>:
+    <script type="math/tex; mode=display">
+    Z_{{i,j,k}}=\sum_{l,m,n}V_{l,j+m-1,k+n-1}\;K_{i,l,m,n}
+    </script>
+</p>
+<ul>
+<li>Kernel: <span class="arithmatex">\(K_{i,j,k,l}\)</span>, <span class="arithmatex">\(i\)</span> tunnel, connection with the <span class="arithmatex">\(j\)</span> tunnel of the input, positioned <span class="arithmatex">\((k,l)\)</span>, </li>
 </ul>
+</li>
+<li>
+<p><strong>Stride</strong>: If we want to sample the output at an interval of <span class="arithmatex">\(s\)</span> pixels in each direction, we can apply a stride of <span class="arithmatex">\(s\)</span> during the convolution or pooling operation:
+    <script type="math/tex; mode=display">
+    Z_{i,j,k} = c(K,V,s)_{i,j,k} = \sum_{l,m,n}[V_{l, s(j-1)+m,s(k-1)+n}\;K_{i,l,m,n}]
+    </script>
+</p>
+</li>
+</ul>
+<h2 id="references">References</h2>
+<ol>
+<li>
+<p><a href="https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53">A Comprehensive Guide to Convolutional Neural Networks — the ELI5 way</a></p>
+</li>
+<li>
+<p><a href="https://windmissing.github.io/Bible-DeepLearning/Chapter9/1Convolution.html">Notes for Deep Learning, by GitHub user windmissing</a></p>
+</li>
+</ol>
 
 
 
