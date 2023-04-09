@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../../AL/Endomorphismes/">
+        <link rel="prev" href="../../ML-Basics/">
       
       
-        <link rel="next" href="../Topology/">
+        <link rel="next" href="../../../P/Ondes%20Ondulatoires/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>Convexité - Brandon Lin</title>
+        <title>CNN - Brandon Lin</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#convexite" class="md-skip">
+        <a href="#convolutional-network" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Convexité
+              CNN
             
           </span>
         </div>
@@ -306,14 +306,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
@@ -322,7 +324,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Machine Learning
@@ -335,7 +337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ML/ML-Basics/" class="md-nav__link">
+      <a href="../../ML-Basics/" class="md-nav__link">
         Basics
       </a>
     </li>
@@ -347,11 +349,94 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../ML/CV/CNN/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          CNN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         CNN
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#convolution-operation-and-cross-correlation" class="md-nav__link">
+    Convolution operation and cross-correlation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motivations" class="md-nav__link">
+    Motivations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    Process
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pooling" class="md-nav__link">
+    Pooling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-for-the-task" class="md-nav__link">
+    Requirements for the task
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#improvements-from-convolutional-operations-in-math" class="md-nav__link">
+    Improvements from convolutional operations in math
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -432,16 +517,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
       
@@ -450,7 +533,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Maths (French)
@@ -490,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AL/Endomorphismes/" class="md-nav__link">
+      <a href="../../../M/AL/Endomorphismes/" class="md-nav__link">
         Endomorphismes
       </a>
     </li>
@@ -509,16 +592,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
       
       
       
@@ -527,7 +608,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           Analyse
@@ -538,99 +619,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Convexité
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../M/An/Convexit%C3%A9/" class="md-nav__link">
         Convexité
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#convexe-concave-affine" class="md-nav__link">
-    Convexe, Concave, Affine
-  </a>
-  
-    <nav class="md-nav" aria-label="Convexe, Concave, Affine">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#epigraphe" class="md-nav__link">
-    Épigraphe
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#proprietes" class="md-nav__link">
-    Propriétés
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inegalites" class="md-nav__link">
-    Inégalités
-  </a>
-  
-    <nav class="md-nav" aria-label="Inégalités">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cas-discrete" class="md-nav__link">
-    Cas Discrète
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inegalite-de-jensen" class="md-nav__link">
-    Inégalité de Jensen
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -642,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Topology/" class="md-nav__link">
+      <a href="../../../M/An/Topology/" class="md-nav__link">
         Topology
       </a>
     </li>
@@ -678,189 +671,182 @@
                   
 
 
-<h1 id="convexite">Convexité</h1>
-<blockquote>
-<p>Exercices : <a href="http://moodle.speit.sjtu.edu.cn/pluginfile.php/35074/mod_resource/content/3/TDs_Topologie_et_calcul_differentiel_2022_2023.pdf">TD3</a></p>
-</blockquote>
-<h2 id="convexe-concave-affine">Convexe, Concave, Affine</h2>
+<h1 id="convolutional-network">Convolutional Network</h1>
+<p><img alt="" src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*vkQ0hXDaQv57sALXAJquxA.jpeg" /></p>
+<h2 id="convolution-operation-and-cross-correlation">Convolution operation and cross-correlation</h2>
 <ul>
 <li>
-<p><strong>Définition</strong> : Soit <span class="arithmatex">\(f:I\to \mathbb{R}\)</span>, <span class="arithmatex">\(f\)</span> est dite <strong>convexe</strong> si elle vérifie 
+<p><strong>Convolution operation</strong>: To predict the position of a special object <span class="arithmatex">\(x=x(t)\)</span>, we do an average to the measurements in a period of time. The more recent the measurement is, the more weight it is given. Therefore, we obtain a smooth estimating function <span class="arithmatex">\(s=s(t)\)</span>: 
     <script type="math/tex; mode=display">
-    \forall(a,b) \in I^2,\; \forall t\in [0, 1],\;f((1-t)a+tb))\leq (1-t)f(a)+tf(b)</script>
+    s(t) = \int x(a) w(t-a)\, \mathrm{d}a =(x*w)(t)
+    </script>
 </p>
+<ul>
+<li>Only in our example, <span class="arithmatex">\(w\)</span> is an effective <a href="https://en.wikipedia.org/wiki/Probability_density_function">probability density function</a>, and <span class="arithmatex">\(w(x&lt;0)=0\)</span>.</li>
+<li><span class="arithmatex">\(x\)</span> is the <strong>input</strong>, <span class="arithmatex">\(w\)</span> is the <strong>kernel function</strong>, and <span class="arithmatex">\(f\)</span> is refered to as <strong>feature map</strong>.</li>
+</ul>
 </li>
 <li>
-<p><span class="arithmatex">\(f\)</span> est dite <strong>concave</strong> si elle vérifie 
+<p>A <em>discrete version</em> of the operation could be written as: 
     <script type="math/tex; mode=display">
-    -f \text{ est convexe}
+    s(t) = (x*w)(t) = \sum_{a=-\infty}^{+\infty} x(a)w(t-a)
     </script>
 </p>
 </li>
 <li>
-<p>Si <span class="arithmatex">\(f:I\to \mathbb{R}\)</span> est à la fois <strong>convexe</strong> et <strong>concave</strong>, alors <span class="arithmatex">\(f\)</span> est <strong>affine</strong>.</p>
-</li>
-<li>
-<p><strong>Propriété</strong> : <em>Sur l'intervalle</em> <span class="arithmatex">\([a,b]\)</span>, la courbe passe <em>en-dessous</em> de sa corde entre <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(b\)</span>. <em>En-dehors de l'intervalle</em> <span class="arithmatex">\([a,b]\)</span>, elle passe <em>au-dessus</em> de cette corde. Elle doit aussi être <em>au-dessus</em> de sa tangente. <img alt="" src="../assets/Convexe-Corde-Courbe.png" /></p>
-</li>
-<li>
-<p><strong>Propriété</strong> : la <strong>midconvexité</strong> - Soit <span class="arithmatex">\(f\)</span> est une fonction <strong>continue</strong> sur <span class="arithmatex">\(I\)</span>, alors 
+<p>For a two dimensional figure <span class="arithmatex">\(I\)</span>, using a two-dimensional kernel <span class="arithmatex">\(K\)</span>, the equivalent form is: 
     <script type="math/tex; mode=display">
-    [f \text{ convexe}] \iff [\forall(x,y)] \in I^2,\; f\left( \frac{x+y}{2} \right) \leq \frac{f(x)+f(y)}{2}
+    \begin{align}
+    S(i,j) = (I*K)(i,j) &= \sum_{m}\sum_{n}I(m,n)K(i-m,i-n) \\=(K*I)(i,j)&= \sum_{m}\sum_{n}I(i-m,j-n)K(m,n)
+    \end{align}
+    </script>
+</p>
+</li>
+<li>
+<p>However, the <strong>cross-correlation</strong> is more often used in most nets:
+    <script type="math/tex; mode=display">
+    S(i,j) = (I*K)(i,j) = \sum_{m}\sum_{n}I(i+m,j+n)K(m,n)
+    </script>
+</p>
+<ul>
+<li>Convolution = Cross-correlation + flipping the kernel<ul>
+<li>Example of kernel flipping:
+    <script type="math/tex; mode=display">
+    \begin{bmatrix}
+    1 & 2 & 3 \\ 
+    4 & 5 & 6 \\ 
+    7 & 8 & 9
+    \end{bmatrix} \implies 
+    \begin{bmatrix}
+    9 & 8 & 7 \\ 
+    6 & 5 & 4 \\ 
+    3 & 2 & 1
+    \end{bmatrix}
+    </script>
+</li>
+</ul>
+</li>
+<li><strong>Convolution operations (Math)</strong> are commutative, it is because we have <em>flipped the kernel</em>, which refers to the decrease of the index of the kernel while the index of the input is increasing. We ignore the flip as we have abandoned the <em>commutative</em> property.</li>
+<li>In deep-learning, <strong>convolution (DL)</strong> refers to the mathematical operation <strong>cross-correlation (Math)</strong>, lacking a flip to the kernel. </li>
+</ul>
+</li>
+</ul>
+<h2 id="motivations">Motivations</h2>
+<ul>
+<li>
+<p><strong>Sparse Interactions</strong></p>
+<ul>
+<li>The size of the kernel <span class="arithmatex">\(\ll\)</span> The size of the input, we use small amount of kernels to detect some small features.</li>
+<li>For a <span class="arithmatex">\(m\)</span>-dimensional input and a <span class="arithmatex">\(n\)</span>-dimensional output, a full-connection network have a <span class="arithmatex">\(m\times n\)</span> matrix to store the parameters. However, by limiting the number of connections to <span class="arithmatex">\(k&lt;m\)</span>, the matrix is reduced to <span class="arithmatex">\(k \times n\)</span>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameter sharing</strong></p>
+<ul>
+<li>Using same parameters (connected to the kernel elements) to different areas of the input.</li>
+</ul>
+</li>
+<li>
+<p><strong>Equivariant representations</strong></p>
+<ul>
+<li><strong>Equivariance</strong>: <span class="arithmatex">\(f(g(x))=g(f(x))\)</span>, for example translation of certain functions. (Rotations or other operations may not be equivariant)</li>
+</ul>
+</li>
+</ul>
+<h2 id="process">Process</h2>
+<ul>
+<li>The first stage, <strong>convolutional layer</strong> trigger a linear activation response,
+    <img alt="" src="https://windmissing.github.io/Bible-DeepLearning/assets/images/Chapter9/38.png" /></li>
+<li>
+<p>The second stage, the <strong>detector stage</strong> using a non-linear activation function to make the previous output pass through the architecture.</p>
+</li>
+<li>
+<p>The third stage, we use the <strong>pooling function</strong> to adjust the input.</p>
+</li>
+</ul>
+<h2 id="pooling">Pooling</h2>
+<ul>
+<li>
+<p>The pooling function uses the <em>overall statistical characteristics</em> of the adjacent output at a certain position to replace the output of the network at that location.</p>
+</li>
+<li>
+<p>When the input are slightly translated, the pooling function helps to make the expression of input <strong>invariant</strong>.</p>
+</li>
+<li>
+<p>We care if a certain feature <strong>exists</strong>, but the specific <strong>position is unimportant</strong>.</p>
+</li>
+<li>
+<p>Advantages:</p>
+</li>
+<li><strong>Produce a same-sized output for different kinds of input</strong></li>
+<li>Because the pooling integrates the feedback of all neighbors, it makes it possible that the pooling unit is <strong>smaller</strong> than the detection unit. We can use the integrated pooling area.</li>
+</ul>
+<h2 id="requirements-for-the-task">Requirements for the task</h2>
+<ul>
+<li>
+<p>There is no evident or significant relationship between two locations that are separated by a considerable distance. (Convolution Layer)</p>
+</li>
+<li>
+<p>The task requires focus on a specific location. (Pooling Layer)</p>
+</li>
+</ul>
+<h2 id="improvements-from-convolutional-operations-in-math">Improvements from convolutional operations in math</h2>
+<ul>
+<li>
+<p>Differences:</p>
+<ul>
+<li><strong>Multiple convolution processing in the same time</strong>: multiple features to be extracted.</li>
+<li>Input as four dimension: <span class="arithmatex">\((ind,i,j,k)\)</span><ul>
+<li><span class="arithmatex">\((j,k)\)</span> coordinates in the picture</li>
+<li><span class="arithmatex">\(i\)</span> the tunnel (RGB)</li>
+<li><span class="arithmatex">\(ind\)</span> the index in the whole batch</li>
+</ul>
+</li>
+<li>Not necessarily invariant</li>
+</ul>
+</li>
+<li>
+<p>Partially connected networks = <strong>Unshared Convolution</strong>, cases when we are guaranteed that a certain feature will only appear in a certain part of the picture:
+    <script type="math/tex; mode=display">
+    Z_{i,j,k} = \sum_{l,m,n} [V_{l, j+m-1,k+n-1}\;W_{i,j,k,l,m,n}]
+    </script>
+</p>
+<ul>
+<li><span class="arithmatex">\(V_{l,x,y}\)</span>: Input, the value of the position <span class="arithmatex">\((x,y)\)</span> of the input and <span class="arithmatex">\(l\)</span> tunnel.</li>
+<li><span class="arithmatex">\(W_{i,j,k,l,m,n}\)</span>: The weight matrix (6-dimensional), output <span class="arithmatex">\((i,j,k)\)</span>: <span class="arithmatex">\(i\)</span> tunnel and position <span class="arithmatex">\((j,k)\)</span>, input <span class="arithmatex">\((l,m,n)\)</span>: <span class="arithmatex">\(l\)</span> tunnel, <span class="arithmatex">\((m,n)\)</span> the difference of index</li>
+<li><span class="arithmatex">\(Z_{l,x,y}\)</span>: The output, same form with the input</li>
+</ul>
+</li>
+<li>
+<p>Note: <span class="arithmatex">\(-1\)</span> comes from the index problem, modern computer usually begins its index from 0.</p>
+</li>
+<li>
+<p><strong>Basic Convolution</strong>:
+    <script type="math/tex; mode=display">
+    Z_{{i,j,k}}=\sum_{l,m,n}V_{l,j+m-1,k+n-1}\;K_{i,l,m,n}
+    </script>
+</p>
+<ul>
+<li>Kernel: <span class="arithmatex">\(K_{i,j,k,l}\)</span>, <span class="arithmatex">\(i\)</span> tunnel, connection with the <span class="arithmatex">\(j\)</span> tunnel of the input, positioned <span class="arithmatex">\((k,l)\)</span>, </li>
+</ul>
+</li>
+<li>
+<p><strong>Stride</strong>: If we want to sample the output at an interval of <span class="arithmatex">\(s\)</span> pixels in each direction, we can apply a stride of <span class="arithmatex">\(s\)</span> during the convolution or pooling operation:
+    <script type="math/tex; mode=display">
+    Z_{i,j,k} = c(K,V,s)_{i,j,k} = \sum_{l,m,n}[V_{l, s(j-1)+m,s(k-1)+n}\;K_{i,l,m,n}]
     </script>
 </p>
 </li>
 </ul>
-<h3 id="epigraphe">Épigraphe</h3>
-<ul>
+<h2 id="references">References</h2>
+<ol>
 <li>
-<p><strong>Définition</strong> : Soit <span class="arithmatex">\(f: I \to \mathbb{R}\)</span>, on appelle <strong>épigraphe</strong> de <span class="arithmatex">\(f\)</span> l'ensemble 
-    <script type="math/tex; mode=display">
-    \mathcal{E}_{f}=\{(x,y)\in I \times \mathbb{R},\; y\geq f(x)\}
-    </script>
-</p>
+<p><a href="https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53">A Comprehensive Guide to Convolutional Neural Networks — the ELI5 way</a></p>
 </li>
 <li>
-<p>Soit <span class="arithmatex">\(\mathcal{C}\subset \mathbb{R}^n\)</span>, On dit que <span class="arithmatex">\(\mathcal{C}\)</span> est <strong>convexe</strong> (c'est-à-dire <strong>partie convexe</strong>) si 
-    <script type="math/tex; mode=display">
-    \forall(A,B) \in \mathcal{C}^2,\; \forall t\in [0, 1], \; \underbrace{\mathrm{Bar}((A,1-t),(B,t))}_{\text{souvent } (1-t)A+tB}\in \mathcal{C}
-    </script>
-</p>
+<p><a href="https://windmissing.github.io/Bible-DeepLearning/Chapter9/1Convolution.html">Notes for Deep Learning, by GitHub user windmissing</a></p>
 </li>
-<li>
-<p><strong>Propriété</strong> : La fonction <span class="arithmatex">\(f\)</span> est convexe <span class="arithmatex">\(\iff\)</span> L'<strong>épigraphe</strong> <span class="arithmatex">\(\mathcal{E}_{f}\)</span> de <span class="arithmatex">\(f\)</span> est un ensemble convexe</p>
-</li>
-</ul>
-<h3 id="proprietes">Propriétés</h3>
-<ul>
-<li>
-<p><strong>Propriété</strong> : <strong>Inégalité des pentes</strong> : On a que <span class="arithmatex">\(f\)</span> est <strong>convexe</strong> ssi : pour <span class="arithmatex">\(\forall (x,y,z) \in I^3\)</span>, </p>
-<ul>
-<li>记忆：固定一点，另外一点坐标越大，斜率即越大。
-<script type="math/tex; mode=display">
-[x<z<y] \implies \left[ \frac{f(z)-f(x)}{z-x}\leq \frac{f(y)-f(x)}{y-x} \leq \frac{f(y)-f(z)}{y-z}\right]
-</script>
-<img alt="" src="../assets/Inegalite-des-pentes.png" /></li>
-</ul>
-</li>
-<li>
-<p><strong>Propriété</strong> : Inégalité des pentes, Taux d'accroissement d'une fonction convexe : L'application de <span class="arithmatex">\(f\)</span>, <span class="arithmatex">\(f\)</span> est <strong>convexe</strong> ssi : 
-    <script type="math/tex; mode=display">
-    \tau_{x}:\begin{cases}
-    I\backslash\{x\} &\to \mathbb{R}  \\
-    t&\mapsto \frac{f(t)-f(x)}{t-x}
-    \end{cases} \text{ est croissante}
-    </script>
-</p>
-</li>
-<li>
-<p>Si <span class="arithmatex">\(f:I\to \mathbb{R}\)</span> une fonction <strong>convexe</strong>, alors <span class="arithmatex">\(f\)</span> est <strong>continue</strong> sur <span class="arithmatex">\(I^\circ\)</span>.</p>
-</li>
-<li>
-<p>Si la fonction est <strong>continue</strong> et <strong>dérivable</strong> : 
-    <script type="math/tex; mode=display">
-    [f \text{ convexe sur } I] \iff [f' \text{ croissante sur }I^\circ]
-    </script>
-</p>
-<ul>
-<li><mark>Soit <span class="arithmatex">\(I\)</span> un intervalle ouvert de <span class="arithmatex">\(\mathbb R\)</span>, soit <span class="arithmatex">\(f\in \mathscr C(I,\mathbb R)\)</span> ayant en tout point une dérivée à droite telle que <span class="arithmatex">\(f_d'\)</span> soit croissante, alors <span class="arithmatex">\(f\)</span> est convexe.</mark> Rappel :
-    <script type="math/tex; mode=display">
-    f_d'|_{x=x_0} = \lim_{t\to 0,\;t>0}\frac{f(x_0+t)-f(x_0)}{t}
-    </script>
-    Souvent c'est obligatoire d'assurer si <span class="arithmatex">\(\underset{{x \to x_0^-}}{\lim}f_d'(x)&lt;f_d '|_{x=x_0}\)</span>.</li>
-</ul>
-</li>
-<li>
-<p>Si la fonction est <strong>continue</strong> et deux fois <strong>dérivable</strong> : 
-    <script type="math/tex; mode=display">
-    [f \text{ convexe}] \iff [f''>0]
-    </script>
-</p>
-</li>
-</ul>
-<h2 id="inegalites">Inégalités</h2>
-<h3 id="cas-discrete">Cas Discrète</h3>
-<ul>
-<li>
-<p><strong>Inégalité de convexité discrète</strong> : Soit <span class="arithmatex">\(f:I \to \mathbb{R}\)</span> <em>convexe</em>, tq <span class="arithmatex">\((\lambda_{1},\dots,\lambda_{n})\in(\mathbb{R}_{+})^n\)</span>, alors 
-    <script type="math/tex; mode=display">
-    f\left( \frac{1}{\sum_{k=1}^n \lambda_{k}}\sum_{k=1}^n\lambda_{k}x_{k} \right) \leq \frac{1}{\sum_{k=1}^n\lambda_{k}}\left( \sum_{k=1}^n\lambda_{k}f(x_{k}) \right)
-    </script>
-    Autrement dit :  <em>L'image du barycentre à coefficients positifs est inférieure ou égale au barycentre des images</em>.</p>
-<ul>
-<li>
-<p>Cas <span class="arithmatex">\(f: x \mapsto x^{b/a}\)</span>, <span class="arithmatex">\(\bar x = x^a\)</span> : 
-    <script type="math/tex; mode=display">
-    1<a<b \implies \left(\frac{1}{n} \sum_{j=1}^nx_j^a\right)^{1/a} \le  \left(\frac{1}{n} \sum_{j=1}^nx_j^b\right)^{1/b}
-    </script>
-</p>
-</li>
-<li>
-<p>Cas <span class="arithmatex">\(f = \exp\)</span>, <span class="arithmatex">\(\bar x=\pm\ln (x)\)</span> : 
-    <script type="math/tex; mode=display">
-    \frac{n}{1/x_1+\cdots+1/x_n} \le (x_1x_2\cdots x_n)^{1/n} \le \frac{x_1+\cdots+x_n}{n}
-    </script>
-</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Inégalité de Cauchy-Schwarz discrète</strong> : Retour vers l'<strong>inégalité de Cauchy-Schwarz</strong> : 
-    <script type="math/tex; mode=display">
-    <x,y> \leq |x| |y| \iff \left( \sum a_{i}b_{i} \right)^2\leq \sum a_{i}^2 \sum b_{i}^2 
-    </script>
-</p>
-</li>
-<li>
-<p><strong>Inégalité de Hölder discrète</strong> : Soit <span class="arithmatex">\(p\)</span> et <span class="arithmatex">\(q\)</span> deux nombres réels de <span class="arithmatex">\(]1, +\infty[\)</span> tels que 
-    <script type="math/tex; mode=display">
-    \frac{1}{p}+\frac{1}{q}=1
-    </script>
-    Soit <span class="arithmatex">\((a_{1},\dots,a_{n},b_{1},\dots,b_{n})\in \mathbb{R}_{+}^{2n}\)</span>. Alors, 
-    <script type="math/tex; mode=display">
-    \sum_{k=1}^na_{k}b_{k }\leq\left( \sum_{k=1}^na_{k}^p \right)^{\frac{1}{p}}\left( \sum_{k=1} ^nb_{k}^p\right)^{\frac{1}{q}}
-    </script>
-</p>
-</li>
-</ul>
-<h3 id="inegalite-de-jensen">Inégalité de Jensen</h3>
-<ul>
-<li>
-<p><strong>Inégalité de Jensen ou Inégalité de convexité continue</strong> : Soit <span class="arithmatex">\(I\)</span> un intervalle de <span class="arithmatex">\(\mathbb{R}\)</span>, soit <span class="arithmatex">\(f\)</span> et <span class="arithmatex">\(h\)</span> définis, continues par morceaux sur <span class="arithmatex">\(I\)</span> avec <span class="arithmatex">\(h \geq 0\)</span>, et telles que 
-    <script type="math/tex; mode=display">
-    \int _{a}^b h(t) \, \mathrm{d}t \text{ et } \int _{a}^b f(t)h(t) \, \mathrm{d}t \text{  existent et } \int _{a}^b h(t) \, \mathrm{d}t>0 
-    </script>
-</p>
-<p>Soit <span class="arithmatex">\(\phi\)</span> une fonction <em>convexe</em> définie sur un intervalle ouvert <span class="arithmatex">\(J\)</span> contenant <span class="arithmatex">\(f(I)\)</span> et telle que 
-<script type="math/tex; mode=display">
-\int _{a}^b \phi(f(t))h(t) \, \mathrm{d}t \text{  existe}
-</script>
-</p>
-<p>Alors, 
-<script type="math/tex; mode=display">
-\boxed{\phi\left( \frac{1}{\int _{a}^b h(t) \, \mathrm{d}t }\int _{a}^b f(t)h(t) \, \mathrm{d}t  \right)\leq \frac{1}{\int _{a}^b h(t) \, \mathrm{d}t } \int _{a}^b \phi(f(t))h(t) \, \mathrm{d}t }
-</script>
-</p>
-</li>
-<li>
-<p>Cas spécial : <script type="math/tex; mode=display">\phi\left(  \frac{1}{b-a}\int _{a}^b f(t) \, \mathrm{d}t \right) \leq \frac{1}{b-a}\int _{a}^b \phi(f(t)) \, \mathrm{d}t </script>
-</p>
-</li>
-<li>
-<p><strong>Inégalité de Cauchy-Schwarz continue</strong> : En justifiant que tous les choses existents, on a : 
-    <script type="math/tex; mode=display">
-    |\int _{a}^b f(t)g(t) \, \mathrm{d}t | \leq \sqrt{ \int _{a}^b f(t)^2 \, \mathrm{d}t  }\;\sqrt{ \int _{a}^b g(t)^2 \, \mathrm{d}t  }
-    </script>
-</p>
-</li>
-<li>
-<p><strong>Inégalité de Hölder</strong> : En justifiant que tous les choses existents, on a :
-    <script type="math/tex; mode=display">
-    \boxed{ | \int _{a}^b f(t)g(t) \, \mathrm{d}t| \leq \left( \int _{a}^b |f(t) |^p\, \mathrm{d}t  \right)^{1/p} \left( \int _{a}^b |g(t) |^q\, \mathrm{d}t  \right)^{1/q}} 
-    </script>
-</p>
-</li>
-</ul>
+</ol>
 
 
 

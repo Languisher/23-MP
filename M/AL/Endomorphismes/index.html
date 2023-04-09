@@ -266,6 +266,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cookbooks/Espanso/" class="md-nav__link">
+        Snippets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cookbooks/Vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -321,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ML/CNN/" class="md-nav__link">
+      <a href="../../../ML/CV/CNN/" class="md-nav__link">
         CNN
       </a>
     </li>
@@ -505,6 +533,53 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#endomorphismes-auto-ajoints" class="md-nav__link">
+    Endomorphismes auto-ajoints
+  </a>
+  
+    <nav class="md-nav" aria-label="Endomorphismes auto-ajoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theoreme-de-reduction-des-endomorphismes-auto-adjointes" class="md-nav__link">
+    Théorème de réduction des endomorphismes auto-adjointes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automorphismes-orthogonaux" class="md-nav__link">
+    Automorphismes Orthogonaux
+  </a>
+  
+    <nav class="md-nav" aria-label="Automorphismes Orthogonaux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decomposition-dun-automorphisme-orthogonaux-en-un-produit-de-reflexions" class="md-nav__link">
+    Décomposition d'un automorphisme orthogonaux en un produit de réflexions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endomorphismes-antisymetriques" class="md-nav__link">
+    Endomorphismes Antisymétriques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#decompositions" class="md-nav__link">
     Décompositions
   </a>
@@ -513,14 +588,35 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#decomposition-polaire" class="md-nav__link">
+    Décomposition Polaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#decomposition-de-cholesky" class="md-nav__link">
     Décomposition de Cholesky
   </a>
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#decomposition-qr" class="md-nav__link">
+    Décomposition QR
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrice-de-gram" class="md-nav__link">
+    Matrice de Gram
+  </a>
   
 </li>
       
@@ -686,7 +782,289 @@
 <p><em>Si on a le choix de la base dans un espace euclidien, on choisit prequement toujours de travailler en base orthonormée !</em></p>
 </li>
 </ul>
+<h2 id="endomorphismes-auto-ajoints">Endomorphismes auto-ajoints</h2>
+<ul>
+<li>
+<p><span class="arithmatex">\(f\)</span> est <strong>auto-adjoint</strong> ou <strong>symétrique</strong> si
+    <script type="math/tex; mode=display">
+    f^\star =f
+    </script>
+</p>
+</li>
+<li>
+<p>On note
+    <script type="math/tex; mode=display">
+    \mathscr S(E) = \{f\in \mathscr L(E),\;f^\star = f\}
+    </script>
+    en même temps, 
+    <script type="math/tex; mode=display">
+    u \in \mathscr S(E)\iff \mathrm{Mat}(u,\mathscr E )\in \mathrm{S}_n(\mathbb R) = \{A\in \mathrm{M}_n(\mathbb R) ,\; ^tA = A\}
+    </script>
+</p>
+</li>
+<li>
+<p>Exemples :</p>
+<ul>
+<li>
+<p>Les projecteurs orthogonaux sont les projecteurs auto-adjoints.</p>
+</li>
+<li>
+<p>Si <span class="arithmatex">\(\exists \; \mathscr E, \; \exists \Lambda = (\lambda_1,\cdots,\lambda_n) \in \mathbb R^n\)</span>, tel que :
+<script type="math/tex; mode=display">
+\forall k\in[\![1,n]\!],\;f(e_k) = \lambda_k.e_k
+</script>
+Alors, <span class="arithmatex">\(f\)</span> est <strong>auto-adjoint</strong>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(f\)</span> est un <strong>endomorphismes auto-adjoint positif</strong> s'il vérfie de plus 
+    <script type="math/tex; mode=display">
+    \forall x\in E,\; <x,f(x)> \ge 0
+    </script>
+    Version Matricielle : 
+    <script type="math/tex; mode=display">
+    \forall X,\;^tX.A.X \ge 0
+    </script>
+</p>
+</li>
+<li>
+<p><span class="arithmatex">\(f\)</span> est un <strong>endomorphismes auto-adjoint définis positif</strong> s'il vérfie de plus 
+    <script type="math/tex; mode=display">
+    \forall x\in E,\; <x,f(x)> > 0
+    </script>
+    Version Matricielle :
+    <script type="math/tex; mode=display">
+    \forall X,\; ^tX.A.X > 0
+    </script>
+</p>
+</li>
+<li>
+<p>Propriétés : </p>
+<ul>
+<li>
+<p>Si <span class="arithmatex">\(n = \dim E\)</span>,
+<script type="math/tex; mode=display">
+\dim \mathscr S(E) = \frac{n(n+1)}{2}
+</script>
+</p>
+</li>
+<li>
+<p>Pour n'import quelle <span class="arithmatex">\(f\)</span>,
+<script type="math/tex; mode=display">
+\begin{cases}
+f^ \star \circ f \in \mathscr S^ +(E)\\ 
+f \circ f^\star \in \mathscr S^+(E)
+\end{cases}
+</script>
+De plus, 
+<script type="math/tex; mode=display">
+f^\star \circ f \in \mathscr S^ {++}(E) \iff f \in \mathscr{GL}(E) 
+</script>
+</p>
+</li>
+</ul>
+<blockquote>
+<p>Preuve : 
+    <script type="math/tex; mode=display">
+    <f^\star \circ f(x),x> = <f(x),f(x)> = ||f(x)||^ 2
+    </script>
+</p>
+</blockquote>
+<ul>
+<li>Pour n'import quelle <span class="arithmatex">\(f\)</span>,
+<script type="math/tex; mode=display">
+\mathrm{Ker}(f^ \star \circ f) = \mathrm{Ker}(f)
+</script>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="theoreme-de-reduction-des-endomorphismes-auto-adjointes">Théorème de réduction des endomorphismes auto-adjointes</h3>
+<div class="arithmatex">\[
+f\in \mathscr S(E) \implies \exists (\mathscr E, \Lambda) \in (E ^ n, \mathbb R^n),\; \forall k\in [\![1,n]\!],\; f(e_k)=\lambda_k.e_k
+$$
+- Verison Matricielle :
+    $$
+    f\in \mathscr S(E) \implies \exists \mathscr E \in E ^ n,\;  \mathrm {Mat}(f,\mathscr E) = \mathrm{diag}(\lambda_1,\cdots,\lambda_n)
+    \]</div>
+<div class="highlight"><pre><span></span><code>&gt; [Preuve](assets/Theoreme-de-reduction.png)
+</code></pre></div>
+<ul>
+<li>
+<p>Remarque :
+    <script type="math/tex; mode=display">
+    <u(x),x> = \sum \lambda_k <e_k,x>^ 2
+    </script>
+</p>
+<blockquote>
+<p><a href="../assets/Theoreme-de-reduction-1.png">Preuve</a></p>
+</blockquote>
+</li>
+<li>
+<p>Remarque : <img alt="" src="../assets/Theoreme-de-reduction-2.png" /></p>
+</li>
+<li>
+<p><strong>Proposition</strong> : Soit <span class="arithmatex">\(f\in \mathscr S^ +(E)\)</span>, alors :
+    <script type="math/tex; mode=display">
+    \exists ! g\in \mathscr S^ +(E) \text{ t.q. } f= g\circ g
+    </script>
+</p>
+<blockquote>
+<p><a href="../assets/f%3Dgcircg.png">Preuve</a></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="automorphismes-orthogonaux">Automorphismes Orthogonaux</h2>
+<ul>
+<li>
+<p><span class="arithmatex">\(f \in \mathscr{GL}(E)\)</span> est appellée <strong>automorphisme orthogonal</strong> si elle vérifie :
+<script type="math/tex; mode=display">
+f\in \mathscr{O}(E) \iff f^\star \circ f = f\circ f^\star = \mathrm{id}_E \iff f^\star = f^{-1}
+</script>
+</p>
+</li>
+<li>
+<p>Évidemment, 
+    <script type="math/tex; mode=display">
+    u \in \mathscr{O}(E) \implies \mathrm{det}(u)= \pm 1
+    </script>
+</p>
+</li>
+<li>
+<p><strong>Propriétés</strong> : Équivalance de</p>
+<ul>
+<li><span class="arithmatex">\(f\in \mathscr O(E)\)</span></li>
+<li><span class="arithmatex">\(\forall x\in E, \;||f(x)||=||x||\)</span></li>
+<li><span class="arithmatex">\(\forall(x,y)\in E ^ 2,\; &lt;f(x),f(y) = &lt;x,y&gt;\)</span></li>
+<li><span class="arithmatex">\(\forall, \exists\)</span> <span class="arithmatex">\(\mathscr E\)</span> t.q. <span class="arithmatex">\(f(e_1),\cdots,f(e_n)\)</span> encore une b.o.n.</li>
+</ul>
+</li>
+<li>
+<p>On appelle <strong>symétrie orthogonale</strong> tout élément de 
+    <script type="math/tex; mode=display">
+    s \in \mathscr{S}(E) \cap \mathscr{O}(E)
+    </script>
+</p>
+<ul>
+<li>Son projecteur associé est <span class="arithmatex">\(s = 2p-\mathrm{id}_E\)</span> est un projecteur orthogonale.</li>
+</ul>
+</li>
+<li>
+<p>On appelle <strong>rotation</strong> de <span class="arithmatex">\(E\)</span> :
+    <script type="math/tex; mode=display">
+    \mathscr{SO}(E) = \{u\in \mathscr{O}(E),\;\det(u) = 1\}
+    </script>
+</p>
+</li>
+<li>
+<p>On appelle <strong>réflexion</strong> de <span class="arithmatex">\(E\)</span> :
+    <script type="math/tex; mode=display">
+    \mathscr{O}(E) \backslash \mathscr{SO}(E)
+    </script>
+</p>
+<ul>
+<li>C'est une <strong>symétrie orthogonale</strong> de <span class="arithmatex">\(E_1\)</span>, l'hyperplan sur lequelle une projection orthogonale. <span class="arithmatex">\(E_1\)</span> est définie par<br />
+<script type="math/tex; mode=display">
+    E_1 = \{x, \;u(x)=x\} = \mathrm{Ker}(u-\mathrm{id}_E)
+    </script>
+<img alt="" src="../assets/reflexion-1.png" /></li>
+</ul>
+</li>
+<li>
+<p>Exemple de dimension 2 : <img alt="" src="../assets/orthogonal-1.png" /></p>
+</li>
+<li>
+<p>Exemple de dimension 3 : <img alt="" src="../assets/orthogonal-2.png" /></p>
+</li>
+</ul>
+<h3 id="decomposition-dun-automorphisme-orthogonaux-en-un-produit-de-reflexions">Décomposition d'un automorphisme orthogonaux en un produit de réflexions</h3>
+<ul>
+<li>
+<p>Soit <span class="arithmatex">\(f\in \mathscr{O}(E)\)</span>,
+    <script type="math/tex; mode=display">
+    \exists p = \mathrm{codim}(\mathrm{Ker}(f-\mathrm{id}_E)),\; \exists (s_1,\cdots,s_p) \in (\mathscr{O}(E)\backslash\mathscr{SO}(E))^p,\; f = s_1\circ\cdots \circ s_p
+    </script>
+</p>
+<blockquote>
+<p><a href="../assets/orthogonal-3.png">Preuve</a></p>
+</blockquote>
+</li>
+<li>
+<p><strong>Forme Canonique des automorphismes orthogonaux</strong> : <img alt="" src="../assets/orthogonal-4.png" /></p>
+</li>
+</ul>
+<h2 id="endomorphismes-antisymetriques">Endomorphismes Antisymétriques</h2>
+<ul>
+<li>
+<p>On dit que <span class="arithmatex">\(f\)</span> est <strong>anti-symétrique</strong> s'il vérifie 
+    <script type="math/tex; mode=display">
+    f\in \mathscr A(E) \iff f^ \star = -f
+    </script>
+</p>
+</li>
+<li>
+<p><strong>Propriétés</strong> :</p>
+<ul>
+<li>Décomposition en somme directe
+<script type="math/tex; mode=display">
+\mathscr{L}(E) = \mathscr{S}(E) \oplus \mathscr{A}(E)
+</script>
+</li>
+<li>Dimension :
+<script type="math/tex; mode=display">
+\dim(\mathscr{A}(E)) = \frac{n(n-1)}{2}
+</script>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Propriété</strong> :
+    <script type="math/tex; mode=display">
+    \forall x\in E,\; [u \in \mathscr{A}(E)] \iff [<u(x),x> =0]
+    </script>
+</p>
+</li>
+<li>
+<p><strong>Forme Canonique d'un endomorphismes anti-symétrique</strong> : <img alt="" src="../assets/anti-symetrique.png" /></p>
+<blockquote>
+<p><a href="../assets/anti-symetrique-1.png">Preuve</a></p>
+</blockquote>
+</li>
+<li>
+<p><strong>Propriétés</strong> : Dans <span class="arithmatex">\(E= \mathbb R^ 3\)</span>
+    <script type="math/tex; mode=display">
+    f: x \mapsto w \wedge x \in \mathscr{A}(E)
+    </script>
+    et on peut trouver une b.o.n. telle que 
+    <script type="math/tex; mode=display">
+    f(e_1) = 0_E,\; f(e_2) = ||w|||.e_3, f(e_3) = ||w||.e_2
+    </script>
+    Sa forme canonique basée sur <span class="arithmatex">\((c_1,c_2,c_3)\)</span> est 
+    <script type="math/tex; mode=display">
+    f = \begin{bmatrix}
+    0 & -r & q\\ 
+    r&0&-p\\ 
+    -q & p &0
+    \end{bmatrix}
+    </script>
+    associé à <span class="arithmatex">\(w= pc_1+qc_2+rc_3\)</span>.</p>
+</li>
+</ul>
 <h2 id="decompositions">Décompositions</h2>
+<h3 id="decomposition-polaire">Décomposition Polaire</h3>
+<ul>
+<li>
+<p>Soit <span class="arithmatex">\(f \in \mathscr{GL}(E)\)</span>, 
+    <script type="math/tex; mode=display">
+    \exists ! \; (\rho, \theta) \in ( \mathscr S ^{++}(E) \times \mathscr O(E)), \; f= \rho \times \theta
+    </script>
+</p>
+<blockquote>
+<p><a href="../assets/Decomposition-polaire.png">Preuve</a></p>
+</blockquote>
+</li>
+</ul>
 <h3 id="decomposition-de-cholesky">Décomposition de Cholesky</h3>
 <ul>
 <li>
@@ -719,6 +1097,71 @@
 <li>Unicité : Si <span class="arithmatex">\(A = \;^tT_1.T_1 = \;^tT_2.T_2\)</span>, donc <span class="arithmatex">\(\Delta=T_1.T_2^{-1} = \;^tT_1^{-1}.^tT_2\)</span>, appartient respectivement à <span class="arithmatex">\(\mathrm{T}^+\)</span> et <span class="arithmatex">\(\mathrm{T}^-\)</span>. Dsonc <span class="arithmatex">\(\Delta\)</span> est diagonale. Or, <span class="arithmatex">\(<span class="arithmatex">\(A = \;^tT_1.T_1 = \;^tT_2.(^t\Delta.\Delta).T_2=\;^tT_2.T_2\)</span>\)</span>. Cela implique que <span class="arithmatex">\(\Delta = \mathrm{id}_E\)</span>.</li>
 </ul>
 </blockquote>
+<h3 id="decomposition-qr">Décomposition QR</h3>
+<ul>
+<li>
+<p>Soit <span class="arithmatex">\(A \in \mathrm{GL}_n(\mathbb R)\)</span>, il existe une unique <span class="arithmatex">\((O,T)\in (\mathrm O_n(\mathbb R),\mathrm T_n^+(\mathbb{R}))\)</span>, tel que :
+    <script type="math/tex; mode=display">
+    \boxed{A = O.T}
+    </script>
+</p>
+<blockquote>
+<p><a href="../assets/DecompositionQR.png">Preuve</a></p>
+</blockquote>
+</li>
+<li>
+<p>Si on veut résoudre <span class="arithmatex">\(AX = B\)</span>, cela devient <span class="arithmatex">\(O.T.X=B\)</span>, ensuite
+    <script type="math/tex; mode=display">
+    T.X = \;^tO.B
+    </script>
+    car <span class="arithmatex">\(^tO=O^{-1}\)</span></p>
+</li>
+</ul>
+<h2 id="matrice-de-gram">Matrice de Gram</h2>
+<ul>
+<li>
+<p>Soit <span class="arithmatex">\(E\)</span> un <em>espace préhilbertien réel</em>, et <span class="arithmatex">\(\mathscr X=(x_1,\cdots,x_n)\)</span> une famille <em>finie</em> de vecteurs de <span class="arithmatex">\(E\)</span>. On appelle <strong>matrice de Gram de <span class="arithmatex">\(\mathscr X\)</span></strong> la matrice 
+    <script type="math/tex; mode=display">
+    G_\mathscr X = [<x_i,x_j>]_{(i,j)\in[\![1,n]\!]}
+    </script>
+</p>
+</li>
+<li>
+<p><span class="arithmatex">\(G_\mathscr X \in \mathrm{S}_n^+(\mathbb R)\)</span>.</p>
+</li>
+</ul>
+<blockquote>
+<p>Preuve : Soit <span class="arithmatex">\(X_a = \;^t[a_1,\cdots,a_n]\)</span> avec la base <span class="arithmatex">\((e_1,\cdots,e_n)\)</span>
+   <script type="math/tex; mode=display">
+   ^tX_a.G_\mathscr X .X_a = \sum_{i,j}a_ia_j<x_i,x_j> = || \sum_i a_ix_i ||^2
+   </script>
+</p>
+</blockquote>
+<ul>
+<li>
+<p><span class="arithmatex">\(G_\mathscr X \in \mathrm S_n^{++}(\mathbb R) \iff [(x_1,\cdots,x_n) \text { indépendants} ]\)</span></p>
+<ul>
+<li>C'est équivalent de dire <span class="arithmatex">\(G_\mathscr X\)</span> est de plus inversible.</li>
+</ul>
+</li>
+<li>
+<p>Plus précisément,
+    <script type="math/tex; mode=display">
+    \mathrm{rang}(\mathscr X) = \mathrm{rang}(G_\mathscr X)
+    </script>
+</p>
+</li>
+<li>
+<p>Application : Pour montrer que <span class="arithmatex">\((x_1,\cdots,x_n)\)</span> indépendants ou non, il faut et il suffit de calculer <span class="arithmatex">\(<span class="arithmatex">\(\det(G_\mathscr X)\)</span>\)</span></p>
+</li>
+<li>
+<p>Soit <span class="arithmatex">\(E\)</span> préhilbertien réel, <span class="arithmatex">\(\mathscr X = (x_1,\cdots, x_n)\in E^n\)</span>, on appellera <strong>volume de l'objet</strong> construit sur <span class="arithmatex">\((x_1,\cdots,x_p)\)</span> :
+    <script type="math/tex; mode=display">
+    v(x_1,\cdots,x_p) = \sqrt{\det(G_\mathscr X)}
+    </script>
+</p>
+</li>
+</ul>
 
 
 

@@ -9,24 +9,24 @@
       
       
       
-        <link rel="prev" href="../../AL/Endomorphismes/">
+        <link rel="prev" href="../Espanso/">
       
       
-        <link rel="next" href="../Topology/">
+        <link rel="next" href="../../ML/ML-Basics/">
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>Convexité - Brandon Lin</title>
+        <title>Vim - Brandon Lin</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.7a7fce14.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7a7fce14.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -42,7 +42,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#convexite" class="md-skip">
+        <a href="#vim" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Brandon Lin" class="md-header__button md-logo" aria-label="Brandon Lin" data-md-component="logo">
+    <a href="../.." title="Brandon Lin" class="md-header__button md-logo" aria-label="Brandon Lin" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Convexité
+              Vim
             
           </span>
         </div>
@@ -197,7 +197,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Brandon Lin" class="md-nav__button md-logo" aria-label="Brandon Lin" data-md-component="logo">
+    <a href="../.." title="Brandon Lin" class="md-nav__button md-logo" aria-label="Brandon Lin" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -216,7 +216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -229,14 +229,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
       
       
       
@@ -245,7 +247,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Cookbooks
@@ -258,7 +260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Cookbooks/Mkdocs/" class="md-nav__link">
+      <a href="../Mkdocs/" class="md-nav__link">
         Mkdocs
       </a>
     </li>
@@ -272,7 +274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Cookbooks/Espanso/" class="md-nav__link">
+      <a href="../Espanso/" class="md-nav__link">
         Snippets
       </a>
     </li>
@@ -284,11 +286,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../Cookbooks/Vim/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Vim
       </a>
+      
     </li>
   
 
@@ -335,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ML/ML-Basics/" class="md-nav__link">
+      <a href="../../ML/ML-Basics/" class="md-nav__link">
         Basics
       </a>
     </li>
@@ -349,7 +361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ML/CV/CNN/" class="md-nav__link">
+      <a href="../../ML/CV/CNN/" class="md-nav__link">
         CNN
       </a>
     </li>
@@ -398,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../P/Ondes%20Ondulatoires/" class="md-nav__link">
+      <a href="../../P/Ondes%20Ondulatoires/" class="md-nav__link">
         Ondes Ondulatoires
       </a>
     </li>
@@ -412,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../P/Thermochimie/" class="md-nav__link">
+      <a href="../../P/Thermochimie/" class="md-nav__link">
         Thermochimie
       </a>
     </li>
@@ -432,16 +444,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
       
@@ -450,7 +460,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Maths (French)
@@ -490,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AL/Endomorphismes/" class="md-nav__link">
+      <a href="../../M/AL/Endomorphismes/" class="md-nav__link">
         Endomorphismes
       </a>
     </li>
@@ -509,16 +519,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
       
       
       
@@ -527,7 +535,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           Analyse
@@ -538,99 +546,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Convexité
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../M/An/Convexit%C3%A9/" class="md-nav__link">
         Convexité
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#convexe-concave-affine" class="md-nav__link">
-    Convexe, Concave, Affine
-  </a>
-  
-    <nav class="md-nav" aria-label="Convexe, Concave, Affine">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#epigraphe" class="md-nav__link">
-    Épigraphe
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#proprietes" class="md-nav__link">
-    Propriétés
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inegalites" class="md-nav__link">
-    Inégalités
-  </a>
-  
-    <nav class="md-nav" aria-label="Inégalités">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cas-discrete" class="md-nav__link">
-    Cas Discrète
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inegalite-de-jensen" class="md-nav__link">
-    Inégalité de Jensen
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -642,7 +562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Topology/" class="md-nav__link">
+      <a href="../../M/An/Topology/" class="md-nav__link">
         Topology
       </a>
     </li>
@@ -678,189 +598,7 @@
                   
 
 
-<h1 id="convexite">Convexité</h1>
-<blockquote>
-<p>Exercices : <a href="http://moodle.speit.sjtu.edu.cn/pluginfile.php/35074/mod_resource/content/3/TDs_Topologie_et_calcul_differentiel_2022_2023.pdf">TD3</a></p>
-</blockquote>
-<h2 id="convexe-concave-affine">Convexe, Concave, Affine</h2>
-<ul>
-<li>
-<p><strong>Définition</strong> : Soit <span class="arithmatex">\(f:I\to \mathbb{R}\)</span>, <span class="arithmatex">\(f\)</span> est dite <strong>convexe</strong> si elle vérifie 
-    <script type="math/tex; mode=display">
-    \forall(a,b) \in I^2,\; \forall t\in [0, 1],\;f((1-t)a+tb))\leq (1-t)f(a)+tf(b)</script>
-</p>
-</li>
-<li>
-<p><span class="arithmatex">\(f\)</span> est dite <strong>concave</strong> si elle vérifie 
-    <script type="math/tex; mode=display">
-    -f \text{ est convexe}
-    </script>
-</p>
-</li>
-<li>
-<p>Si <span class="arithmatex">\(f:I\to \mathbb{R}\)</span> est à la fois <strong>convexe</strong> et <strong>concave</strong>, alors <span class="arithmatex">\(f\)</span> est <strong>affine</strong>.</p>
-</li>
-<li>
-<p><strong>Propriété</strong> : <em>Sur l'intervalle</em> <span class="arithmatex">\([a,b]\)</span>, la courbe passe <em>en-dessous</em> de sa corde entre <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(b\)</span>. <em>En-dehors de l'intervalle</em> <span class="arithmatex">\([a,b]\)</span>, elle passe <em>au-dessus</em> de cette corde. Elle doit aussi être <em>au-dessus</em> de sa tangente. <img alt="" src="../assets/Convexe-Corde-Courbe.png" /></p>
-</li>
-<li>
-<p><strong>Propriété</strong> : la <strong>midconvexité</strong> - Soit <span class="arithmatex">\(f\)</span> est une fonction <strong>continue</strong> sur <span class="arithmatex">\(I\)</span>, alors 
-    <script type="math/tex; mode=display">
-    [f \text{ convexe}] \iff [\forall(x,y)] \in I^2,\; f\left( \frac{x+y}{2} \right) \leq \frac{f(x)+f(y)}{2}
-    </script>
-</p>
-</li>
-</ul>
-<h3 id="epigraphe">Épigraphe</h3>
-<ul>
-<li>
-<p><strong>Définition</strong> : Soit <span class="arithmatex">\(f: I \to \mathbb{R}\)</span>, on appelle <strong>épigraphe</strong> de <span class="arithmatex">\(f\)</span> l'ensemble 
-    <script type="math/tex; mode=display">
-    \mathcal{E}_{f}=\{(x,y)\in I \times \mathbb{R},\; y\geq f(x)\}
-    </script>
-</p>
-</li>
-<li>
-<p>Soit <span class="arithmatex">\(\mathcal{C}\subset \mathbb{R}^n\)</span>, On dit que <span class="arithmatex">\(\mathcal{C}\)</span> est <strong>convexe</strong> (c'est-à-dire <strong>partie convexe</strong>) si 
-    <script type="math/tex; mode=display">
-    \forall(A,B) \in \mathcal{C}^2,\; \forall t\in [0, 1], \; \underbrace{\mathrm{Bar}((A,1-t),(B,t))}_{\text{souvent } (1-t)A+tB}\in \mathcal{C}
-    </script>
-</p>
-</li>
-<li>
-<p><strong>Propriété</strong> : La fonction <span class="arithmatex">\(f\)</span> est convexe <span class="arithmatex">\(\iff\)</span> L'<strong>épigraphe</strong> <span class="arithmatex">\(\mathcal{E}_{f}\)</span> de <span class="arithmatex">\(f\)</span> est un ensemble convexe</p>
-</li>
-</ul>
-<h3 id="proprietes">Propriétés</h3>
-<ul>
-<li>
-<p><strong>Propriété</strong> : <strong>Inégalité des pentes</strong> : On a que <span class="arithmatex">\(f\)</span> est <strong>convexe</strong> ssi : pour <span class="arithmatex">\(\forall (x,y,z) \in I^3\)</span>, </p>
-<ul>
-<li>记忆：固定一点，另外一点坐标越大，斜率即越大。
-<script type="math/tex; mode=display">
-[x<z<y] \implies \left[ \frac{f(z)-f(x)}{z-x}\leq \frac{f(y)-f(x)}{y-x} \leq \frac{f(y)-f(z)}{y-z}\right]
-</script>
-<img alt="" src="../assets/Inegalite-des-pentes.png" /></li>
-</ul>
-</li>
-<li>
-<p><strong>Propriété</strong> : Inégalité des pentes, Taux d'accroissement d'une fonction convexe : L'application de <span class="arithmatex">\(f\)</span>, <span class="arithmatex">\(f\)</span> est <strong>convexe</strong> ssi : 
-    <script type="math/tex; mode=display">
-    \tau_{x}:\begin{cases}
-    I\backslash\{x\} &\to \mathbb{R}  \\
-    t&\mapsto \frac{f(t)-f(x)}{t-x}
-    \end{cases} \text{ est croissante}
-    </script>
-</p>
-</li>
-<li>
-<p>Si <span class="arithmatex">\(f:I\to \mathbb{R}\)</span> une fonction <strong>convexe</strong>, alors <span class="arithmatex">\(f\)</span> est <strong>continue</strong> sur <span class="arithmatex">\(I^\circ\)</span>.</p>
-</li>
-<li>
-<p>Si la fonction est <strong>continue</strong> et <strong>dérivable</strong> : 
-    <script type="math/tex; mode=display">
-    [f \text{ convexe sur } I] \iff [f' \text{ croissante sur }I^\circ]
-    </script>
-</p>
-<ul>
-<li><mark>Soit <span class="arithmatex">\(I\)</span> un intervalle ouvert de <span class="arithmatex">\(\mathbb R\)</span>, soit <span class="arithmatex">\(f\in \mathscr C(I,\mathbb R)\)</span> ayant en tout point une dérivée à droite telle que <span class="arithmatex">\(f_d'\)</span> soit croissante, alors <span class="arithmatex">\(f\)</span> est convexe.</mark> Rappel :
-    <script type="math/tex; mode=display">
-    f_d'|_{x=x_0} = \lim_{t\to 0,\;t>0}\frac{f(x_0+t)-f(x_0)}{t}
-    </script>
-    Souvent c'est obligatoire d'assurer si <span class="arithmatex">\(\underset{{x \to x_0^-}}{\lim}f_d'(x)&lt;f_d '|_{x=x_0}\)</span>.</li>
-</ul>
-</li>
-<li>
-<p>Si la fonction est <strong>continue</strong> et deux fois <strong>dérivable</strong> : 
-    <script type="math/tex; mode=display">
-    [f \text{ convexe}] \iff [f''>0]
-    </script>
-</p>
-</li>
-</ul>
-<h2 id="inegalites">Inégalités</h2>
-<h3 id="cas-discrete">Cas Discrète</h3>
-<ul>
-<li>
-<p><strong>Inégalité de convexité discrète</strong> : Soit <span class="arithmatex">\(f:I \to \mathbb{R}\)</span> <em>convexe</em>, tq <span class="arithmatex">\((\lambda_{1},\dots,\lambda_{n})\in(\mathbb{R}_{+})^n\)</span>, alors 
-    <script type="math/tex; mode=display">
-    f\left( \frac{1}{\sum_{k=1}^n \lambda_{k}}\sum_{k=1}^n\lambda_{k}x_{k} \right) \leq \frac{1}{\sum_{k=1}^n\lambda_{k}}\left( \sum_{k=1}^n\lambda_{k}f(x_{k}) \right)
-    </script>
-    Autrement dit :  <em>L'image du barycentre à coefficients positifs est inférieure ou égale au barycentre des images</em>.</p>
-<ul>
-<li>
-<p>Cas <span class="arithmatex">\(f: x \mapsto x^{b/a}\)</span>, <span class="arithmatex">\(\bar x = x^a\)</span> : 
-    <script type="math/tex; mode=display">
-    1<a<b \implies \left(\frac{1}{n} \sum_{j=1}^nx_j^a\right)^{1/a} \le  \left(\frac{1}{n} \sum_{j=1}^nx_j^b\right)^{1/b}
-    </script>
-</p>
-</li>
-<li>
-<p>Cas <span class="arithmatex">\(f = \exp\)</span>, <span class="arithmatex">\(\bar x=\pm\ln (x)\)</span> : 
-    <script type="math/tex; mode=display">
-    \frac{n}{1/x_1+\cdots+1/x_n} \le (x_1x_2\cdots x_n)^{1/n} \le \frac{x_1+\cdots+x_n}{n}
-    </script>
-</p>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Inégalité de Cauchy-Schwarz discrète</strong> : Retour vers l'<strong>inégalité de Cauchy-Schwarz</strong> : 
-    <script type="math/tex; mode=display">
-    <x,y> \leq |x| |y| \iff \left( \sum a_{i}b_{i} \right)^2\leq \sum a_{i}^2 \sum b_{i}^2 
-    </script>
-</p>
-</li>
-<li>
-<p><strong>Inégalité de Hölder discrète</strong> : Soit <span class="arithmatex">\(p\)</span> et <span class="arithmatex">\(q\)</span> deux nombres réels de <span class="arithmatex">\(]1, +\infty[\)</span> tels que 
-    <script type="math/tex; mode=display">
-    \frac{1}{p}+\frac{1}{q}=1
-    </script>
-    Soit <span class="arithmatex">\((a_{1},\dots,a_{n},b_{1},\dots,b_{n})\in \mathbb{R}_{+}^{2n}\)</span>. Alors, 
-    <script type="math/tex; mode=display">
-    \sum_{k=1}^na_{k}b_{k }\leq\left( \sum_{k=1}^na_{k}^p \right)^{\frac{1}{p}}\left( \sum_{k=1} ^nb_{k}^p\right)^{\frac{1}{q}}
-    </script>
-</p>
-</li>
-</ul>
-<h3 id="inegalite-de-jensen">Inégalité de Jensen</h3>
-<ul>
-<li>
-<p><strong>Inégalité de Jensen ou Inégalité de convexité continue</strong> : Soit <span class="arithmatex">\(I\)</span> un intervalle de <span class="arithmatex">\(\mathbb{R}\)</span>, soit <span class="arithmatex">\(f\)</span> et <span class="arithmatex">\(h\)</span> définis, continues par morceaux sur <span class="arithmatex">\(I\)</span> avec <span class="arithmatex">\(h \geq 0\)</span>, et telles que 
-    <script type="math/tex; mode=display">
-    \int _{a}^b h(t) \, \mathrm{d}t \text{ et } \int _{a}^b f(t)h(t) \, \mathrm{d}t \text{  existent et } \int _{a}^b h(t) \, \mathrm{d}t>0 
-    </script>
-</p>
-<p>Soit <span class="arithmatex">\(\phi\)</span> une fonction <em>convexe</em> définie sur un intervalle ouvert <span class="arithmatex">\(J\)</span> contenant <span class="arithmatex">\(f(I)\)</span> et telle que 
-<script type="math/tex; mode=display">
-\int _{a}^b \phi(f(t))h(t) \, \mathrm{d}t \text{  existe}
-</script>
-</p>
-<p>Alors, 
-<script type="math/tex; mode=display">
-\boxed{\phi\left( \frac{1}{\int _{a}^b h(t) \, \mathrm{d}t }\int _{a}^b f(t)h(t) \, \mathrm{d}t  \right)\leq \frac{1}{\int _{a}^b h(t) \, \mathrm{d}t } \int _{a}^b \phi(f(t))h(t) \, \mathrm{d}t }
-</script>
-</p>
-</li>
-<li>
-<p>Cas spécial : <script type="math/tex; mode=display">\phi\left(  \frac{1}{b-a}\int _{a}^b f(t) \, \mathrm{d}t \right) \leq \frac{1}{b-a}\int _{a}^b \phi(f(t)) \, \mathrm{d}t </script>
-</p>
-</li>
-<li>
-<p><strong>Inégalité de Cauchy-Schwarz continue</strong> : En justifiant que tous les choses existents, on a : 
-    <script type="math/tex; mode=display">
-    |\int _{a}^b f(t)g(t) \, \mathrm{d}t | \leq \sqrt{ \int _{a}^b f(t)^2 \, \mathrm{d}t  }\;\sqrt{ \int _{a}^b g(t)^2 \, \mathrm{d}t  }
-    </script>
-</p>
-</li>
-<li>
-<p><strong>Inégalité de Hölder</strong> : En justifiant que tous les choses existents, on a :
-    <script type="math/tex; mode=display">
-    \boxed{ | \int _{a}^b f(t)g(t) \, \mathrm{d}t| \leq \left( \int _{a}^b |f(t) |^p\, \mathrm{d}t  \right)^{1/p} \left( \int _{a}^b |g(t) |^q\, \mathrm{d}t  \right)^{1/q}} 
-    </script>
-</p>
-</li>
-</ul>
+<h1 id="vim">Vim</h1>
 
 
 
@@ -925,10 +663,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["naviagation.tabs", "naviagation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["naviagation.tabs", "naviagation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.407015b8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.407015b8.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
