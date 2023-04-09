@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../../ML-Basics/">
+        <link rel="prev" href="../../../Cookbooks/Vim/">
       
       
-        <link rel="next" href="../../../P/Ondes%20Ondulatoires/">
+        <link rel="next" href="../Brain-Inspired-CNN/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>CNN - Brandon Lin</title>
+        <title>Convolutional Network - Brandon Lin</title>
       
     
     
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CNN
+              Convolutional Network
             
           </span>
         </div>
@@ -335,15 +335,30 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../ML-Basics/" class="md-nav__link">
-        Basics
-      </a>
-    </li>
   
-
-            
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          CNN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          CNN
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -361,12 +376,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          CNN
+          Convolutional Network
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        CNN
+        Convolutional Network
       </a>
       
         
@@ -406,6 +421,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#convolution" class="md-nav__link">
+    Convolution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pooling" class="md-nav__link">
     Pooling
   </a>
@@ -427,6 +449,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#resnet" class="md-nav__link">
+    ResNet
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relationship-with-neural-science" class="md-nav__link">
+    Relationship with Neural Science
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#references" class="md-nav__link">
     References
   </a>
@@ -437,6 +473,27 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Brain-Inspired-CNN/" class="md-nav__link">
+        Brain-inspired CNN
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -703,11 +760,12 @@
 </p>
 </li>
 <li>
-<p>However, the <strong>cross-correlation</strong> is more often used in most nets:
+<p><strong>Convolution</strong> is a linear operation, so it can be expressed in the form of matrix multiplication (if we first transform the input tensor into a flat vector). The matrix contained in it is a function of the convolution kernel. This matrix is sparse and each element of the kernel is copied to multiple elements of the matrix.</p>
+</li>
+<li>However, the <strong>cross-correlation</strong> is more often used in most nets:
     <script type="math/tex; mode=display">
     S(i,j) = (I*K)(i,j) = \sum_{m}\sum_{n}I(i+m,j+n)K(m,n)
     </script>
-</p>
 <ul>
 <li>Convolution = Cross-correlation + flipping the kernel<ul>
 <li>Example of kernel flipping:
@@ -758,11 +816,16 @@
 <li>The first stage, <strong>convolutional layer</strong> trigger a linear activation response,
     <img alt="" src="https://windmissing.github.io/Bible-DeepLearning/assets/images/Chapter9/38.png" /></li>
 <li>
-<p>The second stage, the <strong>detector stage</strong> using a non-linear activation function to make the previous output pass through the architecture.</p>
+<p>The second stage, the <strong>detector stage</strong> using a non-linear activation function to make the previous output (after the linear- activation response) pass through the architecture.</p>
 </li>
 <li>
 <p>The third stage, we use the <strong>pooling function</strong> to adjust the input.</p>
 </li>
+</ul>
+<h2 id="convolution">Convolution</h2>
+<ul>
+<li><strong>Tunnels</strong> : The first number of input tunnels equals to 3, is respectively referring to the R,G,B colors; The output tunnels refer to the number of characteristics that we wish to extract.</li>
+<li><strong>1x1 kernel</strong> is used to control the amount of tunels and to reduce or change the dimensions of inputs. Example of 3 tunnels input transformed into a 2 tunnels output : <img alt="" src="https://zh.d2l.ai/_images/conv-1x1.svg" /></li>
 </ul>
 <h2 id="pooling">Pooling</h2>
 <ul>
@@ -787,7 +850,7 @@
 <p>There is no evident or significant relationship between two locations that are separated by a considerable distance. (Convolution Layer)</p>
 </li>
 <li>
-<p>The task requires focus on a specific location. (Pooling Layer)</p>
+<p>The task does not requires focus on a specific location. (Pooling Layer)</p>
 </li>
 </ul>
 <h2 id="improvements-from-convolutional-operations-in-math">Improvements from convolutional operations in math</h2>
@@ -806,7 +869,7 @@
 </ul>
 </li>
 <li>
-<p>Partially connected networks = <strong>Unshared Convolution</strong>, cases when we are guaranteed that a certain feature will only appear in a certain part of the picture:
+<p><strong>Partially connected networks</strong> = <strong>Unshared Convolution</strong>, partially connected without sharing the same parameters. Used when we are guaranteed that a certain feature will only appear in a certain part of the picture:
     <script type="math/tex; mode=display">
     Z_{i,j,k} = \sum_{l,m,n} [V_{l, j+m-1,k+n-1}\;W_{i,j,k,l,m,n}]
     </script>
@@ -821,13 +884,13 @@
 <p>Note: <span class="arithmatex">\(-1\)</span> comes from the index problem, modern computer usually begins its index from 0.</p>
 </li>
 <li>
-<p><strong>Basic Convolution</strong>:
+<p><strong>Fundamental Convolution</strong>:
     <script type="math/tex; mode=display">
     Z_{{i,j,k}}=\sum_{l,m,n}V_{l,j+m-1,k+n-1}\;K_{i,l,m,n}
     </script>
 </p>
 <ul>
-<li>Kernel: <span class="arithmatex">\(K_{i,j,k,l}\)</span>, <span class="arithmatex">\(i\)</span> tunnel, connection with the <span class="arithmatex">\(j\)</span> tunnel of the input, positioned <span class="arithmatex">\((k,l)\)</span>, </li>
+<li>Kernel: <span class="arithmatex">\(K_{i,j,k,l}\)</span>, the <span class="arithmatex">\(i\)</span> (output) tunnel, connection with the <span class="arithmatex">\(j\)</span> input tunnel, positioned <span class="arithmatex">\((k,l)\)</span>, that is to say, do a linear combination to all the channels of the input.</li>
 </ul>
 </li>
 <li>
@@ -837,6 +900,143 @@
     </script>
 </p>
 </li>
+<li>
+<p><strong>(Zero) Padding</strong>: The <span class="arithmatex">\(V\)</span> input will decrease its size each layer. </p>
+<ul>
+<li><strong>Valid Convolution</strong>: Only allows access to the position where the entire core can be fully contained in those images. A <span class="arithmatex">\(m\)</span>-width input + A <span class="arithmatex">\(k\)</span>-width kernel will end up with a <span class="arithmatex">\((m-(k-1))\)</span>-width output.</li>
+<li><strong>Same Convolution</strong>: Only enough zero filling is performed to keep the output and input the same size. Problem: The boundary pixels are accessed less time than the other pixels.</li>
+<li><strong>Full Convolution</strong>: Each pixel are accessed <span class="arithmatex">\(k\)</span> times, by padding <span class="arithmatex">\((k-1)\)</span> zeros on each side. The size of the output is now <span class="arithmatex">\(m+2(k-1)-(k-1)=m+k-1\)</span>.</li>
+<li>The best amount of zeros padded is between the amount of zeros required in <strong>valid convolution</strong> and <strong>same convolution</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Tiled Convolution</strong>: 
+    <script type="math/tex; mode=display">
+    Z_{i,j,k} =  \sum_{l,m,n}[V_{l,j-1+m,k-1+n}\;K_{i,l,m,n,j\%t+1,k\%t+1}]
+    </script>
+</p>
+<ul>
+<li><span class="arithmatex">\(t\)</span> is the size of a specific type of kernel. If <span class="arithmatex">\(t\)</span> equals to the width of the output, then it is <strong>partially connected network</strong>.</li>
+<li>The layer cycles in a collection of different kernels.</li>
+</ul>
+</li>
+<li>
+<p>Comparison between <strong>partially connected, tiled convolution, convolution networks</strong>: <img alt="" src="../assets/CNN-1.png" /></p>
+</li>
+<li>
+<p>Characteristics Learning: The supervised learning of special characteristics(kernels) are relatively expensive, therefore these methods are applied:</p>
+<ul>
+<li>Random Initialization</li>
+<li>Manually design</li>
+<li>Unsupervised learning</li>
+</ul>
+</li>
+</ul>
+<h2 id="resnet">ResNet</h2>
+<ul>
+<li><strong>Residual Newtorks (ResNet)</strong> is a CNN structure designed to contain hundreds of layers.</li>
+<li>
+<p><strong>Degradation Problem</strong>: Saturation of accuracy when numbers of layers increases, and surprisingly a decline follows.</p>
+</li>
+<li>
+<p>Principle:</p>
+</li>
+<li><strong>Identity mapping</strong>: By adding an infinite number of layers that <span class="arithmatex">\(f(x)=x\)</span>, will not make the result better, nor leads to a worser result.</li>
+<li>Suppose <span class="arithmatex">\(f\in \mathcal F\)</span>, where <span class="arithmatex">\(f^\star\)</span> is the best function. A larger function set will not necessarily leads to <span class="arithmatex">\(f^\star\)</span>, while a new set containing <span class="arithmatex">\(u = \mathrm{id}\)</span> is theoratically realistic : <img alt="" src="../assets/ResNet.png" /></li>
+<li>Therefore, by representing <span class="arithmatex">\(f\)</span> as
+        <script type="math/tex; mode=display">
+        f = (f - \mathrm{id}) + \mathrm{id} \iff f(x) = \mathcal F(x) + x
+        </script>
+        We are now required to learn <span class="arithmatex">\(\mathcal F\)</span> instead of <span class="arithmatex">\(f\)</span>, <span class="arithmatex">\(\mathcal F\to 0\)</span> if there is no update to the model. It is relative more easier to simplify, because we can use the <span class="arithmatex">\(L_2\)</span> norm.</li>
+<li>
+<p><strong>Residual Block</strong>: <img alt="" src="https://pic1.zhimg.com/80/v2-c1af5bdb8363bd1c2e635cc3a9f96ff8_1440w.webp" /></p>
+<ul>
+<li>Reducing the amount of parameters by using 1x1 kernel: <img alt="" src="https://pic2.zhimg.com/80/v2-8fb97864957016a6a342f8fad02f06ed_1440w.webp" /></li>
+</ul>
+</li>
+<li>
+<p>Structure: <img alt="" src="https://pic2.zhimg.com/80/v2-c29abdce12af9caa46fb929069715fe9_1440w.webp" /></p>
+<ul>
+<li>Resnet use stride instead of pooling to decrease the dimensions.</li>
+</ul>
+</li>
+<li>A great thanks to <a href="https://zhuanlan.zhihu.com/p/28413039">给妹纸的深度学习教学(4)——同Residual玩耍</a>.</li>
+</ul>
+<h2 id="relationship-with-neural-science">Relationship with Neural Science</h2>
+<ul>
+<li>
+<p>Primary Visual Cortex (V1) and CNN</p>
+<ul>
+<li>
+<p>Similarities:</p>
+<ul>
+<li>
+<p>Spatial mapping: a two-dimensional structure that reflects the image structure of the retina.</p>
+</li>
+<li>
+<p>Simple Cell <span class="arithmatex">\(\iff\)</span> Convolution layer and <strong>detective layer</strong>: A linear function in the receptive field.</p>
+</li>
+<li>
+<p>Complex cell <span class="arithmatex">\(\iff\)</span> Pooling layer: Non-linearity, invariance to slight translations.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Differences:</p>
+<ul>
+<li>
+<p>Attention Mechanism: Special focus on certain parts or areas.</p>
+</li>
+<li>
+<p>Integration with other sensations, such as sounds and smells.</p>
+</li>
+<li>
+<p>Besides object detection, visual mechanisms also includes comprehension of all the scenes, including relationships between different objects.</p>
+</li>
+<li>
+<p>Feedbacks from subsequent layers.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>How to train CNNs? Neural scientists haven't given an effective response.</p>
+</li>
+<li>
+<p><strong>Reverse Correlation</strong>: Impossible to calculate the weight of certain neurons, therefore replaced by detecting their responses, thus obtaining the approximate weight.</p>
+<ul>
+<li><strong>Gabor Function</strong>: weight of a certain pixel in a 2d figure: 
+    <script type="math/tex; mode=display">
+    s(I)= \sum_x\sum_yw(x,y) I(x,y)
+    </script>
+<ul>
+<li><span class="arithmatex">\(s(I)\)</span> response to pixel with coordinates <span class="arithmatex">\(I(x,y)\)</span></li>
+<li><span class="arithmatex">\(w(x,y)\)</span> defined as
+    <script type="math/tex; mode=display">
+    w(x,y,\alpha,\beta_x,\beta_y, f,\phi,x_0,y_0,\tau) = \alpha \exp(-\beta x'^2-\beta_yy'^2) \cos (fx'+\phi)
+    </script>
+    where
+    <script type="math/tex; mode=display">
+    x' = (x-x_0)\cos(\tau)+(y-y_0)\sin(\tau)
+    </script>
+    and
+    <script type="math/tex; mode=display">
+    y' = (y-y_0)\sin(\tau)+(y-y_0)\cos(\tau)
+    </script>
+<ul>
+<li><span class="arithmatex">\(\exp\)</span> term limits the response only to these near <span class="arithmatex">\((x_0,y_0)\)</span></li>
+<li><span class="arithmatex">\(\cos\)</span> term controls how the neuron will response to different brightness of the light along <span class="arithmatex">\(x'\)</span> axe. Simple cells are excited when the phase of the image light wave matches the phase of the cell. <span class="arithmatex">\(\phi\)</span> can control the phase.</li>
+<li><span class="arithmatex">\((x_0,y_0,\tau)\)</span> together define the coordinate system by translation and rotation.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>When human beings staring at a certain object &lt;100ms, information flows from LGN, V1, V2 to IT, where IT has been proved to be semblable to CNNs.</p>
+</li>
 </ul>
 <h2 id="references">References</h2>
 <ol>
@@ -845,6 +1045,9 @@
 </li>
 <li>
 <p><a href="https://windmissing.github.io/Bible-DeepLearning/Chapter9/1Convolution.html">Notes for Deep Learning, by GitHub user windmissing</a></p>
+</li>
+<li>
+<p><a href="https://www.cnblogs.com/LittleHann/p/6792511.html">卷积思想理解、Convolutional Neural Network（CNN）卷积神经网络初探</a></p>
 </li>
 </ol>
 
