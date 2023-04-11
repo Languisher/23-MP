@@ -403,6 +403,68 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Adversarial Attack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Adversarial Attack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/AA/Adversarial-Attack/" class="md-nav__link">
+        Adversarial Attack
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/CV/ImageNet/" class="md-nav__link">
+        ImageNet
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -520,7 +582,7 @@
   
     <li class="md-nav__item">
       <a href="../../M/An/Topology/" class="md-nav__link">
-        Topology
+        Topologie
       </a>
     </li>
   
@@ -672,6 +734,13 @@
           <li class="md-nav__item">
   <a href="#diffraction-de-frauhofer-pupilles-fondamentales" class="md-nav__link">
     Diffraction de Frauhofer, Pupilles Fondamentales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ouverture-circulaire" class="md-nav__link">
+    Ouverture Circulaire
   </a>
   
 </li>
@@ -870,10 +939,86 @@ I_\text{max} \approxeq 4I_0\left(1+\left|\cos\left(\frac{\Delta \omega}{2c}\righ
 </p>
 </blockquote>
 <ul>
-<li>On place maintenant devant l'ouverture <span class="arithmatex">\((T)\)</span> un objet de transparence <span class="arithmatex">\(\tau(P)\)</span> variable, définie par <span class="arithmatex">\(\underline{A}(P)= \tau(P)\times \underline{A}(P^-)\)</span>, donc : 
+<li>
+<p>On place maintenant devant l'ouverture <span class="arithmatex">\((T)\)</span> un objet de transparence <span class="arithmatex">\(\tau(P)\)</span> variable, définie par <span class="arithmatex">\(\underline{A}(P)= \tau(P)\times \underline{A}(P^-)\)</span>, donc : 
     <script type="math/tex; mode=display">
-    \boxed{\underline{A}_{\text{diff}}(M) = K \underline{a}_0 \iint_{(T)} \tau(x_P,y_P)\exp(jk_0(\alpha x_P + \beta y_P)) \;\mathrm{d} \Sigma_P}
+    \boxed{\underline{A}_{\text{diff}}(M) = K \underline{a}_0 \iint_{(T)} \underline{\tau}(x_P,y_P)\exp(jk_0(\alpha x_P + \beta y_P)) \;\mathrm{d} \Sigma_P}
     </script>
+</p>
+<ul>
+<li>La <strong>transparence complex</strong> notée <span class="arithmatex">\(\underline{\tau}(P)\)</span>, la fonction qui modifie l'ampltiude de l'onde par :
+    <script type="math/tex; mode=display">
+    \underline{\tau}(P) = \tau(P).e^{-j\phi(P)}
+    </script>
+</li>
+</ul>
+</li>
+<li>
+<p>L'éclairement diffracté a pour expression<br />
+<script type="math/tex; mode=display">
+    \boxed{I_{\text{diff}}(M) = I_0\; \mathrm{sinc}^2 \left( \frac{\pi \alpha a}{\lambda_0}\right) \mathrm{sinc}^2\left( \frac{\pi\beta b}{\lambda_0}\right)}
+    </script>
+</p>
+<blockquote>
+<p>Preuve :
+   <script type="math/tex; mode=display">
+   \begin{align}
+   \underline{A}_{\text{diff}}(M) &= K \underline{a_{0}} \int _{x_{p}= -a / 2}^ {a / 2} \int _{y_{p}= -b / 2}^{b / 2}1 \times \exp(jk_{0}(\alpha x_{p}+ \beta x_{p})) \, dx_{p}  \, dy _{p} \\
+   &= K \underline{a_{0}} \left[  \frac{- \exp(jk_{0 }\alpha a / 2)- \exp(jk_{0}\alpha (- a / 2))}{jk_{0}\alpha} \right]\left[  \frac{- \exp(jk_{0 }\beta b / 2)- \exp(jk_{0}\beta (- b / 2))}{jk_{0}\beta} \right] \\
+   &= K \underline{a_{0}} \frac{a}{2} \frac{b}{2 }\left[  \frac{2j \sin(k_{0}\alpha a/2)}{jk_{0} \alpha a/2} \right]\left[  \frac{2j \sin(k_{0}\beta b/2)}{jk_{0} \beta b/2} \right]  \\
+   I_{\text{diff}}(M) &= |\underline{A}_{\text{diff}}|^2 \\
+   &=|K^2\underline{a_{0} }ab|^2\mathrm{sinc}^2\left(  \frac{2\pi}{\lambda_{0} } \alpha \frac{a}{2} \right) \mathrm{sinc}^2\left(  \frac{2\pi }{\lambda_{0}} \beta  \frac{b}{2} \right)
+   \end{align}
+   </script>
+</p>
+</blockquote>
+<ul>
+<li>
+<p>En incidence non normale, remplace <span class="arithmatex">\(\alpha \to \alpha - \alpha_i\)</span> et <span class="arithmatex">\(\beta \to \beta - \beta_i\)</span></p>
+</li>
+<li>
+<p>Quand l'ouverture est centrée en <span class="arithmatex">\((x_0,y_0)\)</span>, c'est le déphasage de l'onde qui passe par le centre de la pupille, mais <span class="arithmatex">\(I_\text{diff}(M)\)</span> aucun changement.</p>
+</li>
+<li>
+<p>La lumière est principalement diffractée dans un secteur tel que
+    <img alt="" src="../assets/Secteur-Angulaire.png" />
+    <script type="math/tex; mode=display">
+    \Delta \frac{\pi \alpha a}{\lambda_0} = \pi,\;\Delta \frac{\pi \beta b}{\lambda_0}= \pi \implies \Delta \alpha \approxeq \frac{\lambda}{a},\; \Delta \beta \approxeq \frac{\lambda}{b}
+    </script>
+</p>
+</li>
+<li>
+<p>Sur l'écran situé dans le plan focal (<span class="arithmatex">\(\alpha = f'/a, \; \beta = f'/b\)</span>), les zéros d'éclairement sont les lignes 
+    <script type="math/tex; mode=display">
+    x' = n \frac{\lambda f'}{a},\; y' = m \frac{\lambda f'}{b}
+    </script>
+</p>
+</li>
+<li>
+<p>Limite de l'optique géométrique : Si <span class="arithmatex">\(\lambda \ll a\)</span> et <span class="arithmatex">\(\lambda \ll b\)</span>, la figure de diffraction donne un éclairement qui est nul presque partout sauf en <span class="arithmatex">\(x'= y'=0\)</span></p>
+</li>
+<li>
+<p><strong>Diffraction par une fent très allongée</strong> : La diffraction se produit dans un plan perpendiculaire à la fente.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="ouverture-circulaire">Ouverture Circulaire</h3>
+<ul>
+<li>
+<p>En notant <span class="arithmatex">\(P(\rho, \varphi)\)</span> et <span class="arithmatex">\(M(\rho',\varphi')\)</span> en coordonnées polaires,
+    <img alt="" src="../assets/Ouverture-Circulaire.png" />
+    <script type="math/tex; mode=display">
+    \underline{A}_{\text{diff}}(M) = K \underline{a}_{0}. \frac{2\pi}{(k_{0}\sin \theta)^ 2} [xJ_{1}(x)]_{0}^{k_{0}a \sin \theta},\quad I(\theta) = I_{0 }\left( \frac{2J_{1}(k_{0}a \sin \theta)}{k_{0}a \sin \theta} \right)^2
+    </script>
+    avec 
+    <script type="math/tex; mode=display">
+    J_0(x) = \frac{1}{2\pi} \int_0^{2\pi} e^{jx \cos \varphi} \mathrm{d}\varphi,\; xJ_0(x) = \frac{\mathrm{d}(xJ_1(x))}{\mathrm{d}(x)}
+    </script>
+</p>
+<blockquote>
+<p><a href="../assets/Ouverture-Circulaire-1.png">Preuve</a></p>
+</blockquote>
 </li>
 </ul>
 

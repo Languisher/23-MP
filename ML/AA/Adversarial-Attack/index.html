@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../Topology/">
+        <link rel="prev" href="../../CV/Brain-Inspired-CNN/">
       
       
-        <link rel="next" href="../Calcul-Diff%C3%A9rentielle/">
+        <link rel="next" href="../../CV/ImageNet/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>Convexité - Brandon Lin</title>
+        <title>Adversarial Attack - Brandon Lin</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#convexite" class="md-skip">
+        <a href="#adversarial-attack" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Convexité
+              Adversarial Attack
             
           </span>
         </div>
@@ -320,14 +320,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
@@ -336,7 +338,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Machine Learning
@@ -376,7 +378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ML/CV/CNN/" class="md-nav__link">
+      <a href="../../CV/CNN/" class="md-nav__link">
         Convolutional Network
       </a>
     </li>
@@ -390,7 +392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ML/CV/Brain-Inspired-CNN/" class="md-nav__link">
+      <a href="../../CV/Brain-Inspired-CNN/" class="md-nav__link">
         Brain-inspired CNN
       </a>
     </li>
@@ -409,14 +411,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
       
       
       
@@ -425,7 +429,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           Adversarial Attack
@@ -436,11 +440,231 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../ML/AA/Adversarial-Attack/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Adversarial Attack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Adversarial Attack
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introductions" class="md-nav__link">
+    Introductions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Définitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Définitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    攻击目标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    攻击者认知
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    衡量
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    生成对抗样本
+  </a>
+  
+    <nav class="md-nav" aria-label="生成对抗样本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    白盒攻击
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l-bfgs" class="md-nav__link">
+    L-BFGS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fgsm-fast-gradient-sign-method" class="md-nav__link">
+    FGSM (Fast Gradient Sign Method)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deepfool" class="md-nav__link">
+    DeepFool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsma-jacobian-based-sallency-map-attack" class="md-nav__link">
+    JSMA (Jacobian-based  sallency map attack)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bim-basic-iterative-method-pgd-projected-gradient-descent" class="md-nav__link">
+    BIM (Basic Iterative Method) / PGD (Projected Gradient Descent)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cw-attack" class="md-nav__link">
+    C&amp;W Attack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ground-truth-attack" class="md-nav__link">
+    Ground Truth Attack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    一像素攻击
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l_1-l_2-norm" class="md-nav__link">
+    结合 \(l_1\) 和 \(l_2\) norm 攻击
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#universal-attack" class="md-nav__link">
+    Universal Attack
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spatially-transformed-attack" class="md-nav__link">
+    Spatially Transformed Attack
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    黑盒攻击
+  </a>
+  
+    <nav class="md-nav" aria-label="黑盒攻击">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#substitute-model" class="md-nav__link">
+    Substitute Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zoo-zeroth-order-optimization" class="md-nav__link">
+    ZOO: Zeroth order optimization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-efficient-black-box-attack" class="md-nav__link">
+    Query-efficient black-box attack
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    灰盒攻击
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    参考资料
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -459,7 +683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ML/CV/ImageNet/" class="md-nav__link">
+      <a href="../../CV/ImageNet/" class="md-nav__link">
         ImageNet
       </a>
     </li>
@@ -479,16 +703,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
       
@@ -497,7 +719,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Maths (French)
@@ -537,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AL/Endomorphismes/" class="md-nav__link">
+      <a href="../../../M/AL/Endomorphismes/" class="md-nav__link">
         Endomorphismes
       </a>
     </li>
@@ -556,16 +778,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
       
       
       
@@ -574,7 +794,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
           Analyse
@@ -587,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Topology/" class="md-nav__link">
+      <a href="../../../M/An/Topology/" class="md-nav__link">
         Topologie
       </a>
     </li>
@@ -599,99 +819,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Convexité
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../M/An/Convexit%C3%A9/" class="md-nav__link">
         Convexité
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#convexe-concave-affine" class="md-nav__link">
-    Convexe, Concave, Affine
-  </a>
-  
-    <nav class="md-nav" aria-label="Convexe, Concave, Affine">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#epigraphe" class="md-nav__link">
-    Épigraphe
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#proprietes" class="md-nav__link">
-    Propriétés
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inegalites" class="md-nav__link">
-    Inégalités
-  </a>
-  
-    <nav class="md-nav" aria-label="Inégalités">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cas-discrete" class="md-nav__link">
-    Cas Discrète
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inegalite-de-jensen" class="md-nav__link">
-    Inégalité de Jensen
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -703,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Calcul-Diff%C3%A9rentielle/" class="md-nav__link">
+      <a href="../../../M/An/Calcul-Diff%C3%A9rentielle/" class="md-nav__link">
         Calcul Différentiel
       </a>
     </li>
@@ -788,189 +920,208 @@
                   
 
 
-<h1 id="convexite">Convexité</h1>
-<blockquote>
-<p>Exercices : <a href="http://moodle.speit.sjtu.edu.cn/pluginfile.php/35074/mod_resource/content/3/TDs_Topologie_et_calcul_differentiel_2022_2023.pdf">TD3</a></p>
-</blockquote>
-<h2 id="convexe-concave-affine">Convexe, Concave, Affine</h2>
+<h1 id="adversarial-attack">Adversarial Attack</h1>
+<h2 id="introductions">Introductions</h2>
+<p>深度神经网络的安全问题已经成为一个主要关注点：
+- 如果NN模型无法识别路边的 “STOP” 标志，车辆继续行驶 
+- 公司经常使用图卷积网络（GCN）来决定其客户是否值得信任。</p>
+<p>通过添加难以察觉的扰动攻击，深度学习模型被混淆，所有应用领域中普遍存在的例子提醒研究人员不要在安全关键的机器学习任务中直接采用DNN。</p>
 <ul>
-<li>
-<p><strong>Définition</strong> : Soit <span class="arithmatex">\(f:I\to \mathbb{R}\)</span>, <span class="arithmatex">\(f\)</span> est dite <strong>convexe</strong> si elle vérifie 
+<li><strong>对抗样本</strong>是机器学习模型的输入，攻击者故意设计这些输入以导致模型出错”。在图像分类领域，这些通用示例是故意合成的图像，看起来<em>几乎与原始图像完全相同</em>，但可能误导分类器提供错误的预测输出![[截屏2023-03-02 09.24.24.png]]</li>
+</ul>
+<p>对策以抵抗<strong>对抗样本</strong>的攻击：
+- 梯度掩蔽：由于大多数攻击算法都基于分类器的梯度信息，因此掩蔽或模糊梯度将融合攻击机制
+- 鲁棒性优化：这些研究显示了如何训练一个能够正确分类对抗性示例的鲁棒性高的分类器。
+- 横向检测：这些方法试图在向深度学习模型反馈样本之前<em>检查样本是良性还是对抗性</em>的。它可以被视为防范对抗性例子的一种方法。这些方法提高了DNN对对抗性示例的抵抗力。</p>
+<h2 id="definitions">Définitions</h2>
+<h3 id="_1">攻击目标</h3>
+<ul>
+<li>Poisoning attack vs Evasion attack: 毒药攻击就是可以修改训练数据，“毒化”数据；躲避攻击就是只可以修改测试数据，试图“躲避”模型的正常分类。</li>
+<li>Targeted attack versus non-targeted attack: 目的都是分错类，但定向攻击强调的是分到特定的类。</li>
+</ul>
+<h3 id="_2">攻击者认知</h3>
+<ul>
+<li><strong>白盒攻击</strong>在白盒设置中，对手可以访问目标神经网络的所有信息，包括其架构、参数、梯度等。结构和参数有助于人们清楚地理解DNN模型的脆弱性，并且可以对其进行数学分析。</li>
+<li><strong>黑盒攻击</strong>在黑盒攻击设置中，DNN模型的内部配置对对手不可用。对手只能输入数据并查询模型的输出。他们通常通过不断地向盒子中输入样本并观察输出来攻击模型，以揭示模型的输入-输出关系，并识别其弱点。与白盒攻击相比，黑盒攻击在应用程序中更实用，因为模型设计者通常出于专有原因而不开源其模型参数。</li>
+<li><strong>半白（灰）盒攻击</strong>在半白盒或灰盒攻击设置中，黑客训练生成模型以在白盒设置中生成对抗性示例。一旦生成模型得到训练，攻击者就不再需要受害者模型，并且可以在黑盒背景下制作对抗性示例</li>
+</ul>
+<h3 id="_3">衡量</h3>
+<ul>
+<li><strong>最小扰动</strong>：已知分类器 <span class="arithmatex">\(F\)</span>，数据 <span class="arithmatex">\((x,y)\)</span>，扰动有最小扰动（模）：
     <script type="math/tex; mode=display">
-    \forall(a,b) \in I^2,\; \forall t\in [0, 1],\;f((1-t)a+tb))\leq (1-t)f(a)+tf(b)</script>
-</p>
-</li>
-<li>
-<p><span class="arithmatex">\(f\)</span> est dite <strong>concave</strong> si elle vérifie 
-    <script type="math/tex; mode=display">
-    -f \text{ est convexe}
+    \delta=\arg \min{\Vert \delta\Vert } \text{ s.t. } F(x+\delta)\ne y
     </script>
-</p>
-</li>
-<li>
-<p>Si <span class="arithmatex">\(f:I\to \mathbb{R}\)</span> est à la fois <strong>convexe</strong> et <strong>concave</strong>, alors <span class="arithmatex">\(f\)</span> est <strong>affine</strong>.</p>
-</li>
-<li>
-<p><strong>Propriété</strong> : <em>Sur l'intervalle</em> <span class="arithmatex">\([a,b]\)</span>, la courbe passe <em>en-dessous</em> de sa corde entre <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(b\)</span>. <em>En-dehors de l'intervalle</em> <span class="arithmatex">\([a,b]\)</span>, elle passe <em>au-dessus</em> de cette corde. Elle doit aussi être <em>au-dessus</em> de sa tangente. <img alt="" src="../assets/Convexe-Corde-Courbe.png" /></p>
-</li>
-<li>
-<p><strong>Propriété</strong> : la <strong>midconvexité</strong> - Soit <span class="arithmatex">\(f\)</span> est une fonction <strong>continue</strong> sur <span class="arithmatex">\(I\)</span>, alors 
+    (<span class="arithmatex">\(\Vert\Vert\)</span>) 通常指的是 <span class="arithmatex">\(l_p\)</span> 范数</li>
+<li><strong>鲁棒性</strong>：扰动的范数 
     <script type="math/tex; mode=display">
-    [f \text{ convexe}] \iff [\forall(x,y)] \in I^2,\; f\left( \frac{x+y}{2} \right) \leq \frac{f(x)+f(y)}{2}
+    r(x, F)=\Vert \delta_{\min{}}\Vert 
     </script>
-</p>
+</li>
+<li><strong>全局鲁棒性</strong>：在整个群上的鲁棒性期望 
+    <script type="math/tex; mode=display">
+    \rho(F) = \mathbb{E}_{x \sim \mathcal{D}}\;r(x,F)
+    </script>
+</li>
+<li><strong>Most-adversarial example</strong>：满足 <span class="arithmatex">\(L\)</span> 最大，且干扰样本在原样本的 <span class="arithmatex">\(\varepsilon\)</span>-neighbor ball 里：
+    <script type="math/tex; mode=display">
+    x_{adv} = \arg \max L(x' , F) \text{ s.t. } \Vert x' -x\Vert \leq \varepsilon
+    </script>
+</li>
+<li><strong>对抗损失</strong>：<strong>Most-adversarial example</strong>的损失函数：
+    <script type="math/tex; mode=display">
+    L(x_{adv}) = \max{ L(x' ,y)}
+    </script>
+</li>
+<li><strong>全局对抗损失</strong>：在整个群上的对抗损失衡量 
+    <script type="math/tex; mode=display">
+    R_{adv}(F) = \mathbb{E}\max{L(x' ,y)}
+    </script>
+</li>
+<li>分类器表现正确性：（注意是样本 <span class="arithmatex">\(x\)</span> 来自自然分布）
+    <script type="math/tex; mode=display">
+    R(F) = \mathbb{E}_{x \sim \mathcal{ D}}\;L(x, y)
+    </script>
 </li>
 </ul>
-<h3 id="epigraphe">Épigraphe</h3>
+<h2 id="_4">生成对抗样本</h2>
+<h3 id="_5">白盒攻击</h3>
 <ul>
-<li>
-<p><strong>Définition</strong> : Soit <span class="arithmatex">\(f: I \to \mathbb{R}\)</span>, on appelle <strong>épigraphe</strong> de <span class="arithmatex">\(f\)</span> l'ensemble 
+<li>已知分类器 <span class="arithmatex">\(C\)</span> 和样本 <span class="arithmatex">\((x,y)\)</span>，生成 <span class="arithmatex">\(x'\)</span> 使得 <span class="arithmatex">\(\Vert x' - x\Vert \leq \varepsilon\)</span>，且 <span class="arithmatex">\(C(x' )=t \ne y\)</span>.</li>
+<li><span class="arithmatex">\(\Vert  \cdot\Vert\)</span> 衡量 <span class="arithmatex">\(x'\)</span> 和 <span class="arithmatex">\(x\)</span> 间区别</li>
+</ul>
+<h3 id="l-bfgs">L-BFGS</h3>
+<ul>
+<li>攻击深度神经网络图片分类器，目的：
     <script type="math/tex; mode=display">
-    \mathcal{E}_{f}=\{(x,y)\in I \times \mathbb{R},\; y\geq f(x)\}
+    \min{\Vert x-x' \Vert _{2}^ 2} \text{ s.t. } C(x')=t \text{ and } x' \in [0,1]^m
     </script>
-</p>
 </li>
-<li>
-<p>Soit <span class="arithmatex">\(\mathcal{C}\subset \mathbb{R}^n\)</span>, On dit que <span class="arithmatex">\(\mathcal{C}\)</span> est <strong>convexe</strong> (c'est-à-dire <strong>partie convexe</strong>) si 
+<li>构建损失函数：
     <script type="math/tex; mode=display">
-    \forall(A,B) \in \mathcal{C}^2,\; \forall t\in [0, 1], \; \underbrace{\mathrm{Bar}((A,1-t),(B,t))}_{\text{souvent } (1-t)A+tB}\in \mathcal{C}
+    \underbrace{\min{c\Vert x-x'\Vert _{2}^2}}_{\text{similarity between }x \text{ and }x'}+\underbrace{\mathcal{L}(x',t)}_{\text{find }x' \text{ which has a small loss to }t}
     </script>
-</p>
+    其中 <span class="arithmatex">\(c\)</span> 是一个常数，通过改变 <span class="arithmatex">\(c\)</span> 找到 <span class="arithmatex">\(x'\)</span></li>
+<li>这个损失函数通过 L-BFGS 实现，迭代式攻击</li>
+</ul>
+<h3 id="fgsm-fast-gradient-sign-method">FGSM (Fast Gradient Sign Method)</h3>
+<ul>
+<li>一步到位，快速生成</li>
+<li>样本构建方式： 
+    <script type="math/tex; mode=display">
+    \begin{cases}
+    x' = x+ \varepsilon \mathrm{sgn}(\nabla_{x}\mathcal{L}(x,y)) \text{ non-target} \\
+    x' = x - \varepsilon \mathrm{sgn}(\nabla_{x}\mathcal{L}(x,t)) \text{ target on } t
+    \end{cases}
+    </script>
 </li>
-<li>
-<p><strong>Propriété</strong> : La fonction <span class="arithmatex">\(f\)</span> est convexe <span class="arithmatex">\(\iff\)</span> L'<strong>épigraphe</strong> <span class="arithmatex">\(\mathcal{E}_{f}\)</span> de <span class="arithmatex">\(f\)</span> est un ensemble convexe</p>
+<li>对于有目标攻击，其本质即为：
+    <script type="math/tex; mode=display">
+    \min{\mathcal{L}(x', t)} \text{ s.t. }\Vert x'-x\Vert _{\infty}< \varepsilon \text{ and } x' \in [0,1]^m
+    </script>
 </li>
 </ul>
-<h3 id="proprietes">Propriétés</h3>
+<h3 id="deepfool">DeepFool</h3>
+<ul>
+<li>找到一条跨越决策边界的路径</li>
+<li>例如样本分类为 4 但将被误导为 3 的边界为超平面 
+    <script type="math/tex; mode=display">
+    \mathcal{F}_{3}= \{F(x)_{4}-F(x)_{3}=0\}
+    </script>
+<img alt="" src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9Qc2hvOWRtN29ER3RnYmh1WjRDdFJqaWMzdUE0RElpYXJ4aWFiSGJFTVVpY3VzaGlhM1Y5aWNFQ3dWaWFMRDdFaWNTeTdNR3gxb0hiQkl4dGI5NUR2RDc2Q2EyTGljUS82NDA?x-oss-process=image/format,png" /></li>
+<li>每次迭代时，将超平面在该点微分，并计算在该点的垂直向量。</li>
+<li>DeepFool 的实验同时证明：在 DNN 图片分类器中，几乎所有的样本都与他们的决策边界非常相近。这说明 DNN 模型鲁棒性较差。</li>
+</ul>
+<h3 id="jsma-jacobian-based-sallency-map-attack">JSMA (Jacobian-based  sallency map attack)</h3>
+<ul>
+<li>重复操作，找到哪一个像素是对分类结果影响最大的</li>
+<li>通过计算 <span class="arithmatex">\(J_F(x)\)</span> 去观察 <span class="arithmatex">\(F(x)\)</span> 的变化，其中 
+    <script type="math/tex; mode=display">
+    J_{F}:x \longmapsto \frac{\partial F(x)}{\partial x} = \{ \frac{\partial F_{j}(x)}{\partial x_{i}}\}_{i \times j}
+    </script>
+</li>
+<li>对于有目标攻击，从而使 <span class="arithmatex">\(F_{t}(x)\)</span> 增加或减小 <span class="arithmatex">\(\sum_{j\ne t}F_{j}(x)\)</span>，使得对于样本 <span class="arithmatex">\(x\)</span>，标签 <span class="arithmatex">\(t\)</span> 的得分最高</li>
+</ul>
+<h3 id="bim-basic-iterative-method-pgd-projected-gradient-descent">BIM (Basic Iterative Method) / PGD (Projected Gradient Descent)</h3>
+<ul>
+<li>[[对抗攻击和防御基础#FGSM (Fast Gradient Sign Method)]] 的迭代版本：
+    <script type="math/tex; mode=display">
+    x_{0}=x;\; x^{t+1} = \mathrm{Clip}_{x, \varepsilon}(x^t+\alpha \mathrm{sgn}(\nabla_{x}\mathcal{L}(x^t,y)))
+    </script>
+</li>
+<li><span class="arithmatex">\(\alpha\)</span> 相对较小，迭代次数需要保证能够抵达分类边界，例如数量为 <span class="arithmatex">\(\epsilon / \alpha + 10\)</span></li>
+</ul>
+<h3 id="cw-attack">C&amp;W Attack</h3>
+<ul>
+<li>[[对抗攻击和防御基础#L-BFGS]] 的优化版本：
+    <script type="math/tex; mode=display">
+    \underbrace{\min{c\Vert x-x'\Vert _{2}^2}}_{\text{similarity between }x \text{ and }x'}+\underbrace{c\cdot f(x',t)}_{\text{find an }x' \text{ that has larger score for class }t}
+    </script>
+</li>
+<li>唯一区别：使用 Margin Loss 而不是交叉熵损失函数，优势：当 <span class="arithmatex">\(C(x')=t\)</span> 时，<span class="arithmatex">\(f(x',t)=0\)</span>，因此损失函数直接优化 <span class="arithmatex">\(\min{c\Vert x-x'\Vert_{2}^2}\)</span>，效率更高。</li>
+</ul>
+<h3 id="ground-truth-attack">Ground Truth Attack</h3>
 <ul>
 <li>
-<p><strong>Propriété</strong> : <strong>Inégalité des pentes</strong> : On a que <span class="arithmatex">\(f\)</span> est <strong>convexe</strong> ssi : pour <span class="arithmatex">\(\forall (x,y,z) \in I^3\)</span>, </p>
+<p><strong>Ground Truth Adversarial Example</strong>：找到最小 <span class="arithmatex">\(r\)</span> 使得：以标签中心 <span class="arithmatex">\(x_0\)</span> 的最小球半径内 <span class="arithmatex">\(BO(x_{0},r)\)</span> 不再有对抗样本可以干扰这个样本</p>
+</li>
+<li>
+<p>衡量<strong>最小干扰</strong>即鲁棒性，但由于使用 SMT 效率较慢</p>
+</li>
+</ul>
+<h3 id="_6">一像素攻击</h3>
 <ul>
-<li>记忆：固定一点，另外一点坐标越大，斜率即越大。
-<script type="math/tex; mode=display">
-[x<z<y] \implies \left[ \frac{f(z)-f(x)}{z-x}\leq \frac{f(y)-f(x)}{y-x} \leq \frac{f(y)-f(z)}{y-z}\right]
-</script>
-<img alt="" src="../assets/Inegalite-des-pentes.png" /></li>
+<li>限制扰动的 <span class="arithmatex">\(l_{0}\)</span> norm <span class="arithmatex">\(x'-x\)</span>，即修改的像素数目。</li>
+<li>同时体现了很多模型的鲁棒性较差。</li>
 </ul>
-</li>
-<li>
-<p><strong>Propriété</strong> : Inégalité des pentes, Taux d'accroissement d'une fonction convexe : L'application de <span class="arithmatex">\(f\)</span>, <span class="arithmatex">\(f\)</span> est <strong>convexe</strong> ssi : 
-    <script type="math/tex; mode=display">
-    \tau_{x}:\begin{cases}
-    I\backslash\{x\} &\to \mathbb{R}  \\
-    t&\mapsto \frac{f(t)-f(x)}{t-x}
-    \end{cases} \text{ est croissante}
-    </script>
-</p>
-</li>
-<li>
-<p>Si <span class="arithmatex">\(f:I\to \mathbb{R}\)</span> une fonction <strong>convexe</strong>, alors <span class="arithmatex">\(f\)</span> est <strong>continue</strong> sur <span class="arithmatex">\(I^\circ\)</span>.</p>
-</li>
-<li>
-<p>Si la fonction est <strong>continue</strong> et <strong>dérivable</strong> : 
-    <script type="math/tex; mode=display">
-    [f \text{ convexe sur } I] \iff [f' \text{ croissante sur }I^\circ]
-    </script>
-</p>
+<h3 id="l_1-l_2-norm">结合 <span class="arithmatex">\(l_1\)</span> 和 <span class="arithmatex">\(l_2\)</span> norm 攻击</h3>
 <ul>
-<li><mark>Soit <span class="arithmatex">\(I\)</span> un intervalle ouvert de <span class="arithmatex">\(\mathbb R\)</span>, soit <span class="arithmatex">\(f\in \mathscr C(I,\mathbb R)\)</span> ayant en tout point une dérivée à droite telle que <span class="arithmatex">\(f_d'\)</span> soit croissante, alors <span class="arithmatex">\(f\)</span> est convexe.</mark> Rappel :
-    <script type="math/tex; mode=display">
-    f_d'|_{x=x_0} = \lim_{t\to 0,\;t>0}\frac{f(x_0+t)-f(x_0)}{t}
-    </script>
-    Souvent c'est obligatoire d'assurer si <span class="arithmatex">\(\underset{{x \to x_0^-}}{\lim}f_d'(x)&lt;f_d '|_{x=x_0}\)</span>.</li>
+<li>对于 <span class="arithmatex">\(l_{2}\)</span> 攻击防守表现较好的模型，仍然在该方法前不堪一击。</li>
 </ul>
-</li>
-<li>
-<p>Si la fonction est <strong>continue</strong> et deux fois <strong>dérivable</strong> : 
-    <script type="math/tex; mode=display">
-    [f \text{ convexe}] \iff [f''>0]
-    </script>
-</p>
-</li>
-</ul>
-<h2 id="inegalites">Inégalités</h2>
-<h3 id="cas-discrete">Cas Discrète</h3>
+<h3 id="universal-attack">Universal Attack</h3>
 <ul>
-<li>
-<p><strong>Inégalité de convexité discrète</strong> : Soit <span class="arithmatex">\(f:I \to \mathbb{R}\)</span> <em>convexe</em>, tq <span class="arithmatex">\((\lambda_{1},\dots,\lambda_{n})\in(\mathbb{R}_{+})^n\)</span>, alors 
-    <script type="math/tex; mode=display">
-    f\left( \frac{1}{\sum_{k=1}^n \lambda_{k}}\sum_{k=1}^n\lambda_{k}x_{k} \right) \leq \frac{1}{\sum_{k=1}^n\lambda_{k}}\left( \sum_{k=1}^n\lambda_{k}f(x_{k}) \right)
-    </script>
-    Autrement dit :  <em>L'image du barycentre à coefficients positifs est inférieure ou égale au barycentre des images</em>.</p>
+<li>不仅只针对一个样本，而是误导一群样本（甚至是绝大部分样本）</li>
+</ul>
+<h3 id="spatially-transformed-attack">Spatially Transformed Attack</h3>
 <ul>
-<li>
-<p>Cas <span class="arithmatex">\(f: x \mapsto x^{b/a}\)</span>, <span class="arithmatex">\(\bar x = x^a\)</span> : 
-    <script type="math/tex; mode=display">
-    1<a<b \implies \left(\frac{1}{n} \sum_{j=1}^nx_j^a\right)^{1/a} \le  \left(\frac{1}{n} \sum_{j=1}^nx_j^b\right)^{1/b}
-    </script>
-</p>
-</li>
-<li>
-<p>Cas <span class="arithmatex">\(f = \exp\)</span>, <span class="arithmatex">\(\bar x=\pm\ln (x)\)</span> : 
-    <script type="math/tex; mode=display">
-    \frac{n}{1/x_1+\cdots+1/x_n} \le (x_1x_2\cdots x_n)^{1/n} \le \frac{x_1+\cdots+x_n}{n}
-    </script>
-</p>
-</li>
+<li>不修改特定像素，而是对特定区域的像素进行空间变换（例如：平移、旋转和扭曲）</li>
 </ul>
-</li>
-<li>
-<p><strong>Inégalité de Cauchy-Schwarz discrète</strong> : Retour vers l'<strong>inégalité de Cauchy-Schwarz</strong> : 
-    <script type="math/tex; mode=display">
-    <x,y> \leq |x| |y| \iff \left( \sum a_{i}b_{i} \right)^2\leq \sum a_{i}^2 \sum b_{i}^2 
-    </script>
-</p>
-</li>
-<li>
-<p><strong>Inégalité de Hölder discrète</strong> : Soit <span class="arithmatex">\(p\)</span> et <span class="arithmatex">\(q\)</span> deux nombres réels de <span class="arithmatex">\(]1, +\infty[\)</span> tels que 
-    <script type="math/tex; mode=display">
-    \frac{1}{p}+\frac{1}{q}=1
-    </script>
-    Soit <span class="arithmatex">\((a_{1},\dots,a_{n},b_{1},\dots,b_{n})\in \mathbb{R}_{+}^{2n}\)</span>. Alors, 
-    <script type="math/tex; mode=display">
-    \sum_{k=1}^na_{k}b_{k }\leq\left( \sum_{k=1}^na_{k}^p \right)^{\frac{1}{p}}\left( \sum_{k=1} ^nb_{k}^p\right)^{\frac{1}{q}}
-    </script>
-</p>
-</li>
-</ul>
-<h3 id="inegalite-de-jensen">Inégalité de Jensen</h3>
+<h2 id="_7">黑盒攻击</h2>
+<h3 id="substitute-model">Substitute Model</h3>
 <ul>
-<li>
-<p><strong>Inégalité de Jensen ou Inégalité de convexité continue</strong> : Soit <span class="arithmatex">\(I\)</span> un intervalle de <span class="arithmatex">\(\mathbb{R}\)</span>, soit <span class="arithmatex">\(f\)</span> et <span class="arithmatex">\(h\)</span> définis, continues par morceaux sur <span class="arithmatex">\(I\)</span> avec <span class="arithmatex">\(h \geq 0\)</span>, et telles que 
-    <script type="math/tex; mode=display">
-    \int _{a}^b h(t) \, \mathrm{d}t \text{ et } \int _{a}^b f(t)h(t) \, \mathrm{d}t \text{  existent et } \int _{a}^b h(t) \, \mathrm{d}t>0 
-    </script>
-</p>
-<p>Soit <span class="arithmatex">\(\phi\)</span> une fonction <em>convexe</em> définie sur un intervalle ouvert <span class="arithmatex">\(J\)</span> contenant <span class="arithmatex">\(f(I)\)</span> et telle que 
-<script type="math/tex; mode=display">
-\int _{a}^b \phi(f(t))h(t) \, \mathrm{d}t \text{  existe}
-</script>
-</p>
-<p>Alors, 
-<script type="math/tex; mode=display">
-\boxed{\phi\left( \frac{1}{\int _{a}^b h(t) \, \mathrm{d}t }\int _{a}^b f(t)h(t) \, \mathrm{d}t  \right)\leq \frac{1}{\int _{a}^b h(t) \, \mathrm{d}t } \int _{a}^b \phi(f(t))h(t) \, \mathrm{d}t }
-</script>
-</p>
+<li>基本原理：<strong>Transferbility</strong>：一个能攻击 <span class="arithmatex">\(F_1\)</span> 的样本，也可以攻击拥有与前者结构相似的 <span class="arithmatex">\(F_2\)</span> 模型</li>
+<li>步骤：<ul>
+<li>合成 substitute 训练集，从测试集复制而来、或自己制造样本 <span class="arithmatex">\(X\)</span></li>
+<li>将训练集 <span class="arithmatex">\(X\)</span> 放入分类器 <span class="arithmatex">\(F\)</span> 获得结果 <span class="arithmatex">\(Y\)</span></li>
+<li>选择一个“替代”的 DNN 模型来获得我们的 <span class="arithmatex">\(F'\)</span>，要求模型应与被攻击模型相似</li>
+<li>样本增广，迭代式重复训练，使得 <span class="arithmatex">\(F'\)</span> 的正确率更高</li>
+<li>用白盒攻击的方法攻击 <span class="arithmatex">\(F'\)</span>，获得对抗样本。根据 <strong>Transferbility</strong> 的原理，这些样本对 <span class="arithmatex">\(F\)</span> 同样有效果。</li>
+</ul>
 </li>
-<li>
-<p>Cas spécial : <script type="math/tex; mode=display">\phi\left(  \frac{1}{b-a}\int _{a}^b f(t) \, \mathrm{d}t \right) \leq \frac{1}{b-a}\int _{a}^b \phi(f(t)) \, \mathrm{d}t </script>
-</p>
-</li>
-<li>
-<p><strong>Inégalité de Cauchy-Schwarz continue</strong> : En justifiant que tous les choses existents, on a : 
+<li>FGSM、PGD 和 momentum-based attack 的 <strong>transferbility</strong> 更高</li>
+</ul>
+<h3 id="zoo-zeroth-order-optimization">ZOO: Zeroth order optimization</h3>
+<ul>
+<li>如果知道<strong>置信度</strong>，则不需要构建合成训练集及替代模型</li>
+<li>通过观察预测置信度，可以挖掘出模型的梯度信息：对每一个样本的特定位置 <span class="arithmatex">\(i\)</span> 我们加减一个非常的小量，观察置信度 <span class="arithmatex">\(F(x)\)</span> 的变化：
     <script type="math/tex; mode=display">
-    |\int _{a}^b f(t)g(t) \, \mathrm{d}t | \leq \sqrt{ \int _{a}^b f(t)^2 \, \mathrm{d}t  }\;\sqrt{ \int _{a}^b g(t)^2 \, \mathrm{d}t  }
+    \frac{\partial F(x)}{\partial x_{i}} \approx \frac{F(x+he_{i})-F(x-he_{i})}{2h}
     </script>
-</p>
-</li>
-<li>
-<p><strong>Inégalité de Hölder</strong> : En justifiant que tous les choses existents, on a :
-    <script type="math/tex; mode=display">
-    \boxed{ | \int _{a}^b f(t)g(t) \, \mathrm{d}t| \leq \left( \int _{a}^b |f(t) |^p\, \mathrm{d}t  \right)^{1/p} \left( \int _{a}^b |g(t) |^q\, \mathrm{d}t  \right)^{1/q}} 
-    </script>
-</p>
 </li>
 </ul>
+<h3 id="query-efficient-black-box-attack">Query-efficient black-box attack</h3>
+<ul>
+<li>大量的“测试”可能会被禁止（例如：封 IP），因此需要提高攻击的效率</li>
+<li>模型的输出依赖于围绕 <span class="arithmatex">\(x\)</span> 的变化，同样也是观察 <span class="arithmatex">\(F\)</span> 的梯度</li>
+</ul>
+<h2 id="_8">灰盒攻击</h2>
+<ul>
+<li>从 GAN 中生成对抗样本</li>
+<li>优势：效率更快，生成的样本更加自然和难以被发现</li>
+</ul>
+<h2 id="_9">参考资料</h2>
+<ol>
+<li>Xu, H., Ma, Y., Liu, HC. <em>et al.</em> Adversarial Attacks and Defenses in Images, Graphs and Text: A Review. <em>Int. J. Autom. Comput.</em> <strong>17</strong>, 151–178 (2020). https://doi.org/10.1007/s11633-019-1211-x</li>
+</ol>
 
 
 

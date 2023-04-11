@@ -19,7 +19,7 @@
     
     
       
-        <title>Topology - Brandon Lin</title>
+        <title>Topologie - Brandon Lin</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#topology" class="md-skip">
+        <a href="#topologie" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Topology
+              Topologie
             
           </span>
         </div>
@@ -405,6 +405,68 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Adversarial Attack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Adversarial Attack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/AA/Adversarial-Attack/" class="md-nav__link">
+        Adversarial Attack
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/CV/ImageNet/" class="md-nav__link">
+        ImageNet
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -535,12 +597,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Topology
+          Topologie
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Topology
+        Topologie
       </a>
       
         
@@ -566,9 +628,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#boules-fermees" class="md-nav__link">
-    Boules, Fermées
+  <a href="#boules-parties" class="md-nav__link">
+    Boules, Parties
   </a>
+  
+    <nav class="md-nav" aria-label="Boules, Parties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boules" class="md-nav__link">
+    Boules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parties-fermes" class="md-nav__link">
+    Parties Fermés
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parties-ouverts" class="md-nav__link">
+    Parties Ouverts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -686,7 +775,7 @@
                   
 
 
-<h1 id="topology">Topology</h1>
+<h1 id="topologie">Topologie</h1>
 <h2 id="distance-diametre-norme">Distance, Diamètre, Norme</h2>
 <ul>
 <li>
@@ -757,7 +846,8 @@
 </p>
 </li>
 </ul>
-<h2 id="boules-fermees">Boules, Fermées</h2>
+<h2 id="boules-parties">Boules, Parties</h2>
+<h3 id="boules">Boules</h3>
 <blockquote>
 <p>On soit <span class="arithmatex">\((E,d)\)</span> un espace métrique.</p>
 </blockquote>
@@ -808,6 +898,9 @@
 </li>
 </ul>
 </li>
+</ul>
+<h3 id="parties-fermes">Parties Fermés</h3>
+<ul>
 <li>
 <p>Soit <span class="arithmatex">\(F\subset E\)</span>. On dit <span class="arithmatex">\(F\)</span> est <strong>fermé</strong> dans <span class="arithmatex">\(E\)</span> si
     <script type="math/tex; mode=display">
@@ -817,28 +910,39 @@
     \forall x\in E,\;[x\in F] \iff [d(x,F)=0]
     </script>
 </p>
-</li>
-<li>
-<p><strong>Propriétés</strong> :</p>
 <ul>
+<li><strong>Propriétés</strong> :<ul>
 <li><span class="arithmatex">\((F_i)\)</span> une famille q.q. de fermés de <span class="arithmatex">\(E\)</span>, alors <span class="arithmatex">\(\bigcap F_i\)</span> est fermée dans <span class="arithmatex">\(E\)</span></li>
 <li><span class="arithmatex">\((F_i)\)</span> une famille finie de fermés de <span class="arithmatex">\(E\)</span>, alors <span class="arithmatex">\(\bigcup F_i\)</span> est fermée dans <span class="arithmatex">\(E\)</span></li>
 </ul>
 </li>
-<li>
-<p>Soit <span class="arithmatex">\(A \subset E\)</span>, on appelle <strong>adhérence de <span class="arithmatex">\(A\)</span> dans <span class="arithmatex">\(E\)</span></strong> le <em>plus petit fermé de</em> <span class="arithmatex">\(E\)</span> <em>contenant</em> <span class="arithmatex">\(A\)</span>, et on le note <span class="arithmatex">\(\bar A\)</span>.</p>
+</ul>
 </li>
 <li>
-<p>Soit <span class="arithmatex">\(x\in E\)</span>, 
+<p>Soit <span class="arithmatex">\(A \subset E\)</span>, on appelle <strong>adhérence de <span class="arithmatex">\(A\)</span> dans <span class="arithmatex">\(E\)</span></strong> le <em>plus petit fermé de</em> <span class="arithmatex">\(E\)</span> <em>contenant</em> <span class="arithmatex">\(A\)</span>, et on le note <span class="arithmatex">\(\bar A\)</span>.</p>
+<ul>
+<li>Soit <span class="arithmatex">\(x\in E\)</span>, 
     <script type="math/tex; mode=display">
-    x \in \bar{B} \iff \exists \;(x_n)\in B^\mathbb N,\; x_n \underset{n \to +\infty}{\longrightarrow} x
+    x \in \bar{A} \iff \exists \;(x_n)\in A^\mathbb N,\; x_n \underset{n \to +\infty}{\longrightarrow} x
     </script>
 <script type="math/tex; mode=display">
-    x \in \bar{B} \iff \forall \varepsilon>0,\; \exists \;a\in B,\; a\in BO(x, \varepsilon) 
+    x \in \bar{A} \iff \forall \varepsilon>0,\; \exists \;a\in A,\; a\in BO(x, \varepsilon) 
     </script>
-</p>
+</li>
+<li>
+<p>L'ensemble <span class="arithmatex">\(\bar A\)</span> est donc l'ensemble des limites des suites d'éléments de <span class="arithmatex">\(A\)</span>. Il dépend de <span class="arithmatex">\(E\)</span> et <span class="arithmatex">\(d\)</span>.</p>
+</li>
+<li>
+<p><strong>Propriétés</strong> :</p>
 <ul>
-<li>L'ensemble <span class="arithmatex">\(\bar A\)</span> est donc l'ensemble des limites des suites d'éléments de <span class="arithmatex">\(A\)</span>.</li>
+<li><span class="arithmatex">\(A \subset \bar{A}\)</span></li>
+<li><span class="arithmatex">\(\bar{\bar{A}} = \bar{A}\)</span></li>
+<li><span class="arithmatex">\(A = \bar{A} \iff A\)</span> est fermé.</li>
+<li><span class="arithmatex">\(A \subset \bar A \implies \bar A \subset \bar B\)</span></li>
+<li><span class="arithmatex">\(\overline{A \cup B} = \bar{A} \cup \bar{B}\)</span></li>
+<li><span class="arithmatex">\(\overline{A \cap B} \subset \bar{A} \cap \bar{B}\)</span></li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -849,6 +953,39 @@
 </p>
 <ul>
 <li>L'égalité est pris lorsque <span class="arithmatex">\((E, N)\)</span> est un espace <em>normée</em>.</li>
+</ul>
+<blockquote>
+<p>Preuve :
+<span class="arithmatex">\((\implies)\)</span>, <span class="arithmatex">\(BF\)</span> est un boule fermé.
+<span class="arithmatex">\((\impliedby)\)</span>, <span class="arithmatex">\(x \in BF(a,r)\)</span>, alors la suite <span class="arithmatex">\(x_n = \lambda a+(1-\lambda)x\)</span> suffit, ici <span class="arithmatex">\(\lambda = 1/n \in ]0, 1[\)</span>.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Partie Dense</strong>: Soit <span class="arithmatex">\((E,d)\)</span> un espace métrique et <span class="arithmatex">\(A\)</span> une partie de <span class="arithmatex">\(E\)</span>. <span class="arithmatex">\(A\)</span> est <strong>dense</strong> dans <span class="arithmatex">\(E\)</span> si <span class="arithmatex">\(\overline{A}=E\)</span>.</p>
+</li>
+</ul>
+<h3 id="parties-ouverts">Parties Ouverts</h3>
+<ul>
+<li>
+<p><strong>Parties Ouvertes</strong> : Soit <span class="arithmatex">\(O \subset (E,d)\)</span>, on dit que <span class="arithmatex">\(O\)</span> est <strong>ouvert dans</strong> <span class="arithmatex">\(E\)</span> si <span class="arithmatex">\(E\backslash O\)</span> est fermé dans <span class="arithmatex">\(E\)</span>.</p>
+<ul>
+<li>Remarque : C'est FAUX de dire que <span class="arithmatex">\(A\)</span> est ouvert dans <span class="arithmatex">\(E\)</span> car <span class="arithmatex">\(A\)</span> n'est pas fermé.</li>
+</ul>
+</li>
+<li>
+<p><strong>Propriétés</strong> :</p>
+<ul>
+<li><span class="arithmatex">\(\bigcup_{i\in I} O_i\)</span> est ouvert.</li>
+<li>
+<p>Si <span class="arithmatex">\(I\)</span> est fini, alors <span class="arithmatex">\(\bigcap_{i\in I}O_i\)</span> est ouvert.</p>
+</li>
+<li>
+<p>Caractérisation des ouverts : 
+    <script type="math/tex; mode=display">
+    [O \text{ ouvert dans } E] \iff [\forall x\in O, \; \exists \varepsilon >0, \; BO(x, \varepsilon)\subset O]
+    </script>
+</p>
+</li>
 </ul>
 </li>
 </ul>

@@ -329,6 +329,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#markdown-vim" class="md-nav__link">
+    Markdown &amp; Vim
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solutions-to-a-number-of-problems" class="md-nav__link">
+    Solutions to a number of problems
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#reference" class="md-nav__link">
     Reference
   </a>
@@ -462,6 +476,68 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Adversarial Attack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Adversarial Attack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/AA/Adversarial-Attack/" class="md-nav__link">
+        Adversarial Attack
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ML/CV/ImageNet/" class="md-nav__link">
+        ImageNet
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -579,7 +655,7 @@
   
     <li class="md-nav__item">
       <a href="../../M/An/Topology/" class="md-nav__link">
-        Topology
+        Topologie
       </a>
     </li>
   
@@ -713,6 +789,25 @@
 </li>
 <li>Visual Mode -&gt; command line mode, <code>:normal</code></li>
 </ul>
+<h2 id="markdown-vim">Markdown &amp; Vim</h2>
+<ul>
+<li><code>zr</code>: reduces fold level throughout the buffer</li>
+<li><code>zR</code>: opens all folds</li>
+<li><code>zm</code>: increases fold level throughout the buffer</li>
+<li><code>zM</code>: folds everything all the way</li>
+<li><code>za</code>: open a fold your cursor is on</li>
+<li><code>zA</code>: open a fold your cursor is on recursively</li>
+<li><code>zc</code>: close a fold your cursor is on</li>
+<li><code>zC</code>: close a fold your cursor is on recursively</li>
+</ul>
+<h2 id="solutions-to-a-number-of-problems">Solutions to a number of problems</h2>
+<ul>
+<li>Problem with the indentation when pasting:<ul>
+<li>Solution: type <code>:set paste</code> then paste the text. <code>:set nopaste</code> to quit the <code>paste</code> environment.</li>
+<li>Reference: <a href="https://blog.csdn.net/wzy_1988/article/details/50264285">Vim中复制粘贴缩进错乱问题的解决方案</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="reference">Reference</h2>
 <ul>
 <li>Practical Vim: Edit Text at the Speed of Thought by Drew Nei</li>
@@ -721,6 +816,14 @@
 <ul>
 <li>Notes:<ul>
 <li>Use <code>&lt;F3&gt;</code> to open the nerd-tree.</li>
+<li>Update the plugins: <a href="https://github.com/junegunn/vim-plug">github link to junegunn/vim-plug</a><ul>
+<li><code>:PlugInstall [name ...]</code> Install plugins</li>
+<li><code>:PlugUpdate [name ...]</code> Install or update plugins</li>
+<li><code>:PlugClean</code> Remove unlisted plugins (bang version will clean without prompt)</li>
+<li><code>:PlugUpgrade</code> Upgrade vim-plug itself</li>
+<li><code>:PlugStatus</code> Check the status of plugins</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
