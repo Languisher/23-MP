@@ -9,17 +9,15 @@
       
       
       
-        <link rel="prev" href="../../CV/Brain-Inspired-CNN/">
+        <link rel="prev" href="../Thermo01/">
       
-      
-        <link rel="next" href="../../CV/ImageNet/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>Adversarial Attack - Brandon Lin</title>
+        <title>Thermodynamique de la Réaction Chimique - Brandon Lin</title>
       
     
     
@@ -71,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adversarial-attack" class="md-skip">
+        <a href="#thermodynamique-de-la-reaction-chimique" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Adversarial Attack
+              Thermodynamique de la Réaction Chimique
             
           </span>
         </div>
@@ -320,16 +318,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
       
@@ -338,7 +334,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Machine Learning
@@ -378,7 +374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CV/CNN/" class="md-nav__link">
+      <a href="../../../ML/CV/CNN/" class="md-nav__link">
         Convolutional Network
       </a>
     </li>
@@ -392,7 +388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CV/Brain-Inspired-CNN/" class="md-nav__link">
+      <a href="../../../ML/CV/Brain-Inspired-CNN/" class="md-nav__link">
         Brain-inspired CNN
       </a>
     </li>
@@ -411,16 +407,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
       
       
       
@@ -429,7 +423,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           Adversarial Attack
@@ -440,231 +434,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Adversarial Attack
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../ML/AA/Adversarial-Attack/" class="md-nav__link">
         Adversarial Attack
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introductions" class="md-nav__link">
-    Introductions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#definitions" class="md-nav__link">
-    Définitions
-  </a>
-  
-    <nav class="md-nav" aria-label="Définitions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    攻击目标
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    攻击者认知
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    衡量
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    生成对抗样本
-  </a>
-  
-    <nav class="md-nav" aria-label="生成对抗样本">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    白盒攻击
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#l-bfgs" class="md-nav__link">
-    L-BFGS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fgsm-fast-gradient-sign-method" class="md-nav__link">
-    FGSM (Fast Gradient Sign Method)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deepfool" class="md-nav__link">
-    DeepFool
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jsma-jacobian-based-sallency-map-attack" class="md-nav__link">
-    JSMA (Jacobian-based  sallency map attack)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bim-basic-iterative-method-pgd-projected-gradient-descent" class="md-nav__link">
-    BIM (Basic Iterative Method) / PGD (Projected Gradient Descent)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cw-attack" class="md-nav__link">
-    C&amp;W Attack
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ground-truth-attack" class="md-nav__link">
-    Ground Truth Attack
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    一像素攻击
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#l_1-l_2-norm" class="md-nav__link">
-    结合 \(l_1\) 和 \(l_2\) norm 攻击
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#universal-attack" class="md-nav__link">
-    Universal Attack
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#spatially-transformed-attack" class="md-nav__link">
-    Spatially Transformed Attack
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    黑盒攻击
-  </a>
-  
-    <nav class="md-nav" aria-label="黑盒攻击">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#substitute-model" class="md-nav__link">
-    Substitute Model
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#zoo-zeroth-order-optimization" class="md-nav__link">
-    ZOO: Zeroth order optimization
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#query-efficient-black-box-attack" class="md-nav__link">
-    Query-efficient black-box attack
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    灰盒攻击
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    参考资料
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -683,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CV/ImageNet/" class="md-nav__link">
+      <a href="../../../ML/CV/ImageNet/" class="md-nav__link">
         ImageNet
       </a>
     </li>
@@ -876,14 +650,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
       
       
       
@@ -892,7 +668,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Physiques (French)
@@ -905,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../P/Ondes%20Ondulatoires/" class="md-nav__link">
+      <a href="../../Ondes%20Ondulatoires/" class="md-nav__link">
         Ondes Ondulatoires
       </a>
     </li>
@@ -917,14 +693,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
       
       
       
@@ -933,7 +711,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           Thermodynamique (2)
@@ -946,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../P/Thermo/Thermo01/" class="md-nav__link">
+      <a href="../Thermo01/" class="md-nav__link">
         Mélange et Potentiel Chimique
       </a>
     </li>
@@ -958,11 +736,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../P/Thermo/Thermo02/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Thermodynamique de la Réaction Chimique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Thermodynamique de la Réaction Chimique
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#avancement" class="md-nav__link">
+    Avancement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evolution-et-equilibre-chimique" class="md-nav__link">
+    Évolution et Équilibre Chimique
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grandeurs-standard-de-reaction" class="md-nav__link">
+    Grandeurs Standard de Réaction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#effets-thermiques-dune-reaction-chimique" class="md-nav__link">
+    Effets Thermiques d'une réaction Chimique
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -996,208 +836,256 @@
                   
 
 
-<h1 id="adversarial-attack">Adversarial Attack</h1>
-<h2 id="introductions">Introductions</h2>
-<p>深度神经网络的安全问题已经成为一个主要关注点：
-- 如果NN模型无法识别路边的 “STOP” 标志，车辆继续行驶 
-- 公司经常使用图卷积网络（GCN）来决定其客户是否值得信任。</p>
-<p>通过添加难以察觉的扰动攻击，深度学习模型被混淆，所有应用领域中普遍存在的例子提醒研究人员不要在安全关键的机器学习任务中直接采用DNN。</p>
-<ul>
-<li><strong>对抗样本</strong>是机器学习模型的输入，攻击者故意设计这些输入以导致模型出错”。在图像分类领域，这些通用示例是故意合成的图像，看起来<em>几乎与原始图像完全相同</em>，但可能误导分类器提供错误的预测输出![[截屏2023-03-02 09.24.24.png]]</li>
-</ul>
-<p>对策以抵抗<strong>对抗样本</strong>的攻击：
-- 梯度掩蔽：由于大多数攻击算法都基于分类器的梯度信息，因此掩蔽或模糊梯度将融合攻击机制
-- 鲁棒性优化：这些研究显示了如何训练一个能够正确分类对抗性示例的鲁棒性高的分类器。
-- 横向检测：这些方法试图在向深度学习模型反馈样本之前<em>检查样本是良性还是对抗性</em>的。它可以被视为防范对抗性例子的一种方法。这些方法提高了DNN对对抗性示例的抵抗力。</p>
-<h2 id="definitions">Définitions</h2>
-<h3 id="_1">攻击目标</h3>
-<ul>
-<li>Poisoning attack vs Evasion attack: 毒药攻击就是可以修改训练数据，“毒化”数据；躲避攻击就是只可以修改测试数据，试图“躲避”模型的正常分类。</li>
-<li>Targeted attack versus non-targeted attack: 目的都是分错类，但定向攻击强调的是分到特定的类。</li>
-</ul>
-<h3 id="_2">攻击者认知</h3>
-<ul>
-<li><strong>白盒攻击</strong>在白盒设置中，对手可以访问目标神经网络的所有信息，包括其架构、参数、梯度等。结构和参数有助于人们清楚地理解DNN模型的脆弱性，并且可以对其进行数学分析。</li>
-<li><strong>黑盒攻击</strong>在黑盒攻击设置中，DNN模型的内部配置对对手不可用。对手只能输入数据并查询模型的输出。他们通常通过不断地向盒子中输入样本并观察输出来攻击模型，以揭示模型的输入-输出关系，并识别其弱点。与白盒攻击相比，黑盒攻击在应用程序中更实用，因为模型设计者通常出于专有原因而不开源其模型参数。</li>
-<li><strong>半白（灰）盒攻击</strong>在半白盒或灰盒攻击设置中，黑客训练生成模型以在白盒设置中生成对抗性示例。一旦生成模型得到训练，攻击者就不再需要受害者模型，并且可以在黑盒背景下制作对抗性示例</li>
-</ul>
-<h3 id="_3">衡量</h3>
-<ul>
-<li><strong>最小扰动</strong>：已知分类器 <span class="arithmatex">\(F\)</span>，数据 <span class="arithmatex">\((x,y)\)</span>，扰动有最小扰动（模）：
-    <script type="math/tex; mode=display">
-    \delta=\arg \min{\Vert \delta\Vert } \text{ s.t. } F(x+\delta)\ne y
-    </script>
-    (<span class="arithmatex">\(\Vert\Vert\)</span>) 通常指的是 <span class="arithmatex">\(l_p\)</span> 范数</li>
-<li><strong>鲁棒性</strong>：扰动的范数 
-    <script type="math/tex; mode=display">
-    r(x, F)=\Vert \delta_{\min{}}\Vert 
-    </script>
-</li>
-<li><strong>全局鲁棒性</strong>：在整个群上的鲁棒性期望 
-    <script type="math/tex; mode=display">
-    \rho(F) = \mathbb{E}_{x \sim \mathcal{D}}\;r(x,F)
-    </script>
-</li>
-<li><strong>Most-adversarial example</strong>：满足 <span class="arithmatex">\(L\)</span> 最大，且干扰样本在原样本的 <span class="arithmatex">\(\varepsilon\)</span>-neighbor ball 里：
-    <script type="math/tex; mode=display">
-    x_{adv} = \arg \max L(x' , F) \text{ s.t. } \Vert x' -x\Vert \leq \varepsilon
-    </script>
-</li>
-<li><strong>对抗损失</strong>：<strong>Most-adversarial example</strong>的损失函数：
-    <script type="math/tex; mode=display">
-    L(x_{adv}) = \max{ L(x' ,y)}
-    </script>
-</li>
-<li><strong>全局对抗损失</strong>：在整个群上的对抗损失衡量 
-    <script type="math/tex; mode=display">
-    R_{adv}(F) = \mathbb{E}\max{L(x' ,y)}
-    </script>
-</li>
-<li>分类器表现正确性：（注意是样本 <span class="arithmatex">\(x\)</span> 来自自然分布）
-    <script type="math/tex; mode=display">
-    R(F) = \mathbb{E}_{x \sim \mathcal{ D}}\;L(x, y)
-    </script>
-</li>
-</ul>
-<h2 id="_4">生成对抗样本</h2>
-<h3 id="_5">白盒攻击</h3>
-<ul>
-<li>已知分类器 <span class="arithmatex">\(C\)</span> 和样本 <span class="arithmatex">\((x,y)\)</span>，生成 <span class="arithmatex">\(x'\)</span> 使得 <span class="arithmatex">\(\Vert x' - x\Vert \leq \varepsilon\)</span>，且 <span class="arithmatex">\(C(x' )=t \ne y\)</span>.</li>
-<li><span class="arithmatex">\(\Vert  \cdot\Vert\)</span> 衡量 <span class="arithmatex">\(x'\)</span> 和 <span class="arithmatex">\(x\)</span> 间区别</li>
-</ul>
-<h3 id="l-bfgs">L-BFGS</h3>
-<ul>
-<li>攻击深度神经网络图片分类器，目的：
-    <script type="math/tex; mode=display">
-    \min{\Vert x-x' \Vert _{2}^ 2} \text{ s.t. } C(x')=t \text{ and } x' \in [0,1]^m
-    </script>
-</li>
-<li>构建损失函数：
-    <script type="math/tex; mode=display">
-    \underbrace{\min{c\Vert x-x'\Vert _{2}^2}}_{\text{similarity between }x \text{ and }x'}+\underbrace{\mathcal{L}(x',t)}_{\text{find }x' \text{ which has a small loss to }t}
-    </script>
-    其中 <span class="arithmatex">\(c\)</span> 是一个常数，通过改变 <span class="arithmatex">\(c\)</span> 找到 <span class="arithmatex">\(x'\)</span></li>
-<li>这个损失函数通过 L-BFGS 实现，迭代式攻击</li>
-</ul>
-<h3 id="fgsm-fast-gradient-sign-method">FGSM (Fast Gradient Sign Method)</h3>
-<ul>
-<li>一步到位，快速生成</li>
-<li>样本构建方式： 
-    <script type="math/tex; mode=display">
-    \begin{cases}
-    x' = x+ \varepsilon \mathrm{sgn}(\nabla_{x}\mathcal{L}(x,y)) \text{ non-target} \\
-    x' = x - \varepsilon \mathrm{sgn}(\nabla_{x}\mathcal{L}(x,t)) \text{ target on } t
-    \end{cases}
-    </script>
-</li>
-<li>对于有目标攻击，其本质即为：
-    <script type="math/tex; mode=display">
-    \min{\mathcal{L}(x', t)} \text{ s.t. }\Vert x'-x\Vert _{\infty}< \varepsilon \text{ and } x' \in [0,1]^m
-    </script>
-</li>
-</ul>
-<h3 id="deepfool">DeepFool</h3>
-<ul>
-<li>找到一条跨越决策边界的路径</li>
-<li>例如样本分类为 4 但将被误导为 3 的边界为超平面 
-    <script type="math/tex; mode=display">
-    \mathcal{F}_{3}= \{F(x)_{4}-F(x)_{3}=0\}
-    </script>
-<img alt="" src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X3BuZy9Qc2hvOWRtN29ER3RnYmh1WjRDdFJqaWMzdUE0RElpYXJ4aWFiSGJFTVVpY3VzaGlhM1Y5aWNFQ3dWaWFMRDdFaWNTeTdNR3gxb0hiQkl4dGI5NUR2RDc2Q2EyTGljUS82NDA?x-oss-process=image/format,png" /></li>
-<li>每次迭代时，将超平面在该点微分，并计算在该点的垂直向量。</li>
-<li>DeepFool 的实验同时证明：在 DNN 图片分类器中，几乎所有的样本都与他们的决策边界非常相近。这说明 DNN 模型鲁棒性较差。</li>
-</ul>
-<h3 id="jsma-jacobian-based-sallency-map-attack">JSMA (Jacobian-based  sallency map attack)</h3>
-<ul>
-<li>重复操作，找到哪一个像素是对分类结果影响最大的</li>
-<li>通过计算 <span class="arithmatex">\(J_F(x)\)</span> 去观察 <span class="arithmatex">\(F(x)\)</span> 的变化，其中 
-    <script type="math/tex; mode=display">
-    J_{F}:x \longmapsto \frac{\partial F(x)}{\partial x} = \{ \frac{\partial F_{j}(x)}{\partial x_{i}}\}_{i \times j}
-    </script>
-</li>
-<li>对于有目标攻击，从而使 <span class="arithmatex">\(F_{t}(x)\)</span> 增加或减小 <span class="arithmatex">\(\sum_{j\ne t}F_{j}(x)\)</span>，使得对于样本 <span class="arithmatex">\(x\)</span>，标签 <span class="arithmatex">\(t\)</span> 的得分最高</li>
-</ul>
-<h3 id="bim-basic-iterative-method-pgd-projected-gradient-descent">BIM (Basic Iterative Method) / PGD (Projected Gradient Descent)</h3>
-<ul>
-<li>[[对抗攻击和防御基础#FGSM (Fast Gradient Sign Method)]] 的迭代版本：
-    <script type="math/tex; mode=display">
-    x_{0}=x;\; x^{t+1} = \mathrm{Clip}_{x, \varepsilon}(x^t+\alpha \mathrm{sgn}(\nabla_{x}\mathcal{L}(x^t,y)))
-    </script>
-</li>
-<li><span class="arithmatex">\(\alpha\)</span> 相对较小，迭代次数需要保证能够抵达分类边界，例如数量为 <span class="arithmatex">\(\epsilon / \alpha + 10\)</span></li>
-</ul>
-<h3 id="cw-attack">C&amp;W Attack</h3>
-<ul>
-<li>[[对抗攻击和防御基础#L-BFGS]] 的优化版本：
-    <script type="math/tex; mode=display">
-    \underbrace{\min{c\Vert x-x'\Vert _{2}^2}}_{\text{similarity between }x \text{ and }x'}+\underbrace{c\cdot f(x',t)}_{\text{find an }x' \text{ that has larger score for class }t}
-    </script>
-</li>
-<li>唯一区别：使用 Margin Loss 而不是交叉熵损失函数，优势：当 <span class="arithmatex">\(C(x')=t\)</span> 时，<span class="arithmatex">\(f(x',t)=0\)</span>，因此损失函数直接优化 <span class="arithmatex">\(\min{c\Vert x-x'\Vert_{2}^2}\)</span>，效率更高。</li>
-</ul>
-<h3 id="ground-truth-attack">Ground Truth Attack</h3>
+<h1 id="thermodynamique-de-la-reaction-chimique">Thermodynamique de la Réaction Chimique</h1>
+<h2 id="avancement">Avancement</h2>
 <ul>
 <li>
-<p><strong>Ground Truth Adversarial Example</strong>：找到最小 <span class="arithmatex">\(r\)</span> 使得：以标签中心 <span class="arithmatex">\(x_0\)</span> 的最小球半径内 <span class="arithmatex">\(BO(x_{0},r)\)</span> 不再有对抗样本可以干扰这个样本</p>
-</li>
-<li>
-<p>衡量<strong>最小干扰</strong>即鲁棒性，但由于使用 SMT 效率较慢</p>
-</li>
-</ul>
-<h3 id="_6">一像素攻击</h3>
-<ul>
-<li>限制扰动的 <span class="arithmatex">\(l_{0}\)</span> norm <span class="arithmatex">\(x'-x\)</span>，即修改的像素数目。</li>
-<li>同时体现了很多模型的鲁棒性较差。</li>
-</ul>
-<h3 id="l_1-l_2-norm">结合 <span class="arithmatex">\(l_1\)</span> 和 <span class="arithmatex">\(l_2\)</span> norm 攻击</h3>
-<ul>
-<li>对于 <span class="arithmatex">\(l_{2}\)</span> 攻击防守表现较好的模型，仍然在该方法前不堪一击。</li>
-</ul>
-<h3 id="universal-attack">Universal Attack</h3>
-<ul>
-<li>不仅只针对一个样本，而是误导一群样本（甚至是绝大部分样本）</li>
-</ul>
-<h3 id="spatially-transformed-attack">Spatially Transformed Attack</h3>
-<ul>
-<li>不修改特定像素，而是对特定区域的像素进行空间变换（例如：平移、旋转和扭曲）</li>
-</ul>
-<h2 id="_7">黑盒攻击</h2>
-<h3 id="substitute-model">Substitute Model</h3>
-<ul>
-<li>基本原理：<strong>Transferbility</strong>：一个能攻击 <span class="arithmatex">\(F_1\)</span> 的样本，也可以攻击拥有与前者结构相似的 <span class="arithmatex">\(F_2\)</span> 模型</li>
-<li>步骤：<ul>
-<li>合成 substitute 训练集，从测试集复制而来、或自己制造样本 <span class="arithmatex">\(X\)</span></li>
-<li>将训练集 <span class="arithmatex">\(X\)</span> 放入分类器 <span class="arithmatex">\(F\)</span> 获得结果 <span class="arithmatex">\(Y\)</span></li>
-<li>选择一个“替代”的 DNN 模型来获得我们的 <span class="arithmatex">\(F'\)</span>，要求模型应与被攻击模型相似</li>
-<li>样本增广，迭代式重复训练，使得 <span class="arithmatex">\(F'\)</span> 的正确率更高</li>
-<li>用白盒攻击的方法攻击 <span class="arithmatex">\(F'\)</span>，获得对抗样本。根据 <strong>Transferbility</strong> 的原理，这些样本对 <span class="arithmatex">\(F\)</span> 同样有效果。</li>
-</ul>
-</li>
-<li>FGSM、PGD 和 momentum-based attack 的 <strong>transferbility</strong> 更高</li>
-</ul>
-<h3 id="zoo-zeroth-order-optimization">ZOO: Zeroth order optimization</h3>
-<ul>
-<li>如果知道<strong>置信度</strong>，则不需要构建合成训练集及替代模型</li>
-<li>通过观察预测置信度，可以挖掘出模型的梯度信息：对每一个样本的特定位置 <span class="arithmatex">\(i\)</span> 我们加减一个非常的小量，观察置信度 <span class="arithmatex">\(F(x)\)</span> 的变化：
+<p><strong>Équation Bilan</strong> :
     <script type="math/tex; mode=display">
-    \frac{\partial F(x)}{\partial x_{i}} \approx \frac{F(x+he_{i})-F(x-he_{i})}{2h}
+    \alpha_1 A_1 +\cdots + \alpha_n A_n = \beta_1 B_1 + \cdots + \beta_p B_p
+    </script>
+</p>
+<ul>
+<li>
+<p>Composé <strong>Physico-chimiques</strong> : <span class="arithmatex">\(A_i\)</span> et <span class="arithmatex">\(B_i\)</span>, <span class="arithmatex">\(H_2O_{(l)} \ne H_2O_{(g)}\)</span>    </p>
+<ul>
+<li><strong>Reáctifs</strong> et <strong>Produits</strong><ul>
+<li><strong>Nombres stœchiométriques</strong></li>
+</ul>
+</li>
+<li><strong>Nombres stœchiométriques algébriques</strong> :
+    <script type="math/tex; mode=display">
+    \nu_i = \begin{cases} -\alpha_i <0\\ 
+    \beta_i >0
+    \end{cases} \implies \boxed{0 = \sum_i \nu_iC_i \quad(E)}
     </script>
 </li>
 </ul>
-<h3 id="query-efficient-black-box-attack">Query-efficient black-box attack</h3>
-<ul>
-<li>大量的“测试”可能会被禁止（例如：封 IP），因此需要提高攻击的效率</li>
-<li>模型的输出依赖于围绕 <span class="arithmatex">\(x\)</span> 的变化，同样也是观察 <span class="arithmatex">\(F\)</span> 的梯度</li>
+</li>
+<li>
+<p><span class="arithmatex">\((E)\)</span> peut considérée comme un vecteur d'un espace vectoriel.</p>
+</li>
 </ul>
-<h2 id="_8">灰盒攻击</h2>
+</li>
+<li>
+<p><strong>Avancement</strong> : la variable <span class="arithmatex">\(\xi\)</span> unité <span class="arithmatex">\(\text{mol}\)</span> définit par
+    <script type="math/tex; mode=display">
+    \mathrm{d} \xi  = \frac{\mathrm{d}n_1}{\nu_1} = \frac{\mathrm{d}n_2}{\nu_2} = \cdots = \frac{\mathrm{d}n_i}{\nu_i}, \;\xi_{\text{init}}=0
+    </script>
+    Donc q.q.s. l'état de transformation du système :
+    <script type="math/tex; mode=display">
+    n_i = n_{i,0} + \nu_i \xi 
+    </script>
+</p>
 <ul>
-<li>从 GAN 中生成对抗样本</li>
-<li>优势：效率更快，生成的样本更加自然和难以被发现</li>
+<li><strong>Tableau d'avancement</strong></li>
+<li><span class="arithmatex">\(\xi = \xi_\text{max}\)</span> <strong>Réactif limitant</strong>, réaction totale en sens direct</li>
+<li><span class="arithmatex">\(\xi = \xi_\text{min}\)</span> <strong>Produit limitant</strong>, réaction totale en sens inverse</li>
+<li><em>Cas où plusieurs réactions sont possibles</em> : <img alt="" src="../assets/Thermo20.png" /></li>
 </ul>
-<h2 id="_9">参考资料</h2>
-<ol>
-<li>Xu, H., Ma, Y., Liu, HC. <em>et al.</em> Adversarial Attacks and Defenses in Images, Graphs and Text: A Review. <em>Int. J. Autom. Comput.</em> <strong>17</strong>, 151–178 (2020). https://doi.org/10.1007/s11633-019-1211-x</li>
-</ol>
+</li>
+</ul>
+<h2 id="evolution-et-equilibre-chimique">Évolution et Équilibre Chimique</h2>
+<ul>
+<li>
+<p><strong>Profil de Réaction</strong> : La courbe représentant <span class="arithmatex">\(G(T,P, \xi)= G(\xi)|_{T,P}\)</span>.</p>
+<ul>
+<li>Il permet de prévoir l'évolution du système. <img alt="" src="../assets/Thermo21.png" /></li>
+</ul>
+</li>
+<li>
+<p><strong>L'état d'équilibre chimique</strong> : L'état <span class="arithmatex">\((T, P, \xi_{eq}) = \arg\min_\xi G(T,P,\xi)\)</span></p>
+</li>
+<li>
+<p>Le système finit lorsque</p>
+<ul>
+<li>Atteint la réaction thermodynamiquement totale, tel qu'un des composés complètement disparu</li>
+<li>Atteint <span class="arithmatex">\((T,P,\xi_{eq})\)</span></li>
+</ul>
+</li>
+<li>
+<p><strong>Enthalpie libre de réaction</strong>, s'exprime en <span class="arithmatex">\(J.mol^{-1}\)</span> :
+    <script type="math/tex; mode=display">
+    \boxed{
+    \Delta_rG = \left(\frac{\partial G}{\partial \xi}\right)_{T,P}
+    }
+    </script>
+</p>
+<ul>
+<li>
+<p>En réaction équilibrée (si <span class="arithmatex">\(\exists\)</span>): <span class="arithmatex">\(\Delta_rG(\xi_{eq}) = 0\)</span>, mais l'inverse est FAUX.</p>
+</li>
+<li>
+<p>Q.q.s. <span class="arithmatex">\(\xi\)</span>, on a :
+    <script type="math/tex; mode=display">
+    \Delta_r G(\xi)<0 \implies \mathrm{d}\xi >0, \; \text{ evolue } \rightarrow
+    </script>
+<script type="math/tex; mode=display">
+    \Delta_r G(\xi)>0 \implies \mathrm{d}\xi <0, \; \text{ evolue } \leftarrow
+    </script>
+</p>
+<blockquote>
+<p>Preuve : <span class="arithmatex">\(G\)</span> diminue, donc :
+<script type="math/tex; mode=display">
+\begin{align}
+&G(T,P, \xi + d\xi) - G(T,P, \xi) < 0 \\
+\iff &d\xi \times \left(\frac{\partial G}{\partial \xi}\right)_{T,P} = d\xi \times \Delta_r G(\xi)<0
+\end{align}
+</script>
+</p>
+</blockquote>
+</li>
+<li>
+<p>Évolution spontannée irréversible, car 
+    <script type="math/tex; mode=display">
+    \delta S_{creee}  = - \frac{\mathrm {d} \xi \times \Delta _r G(\xi)} {T}>0
+    </script>
+</p>
+</li>
+<li>
+<p>Dans une réaction, expression générale :
+    <script type="math/tex; mode=display">
+    \boxed{
+    0 = \sum_i \nu_i C_i \implies \Delta_r G(\xi) = \sum_i \nu_i \mu_i
+    }
+    </script>
+</p>
+<blockquote>
+<p>Preuve :
+<script type="math/tex; mode=display">
+\left(\frac{\partial G}{\partial \xi}\right)_{T,P} = \left(\frac{\partial G}{\partial n_i}\right)_{T,P} \times  \left(\frac{\partial n_i}{\partial \xi}\right)
+</script>
+</p>
+</blockquote>
+</li>
+<li>
+<p><strong>L'enthalpie libre standard de réaction</strong> <span class="arithmatex">\(\Delta_r G^\circ(T)\)</span>, <strong>Le quotient réactionnel</strong> <span class="arithmatex">\(Q\)</span> : 
+    <script type="math/tex; mode=display">
+    \Delta_r G = \underbrace{\Delta_r \nu_i \mu_i^\circ(T)}_{\Delta_r G^\circ(T)} + RT\underbrace{\sum_i \nu_i\ln(a_i)}_{\ln(Q) = \ln(\prod_i a_i^{\nu_i})} = \Delta_r G^\circ(T) + RT\ln(Q)
+    </script>
+    avec 
+    <script type="math/tex; mode=display">
+    \boxed{
+    \Delta_r G^\circ(T) = \Delta_r \nu_i \mu_i^\circ(T),\quad Q = \prod_i a_i^{\nu_i}}
+    </script>
+    car 
+    <script type="math/tex; mode=display">
+    \mu_i = \mu_i^\circ + RT \ln(a_i)
+    </script>
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>La constante de réaction</strong> :
+    <script type="math/tex; mode=display">
+    \boxed{K^\circ(T) = \exp\left(- \frac{\Delta_r G^\circ(T)}{RT}\right)} \implies \Delta_r G = RT\ln\left(\frac{Q}{K^\circ(T)}\right)
+    </script>
+</p>
+</li>
+<li>
+<p><strong>Loi d'action des masses</strong> ou <strong>Loi de Guldberg Waage</strong> :
+    <script type="math/tex; mode=display">
+    Q_{eq} = K^\circ(T)
+    </script>
+</p>
+<ul>
+<li>Si <span class="arithmatex">\(Q &lt; K^\circ(T)\)</span>, <span class="arithmatex">\(\Delta_r(G)(\xi)&lt;0\)</span>, l'évolution <span class="arithmatex">\((\to)\)</span></li>
+<li>Si <span class="arithmatex">\(Q &gt;K^\circ(T)\)</span>, <span class="arithmatex">\(\Delta_r(G)(\xi)&gt;0\)</span>, l'évolution <span class="arithmatex">\((\leftarrow)\)</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="grandeurs-standard-de-reaction">Grandeurs Standard de Réaction</h2>
+<ul>
+<li>
+<p><strong>Enthalpie molaire standard</strong> : L'enthalpie molaire <span class="arithmatex">\(H_m\)</span> d'un composé physico-chimique dans l'état standard, notée <span class="arithmatex">\(H_m^\circ(T)\)</span>, s'exprime en <span class="arithmatex">\(J/mol\)</span></p>
+<ul>
+<li>Pour les GP et phases condensées idéales purs, <span class="arithmatex">\(H_m\)</span> ne dépend que <span class="arithmatex">\(T\)</span> : 
+    <script type="math/tex; mode=display">
+    H_m(T, P) = H_m(T, P^\circ) = H_m^\circ(T)
+    </script>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Capacité thermique standard</strong> à pression constante, s'exprime en <span class="arithmatex">\(J/K .mol\)</span>:
+    <script type="math/tex; mode=display">
+    C_{P,m}^\circ (T) = \frac{\mathrm dH_m^\circ(T)}{\mathrm d  T}
+    </script>
+</p>
+</li>
+<li>
+<p><strong>Entropie molaire standard</strong>, s'exprime en <span class="arithmatex">\(J/K .mol\)</span> : <span class="arithmatex">\(S_m\)</span></p>
+<ul>
+<li>Variation en fonction de <span class="arithmatex">\(T\)</span> :
+    <script type="math/tex; mode=display">
+    \frac{\mathrm d S_m^\circ(T)}{\mathrm d T} = \frac{C_{P,m}^\circ(T)}{T}
+    </script>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Deux Relations de Kirchhoff</strong> : Variation avec la température :
+    <script type="math/tex; mode=display">
+    \begin{align}
+    \Delta_rH^\circ(T) &= \sum_i \nu_i H_{m,i} ^\circ (T), \\
+    \Delta_rS^\circ(T) &= \sum_i \nu_i S_{m,i} ^\circ (T) \end{align}\implies\boxed{ \begin{align}
+    \frac{\mathrm d \Delta_r H^\circ}{\mathrm d T} &= \Delta_r C_p^\circ\\ 
+    \frac{\mathrm d \Delta_r S^\circ}{\mathrm d T} &=\frac{ \Delta_r C_p^\circ}{T}\end{align}}
+    </script>
+</p>
+<ul>
+<li>
+<p><strong>Approximation d'Ellingham</strong> : </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\Delta_r H^\circ (T)\)</span> et <span class="arithmatex">\(\Delta_r S^\circ(T)\)</span> ne dépendent pas de <span class="arithmatex">\(T\)</span>, les dérivations sont considérées nulles.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\Delta_r G^\circ(T) = \Delta_r H^\circ(T) - T \times \Delta_r S(T)\)</span> est une fonction affine de la <span class="arithmatex">\(T\)</span>.</p>
+</li>
+<li>Donc,
+  <script type="math/tex; mode=display">
+  K^\circ(T)= \exp\left(-\frac{\Delta _r H^\circ(T)}{RT} + \frac{\Delta_r S^\circ(T)}{R}\right) =  \exp\left(-\frac{\Delta _r H^\circ}{RT} + \frac{\Delta_r S^\circ}{R}\right)
+  </script>
+  ?????????????</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Réaction standard de formation</strong> (théorique, pas réalisable) : 
+    Un corps formé à partir de corps simples, <span class="arithmatex">\(\nu = +1\)</span></p>
+<ul>
+<li><strong>État standard d'agrégation</strong> le plus stable à <span class="arithmatex">\(T\)</span> et à <span class="arithmatex">\(P\)</span> standard.</li>
+<li>La <strong>grandeur standard de formation</strong> </li>
+</ul>
+</li>
+<li>
+<p><strong>Loi de Hess</strong> :
+    <script type="math/tex; mode=display">
+    0 = \sum_i \nu_iC_i \implies \Delta_r X^\circ(E) = \sum_i \nu_i \Delta_f X^\circ (C_i)
+    </script>
+</p>
+</li>
+</ul>
+<h2 id="effets-thermiques-dune-reaction-chimique">Effets Thermiques d'une réaction Chimique</h2>
+<ul>
+<li>
+<p>L'enthaplie est la somme des enthalpies des composés séparés dans le cas d'un mélange idéal (pourquoi?)</p>
+<div class="arithmatex">\[
+H(T, P, \xi) - H(T, P, 0) = \xi \times \Delta _r H_{m,i}^\circ(T)
+\]</div>
+</li>
+<li>
+<p>L'énergie interne
+    <script type="math/tex; mode=display">
+    U(T, P, \xi) - U(T, P, 0) = \xi \times H^\circ(T) - (n_{gaz}(\xi)- n_{gaz}(0))RT
+    </script>
+</p>
+<p>???</p>
+</li>
+</ul>
 
 
 
