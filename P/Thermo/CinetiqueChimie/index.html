@@ -1,0 +1,1412 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Thermo01/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
+    
+    
+      
+        <title>Cinétique Chimie - Brandon Lin</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7a7fce14.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/timeago.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cinetique-chimie" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Brandon Lin" class="md-header__button md-logo" aria-label="Brandon Lin" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Brandon Lin
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Cinétique Chimie
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Brandon Lin" class="md-nav__button md-logo" aria-label="Brandon Lin" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Brandon Lin
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Cookbooks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cookbooks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cookbooks/Git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cookbooks/Mkdocs/" class="md-nav__link">
+        Mkdocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          Vim & Markdown
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Vim & Markdown
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cookbooks/vim-md/Markdown/" class="md-nav__link">
+        Markdown
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cookbooks/vim-md/Vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cookbooks/Manim/" class="md-nav__link">
+        Manim
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Machine Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Machine Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          CNN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          CNN
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/CV/CNN/" class="md-nav__link">
+        Convolutional Network
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/CV/Brain-Inspired-CNN/" class="md-nav__link">
+        Brain-inspired CNN
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Adversarial Attack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Adversarial Attack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/AA/Adversarial-Attack/" class="md-nav__link">
+        Adversarial Attack
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/CV/ImageNet/" class="md-nav__link">
+        ImageNet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Maths (French)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Maths (French)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          Algèbre
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Algèbre
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../M/AL/Endomorphismes/" class="md-nav__link">
+        Endomorphismes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../M/AL/ReductionsdesEndomorphismes/" class="md-nav__link">
+        Réductions des endomorphismes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Analyse
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Analyse
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../M/An/Topology/" class="md-nav__link">
+        Topologie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../M/An/Convexit%C3%A9/" class="md-nav__link">
+        Convexité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../M/An/Calcul-Diff%C3%A9rentielle/" class="md-nav__link">
+        Calcul Différentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Physiques (French)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Physiques (French)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ondes%20Ondulatoires/" class="md-nav__link">
+        Ondes Ondulatoires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          Thermodynamique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Thermodynamique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Thermo01/" class="md-nav__link">
+        Mélange et Potentiel Chimique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Cinétique Chimie
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Cinétique Chimie
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notations-basiques" class="md-nav__link">
+    Notations Basiques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vitesses-et-temps-dans-un-systeme-reactionnel" class="md-nav__link">
+    Vitesses et temps dans un système réactionnel
+  </a>
+  
+    <nav class="md-nav" aria-label="Vitesses et temps dans un système réactionnel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#determinations-experimentales" class="md-nav__link">
+    Déterminations expérimentales
+  </a>
+  
+    <nav class="md-nav" aria-label="Déterminations expérimentales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principe-general" class="md-nav__link">
+    Principe Général
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#determiner-la-concentration" class="md-nav__link">
+    Déterminer la concentration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loi-de-vitesse" class="md-nav__link">
+    Loi de Vitesse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Définitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cas-dune-reaction-dordre-0" class="md-nav__link">
+    Cas d'une réaction d'ordre 0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cas-dune-reaction-dordre-1" class="md-nav__link">
+    Cas d'une réaction d'ordre 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cas-dune-reaction-dordre-2" class="md-nav__link">
+    Cas d'une réaction d'ordre 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplification-dune-loi-de-vitesse" class="md-nav__link">
+    Simplification d'une loi de vitesse
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#degenerescene-de-lordre" class="md-nav__link">
+    Dégénérescene de l'ordre
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#determination-experimentale-dune-loi-de-vitesse" class="md-nav__link">
+    Détermination expérimentale d'une loi de vitesse
+  </a>
+  
+    <nav class="md-nav" aria-label="Détermination expérimentale d'une loi de vitesse">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methode-differentielle-pour-trouver-un-ordre" class="md-nav__link">
+    Méthode différentielle pour trouver un ordre
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methode-integrale-pour-confirmer-un-ordre-suppose" class="md-nav__link">
+    Méthode intégrale pour confirmer un ordre supposé
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methode-du-temps-de-demi-reaction" class="md-nav__link">
+    Méthode du temps de demi-réaction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#03-exemples-de-reactions-complexes" class="md-nav__link">
+    03 Exemples de réactions complexes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deux-reaction-successives-dordre-1" class="md-nav__link">
+    Deux Réaction successives d'ordre 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reaction-equilibre" class="md-nav__link">
+    Réaction équilibre
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mecaniques-reactionnels" class="md-nav__link">
+    Mécaniques Réactionnels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notions-fondamentales" class="md-nav__link">
+    Notions fondamentales
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loi-de-vant-hoff" class="md-nav__link">
+    Loi de Van't Hoff
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aeqs" class="md-nav__link">
+    AEQS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemple" class="md-nav__link">
+    Exemple
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#influence-de-la-temperature" class="md-nav__link">
+    Influence de la température
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="cinetique-chimie">Cinétique Chimie</h1>
+<blockquote>
+<p>从 Obsidian 复制过来，有空再整理</p>
+</blockquote>
+<h2 id="notations-basiques">Notations Basiques</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>title: Équation Bilan
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>$$
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>\alpha_{1}A_{1}+ \dots+\alpha_{n}A_{n}=\beta_{1}B_{1}+\dots+\beta_{p}B_{p}
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>$$
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>- Elle doit *conserver la charge totale* et *conserver la quantité de chaque élément chimique*
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>- $A_{i}$ est dit **réactifs** et $B_i$ est dit **produits**
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>- $\alpha$ et $\beta$ est dit **coefficients stoechiométriques**
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Cette équation est équivalente à $$0 = \sum_{i}\nu_{i}C_{i}$$ avec $\nu_{i}$ les **coefiicients stoechiométriques algébriques**, $$\nu_{i}=\begin{cases}
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>-\alpha_{i}&lt;0 \text{ pour les réactifs}  \\\beta _{i}&gt;0 \text{ pour les produits}\end{cases}$$ 
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>- On note $n_{i}$ la **quantité de matière** de $C_{i}$ à un instant quelconque
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>- L&#39;**avancement** de réaction $\xi$, nul au début de la réaction, est défini par $$\mathrm{d}\xi= \frac{\mathrm{d}n_{i}}{\nu_{i}}$$ pour tout $i$, et on a $$n_{i}=n_{i,0}+\nu_{i}\xi$$ C’est une grandeur homogène à une quantité de matière (en $\mathrm{mol}$).
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>- Lorsque $\xi$ augmente, le système évolue dans le **sens direct** (symbolisé par →). 
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>- Lorsque $\xi$ diminue , le système évolue dans le **sens indirect**, ou sens inverse (symbolisé par ←)
+</code></pre></div>
+<ul>
+<li>Quelle est l'<strong>avancement final</strong> <span class="arithmatex">\(\xi_{f}\)</span> ?</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>title: Tableau d&#39;avancement et état final
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>![[Pasted image 20230222081831.png]]
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>- La réaction est **totale** si $\xi_{f}=\xi_{\mathrm{\max{}}}$, **réactif limitant** est le réactif qui a déjà disparu.
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>- La réaction est **limitée** lorsque $\xi_{f}&lt;\xi_{\mathrm{\max{}}}$
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>- Les réactifs sont introduits en **proportions stoéchiométriques** quand $$\frac{n_{i,0}}{|\nu_{i}|}=k \text{ (constante)}$$ Ils sont tous limitants et disparaissent tous si la réaction est totale.
+</code></pre></div>
+<h2 id="vitesses-et-temps-dans-un-systeme-reactionnel">Vitesses et temps dans un système réactionnel</h2>
+<ul>
+<li>Un système réactionnel <em>fermé</em> de <em>volume</em> <span class="arithmatex">\(V\)</span> <em>constant</em>, constitué d'un certain nombre d'<em>espèces physico-chimiques</em> notée <span class="arithmatex">\(C_i\)</span> </li>
+<li>On note <span class="arithmatex">\(n_{i}\)</span> la <strong>quantité de matière</strong> de <span class="arithmatex">\(C_{i}\)</span></li>
+<li>
+<p>On note <span class="arithmatex">\([C_{i}]\)</span> la <strong>concentration</strong> de <span class="arithmatex">\(C_{i}\)</span>, la <em>quantité rapportée au volume total</em> du mélange qui contient cette espèce. Elle est exprimée en moles par unité de volume.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>title: Vitesses Volumiques de Formation, Vitesses Volumiques de Disparition
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>- **Vitesses volumiques de formation** de l&#39;espèce $C_i$ $$v_{f} (C_{i})= \frac{1}{V} \frac{dn_{i}}{dt}=\frac{d[C_{i}]}{dt}$$
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>- **Vitesses volumiques de disparition** $$v_{d}(C_{i}) = -\frac{1}{V} \frac{dn_{i}}{dt}= - \frac{d[C_{i}]}{dt}$$
+</code></pre></div></p>
+</li>
+<li>
+<p>Elles s'expriment en <span class="arithmatex">\(\text{mol}.L^{-1}.s^{-1}\)</span></p>
+</li>
+<li>
+<p>Unité courante :</p>
+<ul>
+<li><span class="arithmatex">\(C_{i}\)</span> est un produit, on considère plutôt <span class="arithmatex">\(v_{f}(C_{i})\geq 0\)</span></li>
+<li><span class="arithmatex">\(C_{i}\)</span> est un réactif, on considère plutôt <span class="arithmatex">\(v_{d}(C_{i})\geq 0\)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>title: Vitesse Volumique de Réaction
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>- Rappel : **Avancement de la réaction** : $\xi$, D&#39;après $$n_{i}=n_{i,o}+ \nu_{i}\xi$$ [[00 Notations Basiques]], donc$$\frac{dn_{i}}{dt}= \nu_{i} \frac{d\xi}{dt} \implies \frac{1}{V} \frac{d\xi}{dt}= \frac{1}{\nu_{i}V} \frac{dn_{i}}{dt}$$
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>- Cela nous implique la définition de la **vitesse volumique de réaction** : $$v= \frac{1}{V} \frac{d \xi}{dt}= \frac{1}{\nu_{i}} \frac{d[C_{i}]}{dt}$$
+</code></pre></div></li>
+</ul>
+</li>
+<li>
+<p>Si <span class="arithmatex">\(C_{i}\)</span> est un produit, <span class="arithmatex">\(\nu_{i}&gt;0\)</span>, et <span class="arithmatex">\(v_{f}(C_{i})=\nu_{i}v \geq 0\)</span>, si <span class="arithmatex">\(C_{i}\)</span> est un réactif, <span class="arithmatex">\(v_{d}&gt;0\)</span>, <span class="arithmatex">\(v_{d}(C_{i}) = -\nu_{i}v \leq 0\)</span>.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>title: Temps de Demi-Réaction
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>- **Temps de demi-réaction** : $t_{1 /  2}$ qui suffit : $$\xi\left( t=t_{1 / 2} \right) = \frac{\xi_{f}}{2}$$durée au bout de laquelle *la moitié de l&#39;avancement final est atteinte*.
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    - Analogie : temps de demi-vie (ou période radioactive) d&#39;un nucléide radioactif.
+</code></pre></div>
+<ul>
+<li><strong>Facteur cinétique</strong> : Il s'agit de tout élément qui peut influencer la vitesse d'une réaction.<ul>
+<li>température</li>
+<li>concentration des réactifs</li>
+<li>présence d'un catalyseur</li>
+<li>autres : pression (réactif gazeux), nature des solvants, rayonnement</li>
+</ul>
+</li>
+</ul>
+<h3 id="determinations-experimentales">Déterminations expérimentales</h3>
+<h4 id="principe-general">Principe Général</h4>
+<ul>
+<li>Considérons une réaction unique et un réactif noté <span class="arithmatex">\(A\)</span>.</li>
+<li>Pour déterminer <span class="arithmatex">\(v_{d}(A)\)</span> et en déduire la vitesse de réaction <span class="arithmatex">\(v\)</span>, ainsi que le temps de demi-réaction <span class="arithmatex">\(t_{1/2}\)</span> , on mesure <span class="arithmatex">\([A]\)</span> au cours du temps pour obtenir la courbe <span class="arithmatex">\([A](t)\)</span>.</li>
+<li>Pour déterminer <span class="arithmatex">\(t_{1 / 2}\)</span>, il faut mesurer <span class="arithmatex">\([A]\)</span> jusqu'à valeur d'équilibre <span class="arithmatex">\([A]_{\infty}\)</span>. On a : <span class="arithmatex">\(<span class="arithmatex">\([A]_{1 / 2} = \frac{1}{2}([A]_{0}+[A]_{\infty})\)</span>\)</span>![[截屏2023-02-15 09.11.33.png]]</li>
+</ul>
+<h4 id="determiner-la-concentration">Déterminer la concentration</h4>
+<ul>
+<li>Méthodes physiques de mésure de la concentration : en utilisant en continu et ne perturbent pas la réaction :<ul>
+<li>Conductimétrie : suivre l'évolution de la <strong>conductance</strong> <span class="arithmatex">\(G\)</span> (en <span class="arithmatex">\(S\)</span>) ou de la <strong>conductivité</strong> <span class="arithmatex">\(\sigma\)</span> (en <span class="arithmatex">\(S.m^{-1}\)</span>). On écrite : <ul>
+<li><span class="arithmatex">\(G = k_{\text{cell}}\sigma\)</span>, où <span class="arithmatex">\(k\)</span> la <strong>constante de cellule</strong> en <span class="arithmatex">\(m\)</span> </li>
+<li><span class="arithmatex">\(\sigma=\sum_{i, \text{ ionique}}\lambda_{i}[c_{i}]\)</span> où <span class="arithmatex">\(\lambda_i\)</span> est la conductivité ionique molaire de l’ion i (en <span class="arithmatex">\(S·m^2 · mol^{-1}\)</span>) et <span class="arithmatex">\(c_i\)</span> sa concentration molaire (en mol·m3).</li>
+</ul>
+</li>
+<li>Spectrophotométrie : mesurer l'<strong>absorance</strong> <span class="arithmatex">\(A\)</span> du mélange à une longueur d'onde donnée.<ul>
+<li>obéit à la loi de Beer-Lambert : <span class="arithmatex">\(A = \varepsilon_{\lambda}\times l\times c\)</span></li>
+</ul>
+</li>
+<li>PH-métrie : mesurer de <span class="arithmatex">\(\text{pH}= -\frac{\log[H_{3}O^+]}{c}\)</span> donc de <span class="arithmatex">\([H_{3}O^+]\)</span> ou de <span class="arithmatex">\([OH^-]\)</span></li>
+<li>Mesure de pression : <span class="arithmatex">\(P = \frac{n_{\text{tot, gaz}}RT}{V}= \sum_{i,\text{ gaz}}[C_{i}]RT\)</span> dans un cadre de <span class="arithmatex">\(V\)</span> et <span class="arithmatex">\(T\)</span> constantes.</li>
+</ul>
+</li>
+</ul>
+<h2 id="loi-de-vitesse">Loi de Vitesse</h2>
+<h2 id="definitions">Définitions</h2>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>title: Loi de Vitesse
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>- **Notion de loi de vitesse** : La **vitesse de réaction** [[01 Vitesses et temps dans un système réactionnel#Définitions]] en fonction des **concentrations** $$v = f([C_{1}],[C_{2}],\dots,[C_{n}])$$
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>title: Réaction avec ordre, ordres partiel et global
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>- **Réaction avec ordre :** $$v = k[C_{1}]^{p_{1}}[C_{2}]^{p_{2}}\dots[C_{n}]^{p_{n}}$$
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    - $v$ dépend des $[C_{i}]$
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    - $p_{i}$ est l&#39;**ordre partiel** associé à $C_{i}$ (entier ou fractionnaire)
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    - L&#39;**ordre global** de la réaction est la *somme des ordres partiels* : $$p=p_{1}+p_{2}+\dots+p_{n}$$.
+</code></pre></div></p>
+<ul>
+<li>Exemple de réaction avec ordre : <span class="arithmatex">\(<span class="arithmatex">\(CO_{(g)}+Cl_{2(g)}=COCl_{2(g)}\)</span>\)</span> ici <span class="arithmatex">\(v = k[Cl_{2}][CO]^{3 / 2}\)</span>, donc <span class="arithmatex">\(p_{Cl_{2}}=1,\;p_{CO}=\frac{3}{2}\)</span>.</li>
+</ul>
+<h2 id="cas-dune-reaction-dordre-0">Cas d'une réaction d'ordre 0</h2>
+<p>![[Pasted image 20230222084950.png]]</p>
+<ul>
+<li>Ici, <span class="arithmatex">\(\forall i,\; p_{i }=0\)</span>, alors <span class="arithmatex">\(v = k = \text{constante}\)</span>, On a <span class="arithmatex">\(<span class="arithmatex">\(v = k=- \frac{1}{\alpha} \frac{\mathrm{d}[A]}{\mathrm{d}t} \text{ donc } [A] = [A]_{0} - k \alpha t\)</span>\)</span></li>
+<li>Si la réaction est totale, et <span class="arithmatex">\(A\)</span> est limitant, <span class="arithmatex">\(<span class="arithmatex">\(\frac{[A]_{0}}{2}=[A](t=t_{1 / 2})= [A]_{0}-k\alpha t_{1 / 2} \text{ donc } t_{1 / 2} = \frac{[A]_{0}}{2 k \alpha}\)</span>\)</span> ![[Pasted image 20230222085453.png]]</li>
+</ul>
+<h2 id="cas-dune-reaction-dordre-1">Cas d'une réaction d'ordre 1</h2>
+<ul>
+<li>Ici <span class="arithmatex">\(v = k[A]\)</span>, On a <span class="arithmatex">\(<span class="arithmatex">\(v = k[A] = - \frac{1}{\alpha} \frac{\mathrm{d}[A]}{\mathrm{d}t} \text{ donc } [A](t)=[A]_{0}e^{-\alpha kt }\)</span>\)</span></li>
+<li>Si la réaction est totale et <span class="arithmatex">\(A\)</span> est limitant, <span class="arithmatex">\(<span class="arithmatex">\(\frac{[A]_{0}}{2}=[A](t=t _{1 / 2})= [A]_{0}e^{-\alpha k t_{ 1/ 2}} \text{ donc } t_{1 / 2}=\frac{\ln 2}{\alpha k}\)</span>\)</span></li>
+</ul>
+<h2 id="cas-dune-reaction-dordre-2">Cas d'une réaction d'ordre 2</h2>
+<ul>
+<li>Ici, <span class="arithmatex">\(v = k[A]^2\)</span>. On a (après une simple intégration) <span class="arithmatex">\(<span class="arithmatex">\(v = k[A]^2=-\frac{1}{\alpha} \frac{\mathrm{d}[A]}{\mathrm{d}t} \text{ donc } [A](t) = \frac{[A]_{0}}{1+[A]_{0}k\alpha t}\)</span>\)</span></li>
+<li>Si la réaction est totale et <span class="arithmatex">\(A\)</span> est limitant, <span class="arithmatex">\(<span class="arithmatex">\(\frac{1}{[A]_{0} / 2}- \frac{1}{[A]_{0}}= k \alpha t_{1 / 2} \text{ donc } t_{1 / 2} = \frac{1}{k \alpha [A]_{0}}\)</span>\)</span></li>
+</ul>
+<h2 id="simplification-dune-loi-de-vitesse">Simplification d'une loi de vitesse</h2>
+<div class="arithmatex">\[
+\forall t, \;\frac{n_{1}}{\alpha_{1}}= \frac{n_{2}}{\alpha_{2}} = \dots \implies\frac{[A_{1}]}{\alpha_{1}}= \frac{[A_{2}]}{\alpha_{2}} = \dots
+$$
+D'où
+$$
+v= k'[A_{1}]^{p} \text{ avec } k'=\frac{\alpha_{2}^{p_{2}}}{\alpha_{1}^{p_{2}}} \times \dots \times \frac{\alpha_{n}^{p_{n}}}{\alpha_{1}^{p_{n}}}\times k
+\]</div>
+<h2 id="degenerescene-de-lordre">Dégénérescene de l'ordre</h2>
+<div class="arithmatex">\[
+\frac{n_{1,0}}{|\nu_{1}|} \ll \frac{n_{i,0}}{|\nu_{i}|}, \; \forall i \in [\![2,n]\!]
+$$
+La loi de vitesse se simplifie sous la forme : $$v = k_{\text{app}}[A_{1}]^{p_{1}}$$
+Une **constante de vitesse apparente** : $$k_{\text{app}} = k[A_{2}]^{p_{2}}\dots[A_{n}]^{p_{n}}\]</div>
+<h2 id="determination-experimentale-dune-loi-de-vitesse">Détermination expérimentale d'une loi de vitesse</h2>
+<p><em>Principe</em> : 
+- Hypothèse d'un modèle mathématique
+- Déduction de l'évolution de la concentration d'une ou plusieurs espèces
+- Comparaison avec les résultats expérimentaux</p>
+<p>On suppose <span class="arithmatex">\(<span class="arithmatex">\(v = k[A]^p\)</span>\)</span></p>
+<h3 id="methode-differentielle-pour-trouver-un-ordre">Méthode différentielle pour trouver un ordre</h3>
+<p>Il faut mesurer <span class="arithmatex">\(\mathrm{d}[A] / \mathrm{d}t\)</span> et <span class="arithmatex">\([A]\)</span> en fonction de <span class="arithmatex">\(t\)</span>.
+On trouve <span class="arithmatex">\(<span class="arithmatex">\(\ln \left( -\frac{\mathrm{d}[A]}{\mathrm{d}t} \right)=\ln\alpha k+p\ln[A]\)</span>\)</span>
+Une régéneration linéaire donne <span class="arithmatex">\(p\)</span> et <span class="arithmatex">\(k\)</span> (avec l'origine donne la valeur en connaisant <span class="arithmatex">\(\alpha\)</span>)</p>
+<blockquote>
+<p>Date : 2023-03-01 Matériaux : [[Thermochimie_Cours_CH1_Partie3.pdf]]</p>
+</blockquote>
+<h3 id="methode-integrale-pour-confirmer-un-ordre-suppose">Méthode intégrale pour confirmer un ordre supposé</h3>
+<p>Il faut mesurer <span class="arithmatex">\(t\)</span> et <span class="arithmatex">\([A]\)</span> en fonction de <span class="arithmatex">\(t\)</span>.
+On cherche alors une fonction de <span class="arithmatex">\([A]\)</span> affine avec <span class="arithmatex">\(t\)</span>, validée par une régression linéaire.
+- Si <span class="arithmatex">\(p=0\)</span>, <span class="arithmatex">\([A](t)=[A]_{0}-k\alpha t\)</span>
+- Si <span class="arithmatex">\(p=1\)</span>, <span class="arithmatex">\(\ln [A](t) = \ln[A]_{0}-k\alpha t\)</span>
+- Si <span class="arithmatex">\(p=2\)</span>, <span class="arithmatex">\(1 / [A](t) = 1 / [A]_{0}+ k\alpha t\)</span></p>
+<h3 id="methode-du-temps-de-demi-reaction">Méthode du temps de demi-réaction</h3>
+<p>On détermine <span class="arithmatex">\(t_{1 / 2}\)</span> pour différentes valeurs de <span class="arithmatex">\([A]_{0}\)</span>
+- Si <span class="arithmatex">\(p=0\)</span>, <span class="arithmatex">\(t_{1 / 2}= [A]_{0} / 2k \alpha\)</span>, proportionnel à <span class="arithmatex">\([A]_{0}\)</span>
+- Si <span class="arithmatex">\(p=1\)</span>, <span class="arithmatex">\(t_{1 / 2}= \ln 2 / \alpha k\)</span>, indépendant de <span class="arithmatex">\([A]_{0}\)</span>
+- Si <span class="arithmatex">\(p=2\)</span>, <span class="arithmatex">\(t_{1 / 2 }= 1 / [A]_{0}\alpha k\)</span>, proportionnel à <span class="arithmatex">\(1 / [A]_{0}\)</span></p>
+<p>(Plus généralement, <span class="arithmatex">\(t_{1 / 2}\)</span> est proportionnel à <span class="arithmatex">\([A]_{0}^{1-p}\)</span>)</p>
+<h2 id="03-exemples-de-reactions-complexes">03 Exemples de réactions complexes</h2>
+<blockquote>
+<p>Date : 2023-03-01 Matériaux : [[Thermochimie_Cours_CH1_Partie3.pdf]]</p>
+</blockquote>
+<h2 id="deux-reaction-successives-dordre-1">Deux Réaction successives d'ordre 1</h2>
+<p>![[Drawing 2023-03-01 08.13.58.excalidraw]]
+avec <span class="arithmatex">\(v_{1}=k_{1}[A], \; v_{2}=k_{2}[B]\)</span>
+Alors, les trois équations : <span class="arithmatex">\(<span class="arithmatex">\(\begin{align}
+[A] &amp;=[A]_{0}\cdot e^{-k_{1}t } \to 0 \\
+[B] &amp;= [A]_{0}\cdot\frac{k_{1}}{k_{2}-k_{1}}\cdot(e^{-k_{1}t }-e^{-k_{2} t})\to 0 \\
+[C] &amp;= [A]_{0} \cdot \left[ 1 - \frac{k_{2}}{k_{2}-k_{1}}e^{-k_{1}t }+ \frac{k_{1}}{k_{2}-k_{1}}e^{-k_{2}t} \right] \to [A]_{0}
+\end{align}\)</span>\)</span>![[截屏2023-03-01 08.36.30.png]]
+Lorsque <span class="arithmatex">\(\tau _1 = 1 / k_{1} \gg 1 / k_{2}= \tau_{2}\)</span>, <span class="arithmatex">\(<span class="arithmatex">\(\begin{align}
+[B](t) &amp;\approx  \frac{k_{1}}{k_{2}}[A]_{0}e^{-k_{1}t}\ll[A](t) \text{ et } [C](t)\\
+[C](t) &amp;\approx [A]_{0}(1- e^{-k_{1}t})
+\end{align}\)</span>\)</span><span class="arithmatex">\([C](t)\)</span> ne dépend que de <span class="arithmatex">\(k_{1}\)</span>. 
+- la réaction limite la vitesse globale et est donc dite « <strong>cinétiquement déterminante</strong> ».
+- La concentration de B reste négligeable devant celles de A et B. Elle peut alors être considérée comme quasiment constante : elle est dite <strong>quasi-stationnaire</strong>.
+Démonstration : ![[Pasted image 20230301083609.png]]</p>
+<h2 id="reaction-equilibre">Réaction équilibre</h2>
+<div class="arithmatex">\[
+A=B \iff A \underbrace{\to}_{k^+}B \text{ et } B \underbrace{\to}_{k^-} A
+$$
+à L'état final, $$\frac{[B]_{\infty}}{[A]_{\infty}}= \frac{k_{+}}{k_{-}}$$
+## Réaction parallèles
+$$
+A \underbrace{\to}_{k_{1}}B \text{ et } A \underbrace{\to}_{k_{2}}C
+$$
+On peut établir en tout instant, $$\frac{[B](t)}{[C](t)}= \frac{k_{1}}{k_{2}}\]</div>
+<h2 id="mecaniques-reactionnels">Mécaniques Réactionnels</h2>
+<blockquote>
+<p>Date : 2023-03-01 Matériaux : [[Thermochimie_Cours_CH1_Partie3-3.pdf]]</p>
+</blockquote>
+<h2 id="notions-fondamentales">Notions fondamentales</h2>
+<p>Une équation bilan ne donne aucune information sur les mécanismes microscopiques qui se déroulent par étapes (selon le nombre de réactifs impliqués) appelés actes élémentaires.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>title: Acte Élémentaire
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>- **Acte élémentaire** :  
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Processus dans lequel peu d’entités (1, 2 ou 3 molécules, ions ou atomes) interagissent et produisent aussi peu de nouvelles entités. 
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>- La **molécularité** est le nombre de réactifs impliqués.  
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>- Un **acte élémentaire** 用单个箭头表示。
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>- Les **coefficients stœchiométriques** sont les nombres réels d’entités interagissant.
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>title: IR
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>- **Intermédiaires réactionnels** (IR) :  
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    - Produit peu stable d’un **acte élémentaire**, se transforme rapidement en une autre espèce.  
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    - Les IR *ne figurent pas dans le bilan global* de réaction et existent en *très petite quantité* dans le mélange réactionnel. Ces espèces peu stables sont de différentes natures (radicaux libres, carbocations notamment).
+</code></pre></div>
+<h2 id="loi-de-vant-hoff">Loi de Van't Hoff</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>title: Loi de Van&#39;t Hoff
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>- **Loi de Van&#39;t Hoff** : un acte élémentaire possède une loi de vitesse avec ordre, dont *les ordres partiels sont les coefficients stœchiométriques*. *L’ordre global est égal à la molécularité*.
+</code></pre></div>
+<h2 id="aeqs">AEQS</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>title: AEQS
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>- **Approximation de l’étape cinétiquement déterminante** (AEQS) 
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    - Cette approximation concerne *une succession de réactions élémentaires* dont l’une a une constante de vitesse beaucoup plus faible que les autres. 
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    - *En première approximation*, la vitesse de la réaction est égale à la vitesse de l’étape cinétiquement déterminante, qui est celle ayant la constante de vitesse *la plus faible*
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>- Si $A^\cdot$ est un **IR**, en **AEQS** on peut écrire : $$\frac{\mathrm{d}[A^\cdot]}{\mathrm{d}t}\approx 0=\sum_{i=1}^n v_{i}$$
+</code></pre></div>
+<ul>
+<li>似乎分解反应没有配平并不影响反应速率，即不需要乘以系数（需要验证）</li>
+</ul>
+<h2 id="exemple">Exemple</h2>
+<ol>
+<li>Cas la molécularité trop grande donc impossibilité d'un acte élémentaire : ![[截屏2023-03-01 09.24.01.png]]</li>
+<li>Cas des actes élémentaire : <span class="arithmatex">\(R=(1)+(2)+2(3)\)</span> avec <span class="arithmatex">\(IR: HBrOO \text{ et } HBrO\)</span> ![[截屏2023-03-01 09.25.40.png]]</li>
+<li>La loi de vitesse, montrer que c'est d'ordre 1 : <span class="arithmatex">(<span class="arithmatex">\(n_{HBr} = n_{HBr,0} - \xi_{1}-\xi_{2}-\xi_{3} \implies v = - \frac{1}{4} \frac{\mathrm{d}[HBr]}{\mathrm{d}t} = \frac{1}{4}(v_{1}+v_{2}+v_{3})\)</span>\)</span><ul>
+<li>D'après la <strong>loi de Van't Hoff</strong> : <span class="arithmatex">\(v_{1}=k_{1}[HBr][O_{2}], v_{2}=k_{2}[HBrOO][HBr], \; v_{3}= k_{3}[HBrO][HBr]\)</span>
+    Si d'après l'AEQS, <span class="arithmatex">\(<span class="arithmatex">\(0 = \frac{\mathrm{d}{[HBrOO]}}{\mathrm{d}t}= v_{1}-v_{2} \implies v_{1}=v_{2}\)</span>\)</span> et <span class="arithmatex">\(<span class="arithmatex">\(0 = \frac{\mathrm{d}[HBrO]}{\mathrm{d}t}=2v_{2}-v_{3}\implies v_{3}=2v_{2}=2v_{1}\)</span>\)</span></li>
+<li>Donc, <span class="arithmatex">\(<span class="arithmatex">\(v = v_{1}= k_{1}[HBr][O_{2}]\)</span>\)</span></li>
+</ul>
+</li>
+<li>Pourquoi dit-on que l’étape (1) est cinétiquement déterminante ?<ul>
+<li>Par nos calculs, <span class="arithmatex">\(v=v_1\)</span> mais en fait l'AEQS suppose que <span class="arithmatex">\(k_{2}\gg k_{1}\)</span>. Donc la réaction totale est limitée par <span class="arithmatex">\((1)\)</span></li>
+</ul>
+</li>
+</ol>
+<h2 id="influence-de-la-temperature">Influence de la température</h2>
+<p>En générale, la vitesse de réaction augmente lorsque la température augmente.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>title: Loi d&#39;Arrhenius
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>**Theorème:  Loi d&#39;Arrhenius** (Loi semi-empirique)
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Pours les réactions avec ordre, la **constante de vitesse** $k$ varie généralement selon $$k=Ae^{- \frac{E_{a}}{RT}}(A&gt;0)$$C&#39;est-à-dire $k$ augmente lorsque $T$ augmente. Ici, $E_{a}$ appelle l’**énergie d’activation**.
+</code></pre></div></p>
+<p>L’évolution d’une transformation peut-être représenté par un <strong>chemin réactionnel</strong> (abstrait ou non). 
+La <strong>coordonnée de réaction</strong> <span class="arithmatex">\(u\)</span> (variable abstraite) positionne <em>l’état du système sur ce chemin</em>.
+Le tracé de l'énergie en fonction de la coordonnée de réaction est appelé <strong>diagramme de réaction</strong>.</p>
+<ul>
+<li><strong>Modèle du complexe activé</strong></li>
+<li>La loi d’Arrhenius s’interprète simplement dans le cas d’un acte élémentaire bimoléculaire : <span class="arithmatex">\(<span class="arithmatex">\(A+B →C\)</span>\)</span></li>
+<li>Quand <span class="arithmatex">\(u= 0\)</span>, <span class="arithmatex">\(A\)</span> et <span class="arithmatex">\(B\)</span> sont bien séparés. </li>
+<li>Quand <span class="arithmatex">\(u= 1\)</span>, <span class="arithmatex">\(A\)</span> et <span class="arithmatex">\(B\)</span> ont formé l’entité stable C. </li>
+</ul>
+<p>Entre les deux, le système doit passer par un état d’énergie potentielle <span class="arithmatex">\(E_p(𝑢)\)</span> élevée et donc très <strong>instable</strong>, appelé état de transition correspondant à un <strong>complexe activé</strong> de durée de vie très courte.
+- Entre les deux, le système doit passer par un état très instable, appelé <strong>état de transition</strong>, d’énergie potentielle plus élevée que les états <span class="arithmatex">\(A + B\)</span> ou <span class="arithmatex">\(C\)</span>.
+![[截屏2023-03-01 09.42.37.png]]</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>title: Catalyse
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>- Un **catalyseur** est une espèce qui augment la vitesse d&#39;une réaction sans apparaître dans l&#39;équation bilan. ![[截屏2023-03-08 08.12.33.png]]
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>- L&#39;*équilibre final* n&#39;est pas modifié mais est atteint plus rapidement.
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>- Type : **Catalyse Homogène** ![[截屏2023-03-08 08.16.19.png]]
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>- Type : **Catalyse Hétérogène** ![[截屏2023-03-08 08.16.42.png]]
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>- Type : **Catalyse enzymatique**
+</code></pre></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-04-14T09:29:18+08:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-04-14</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-04-14T09:29:18+08:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-04-14</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/Languisher"  target="_blank" rel="noopener">Brandon Lin</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Languisher" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["naviagation.tabs", "naviagation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.407015b8.min.js"></script>
+      
+        <script src="../../../js/timeago.min.js"></script>
+      
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

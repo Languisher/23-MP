@@ -1,0 +1,1560 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Mkdocs/">
+      
+      
+        <link rel="next" href="../Vim/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
+    
+    
+      
+        <title>Markdown - Brandon Lin</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7a7fce14.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/timeago.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#markdown" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Brandon Lin" class="md-header__button md-logo" aria-label="Brandon Lin" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Brandon Lin
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Markdown
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Brandon Lin" class="md-nav__button md-logo" aria-label="Brandon Lin" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Brandon Lin
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Cookbooks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cookbooks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Mkdocs/" class="md-nav__link">
+        Mkdocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          Vim & Markdown
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Vim & Markdown
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Markdown
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Markdown
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#markdown-and-equations" class="md-nav__link">
+    Markdown and Equations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#my-markdownsnippets" class="md-nav__link">
+    My markdown.snippets
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Manim/" class="md-nav__link">
+        Manim
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Machine Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Machine Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          CNN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          CNN
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/CV/CNN/" class="md-nav__link">
+        Convolutional Network
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/CV/Brain-Inspired-CNN/" class="md-nav__link">
+        Brain-inspired CNN
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Adversarial Attack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Adversarial Attack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/AA/Adversarial-Attack/" class="md-nav__link">
+        Adversarial Attack
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ML/CV/ImageNet/" class="md-nav__link">
+        ImageNet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Maths (French)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Maths (French)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          Algèbre
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Algèbre
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../M/AL/Endomorphismes/" class="md-nav__link">
+        Endomorphismes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../M/AL/ReductionsdesEndomorphismes/" class="md-nav__link">
+        Réductions des endomorphismes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Analyse
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Analyse
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../M/An/Topology/" class="md-nav__link">
+        Topologie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../M/An/Convexit%C3%A9/" class="md-nav__link">
+        Convexité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../M/An/Calcul-Diff%C3%A9rentielle/" class="md-nav__link">
+        Calcul Différentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Physiques (French)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Physiques (French)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../P/Ondes%20Ondulatoires/" class="md-nav__link">
+        Ondes Ondulatoires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          Thermodynamique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Thermodynamique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../P/Thermo/Thermo01/" class="md-nav__link">
+        Mélange et Potentiel Chimique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../P/Thermo/CinetiqueChimie/" class="md-nav__link">
+        Cinétique Chimie
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="markdown">Markdown</h1>
+<blockquote>
+<p>I'll not introduce any basic conceptions of markdown here.</p>
+</blockquote>
+<h2 id="markdown-and-equations">Markdown and Equations</h2>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://github.com/gillescastel/latex-snippets.git">Markdown.snippets file</a></li>
+</ul>
+<h2 id="my-markdownsnippets">My <code>markdown.snippets</code></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>global !p
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>def math():
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    return vim.eval(&#39;vimtex#syntax#in_mathzone()&#39;) == &#39;1&#39;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>def comment():
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    return vim.eval(&#39;vimtex#syntax#in_comment()&#39;) == &#39;1&#39;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>def env(name):
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    [x,y] = vim.eval(&quot;vimtex#env#is_inside(&#39;&quot; + name + &quot;&#39;)&quot;) 
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    return x != &#39;0&#39; and y != &#39;0&#39;
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>endglobal
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>snippet beg &quot;begin{} / end{}&quot; bA
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>\\begin{$1}
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    $0
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>\\end{$1}
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>endsnippet
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>priority 100
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>snippet ... &quot;ldots&quot; i
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>\ldots
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>endsnippet
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>snippet =&gt; &quot;implies&quot; Ai
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>\implies
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>endsnippet
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>snippet =&lt; &quot;implied by&quot; Ai
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>\impliedby
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>endsnippet
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>context &quot;math()&quot;
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>snippet iff &quot;iff&quot; Ai
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>\iff
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>endsnippet
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>snippet mk &quot;Math&quot; wA
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>$${1}$`!p
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>if t[2] and t[2][0] not in [&#39;,&#39;, &#39;.&#39;, &#39;?&#39;, &#39;-&#39;, &#39; &#39;]:
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    snip.rv = &#39; &#39;
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>else:
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    snip.rv = &#39;&#39;
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>`$2
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>endsnippet
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>snippet dm &quot;Math&quot; wA
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>\[
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>${1:${VISUAL}}
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>.\] $0
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>endsnippet
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>snippet ali &quot;Align&quot; bA
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>\begin{align*}
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>    ${1:${VISUAL}}
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>.\end{align*}
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>endsnippet
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>context &quot;math()&quot;
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>snippet // &quot;Fraction&quot; iA
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>\\frac{$1}{$2}$0
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>endsnippet
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>snippet / &quot;Fraction&quot; i
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>\\frac{${VISUAL}}{$1}$0
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>endsnippet
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>context &quot;math()&quot;
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>snippet &#39;((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/&#39; &quot;symbol frac&quot; wrA
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>endsnippet
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>priority 1000
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>context &quot;math()&quot;
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>snippet &#39;^.*\)/&#39; &quot;() frac&quot; wrA
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>`!p
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>stripped = match.string[:-1]
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>depth = 0
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>i = len(stripped) - 1
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>while True:
+<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>    if stripped[i] == &#39;)&#39;: depth += 1
+<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>    if stripped[i] == &#39;(&#39;: depth -= 1
+<a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>    if depth == 0: break;
+<a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>    i-=1
+<a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>snip.rv = stripped[0:i] + &quot;\\frac{&quot; + stripped[i+1:-1] + &quot;}&quot;
+<a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>`{$1}$0
+<a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>endsnippet
+<a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>
+<a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>context &quot;math()&quot;
+<a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>snippet &#39;([A-Za-z])(\d)&#39; &quot;auto subscript&quot; wrA
+<a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+<a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>endsnippet
+<a id="__codelineno-0-94" name="__codelineno-0-94" href="#__codelineno-0-94"></a>
+<a id="__codelineno-0-95" name="__codelineno-0-95" href="#__codelineno-0-95"></a>context &quot;math()&quot;
+<a id="__codelineno-0-96" name="__codelineno-0-96" href="#__codelineno-0-96"></a>snippet &#39;([A-Za-z])_(\d\d)&#39; &quot;auto subscript2&quot; wrA
+<a id="__codelineno-0-97" name="__codelineno-0-97" href="#__codelineno-0-97"></a>`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+<a id="__codelineno-0-98" name="__codelineno-0-98" href="#__codelineno-0-98"></a>endsnippet
+<a id="__codelineno-0-99" name="__codelineno-0-99" href="#__codelineno-0-99"></a>
+<a id="__codelineno-0-100" name="__codelineno-0-100" href="#__codelineno-0-100"></a>
+<a id="__codelineno-0-101" name="__codelineno-0-101" href="#__codelineno-0-101"></a>snippet sympy &quot;sympyblock &quot; w
+<a id="__codelineno-0-102" name="__codelineno-0-102" href="#__codelineno-0-102"></a>sympy $1 sympy$0
+<a id="__codelineno-0-103" name="__codelineno-0-103" href="#__codelineno-0-103"></a>endsnippet
+<a id="__codelineno-0-104" name="__codelineno-0-104" href="#__codelineno-0-104"></a>
+<a id="__codelineno-0-105" name="__codelineno-0-105" href="#__codelineno-0-105"></a>priority 10000
+<a id="__codelineno-0-106" name="__codelineno-0-106" href="#__codelineno-0-106"></a>snippet &#39;sympy(.*)sympy&#39; &quot;sympy&quot; wr
+<a id="__codelineno-0-107" name="__codelineno-0-107" href="#__codelineno-0-107"></a>`!p
+<a id="__codelineno-0-108" name="__codelineno-0-108" href="#__codelineno-0-108"></a>from sympy import *
+<a id="__codelineno-0-109" name="__codelineno-0-109" href="#__codelineno-0-109"></a>x, y, z, t = symbols(&#39;x y z t&#39;)
+<a id="__codelineno-0-110" name="__codelineno-0-110" href="#__codelineno-0-110"></a>k, m, n = symbols(&#39;k m n&#39;, integer=True)
+<a id="__codelineno-0-111" name="__codelineno-0-111" href="#__codelineno-0-111"></a>f, g, h = symbols(&#39;f g h&#39;, cls=Function)
+<a id="__codelineno-0-112" name="__codelineno-0-112" href="#__codelineno-0-112"></a>init_printing()
+<a id="__codelineno-0-113" name="__codelineno-0-113" href="#__codelineno-0-113"></a>snip.rv = eval(&#39;latex(&#39; + match.group(1).replace(&#39;\\&#39;, &#39;&#39;).replace(&#39;^&#39;, &#39;**&#39;).replace(&#39;{&#39;, &#39;(&#39;).replace(&#39;}&#39;, &#39;)&#39;) + &#39;)&#39;)
+<a id="__codelineno-0-114" name="__codelineno-0-114" href="#__codelineno-0-114"></a>`
+<a id="__codelineno-0-115" name="__codelineno-0-115" href="#__codelineno-0-115"></a>endsnippet
+<a id="__codelineno-0-116" name="__codelineno-0-116" href="#__codelineno-0-116"></a>
+<a id="__codelineno-0-117" name="__codelineno-0-117" href="#__codelineno-0-117"></a>priority 1000
+<a id="__codelineno-0-118" name="__codelineno-0-118" href="#__codelineno-0-118"></a>snippet math &quot;mathematicablock&quot; w
+<a id="__codelineno-0-119" name="__codelineno-0-119" href="#__codelineno-0-119"></a>math $1 math$0
+<a id="__codelineno-0-120" name="__codelineno-0-120" href="#__codelineno-0-120"></a>endsnippet
+<a id="__codelineno-0-121" name="__codelineno-0-121" href="#__codelineno-0-121"></a>
+<a id="__codelineno-0-122" name="__codelineno-0-122" href="#__codelineno-0-122"></a>priority 10000
+<a id="__codelineno-0-123" name="__codelineno-0-123" href="#__codelineno-0-123"></a>snippet &#39;math(.*)math&#39; &quot;math&quot; wr
+<a id="__codelineno-0-124" name="__codelineno-0-124" href="#__codelineno-0-124"></a>`!p
+<a id="__codelineno-0-125" name="__codelineno-0-125" href="#__codelineno-0-125"></a>import subprocess
+<a id="__codelineno-0-126" name="__codelineno-0-126" href="#__codelineno-0-126"></a>code = match.group(1)
+<a id="__codelineno-0-127" name="__codelineno-0-127" href="#__codelineno-0-127"></a>code = &#39;ToString[&#39; + code + &#39;, TeXForm]&#39;
+<a id="__codelineno-0-128" name="__codelineno-0-128" href="#__codelineno-0-128"></a>snip.rv = subprocess.check_output([&#39;wolframscript&#39;, &#39;-code&#39;, code])
+<a id="__codelineno-0-129" name="__codelineno-0-129" href="#__codelineno-0-129"></a>`
+<a id="__codelineno-0-130" name="__codelineno-0-130" href="#__codelineno-0-130"></a>endsnippet
+<a id="__codelineno-0-131" name="__codelineno-0-131" href="#__codelineno-0-131"></a>
+<a id="__codelineno-0-132" name="__codelineno-0-132" href="#__codelineno-0-132"></a>snippet == &quot;equals&quot; iA
+<a id="__codelineno-0-133" name="__codelineno-0-133" href="#__codelineno-0-133"></a>&amp;= $1 \\\\
+<a id="__codelineno-0-134" name="__codelineno-0-134" href="#__codelineno-0-134"></a>endsnippet
+<a id="__codelineno-0-135" name="__codelineno-0-135" href="#__codelineno-0-135"></a>
+<a id="__codelineno-0-136" name="__codelineno-0-136" href="#__codelineno-0-136"></a>snippet != &quot;equals&quot; iA
+<a id="__codelineno-0-137" name="__codelineno-0-137" href="#__codelineno-0-137"></a>\neq 
+<a id="__codelineno-0-138" name="__codelineno-0-138" href="#__codelineno-0-138"></a>endsnippet
+<a id="__codelineno-0-139" name="__codelineno-0-139" href="#__codelineno-0-139"></a>
+<a id="__codelineno-0-140" name="__codelineno-0-140" href="#__codelineno-0-140"></a>context &quot;math()&quot;
+<a id="__codelineno-0-141" name="__codelineno-0-141" href="#__codelineno-0-141"></a>snippet ceil &quot;ceil&quot; iA
+<a id="__codelineno-0-142" name="__codelineno-0-142" href="#__codelineno-0-142"></a>\left\lceil $1 \right\rceil $0
+<a id="__codelineno-0-143" name="__codelineno-0-143" href="#__codelineno-0-143"></a>endsnippet
+<a id="__codelineno-0-144" name="__codelineno-0-144" href="#__codelineno-0-144"></a>
+<a id="__codelineno-0-145" name="__codelineno-0-145" href="#__codelineno-0-145"></a>context &quot;math()&quot;
+<a id="__codelineno-0-146" name="__codelineno-0-146" href="#__codelineno-0-146"></a>snippet floor &quot;floor&quot; iA
+<a id="__codelineno-0-147" name="__codelineno-0-147" href="#__codelineno-0-147"></a>\left\lfloor $1 \right\rfloor$0
+<a id="__codelineno-0-148" name="__codelineno-0-148" href="#__codelineno-0-148"></a>endsnippet
+<a id="__codelineno-0-149" name="__codelineno-0-149" href="#__codelineno-0-149"></a>
+<a id="__codelineno-0-150" name="__codelineno-0-150" href="#__codelineno-0-150"></a>snippet pmat &quot;pmat&quot; iA
+<a id="__codelineno-0-151" name="__codelineno-0-151" href="#__codelineno-0-151"></a>\begin{pmatrix} $1 \end{pmatrix} $0
+<a id="__codelineno-0-152" name="__codelineno-0-152" href="#__codelineno-0-152"></a>endsnippet
+<a id="__codelineno-0-153" name="__codelineno-0-153" href="#__codelineno-0-153"></a>
+<a id="__codelineno-0-154" name="__codelineno-0-154" href="#__codelineno-0-154"></a>snippet bmat &quot;bmat&quot; iA
+<a id="__codelineno-0-155" name="__codelineno-0-155" href="#__codelineno-0-155"></a>\begin{bmatrix} $1 \end{bmatrix} $0
+<a id="__codelineno-0-156" name="__codelineno-0-156" href="#__codelineno-0-156"></a>endsnippet
+<a id="__codelineno-0-157" name="__codelineno-0-157" href="#__codelineno-0-157"></a>
+<a id="__codelineno-0-158" name="__codelineno-0-158" href="#__codelineno-0-158"></a>context &quot;math()&quot;
+<a id="__codelineno-0-159" name="__codelineno-0-159" href="#__codelineno-0-159"></a>snippet () &quot;left( right)&quot; iA
+<a id="__codelineno-0-160" name="__codelineno-0-160" href="#__codelineno-0-160"></a>\left( ${1:${VISUAL}} \right) $0
+<a id="__codelineno-0-161" name="__codelineno-0-161" href="#__codelineno-0-161"></a>endsnippet
+<a id="__codelineno-0-162" name="__codelineno-0-162" href="#__codelineno-0-162"></a>
+<a id="__codelineno-0-163" name="__codelineno-0-163" href="#__codelineno-0-163"></a>snippet lr &quot;left( right)&quot; i
+<a id="__codelineno-0-164" name="__codelineno-0-164" href="#__codelineno-0-164"></a>\left( ${1:${VISUAL}} \right) $0
+<a id="__codelineno-0-165" name="__codelineno-0-165" href="#__codelineno-0-165"></a>endsnippet
+<a id="__codelineno-0-166" name="__codelineno-0-166" href="#__codelineno-0-166"></a>
+<a id="__codelineno-0-167" name="__codelineno-0-167" href="#__codelineno-0-167"></a>snippet lr( &quot;left( right)&quot; i
+<a id="__codelineno-0-168" name="__codelineno-0-168" href="#__codelineno-0-168"></a>\left( ${1:${VISUAL}} \right) $0
+<a id="__codelineno-0-169" name="__codelineno-0-169" href="#__codelineno-0-169"></a>endsnippet
+<a id="__codelineno-0-170" name="__codelineno-0-170" href="#__codelineno-0-170"></a>
+<a id="__codelineno-0-171" name="__codelineno-0-171" href="#__codelineno-0-171"></a>snippet lr| &quot;left| right|&quot; i
+<a id="__codelineno-0-172" name="__codelineno-0-172" href="#__codelineno-0-172"></a>\left| ${1:${VISUAL}} \right| $0
+<a id="__codelineno-0-173" name="__codelineno-0-173" href="#__codelineno-0-173"></a>endsnippet
+<a id="__codelineno-0-174" name="__codelineno-0-174" href="#__codelineno-0-174"></a>
+<a id="__codelineno-0-175" name="__codelineno-0-175" href="#__codelineno-0-175"></a>snippet lr{ &quot;left\{ right\}&quot; i
+<a id="__codelineno-0-176" name="__codelineno-0-176" href="#__codelineno-0-176"></a>\left\\{ ${1:${VISUAL}} \right\\} $0
+<a id="__codelineno-0-177" name="__codelineno-0-177" href="#__codelineno-0-177"></a>endsnippet
+<a id="__codelineno-0-178" name="__codelineno-0-178" href="#__codelineno-0-178"></a>
+<a id="__codelineno-0-179" name="__codelineno-0-179" href="#__codelineno-0-179"></a>snippet lrb &quot;left\{ right\}&quot; i
+<a id="__codelineno-0-180" name="__codelineno-0-180" href="#__codelineno-0-180"></a>\left\\{ ${1:${VISUAL}} \right\\} $0
+<a id="__codelineno-0-181" name="__codelineno-0-181" href="#__codelineno-0-181"></a>endsnippet
+<a id="__codelineno-0-182" name="__codelineno-0-182" href="#__codelineno-0-182"></a>
+<a id="__codelineno-0-183" name="__codelineno-0-183" href="#__codelineno-0-183"></a>snippet lr[ &quot;left[ right]&quot; i
+<a id="__codelineno-0-184" name="__codelineno-0-184" href="#__codelineno-0-184"></a>\left[ ${1:${VISUAL}} \right] $0
+<a id="__codelineno-0-185" name="__codelineno-0-185" href="#__codelineno-0-185"></a>endsnippet
+<a id="__codelineno-0-186" name="__codelineno-0-186" href="#__codelineno-0-186"></a>
+<a id="__codelineno-0-187" name="__codelineno-0-187" href="#__codelineno-0-187"></a>snippet lra &quot;leftangle rightangle&quot; iA
+<a id="__codelineno-0-188" name="__codelineno-0-188" href="#__codelineno-0-188"></a>\left&lt;${1:${VISUAL}} \right&gt;$0
+<a id="__codelineno-0-189" name="__codelineno-0-189" href="#__codelineno-0-189"></a>endsnippet
+<a id="__codelineno-0-190" name="__codelineno-0-190" href="#__codelineno-0-190"></a>
+<a id="__codelineno-0-191" name="__codelineno-0-191" href="#__codelineno-0-191"></a>context &quot;math()&quot;
+<a id="__codelineno-0-192" name="__codelineno-0-192" href="#__codelineno-0-192"></a>snippet conj &quot;conjugate&quot; iA
+<a id="__codelineno-0-193" name="__codelineno-0-193" href="#__codelineno-0-193"></a>\overline{$1}$0
+<a id="__codelineno-0-194" name="__codelineno-0-194" href="#__codelineno-0-194"></a>endsnippet
+<a id="__codelineno-0-195" name="__codelineno-0-195" href="#__codelineno-0-195"></a>
+<a id="__codelineno-0-196" name="__codelineno-0-196" href="#__codelineno-0-196"></a>snippet sum &quot;sum&quot; w
+<a id="__codelineno-0-197" name="__codelineno-0-197" href="#__codelineno-0-197"></a>\sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
+<a id="__codelineno-0-198" name="__codelineno-0-198" href="#__codelineno-0-198"></a>endsnippet
+<a id="__codelineno-0-199" name="__codelineno-0-199" href="#__codelineno-0-199"></a>
+<a id="__codelineno-0-200" name="__codelineno-0-200" href="#__codelineno-0-200"></a>snippet taylor &quot;taylor&quot; w
+<a id="__codelineno-0-201" name="__codelineno-0-201" href="#__codelineno-0-201"></a>\sum_{${1:k}=${2:0}}^{${3:\infty}} ${4:c_$1} (x-a)^$1 $0
+<a id="__codelineno-0-202" name="__codelineno-0-202" href="#__codelineno-0-202"></a>endsnippet
+<a id="__codelineno-0-203" name="__codelineno-0-203" href="#__codelineno-0-203"></a>
+<a id="__codelineno-0-204" name="__codelineno-0-204" href="#__codelineno-0-204"></a>snippet lim &quot;limit&quot; w
+<a id="__codelineno-0-205" name="__codelineno-0-205" href="#__codelineno-0-205"></a>\lim_{${1:n} \to ${2:\infty}} 
+<a id="__codelineno-0-206" name="__codelineno-0-206" href="#__codelineno-0-206"></a>endsnippet
+<a id="__codelineno-0-207" name="__codelineno-0-207" href="#__codelineno-0-207"></a>
+<a id="__codelineno-0-208" name="__codelineno-0-208" href="#__codelineno-0-208"></a>snippet limsup &quot;limsup&quot; w
+<a id="__codelineno-0-209" name="__codelineno-0-209" href="#__codelineno-0-209"></a>\limsup_{${1:n} \to ${2:\infty}} 
+<a id="__codelineno-0-210" name="__codelineno-0-210" href="#__codelineno-0-210"></a>endsnippet
+<a id="__codelineno-0-211" name="__codelineno-0-211" href="#__codelineno-0-211"></a>
+<a id="__codelineno-0-212" name="__codelineno-0-212" href="#__codelineno-0-212"></a>snippet prod &quot;product&quot; w
+<a id="__codelineno-0-213" name="__codelineno-0-213" href="#__codelineno-0-213"></a>\prod_{${1:n=${2:1}}}^{${3:\infty}} ${4:${VISUAL}} $0
+<a id="__codelineno-0-214" name="__codelineno-0-214" href="#__codelineno-0-214"></a>endsnippet
+<a id="__codelineno-0-215" name="__codelineno-0-215" href="#__codelineno-0-215"></a>
+<a id="__codelineno-0-216" name="__codelineno-0-216" href="#__codelineno-0-216"></a>snippet part &quot;d/dx&quot; w
+<a id="__codelineno-0-217" name="__codelineno-0-217" href="#__codelineno-0-217"></a>\frac{\partial ${1:V}}{\partial ${2:x}} $0
+<a id="__codelineno-0-218" name="__codelineno-0-218" href="#__codelineno-0-218"></a>endsnippet
+<a id="__codelineno-0-219" name="__codelineno-0-219" href="#__codelineno-0-219"></a>
+<a id="__codelineno-0-220" name="__codelineno-0-220" href="#__codelineno-0-220"></a>context &quot;math()&quot;
+<a id="__codelineno-0-221" name="__codelineno-0-221" href="#__codelineno-0-221"></a>snippet sq &quot;\sqrt{}&quot; iA
+<a id="__codelineno-0-222" name="__codelineno-0-222" href="#__codelineno-0-222"></a>\sqrt{${1:${VISUAL}}} $0
+<a id="__codelineno-0-223" name="__codelineno-0-223" href="#__codelineno-0-223"></a>endsnippet
+<a id="__codelineno-0-224" name="__codelineno-0-224" href="#__codelineno-0-224"></a>
+<a id="__codelineno-0-225" name="__codelineno-0-225" href="#__codelineno-0-225"></a>context &quot;math()&quot;
+<a id="__codelineno-0-226" name="__codelineno-0-226" href="#__codelineno-0-226"></a>snippet sr &quot;^2&quot; iA
+<a id="__codelineno-0-227" name="__codelineno-0-227" href="#__codelineno-0-227"></a>^2
+<a id="__codelineno-0-228" name="__codelineno-0-228" href="#__codelineno-0-228"></a>endsnippet
+<a id="__codelineno-0-229" name="__codelineno-0-229" href="#__codelineno-0-229"></a>
+<a id="__codelineno-0-230" name="__codelineno-0-230" href="#__codelineno-0-230"></a>context &quot;math()&quot;
+<a id="__codelineno-0-231" name="__codelineno-0-231" href="#__codelineno-0-231"></a>snippet cb &quot;^3&quot; iA
+<a id="__codelineno-0-232" name="__codelineno-0-232" href="#__codelineno-0-232"></a>^3
+<a id="__codelineno-0-233" name="__codelineno-0-233" href="#__codelineno-0-233"></a>endsnippet
+<a id="__codelineno-0-234" name="__codelineno-0-234" href="#__codelineno-0-234"></a>
+<a id="__codelineno-0-235" name="__codelineno-0-235" href="#__codelineno-0-235"></a>context &quot;math()&quot;
+<a id="__codelineno-0-236" name="__codelineno-0-236" href="#__codelineno-0-236"></a>snippet td &quot;to the ... power&quot; iA
+<a id="__codelineno-0-237" name="__codelineno-0-237" href="#__codelineno-0-237"></a>^{$1}$0
+<a id="__codelineno-0-238" name="__codelineno-0-238" href="#__codelineno-0-238"></a>endsnippet
+<a id="__codelineno-0-239" name="__codelineno-0-239" href="#__codelineno-0-239"></a>
+<a id="__codelineno-0-240" name="__codelineno-0-240" href="#__codelineno-0-240"></a>context &quot;math()&quot;
+<a id="__codelineno-0-241" name="__codelineno-0-241" href="#__codelineno-0-241"></a>snippet rd &quot;to the ... power&quot; iA
+<a id="__codelineno-0-242" name="__codelineno-0-242" href="#__codelineno-0-242"></a>^{($1)}$0
+<a id="__codelineno-0-243" name="__codelineno-0-243" href="#__codelineno-0-243"></a>endsnippet
+<a id="__codelineno-0-244" name="__codelineno-0-244" href="#__codelineno-0-244"></a>
+<a id="__codelineno-0-245" name="__codelineno-0-245" href="#__codelineno-0-245"></a>snippet __ &quot;subscript&quot; iA
+<a id="__codelineno-0-246" name="__codelineno-0-246" href="#__codelineno-0-246"></a>_{$1}$0
+<a id="__codelineno-0-247" name="__codelineno-0-247" href="#__codelineno-0-247"></a>endsnippet
+<a id="__codelineno-0-248" name="__codelineno-0-248" href="#__codelineno-0-248"></a>
+<a id="__codelineno-0-249" name="__codelineno-0-249" href="#__codelineno-0-249"></a>snippet ooo &quot;\infty&quot; iA
+<a id="__codelineno-0-250" name="__codelineno-0-250" href="#__codelineno-0-250"></a>\infty
+<a id="__codelineno-0-251" name="__codelineno-0-251" href="#__codelineno-0-251"></a>endsnippet
+<a id="__codelineno-0-252" name="__codelineno-0-252" href="#__codelineno-0-252"></a>
+<a id="__codelineno-0-253" name="__codelineno-0-253" href="#__codelineno-0-253"></a>snippet rij &quot;mrij&quot; i
+<a id="__codelineno-0-254" name="__codelineno-0-254" href="#__codelineno-0-254"></a>(${1:x}_${2:n})_{${3:$2}\\in${4:\\N}}$0
+<a id="__codelineno-0-255" name="__codelineno-0-255" href="#__codelineno-0-255"></a>endsnippet
+<a id="__codelineno-0-256" name="__codelineno-0-256" href="#__codelineno-0-256"></a>
+<a id="__codelineno-0-257" name="__codelineno-0-257" href="#__codelineno-0-257"></a>snippet &lt;= &quot;leq&quot; iA
+<a id="__codelineno-0-258" name="__codelineno-0-258" href="#__codelineno-0-258"></a>\le 
+<a id="__codelineno-0-259" name="__codelineno-0-259" href="#__codelineno-0-259"></a>endsnippet
+<a id="__codelineno-0-260" name="__codelineno-0-260" href="#__codelineno-0-260"></a>
+<a id="__codelineno-0-261" name="__codelineno-0-261" href="#__codelineno-0-261"></a>snippet &gt;= &quot;geq&quot; iA
+<a id="__codelineno-0-262" name="__codelineno-0-262" href="#__codelineno-0-262"></a>\ge 
+<a id="__codelineno-0-263" name="__codelineno-0-263" href="#__codelineno-0-263"></a>endsnippet
+<a id="__codelineno-0-264" name="__codelineno-0-264" href="#__codelineno-0-264"></a>
+<a id="__codelineno-0-265" name="__codelineno-0-265" href="#__codelineno-0-265"></a>context &quot;math()&quot;
+<a id="__codelineno-0-266" name="__codelineno-0-266" href="#__codelineno-0-266"></a>snippet EE &quot;geq&quot; iA
+<a id="__codelineno-0-267" name="__codelineno-0-267" href="#__codelineno-0-267"></a>\exists 
+<a id="__codelineno-0-268" name="__codelineno-0-268" href="#__codelineno-0-268"></a>endsnippet
+<a id="__codelineno-0-269" name="__codelineno-0-269" href="#__codelineno-0-269"></a>
+<a id="__codelineno-0-270" name="__codelineno-0-270" href="#__codelineno-0-270"></a>context &quot;math()&quot;
+<a id="__codelineno-0-271" name="__codelineno-0-271" href="#__codelineno-0-271"></a>snippet AA &quot;forall&quot; iA
+<a id="__codelineno-0-272" name="__codelineno-0-272" href="#__codelineno-0-272"></a>\forall 
+<a id="__codelineno-0-273" name="__codelineno-0-273" href="#__codelineno-0-273"></a>endsnippet
+<a id="__codelineno-0-274" name="__codelineno-0-274" href="#__codelineno-0-274"></a>
+<a id="__codelineno-0-275" name="__codelineno-0-275" href="#__codelineno-0-275"></a>context &quot;math()&quot;
+<a id="__codelineno-0-276" name="__codelineno-0-276" href="#__codelineno-0-276"></a>snippet xnn &quot;xn&quot; iA
+<a id="__codelineno-0-277" name="__codelineno-0-277" href="#__codelineno-0-277"></a>x_{n}
+<a id="__codelineno-0-278" name="__codelineno-0-278" href="#__codelineno-0-278"></a>endsnippet
+<a id="__codelineno-0-279" name="__codelineno-0-279" href="#__codelineno-0-279"></a>
+<a id="__codelineno-0-280" name="__codelineno-0-280" href="#__codelineno-0-280"></a>context &quot;math()&quot;
+<a id="__codelineno-0-281" name="__codelineno-0-281" href="#__codelineno-0-281"></a>snippet ynn &quot;yn&quot; iA
+<a id="__codelineno-0-282" name="__codelineno-0-282" href="#__codelineno-0-282"></a>y_{n}
+<a id="__codelineno-0-283" name="__codelineno-0-283" href="#__codelineno-0-283"></a>endsnippet
+<a id="__codelineno-0-284" name="__codelineno-0-284" href="#__codelineno-0-284"></a>
+<a id="__codelineno-0-285" name="__codelineno-0-285" href="#__codelineno-0-285"></a>
+<a id="__codelineno-0-286" name="__codelineno-0-286" href="#__codelineno-0-286"></a>context &quot;math()&quot;
+<a id="__codelineno-0-287" name="__codelineno-0-287" href="#__codelineno-0-287"></a>snippet xii &quot;xi&quot; iA
+<a id="__codelineno-0-288" name="__codelineno-0-288" href="#__codelineno-0-288"></a>x_{i}
+<a id="__codelineno-0-289" name="__codelineno-0-289" href="#__codelineno-0-289"></a>endsnippet
+<a id="__codelineno-0-290" name="__codelineno-0-290" href="#__codelineno-0-290"></a>
+<a id="__codelineno-0-291" name="__codelineno-0-291" href="#__codelineno-0-291"></a>context &quot;math()&quot;
+<a id="__codelineno-0-292" name="__codelineno-0-292" href="#__codelineno-0-292"></a>snippet yii &quot;yi&quot; iA
+<a id="__codelineno-0-293" name="__codelineno-0-293" href="#__codelineno-0-293"></a>y_{i}
+<a id="__codelineno-0-294" name="__codelineno-0-294" href="#__codelineno-0-294"></a>endsnippet
+<a id="__codelineno-0-295" name="__codelineno-0-295" href="#__codelineno-0-295"></a>
+<a id="__codelineno-0-296" name="__codelineno-0-296" href="#__codelineno-0-296"></a>context &quot;math()&quot;
+<a id="__codelineno-0-297" name="__codelineno-0-297" href="#__codelineno-0-297"></a>snippet xjj &quot;xj&quot; iA
+<a id="__codelineno-0-298" name="__codelineno-0-298" href="#__codelineno-0-298"></a>x_{j}
+<a id="__codelineno-0-299" name="__codelineno-0-299" href="#__codelineno-0-299"></a>endsnippet
+<a id="__codelineno-0-300" name="__codelineno-0-300" href="#__codelineno-0-300"></a>
+<a id="__codelineno-0-301" name="__codelineno-0-301" href="#__codelineno-0-301"></a>context &quot;math()&quot;
+<a id="__codelineno-0-302" name="__codelineno-0-302" href="#__codelineno-0-302"></a>snippet yjj &quot;yj&quot; iA
+<a id="__codelineno-0-303" name="__codelineno-0-303" href="#__codelineno-0-303"></a>y_{j}
+<a id="__codelineno-0-304" name="__codelineno-0-304" href="#__codelineno-0-304"></a>endsnippet
+<a id="__codelineno-0-305" name="__codelineno-0-305" href="#__codelineno-0-305"></a>
+<a id="__codelineno-0-306" name="__codelineno-0-306" href="#__codelineno-0-306"></a>context &quot;math()&quot;
+<a id="__codelineno-0-307" name="__codelineno-0-307" href="#__codelineno-0-307"></a>snippet xp1 &quot;x&quot; iA
+<a id="__codelineno-0-308" name="__codelineno-0-308" href="#__codelineno-0-308"></a>x_{n+1}
+<a id="__codelineno-0-309" name="__codelineno-0-309" href="#__codelineno-0-309"></a>endsnippet
+<a id="__codelineno-0-310" name="__codelineno-0-310" href="#__codelineno-0-310"></a>
+<a id="__codelineno-0-311" name="__codelineno-0-311" href="#__codelineno-0-311"></a>context &quot;math()&quot;
+<a id="__codelineno-0-312" name="__codelineno-0-312" href="#__codelineno-0-312"></a>snippet xmm &quot;x&quot; iA
+<a id="__codelineno-0-313" name="__codelineno-0-313" href="#__codelineno-0-313"></a>x_{m}
+<a id="__codelineno-0-314" name="__codelineno-0-314" href="#__codelineno-0-314"></a>endsnippet
+<a id="__codelineno-0-315" name="__codelineno-0-315" href="#__codelineno-0-315"></a>
+<a id="__codelineno-0-316" name="__codelineno-0-316" href="#__codelineno-0-316"></a>snippet R0+ &quot;R0+&quot; iA
+<a id="__codelineno-0-317" name="__codelineno-0-317" href="#__codelineno-0-317"></a>\\R_0^+
+<a id="__codelineno-0-318" name="__codelineno-0-318" href="#__codelineno-0-318"></a>endsnippet
+<a id="__codelineno-0-319" name="__codelineno-0-319" href="#__codelineno-0-319"></a>
+<a id="__codelineno-0-320" name="__codelineno-0-320" href="#__codelineno-0-320"></a>snippet plot &quot;Plot&quot; w
+<a id="__codelineno-0-321" name="__codelineno-0-321" href="#__codelineno-0-321"></a>\begin{figure}[$1]
+<a id="__codelineno-0-322" name="__codelineno-0-322" href="#__codelineno-0-322"></a>    \centering
+<a id="__codelineno-0-323" name="__codelineno-0-323" href="#__codelineno-0-323"></a>    \begin{tikzpicture}
+<a id="__codelineno-0-324" name="__codelineno-0-324" href="#__codelineno-0-324"></a>        \begin{axis}[
+<a id="__codelineno-0-325" name="__codelineno-0-325" href="#__codelineno-0-325"></a>            xmin= ${2:-10}, xmax= ${3:10},
+<a id="__codelineno-0-326" name="__codelineno-0-326" href="#__codelineno-0-326"></a>            ymin= ${4:-10}, ymax = ${5:10},
+<a id="__codelineno-0-327" name="__codelineno-0-327" href="#__codelineno-0-327"></a>            axis lines = middle,
+<a id="__codelineno-0-328" name="__codelineno-0-328" href="#__codelineno-0-328"></a>        ]
+<a id="__codelineno-0-329" name="__codelineno-0-329" href="#__codelineno-0-329"></a>            \addplot[domain=$2:$3, samples=${6:100}]{$7};
+<a id="__codelineno-0-330" name="__codelineno-0-330" href="#__codelineno-0-330"></a>        \end{axis}
+<a id="__codelineno-0-331" name="__codelineno-0-331" href="#__codelineno-0-331"></a>    \end{tikzpicture}
+<a id="__codelineno-0-332" name="__codelineno-0-332" href="#__codelineno-0-332"></a>    \caption{$8}
+<a id="__codelineno-0-333" name="__codelineno-0-333" href="#__codelineno-0-333"></a>    \label{${9:$8}}
+<a id="__codelineno-0-334" name="__codelineno-0-334" href="#__codelineno-0-334"></a>\end{figure}
+<a id="__codelineno-0-335" name="__codelineno-0-335" href="#__codelineno-0-335"></a>endsnippet
+<a id="__codelineno-0-336" name="__codelineno-0-336" href="#__codelineno-0-336"></a>
+<a id="__codelineno-0-337" name="__codelineno-0-337" href="#__codelineno-0-337"></a>snippet nn &quot;Tikz node&quot; w
+<a id="__codelineno-0-338" name="__codelineno-0-338" href="#__codelineno-0-338"></a>\node[$5] (${1/[^0-9a-zA-Z]//g}${2}) ${3:at (${4:0,0}) }{$${1}$};
+<a id="__codelineno-0-339" name="__codelineno-0-339" href="#__codelineno-0-339"></a>$0
+<a id="__codelineno-0-340" name="__codelineno-0-340" href="#__codelineno-0-340"></a>endsnippet
+<a id="__codelineno-0-341" name="__codelineno-0-341" href="#__codelineno-0-341"></a>
+<a id="__codelineno-0-342" name="__codelineno-0-342" href="#__codelineno-0-342"></a>context &quot;math()&quot;
+<a id="__codelineno-0-343" name="__codelineno-0-343" href="#__codelineno-0-343"></a>snippet mcal &quot;mathcal&quot; iA
+<a id="__codelineno-0-344" name="__codelineno-0-344" href="#__codelineno-0-344"></a>\mathcal{$1}$0
+<a id="__codelineno-0-345" name="__codelineno-0-345" href="#__codelineno-0-345"></a>endsnippet
+<a id="__codelineno-0-346" name="__codelineno-0-346" href="#__codelineno-0-346"></a>
+<a id="__codelineno-0-347" name="__codelineno-0-347" href="#__codelineno-0-347"></a>snippet lll &quot;l&quot; iA
+<a id="__codelineno-0-348" name="__codelineno-0-348" href="#__codelineno-0-348"></a>\ell
+<a id="__codelineno-0-349" name="__codelineno-0-349" href="#__codelineno-0-349"></a>endsnippet
+<a id="__codelineno-0-350" name="__codelineno-0-350" href="#__codelineno-0-350"></a>
+<a id="__codelineno-0-351" name="__codelineno-0-351" href="#__codelineno-0-351"></a>context &quot;math()&quot;
+<a id="__codelineno-0-352" name="__codelineno-0-352" href="#__codelineno-0-352"></a>snippet nabl &quot;nabla&quot; iA
+<a id="__codelineno-0-353" name="__codelineno-0-353" href="#__codelineno-0-353"></a>\nabla 
+<a id="__codelineno-0-354" name="__codelineno-0-354" href="#__codelineno-0-354"></a>endsnippet
+<a id="__codelineno-0-355" name="__codelineno-0-355" href="#__codelineno-0-355"></a>
+<a id="__codelineno-0-356" name="__codelineno-0-356" href="#__codelineno-0-356"></a>context &quot;math()&quot;
+<a id="__codelineno-0-357" name="__codelineno-0-357" href="#__codelineno-0-357"></a>snippet xx &quot;cross&quot; iA
+<a id="__codelineno-0-358" name="__codelineno-0-358" href="#__codelineno-0-358"></a>\times 
+<a id="__codelineno-0-359" name="__codelineno-0-359" href="#__codelineno-0-359"></a>endsnippet
+<a id="__codelineno-0-360" name="__codelineno-0-360" href="#__codelineno-0-360"></a>
+<a id="__codelineno-0-361" name="__codelineno-0-361" href="#__codelineno-0-361"></a>priority 100
+<a id="__codelineno-0-362" name="__codelineno-0-362" href="#__codelineno-0-362"></a>snippet ** &quot;cdot&quot; iA
+<a id="__codelineno-0-363" name="__codelineno-0-363" href="#__codelineno-0-363"></a>\cdot 
+<a id="__codelineno-0-364" name="__codelineno-0-364" href="#__codelineno-0-364"></a>endsnippet
+<a id="__codelineno-0-365" name="__codelineno-0-365" href="#__codelineno-0-365"></a>
+<a id="__codelineno-0-366" name="__codelineno-0-366" href="#__codelineno-0-366"></a>context &quot;math()&quot;
+<a id="__codelineno-0-367" name="__codelineno-0-367" href="#__codelineno-0-367"></a>snippet norm &quot;norm&quot; iA
+<a id="__codelineno-0-368" name="__codelineno-0-368" href="#__codelineno-0-368"></a>\|$1\|$0
+<a id="__codelineno-0-369" name="__codelineno-0-369" href="#__codelineno-0-369"></a>endsnippet
+<a id="__codelineno-0-370" name="__codelineno-0-370" href="#__codelineno-0-370"></a>
+<a id="__codelineno-0-371" name="__codelineno-0-371" href="#__codelineno-0-371"></a>priority 100
+<a id="__codelineno-0-372" name="__codelineno-0-372" href="#__codelineno-0-372"></a>context &quot;math()&quot;
+<a id="__codelineno-0-373" name="__codelineno-0-373" href="#__codelineno-0-373"></a>snippet &#39;(?&lt;!\\)(sin|cos|arccot|cot|csc|ln|log|exp|star|perp)&#39; &quot;ln&quot; rwA
+<a id="__codelineno-0-374" name="__codelineno-0-374" href="#__codelineno-0-374"></a>\\`!p snip.rv = match.group(1)`
+<a id="__codelineno-0-375" name="__codelineno-0-375" href="#__codelineno-0-375"></a>endsnippet
+<a id="__codelineno-0-376" name="__codelineno-0-376" href="#__codelineno-0-376"></a>
+<a id="__codelineno-0-377" name="__codelineno-0-377" href="#__codelineno-0-377"></a>priority 300
+<a id="__codelineno-0-378" name="__codelineno-0-378" href="#__codelineno-0-378"></a>context &quot;math()&quot;
+<a id="__codelineno-0-379" name="__codelineno-0-379" href="#__codelineno-0-379"></a>snippet dint &quot;integral&quot; wA
+<a id="__codelineno-0-380" name="__codelineno-0-380" href="#__codelineno-0-380"></a>\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}} $0
+<a id="__codelineno-0-381" name="__codelineno-0-381" href="#__codelineno-0-381"></a>endsnippet
+<a id="__codelineno-0-382" name="__codelineno-0-382" href="#__codelineno-0-382"></a>
+<a id="__codelineno-0-383" name="__codelineno-0-383" href="#__codelineno-0-383"></a>priority 200
+<a id="__codelineno-0-384" name="__codelineno-0-384" href="#__codelineno-0-384"></a>context &quot;math()&quot;
+<a id="__codelineno-0-385" name="__codelineno-0-385" href="#__codelineno-0-385"></a>snippet &#39;(?&lt;!\\)(arcsin|arccos|arctan|arccot|arccsc|arcsec|pi|zeta|int)&#39; &quot;ln&quot; rwA
+<a id="__codelineno-0-386" name="__codelineno-0-386" href="#__codelineno-0-386"></a>\\`!p snip.rv = match.group(1)`
+<a id="__codelineno-0-387" name="__codelineno-0-387" href="#__codelineno-0-387"></a>endsnippet
+<a id="__codelineno-0-388" name="__codelineno-0-388" href="#__codelineno-0-388"></a>
+<a id="__codelineno-0-389" name="__codelineno-0-389" href="#__codelineno-0-389"></a>
+<a id="__codelineno-0-390" name="__codelineno-0-390" href="#__codelineno-0-390"></a>priority 100
+<a id="__codelineno-0-391" name="__codelineno-0-391" href="#__codelineno-0-391"></a>context &quot;math()&quot;
+<a id="__codelineno-0-392" name="__codelineno-0-392" href="#__codelineno-0-392"></a>snippet -&gt; &quot;to&quot; iA
+<a id="__codelineno-0-393" name="__codelineno-0-393" href="#__codelineno-0-393"></a>\to 
+<a id="__codelineno-0-394" name="__codelineno-0-394" href="#__codelineno-0-394"></a>endsnippet
+<a id="__codelineno-0-395" name="__codelineno-0-395" href="#__codelineno-0-395"></a>
+<a id="__codelineno-0-396" name="__codelineno-0-396" href="#__codelineno-0-396"></a>priority 200
+<a id="__codelineno-0-397" name="__codelineno-0-397" href="#__codelineno-0-397"></a>context &quot;math()&quot;
+<a id="__codelineno-0-398" name="__codelineno-0-398" href="#__codelineno-0-398"></a>snippet &lt;-&gt; &quot;leftrightarrow&quot; iA
+<a id="__codelineno-0-399" name="__codelineno-0-399" href="#__codelineno-0-399"></a>\leftrightarrow
+<a id="__codelineno-0-400" name="__codelineno-0-400" href="#__codelineno-0-400"></a>endsnippet
+<a id="__codelineno-0-401" name="__codelineno-0-401" href="#__codelineno-0-401"></a>
+<a id="__codelineno-0-402" name="__codelineno-0-402" href="#__codelineno-0-402"></a>context &quot;math()&quot;
+<a id="__codelineno-0-403" name="__codelineno-0-403" href="#__codelineno-0-403"></a>snippet !&gt; &quot;mapsto&quot; iA
+<a id="__codelineno-0-404" name="__codelineno-0-404" href="#__codelineno-0-404"></a>\mapsto 
+<a id="__codelineno-0-405" name="__codelineno-0-405" href="#__codelineno-0-405"></a>endsnippet
+<a id="__codelineno-0-406" name="__codelineno-0-406" href="#__codelineno-0-406"></a>
+<a id="__codelineno-0-407" name="__codelineno-0-407" href="#__codelineno-0-407"></a>context &quot;math()&quot;
+<a id="__codelineno-0-408" name="__codelineno-0-408" href="#__codelineno-0-408"></a>snippet invs &quot;inverse&quot; iA
+<a id="__codelineno-0-409" name="__codelineno-0-409" href="#__codelineno-0-409"></a>^{-1}
+<a id="__codelineno-0-410" name="__codelineno-0-410" href="#__codelineno-0-410"></a>endsnippet
+<a id="__codelineno-0-411" name="__codelineno-0-411" href="#__codelineno-0-411"></a>
+<a id="__codelineno-0-412" name="__codelineno-0-412" href="#__codelineno-0-412"></a>context &quot;math()&quot;
+<a id="__codelineno-0-413" name="__codelineno-0-413" href="#__codelineno-0-413"></a>snippet compl &quot;complement&quot; iA
+<a id="__codelineno-0-414" name="__codelineno-0-414" href="#__codelineno-0-414"></a>^{c}
+<a id="__codelineno-0-415" name="__codelineno-0-415" href="#__codelineno-0-415"></a>endsnippet
+<a id="__codelineno-0-416" name="__codelineno-0-416" href="#__codelineno-0-416"></a>
+<a id="__codelineno-0-417" name="__codelineno-0-417" href="#__codelineno-0-417"></a>context &quot;math()&quot;
+<a id="__codelineno-0-418" name="__codelineno-0-418" href="#__codelineno-0-418"></a>snippet \\\ &quot;setminus&quot; iA
+<a id="__codelineno-0-419" name="__codelineno-0-419" href="#__codelineno-0-419"></a>\setminus
+<a id="__codelineno-0-420" name="__codelineno-0-420" href="#__codelineno-0-420"></a>endsnippet
+<a id="__codelineno-0-421" name="__codelineno-0-421" href="#__codelineno-0-421"></a>
+<a id="__codelineno-0-422" name="__codelineno-0-422" href="#__codelineno-0-422"></a>snippet &gt;&gt; &quot;&gt;&gt;&quot; iA
+<a id="__codelineno-0-423" name="__codelineno-0-423" href="#__codelineno-0-423"></a>\gg
+<a id="__codelineno-0-424" name="__codelineno-0-424" href="#__codelineno-0-424"></a>endsnippet
+<a id="__codelineno-0-425" name="__codelineno-0-425" href="#__codelineno-0-425"></a>
+<a id="__codelineno-0-426" name="__codelineno-0-426" href="#__codelineno-0-426"></a>snippet &lt;&lt; &quot;&lt;&lt;&quot; iA
+<a id="__codelineno-0-427" name="__codelineno-0-427" href="#__codelineno-0-427"></a>\ll
+<a id="__codelineno-0-428" name="__codelineno-0-428" href="#__codelineno-0-428"></a>endsnippet
+<a id="__codelineno-0-429" name="__codelineno-0-429" href="#__codelineno-0-429"></a>
+<a id="__codelineno-0-430" name="__codelineno-0-430" href="#__codelineno-0-430"></a>
+<a id="__codelineno-0-431" name="__codelineno-0-431" href="#__codelineno-0-431"></a>snippet ~~ &quot;~&quot; iA
+<a id="__codelineno-0-432" name="__codelineno-0-432" href="#__codelineno-0-432"></a>\sim 
+<a id="__codelineno-0-433" name="__codelineno-0-433" href="#__codelineno-0-433"></a>endsnippet
+<a id="__codelineno-0-434" name="__codelineno-0-434" href="#__codelineno-0-434"></a>
+<a id="__codelineno-0-435" name="__codelineno-0-435" href="#__codelineno-0-435"></a>context &quot;math()&quot;
+<a id="__codelineno-0-436" name="__codelineno-0-436" href="#__codelineno-0-436"></a>snippet set &quot;set&quot; wA
+<a id="__codelineno-0-437" name="__codelineno-0-437" href="#__codelineno-0-437"></a>\\{$1\\} $0
+<a id="__codelineno-0-438" name="__codelineno-0-438" href="#__codelineno-0-438"></a>endsnippet
+<a id="__codelineno-0-439" name="__codelineno-0-439" href="#__codelineno-0-439"></a>
+<a id="__codelineno-0-440" name="__codelineno-0-440" href="#__codelineno-0-440"></a>snippet || &quot;mid&quot; iA
+<a id="__codelineno-0-441" name="__codelineno-0-441" href="#__codelineno-0-441"></a> \mid 
+<a id="__codelineno-0-442" name="__codelineno-0-442" href="#__codelineno-0-442"></a>endsnippet
+<a id="__codelineno-0-443" name="__codelineno-0-443" href="#__codelineno-0-443"></a>
+<a id="__codelineno-0-444" name="__codelineno-0-444" href="#__codelineno-0-444"></a>
+<a id="__codelineno-0-445" name="__codelineno-0-445" href="#__codelineno-0-445"></a>context &quot;math()&quot;
+<a id="__codelineno-0-446" name="__codelineno-0-446" href="#__codelineno-0-446"></a>snippet cc &quot;subset&quot; Ai
+<a id="__codelineno-0-447" name="__codelineno-0-447" href="#__codelineno-0-447"></a>\subset 
+<a id="__codelineno-0-448" name="__codelineno-0-448" href="#__codelineno-0-448"></a>endsnippet
+<a id="__codelineno-0-449" name="__codelineno-0-449" href="#__codelineno-0-449"></a>
+<a id="__codelineno-0-450" name="__codelineno-0-450" href="#__codelineno-0-450"></a>snippet notin &quot;not in &quot; iA
+<a id="__codelineno-0-451" name="__codelineno-0-451" href="#__codelineno-0-451"></a>\not\in 
+<a id="__codelineno-0-452" name="__codelineno-0-452" href="#__codelineno-0-452"></a>endsnippet
+<a id="__codelineno-0-453" name="__codelineno-0-453" href="#__codelineno-0-453"></a>
+<a id="__codelineno-0-454" name="__codelineno-0-454" href="#__codelineno-0-454"></a>context &quot;math()&quot;
+<a id="__codelineno-0-455" name="__codelineno-0-455" href="#__codelineno-0-455"></a>snippet inn &quot;in &quot; iA
+<a id="__codelineno-0-456" name="__codelineno-0-456" href="#__codelineno-0-456"></a>\in 
+<a id="__codelineno-0-457" name="__codelineno-0-457" href="#__codelineno-0-457"></a>endsnippet
+<a id="__codelineno-0-458" name="__codelineno-0-458" href="#__codelineno-0-458"></a>
+<a id="__codelineno-0-459" name="__codelineno-0-459" href="#__codelineno-0-459"></a>snippet NN &quot;n&quot; iA
+<a id="__codelineno-0-460" name="__codelineno-0-460" href="#__codelineno-0-460"></a>\N
+<a id="__codelineno-0-461" name="__codelineno-0-461" href="#__codelineno-0-461"></a>endsnippet
+<a id="__codelineno-0-462" name="__codelineno-0-462" href="#__codelineno-0-462"></a>
+<a id="__codelineno-0-463" name="__codelineno-0-463" href="#__codelineno-0-463"></a>snippet Nn &quot;cap&quot; iA
+<a id="__codelineno-0-464" name="__codelineno-0-464" href="#__codelineno-0-464"></a>\cap 
+<a id="__codelineno-0-465" name="__codelineno-0-465" href="#__codelineno-0-465"></a>endsnippet
+<a id="__codelineno-0-466" name="__codelineno-0-466" href="#__codelineno-0-466"></a>
+<a id="__codelineno-0-467" name="__codelineno-0-467" href="#__codelineno-0-467"></a>snippet UU &quot;cup&quot; iA
+<a id="__codelineno-0-468" name="__codelineno-0-468" href="#__codelineno-0-468"></a>\cup 
+<a id="__codelineno-0-469" name="__codelineno-0-469" href="#__codelineno-0-469"></a>endsnippet
+<a id="__codelineno-0-470" name="__codelineno-0-470" href="#__codelineno-0-470"></a>
+<a id="__codelineno-0-471" name="__codelineno-0-471" href="#__codelineno-0-471"></a>snippet uuu &quot;bigcup&quot; iA
+<a id="__codelineno-0-472" name="__codelineno-0-472" href="#__codelineno-0-472"></a>\bigcup_{${1:i \in ${2: I}}} $0
+<a id="__codelineno-0-473" name="__codelineno-0-473" href="#__codelineno-0-473"></a>endsnippet
+<a id="__codelineno-0-474" name="__codelineno-0-474" href="#__codelineno-0-474"></a>
+<a id="__codelineno-0-475" name="__codelineno-0-475" href="#__codelineno-0-475"></a>snippet nnn &quot;bigcap&quot; iA
+<a id="__codelineno-0-476" name="__codelineno-0-476" href="#__codelineno-0-476"></a>\bigcap_{${1:i \in ${2: I}}} $0
+<a id="__codelineno-0-477" name="__codelineno-0-477" href="#__codelineno-0-477"></a>endsnippet
+<a id="__codelineno-0-478" name="__codelineno-0-478" href="#__codelineno-0-478"></a>
+<a id="__codelineno-0-479" name="__codelineno-0-479" href="#__codelineno-0-479"></a>snippet OO &quot;emptyset&quot; iA
+<a id="__codelineno-0-480" name="__codelineno-0-480" href="#__codelineno-0-480"></a>\O
+<a id="__codelineno-0-481" name="__codelineno-0-481" href="#__codelineno-0-481"></a>endsnippet
+<a id="__codelineno-0-482" name="__codelineno-0-482" href="#__codelineno-0-482"></a>
+<a id="__codelineno-0-483" name="__codelineno-0-483" href="#__codelineno-0-483"></a>snippet RR &quot;real&quot; iA
+<a id="__codelineno-0-484" name="__codelineno-0-484" href="#__codelineno-0-484"></a>\R
+<a id="__codelineno-0-485" name="__codelineno-0-485" href="#__codelineno-0-485"></a>endsnippet
+<a id="__codelineno-0-486" name="__codelineno-0-486" href="#__codelineno-0-486"></a>
+<a id="__codelineno-0-487" name="__codelineno-0-487" href="#__codelineno-0-487"></a>snippet QQ &quot;Q&quot; iA
+<a id="__codelineno-0-488" name="__codelineno-0-488" href="#__codelineno-0-488"></a>\Q
+<a id="__codelineno-0-489" name="__codelineno-0-489" href="#__codelineno-0-489"></a>endsnippet
+<a id="__codelineno-0-490" name="__codelineno-0-490" href="#__codelineno-0-490"></a>
+<a id="__codelineno-0-491" name="__codelineno-0-491" href="#__codelineno-0-491"></a>snippet ZZ &quot;Z&quot; iA
+<a id="__codelineno-0-492" name="__codelineno-0-492" href="#__codelineno-0-492"></a>\Z
+<a id="__codelineno-0-493" name="__codelineno-0-493" href="#__codelineno-0-493"></a>endsnippet
+<a id="__codelineno-0-494" name="__codelineno-0-494" href="#__codelineno-0-494"></a>
+<a id="__codelineno-0-495" name="__codelineno-0-495" href="#__codelineno-0-495"></a>snippet &lt;! &quot;normal&quot; iA
+<a id="__codelineno-0-496" name="__codelineno-0-496" href="#__codelineno-0-496"></a>\triangleleft 
+<a id="__codelineno-0-497" name="__codelineno-0-497" href="#__codelineno-0-497"></a>endsnippet
+<a id="__codelineno-0-498" name="__codelineno-0-498" href="#__codelineno-0-498"></a>
+<a id="__codelineno-0-499" name="__codelineno-0-499" href="#__codelineno-0-499"></a>snippet &lt;&gt; &quot;hokje&quot; iA
+<a id="__codelineno-0-500" name="__codelineno-0-500" href="#__codelineno-0-500"></a>\diamond 
+<a id="__codelineno-0-501" name="__codelineno-0-501" href="#__codelineno-0-501"></a>endsnippet
+<a id="__codelineno-0-502" name="__codelineno-0-502" href="#__codelineno-0-502"></a>
+<a id="__codelineno-0-503" name="__codelineno-0-503" href="#__codelineno-0-503"></a>
+<a id="__codelineno-0-504" name="__codelineno-0-504" href="#__codelineno-0-504"></a>context &quot;math()&quot;
+<a id="__codelineno-0-505" name="__codelineno-0-505" href="#__codelineno-0-505"></a>snippet &#39;(?&lt;!i)sts&#39; &quot;text subscript&quot; irA
+<a id="__codelineno-0-506" name="__codelineno-0-506" href="#__codelineno-0-506"></a>_\text{$1} $0
+<a id="__codelineno-0-507" name="__codelineno-0-507" href="#__codelineno-0-507"></a>endsnippet
+<a id="__codelineno-0-508" name="__codelineno-0-508" href="#__codelineno-0-508"></a>
+<a id="__codelineno-0-509" name="__codelineno-0-509" href="#__codelineno-0-509"></a>context &quot;math()&quot;
+<a id="__codelineno-0-510" name="__codelineno-0-510" href="#__codelineno-0-510"></a>snippet tt &quot;text&quot; iA
+<a id="__codelineno-0-511" name="__codelineno-0-511" href="#__codelineno-0-511"></a>\text{$1}$0
+<a id="__codelineno-0-512" name="__codelineno-0-512" href="#__codelineno-0-512"></a>endsnippet
+<a id="__codelineno-0-513" name="__codelineno-0-513" href="#__codelineno-0-513"></a>
+<a id="__codelineno-0-514" name="__codelineno-0-514" href="#__codelineno-0-514"></a>context &quot;math()&quot;
+<a id="__codelineno-0-515" name="__codelineno-0-515" href="#__codelineno-0-515"></a>snippet case &quot;cases&quot; wA
+<a id="__codelineno-0-516" name="__codelineno-0-516" href="#__codelineno-0-516"></a>\begin{cases}
+<a id="__codelineno-0-517" name="__codelineno-0-517" href="#__codelineno-0-517"></a>    $1
+<a id="__codelineno-0-518" name="__codelineno-0-518" href="#__codelineno-0-518"></a>\end{cases}
+<a id="__codelineno-0-519" name="__codelineno-0-519" href="#__codelineno-0-519"></a>endsnippet
+<a id="__codelineno-0-520" name="__codelineno-0-520" href="#__codelineno-0-520"></a>
+<a id="__codelineno-0-521" name="__codelineno-0-521" href="#__codelineno-0-521"></a>snippet SI &quot;SI&quot; iA
+<a id="__codelineno-0-522" name="__codelineno-0-522" href="#__codelineno-0-522"></a>\SI{$1}{$2}
+<a id="__codelineno-0-523" name="__codelineno-0-523" href="#__codelineno-0-523"></a>endsnippet
+<a id="__codelineno-0-524" name="__codelineno-0-524" href="#__codelineno-0-524"></a>
+<a id="__codelineno-0-525" name="__codelineno-0-525" href="#__codelineno-0-525"></a>snippet bigfun &quot;Big function&quot; iA
+<a id="__codelineno-0-526" name="__codelineno-0-526" href="#__codelineno-0-526"></a>\begin{align*}
+<a id="__codelineno-0-527" name="__codelineno-0-527" href="#__codelineno-0-527"></a>    $1: $2 &amp;\longrightarrow $3 \\\\
+<a id="__codelineno-0-528" name="__codelineno-0-528" href="#__codelineno-0-528"></a>    $4 &amp;\longmapsto $1($4) = $0
+<a id="__codelineno-0-529" name="__codelineno-0-529" href="#__codelineno-0-529"></a>.\end{align*}
+<a id="__codelineno-0-530" name="__codelineno-0-530" href="#__codelineno-0-530"></a>endsnippet
+<a id="__codelineno-0-531" name="__codelineno-0-531" href="#__codelineno-0-531"></a>
+<a id="__codelineno-0-532" name="__codelineno-0-532" href="#__codelineno-0-532"></a>snippet cvec &quot;column vector&quot; iA
+<a id="__codelineno-0-533" name="__codelineno-0-533" href="#__codelineno-0-533"></a>\begin{pmatrix} ${1:x}_${2:1}\\\\ \vdots\\\\ $1_${2:n} \end{pmatrix}
+<a id="__codelineno-0-534" name="__codelineno-0-534" href="#__codelineno-0-534"></a>endsnippet
+<a id="__codelineno-0-535" name="__codelineno-0-535" href="#__codelineno-0-535"></a>
+<a id="__codelineno-0-536" name="__codelineno-0-536" href="#__codelineno-0-536"></a>priority 10
+<a id="__codelineno-0-537" name="__codelineno-0-537" href="#__codelineno-0-537"></a>context &quot;math()&quot;
+<a id="__codelineno-0-538" name="__codelineno-0-538" href="#__codelineno-0-538"></a>snippet &quot;bar&quot; &quot;bar&quot; riA
+<a id="__codelineno-0-539" name="__codelineno-0-539" href="#__codelineno-0-539"></a>\overline{$1}$0
+<a id="__codelineno-0-540" name="__codelineno-0-540" href="#__codelineno-0-540"></a>endsnippet
+<a id="__codelineno-0-541" name="__codelineno-0-541" href="#__codelineno-0-541"></a>
+<a id="__codelineno-0-542" name="__codelineno-0-542" href="#__codelineno-0-542"></a>priority 100
+<a id="__codelineno-0-543" name="__codelineno-0-543" href="#__codelineno-0-543"></a>context &quot;math()&quot;
+<a id="__codelineno-0-544" name="__codelineno-0-544" href="#__codelineno-0-544"></a>snippet &quot;([a-zA-Z])bar&quot; &quot;bar&quot; riA
+<a id="__codelineno-0-545" name="__codelineno-0-545" href="#__codelineno-0-545"></a>\overline{`!p snip.rv=match.group(1)`}
+<a id="__codelineno-0-546" name="__codelineno-0-546" href="#__codelineno-0-546"></a>endsnippet
+<a id="__codelineno-0-547" name="__codelineno-0-547" href="#__codelineno-0-547"></a>
+<a id="__codelineno-0-548" name="__codelineno-0-548" href="#__codelineno-0-548"></a>priority 10
+<a id="__codelineno-0-549" name="__codelineno-0-549" href="#__codelineno-0-549"></a>context &quot;math()&quot;
+<a id="__codelineno-0-550" name="__codelineno-0-550" href="#__codelineno-0-550"></a>snippet &quot;hat&quot; &quot;hat&quot; riA
+<a id="__codelineno-0-551" name="__codelineno-0-551" href="#__codelineno-0-551"></a>\hat{$1}$0
+<a id="__codelineno-0-552" name="__codelineno-0-552" href="#__codelineno-0-552"></a>endsnippet
+<a id="__codelineno-0-553" name="__codelineno-0-553" href="#__codelineno-0-553"></a>
+<a id="__codelineno-0-554" name="__codelineno-0-554" href="#__codelineno-0-554"></a>priority 100
+<a id="__codelineno-0-555" name="__codelineno-0-555" href="#__codelineno-0-555"></a>context &quot;math()&quot;
+<a id="__codelineno-0-556" name="__codelineno-0-556" href="#__codelineno-0-556"></a>snippet &quot;([a-zA-Z])hat&quot; &quot;hat&quot; riA
+<a id="__codelineno-0-557" name="__codelineno-0-557" href="#__codelineno-0-557"></a>\hat{`!p snip.rv=match.group(1)`}
+<a id="__codelineno-0-558" name="__codelineno-0-558" href="#__codelineno-0-558"></a>endsnippet
+<a id="__codelineno-0-559" name="__codelineno-0-559" href="#__codelineno-0-559"></a>
+<a id="__codelineno-0-560" name="__codelineno-0-560" href="#__codelineno-0-560"></a>snippet letw &quot;let omega&quot; iA
+<a id="__codelineno-0-561" name="__codelineno-0-561" href="#__codelineno-0-561"></a>Let $\Omega \subset \C$ be open.
+<a id="__codelineno-0-562" name="__codelineno-0-562" href="#__codelineno-0-562"></a>endsnippet
+<a id="__codelineno-0-563" name="__codelineno-0-563" href="#__codelineno-0-563"></a>
+<a id="__codelineno-0-564" name="__codelineno-0-564" href="#__codelineno-0-564"></a>
+<a id="__codelineno-0-565" name="__codelineno-0-565" href="#__codelineno-0-565"></a>snippet HH &quot;H&quot; iA
+<a id="__codelineno-0-566" name="__codelineno-0-566" href="#__codelineno-0-566"></a>\mathbb{H}
+<a id="__codelineno-0-567" name="__codelineno-0-567" href="#__codelineno-0-567"></a>endsnippet
+<a id="__codelineno-0-568" name="__codelineno-0-568" href="#__codelineno-0-568"></a>
+<a id="__codelineno-0-569" name="__codelineno-0-569" href="#__codelineno-0-569"></a>snippet DD &quot;D&quot; iA
+<a id="__codelineno-0-570" name="__codelineno-0-570" href="#__codelineno-0-570"></a>\mathbb{D}
+<a id="__codelineno-0-571" name="__codelineno-0-571" href="#__codelineno-0-571"></a>endsnippet
+<a id="__codelineno-0-572" name="__codelineno-0-572" href="#__codelineno-0-572"></a>
+<a id="__codelineno-0-573" name="__codelineno-0-573" href="#__codelineno-0-573"></a># vim:ft=snippets
+</code></pre></div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-04-14T09:29:17+08:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-04-14</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-04-14T09:29:17+08:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-04-14</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/Languisher"  target="_blank" rel="noopener">Brandon Lin</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Languisher" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["naviagation.tabs", "naviagation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.407015b8.min.js"></script>
+      
+        <script src="../../../js/timeago.min.js"></script>
+      
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

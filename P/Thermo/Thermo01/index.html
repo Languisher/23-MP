@@ -12,7 +12,7 @@
         <link rel="prev" href="../../Ondes%20Ondulatoires/">
       
       
-        <link rel="next" href="../Thermo02/">
+        <link rel="next" href="../CinetiqueChimie/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
@@ -42,6 +42,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../css/timeago.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -59,7 +61,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
   
     
     
@@ -116,7 +118,7 @@
       <form class="md-header__option" data-md-component="palette">
         
           
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
           
             <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
@@ -285,10 +287,58 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          Vim & Markdown
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Vim & Markdown
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../Cookbooks/Vim/" class="md-nav__link">
+      <a href="../../../Cookbooks/vim-md/Markdown/" class="md-nav__link">
+        Markdown
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cookbooks/vim-md/Vim/" class="md-nav__link">
         Vim
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -709,14 +759,14 @@
       
       
         <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
-          Thermodynamique (2)
+          Thermodynamique
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
-          Thermodynamique (2)
+          Thermodynamique
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -767,75 +817,57 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#enthalpie-libre" class="md-nav__link">
-    Enthalpie Libre
+  <a href="#evolution-et-equilibre-chimique" class="md-nav__link">
+    Évolution et Équilibre Chimique
   </a>
-  
-    <nav class="md-nav" aria-label="Enthalpie Libre">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#evolution-mtmb-monotherme-monobare-principe-devolution" class="md-nav__link">
-    Évolution MTMB (Monotherme Monobare), Principe d'évolution
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enthalpie-libre-dun-melange-monophase" class="md-nav__link">
-    Enthalpie libre d'un mélange monophasé
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#uniformite-du-potentiel-chimique-dun-compose-dans-un-systeme-biphase" class="md-nav__link">
-    Uniformité du potentiel chimique d'un composé dans un système biphasé
+  <a href="#enthalpie-libre" class="md-nav__link">
+    Enthalpie Libre
   </a>
   
-    <nav class="md-nav" aria-label="Uniformité du potentiel chimique d'un composé dans un système biphasé">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#etat-standard" class="md-nav__link">
     État Standard
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#potentiel-chimique" class="md-nav__link">
+    Potentiel Chimique
+  </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#melanges-et-potentiel-chimique" class="md-nav__link">
-    Mélanges et Potentiel Chimique
+  <a href="#enthalpie-standard-et-entropie-standard-de-reaction" class="md-nav__link">
+    Enthalpie standard et Entropie standard de réaction
   </a>
-  
-    <nav class="md-nav" aria-label="Mélanges et Potentiel Chimique">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gaz-parfait-pur" class="md-nav__link">
-    Gaz parfait pur
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#melange-ideal-de-gaz-parfait" class="md-nav__link">
-    Mélange idéal de gaz parfait
+  <a href="#enthalpie-libre-de-reaction" class="md-nav__link">
+    Enthalpie libre de réaction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#effets-thermiques-dune-reaction-chimique" class="md-nav__link">
+    Effets Thermiques d'une réaction chimique
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    Références
   </a>
   
 </li>
@@ -855,8 +887,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../Thermo02/" class="md-nav__link">
-        Thermodynamique de la Réaction Chimique
+      <a href="../CinetiqueChimie/" class="md-nav__link">
+        Cinétique Chimie
       </a>
     </li>
   
@@ -892,6 +924,7 @@
 
 
 <h1 id="melange-et-potentiel-chimique">Mélange et Potentiel Chimique</h1>
+<p>Avr. 14 </p>
 <h2 id="description-dun-systeme-physico-chimique">Description d'un système physico-chimique</h2>
 <ul>
 <li><strong>Corps</strong> = Composé = constituant = espèce</li>
@@ -905,35 +938,93 @@
 <li><strong>Homogène</strong> ou <strong>monophasé</strong> : composés dans le même état physique avec <em>une seule phase</em></li>
 <li><strong>Hétérogène</strong> ou <strong>multiphasé</strong> : au moins deux <em>phase distinctes</em>, on a aussi <strong>biphasé</strong> ou <strong>triphasé</strong></li>
 <li>Composition d'un mélange : <ul>
-<li>Fractions molaires : 
+<li>Fractions molaires : <span class="arithmatex">\(x_{i}=\frac{n_{i}}{n_{tot}}\)</span></li>
+<li>Fraction massiques : <span class="arithmatex">\(w_{i}= \frac{m_{i}}{m_{tot}}\)</span></li>
+<li>Concentration molaires : <span class="arithmatex">\(c_{i}= \frac{n_{i}}{V}\)</span></li>
+</ul>
+</li>
+</ul>
+<h2 id="evolution-et-equilibre-chimique">Évolution et Équilibre Chimique</h2>
+<ul>
+<li>
+<p><strong>Équation Bilan</strong> :
     <script type="math/tex; mode=display">
-    x_{i}=\frac{n_{i}}{n_{tot}}
+    \alpha_1 A_1 +\cdots + \alpha_n A_n = \beta_1 B_1 + \cdots + \beta_p B_p
+    </script>
+</p>
+<ul>
+<li>
+<p>Composé <strong>Physico-chimiques</strong> : <span class="arithmatex">\(A_i\)</span> et <span class="arithmatex">\(B_i\)</span>, <span class="arithmatex">\(H_2O_{(l)} \ne H_2O_{(g)}\)</span>    </p>
+<ul>
+<li><strong>Reáctifs</strong> et <strong>Produits</strong><ul>
+<li><strong>Nombres stœchiométriques</strong></li>
+</ul>
+</li>
+<li><strong>Nombres stœchiométriques algébriques</strong> :
+    <script type="math/tex; mode=display">
+    \nu_i = \begin{cases} -\alpha_i <0\\ 
+    \beta_i >0
+    \end{cases} \implies \boxed{0 = \sum_i \nu_iC_i \quad(E)}
     </script>
 </li>
-<li>Fraction massiques : 
-    <script type="math/tex; mode=display">
-    w_{i}= \frac{m_{i}}{m_{tot}}
-    </script>
+</ul>
 </li>
-<li>Concentration molaires : 
-    <script type="math/tex; mode=display">
-    c_{i}= \frac{n_{i}}{V}
-    </script>
+<li>
+<p><span class="arithmatex">\((E)\)</span> peut considérée comme un vecteur d'un espace vectoriel.</p>
 </li>
+</ul>
+</li>
+<li>
+<p><strong>Avancement</strong> : la variable <span class="arithmatex">\(\xi\)</span> unité <span class="arithmatex">\(\text{mol}\)</span> définit par
+    <script type="math/tex; mode=display">
+    \mathrm{d} \xi  = \frac{\mathrm{d}n_1}{\nu_1} = \frac{\mathrm{d}n_2}{\nu_2} = \cdots = \frac{\mathrm{d}n_i}{\nu_i}, \;\xi_{\text{init}}=0
+    </script>
+    Donc q.q.s. l'état de transformation du système :
+    <script type="math/tex; mode=display">
+    n_i = n_{i,0} + \nu_i \xi 
+    </script>
+</p>
+<ul>
+<li><strong>Tableau d'avancement</strong></li>
+<li><span class="arithmatex">\(\xi = \xi_\text{max}\)</span> <strong>Réactif limitant</strong>, réaction totale en sens direct</li>
+<li><span class="arithmatex">\(\xi = \xi_\text{min}\)</span> <strong>Produit limitant</strong>, réaction totale en sens inverse</li>
+<li><em>Cas où plusieurs réactions sont possibles</em> : <img alt="" src="../assets/Thermo20.png" /></li>
+</ul>
+</li>
+<li>
+<p><strong>Profil de Réaction</strong> : La courbe représentant <span class="arithmatex">\(G(T,P, \xi)= G(\xi)|_{T,P}\)</span>.</p>
+<ul>
+<li>Il permet de prévoir l'évolution du système. <img alt="" src="../assets/Thermo21.png" /></li>
+</ul>
+</li>
+<li>
+<p><strong>L'état d'équilibre chimique</strong> : L'état <span class="arithmatex">\((T, P, \xi_{eq}) = \arg\min_\xi G(T,P,\xi)\)</span></p>
+</li>
+<li>
+<p>Le système finit lorsque</p>
+<ul>
+<li>Atteint la réaction thermodynamiquement totale, tel qu'un des composés complètement disparu</li>
+<li>Atteint <span class="arithmatex">\((T,P,\xi_{eq})\)</span></li>
 </ul>
 </li>
 </ul>
 <h2 id="enthalpie-libre">Enthalpie Libre</h2>
-<h3 id="evolution-mtmb-monotherme-monobare-principe-devolution">Évolution MTMB (Monotherme Monobare), Principe d'évolution</h3>
+<ul>
+<li>
+<p>L'<strong>enthalpie libre (énergie de Gibbs)</strong> du système définie par : 
+    <script type="math/tex; mode=display">
+    \boxed{
+    G = H-TS = U+PV - TS
+    }
+    </script>
+</p>
+</li>
+<li>
+<p><strong>Évolution MTMB</strong> : </p>
 <ul>
 <li><strong>Défintion</strong> : En contact avec l'atmosphère qui fait office de thermostat à <span class="arithmatex">\(T_{0}\)</span> et pressiostat à <span class="arithmatex">\(P_{0}\)</span>. Nous considérerons des <strong>transformations MTMB</strong> pour les quelles : 
     <script type="math/tex; mode=display">
     T_{init} = T_{finale}=T_{0},\quad P_{init}= P_{finale}=P_{0}
-    </script>
-</li>
-<li>L'<strong>enthalpie libre (énergie de Gibbs)</strong> du système définie par : 
-    <script type="math/tex; mode=display">
-    G = H-TS = U+PV - TS
     </script>
 </li>
 <li>Pour une transformation MTMB : 
@@ -944,33 +1035,53 @@
     &= -T_{0}S_{c} \text{ si } W_{u}=0
     \end{align}
     </script>
-    (Rappelle : <span class="arithmatex">\(\Delta H = \Delta U+\Delta PV = W+Q+P_{0}\Delta V=(-P_{0}\Delta V+ W_{u})+P_{0}\Delta V+Q\)</span>)
+    Rappelle : <span class="arithmatex">\(\Delta H = \Delta U+\Delta PV = W+Q+P_{0}\Delta V=(-P_{0}\Delta V+ W_{u})+P_{0}\Delta V+Q\)</span>
     En conclusion : 
     <script type="math/tex; mode=display">
     S_{c} \geq 0 \text{ donc } \Delta G \leq 0
     </script>
 </li>
-<li><strong>Conclusion - Principe d'évolution</strong>: Un état d'équilibre thermodynamique minimise l'<strong>enthalpie libre</strong> <span class="arithmatex">\(G\)</span> d'un système en évolution MTMB, compte tenu des contratines imposées.</li>
 </ul>
-<h3 id="enthalpie-libre-dun-melange-monophase">Enthalpie libre d'un mélange monophasé</h3>
+</li>
+<li><strong>Principe d'évolution</strong> : Un état d'équilibre thermodynamique minimise l'<strong>enthalpie libre</strong> <span class="arithmatex">\(G\)</span> d'un système en évolution MTMB, compte tenu des contratines imposées.</li>
+</ul>
+<p>Pour un <em>mélange monophasé</em> de <span class="arithmatex">\(S, V\)</span> composé des <span class="arithmatex">\(N\)</span> espèces <span class="arithmatex">\(A_{i}\)</span> avec <span class="arithmatex">\(n_i\)</span> moles, trouvera <span class="arithmatex">\(G(T, P, n_{1},n_{2},\dots)\)</span> :</p>
 <ul>
 <li>
-<p><strong>Identité thermodynamique</strong></p>
-<blockquote>
-<p>Pour un mélange monophasé de <span class="arithmatex">\(S, V\)</span> composé des <span class="arithmatex">\(N\)</span> espèces <span class="arithmatex">\(A_{i}\)</span> avec <span class="arithmatex">\(n_i\)</span> moles, trouver <span class="arithmatex">\(G(T, P, n_{1},n_{2},\dots)\)</span></p>
-</blockquote>
-<ul>
-<li>
-<p>On a et nous définissons le <strong>potentiel chimique</strong> <span class="arithmatex">\(\mu_{i}\)</span> du corps <span class="arithmatex">\(A_{i}\)</span> dans le mélange : 
+<p>Nous définissons le <strong>potentiel chimique</strong> <span class="arithmatex">\(\mu_{i}\)</span> du corps <span class="arithmatex">\(A_{i}\)</span> dans le mélange : 
     <script type="math/tex; mode=display">
-    \frac{\partial G}{\partial T}= -S,\quad \frac{\partial G}{\partial P}=V,\quad \frac{\partial G}{\partial n_{i}}= \mu_{i}
+    \frac{\partial G}{\partial T}= -S,\quad \frac{\partial G}{\partial P}=V,\quad \boxed{\frac{\partial G}{\partial n_{i}}= \mu_{i}}
     </script>
 </p>
 </li>
 <li>
 <p>En déduire l'<strong>Identité thermodynamique</strong>, au cours d'une transformation imaginaire où la température varie de <span class="arithmatex">\(\mathrm{d}T\)</span>, la pression de <span class="arithmatex">\(\mathrm{d}P\)</span> et les quantités <span class="arithmatex">\(n_{i}\)</span> de <span class="arithmatex">\(\mathrm{d}n_{i}\)</span>, 
     <script type="math/tex; mode=display">
-    \mathrm{d}G = V\mathrm{d}P - S\mathrm{d}T + \sum_{i=1}^n \mu_{i}\mathrm{d}n_{i}</script>
+    \boxed{
+    \mathrm{d}U = T \mathrm{d}S - P\mathrm{d}V + \sum_{i=1}^n \mu_i \mathrm{d}n_i,\quad
+    \mathrm{d}G = V\mathrm{d}P - S\mathrm{d}T + \sum_{i=1}^n \mu_{i}\mathrm{d}n_{i}}
+    </script>
+</p>
+<ul>
+<li>
+<p>Mémorasation d'<strong>identité thermodynamique</strong> :
+    <script type="math/tex; mode=display">
+    \begin{bmatrix}
+    &\leftarrow &-&\\ 
+    &S&\boxed{T}&\\ 
+    &\boxed{P}&V&\\ 
+    \boxed{G}&H&F&U \\ 
+    &\rightarrow&+&
+    \end{bmatrix} 
+    </script>
+</p>
+<blockquote>
+<p>Se Trouve Près de Vous Grand Homme est Fort Utile.</p>
+</blockquote>
+<p>Donc,
+<script type="math/tex; mode=display">
+\mathrm d \boxed G = + V\mathrm d\boxed  P - S \mathrm d\boxed T
+</script>
 </p>
 </li>
 </ul>
@@ -988,14 +1099,16 @@
     G(T,P, n_{1},\dots,n_{N}) = \sum_{i} n_{i }\times\mu_{i}(T, P, n_{1},\dots n_{N})
     </script>
 </li>
+<li>Conclusion : <em>L'enthalpie libre du système est la somme des potentiels chimiques multipliés par les nombres de moles</em> :
+    <script type="math/tex; mode=display">
+    \boxed{
+    G = \sum_{i=1}^n n_i\mu_i}
+    </script>
+</li>
 </ul>
 </li>
 </ul>
-<h2 id="uniformite-du-potentiel-chimique-dun-compose-dans-un-systeme-biphase">Uniformité du potentiel chimique d'un composé dans un système biphasé</h2>
-<ul>
-<li>Le <strong>potentiel chimique</strong> <span class="arithmatex">\(\mu_{i}\)</span> d'un corps pur donné est le <em>même dans toutes les phases</em>.</li>
-</ul>
-<h3 id="etat-standard">État Standard</h3>
+<h2 id="etat-standard">État Standard</h2>
 <ul>
 <li>Les états standard sont des états choisis par convention comme référence pour les états d’une espèce.</li>
 <li>Quel que soit l’état physique d’une espèce, son état standard correspond à une pression de référence 
@@ -1007,29 +1120,275 @@
 <li>Pour un gaz à <span class="arithmatex">\(T\)</span> , pur ou dans un mélange, l’<strong>état standard</strong> est le gaz parfait pur à <span class="arithmatex">\(T\)</span> sous <span class="arithmatex">\(P°\)</span></li>
 <li>Pour <em>une espèce</em> solide ou liquide, pure ou dans un mélange, l’état standard correspond à cette espèce pure dans le même état physique que dans le mélange, à la <em>même</em> température et sous la pression P°.</li>
 </ul>
-<h2 id="melanges-et-potentiel-chimique">Mélanges et Potentiel Chimique</h2>
-<h3 id="gaz-parfait-pur">Gaz parfait pur</h3>
+<h2 id="potentiel-chimique">Potentiel Chimique</h2>
 <ul>
-<li>Considérons un gaz pur à <span class="arithmatex">\(T\)</span>. <img alt="" src="../assets/GPpur01.png" /></li>
-</ul>
-<h2 id="melange-ideal-de-gaz-parfait">Mélange idéal de gaz parfait</h2>
+<li>Définition du <strong>potentiel chimique</strong> : 
+    <script type="math/tex; mode=display">
+    \boxed{\frac{\partial G}{\partial n_{i}}= \mu_{i}}
+    </script>
+</li>
+<li>
+<p>Le <strong>potentiel chimique</strong> <span class="arithmatex">\(\mu_{i}\)</span> d'un corps pur donné est le <em>même dans toutes les phases</em>.</p>
+</li>
+<li>
+<p>Le potentiel chimique a une expression générale :
+    <script type="math/tex; mode=display">
+    \boxed{
+    \mu_i(T.P,n_1,\cdots, n_N) = \mu_i^\circ(T) + RT \ln (a_i)}
+    </script>
+    où</p>
 <ul>
-<li>La <strong>Pression Partielle</strong> du composé <span class="arithmatex">\(P_{i}\)</span> est définie par : 
-    <script type="math/tex; mode=display">
-    P_{i}=x_{i}P
-    </script>
+<li><span class="arithmatex">\(\mu_i^\circ (T)\)</span> est le <strong>potentiel standard</strong> du composé dans l'échelle d'activité choisite.</li>
+<li><span class="arithmatex">\(a_i\)</span> est l'<strong>activité</strong> ( <strong>coefficient d'activité</strong> ) du corps <span class="arithmatex">\(A_i\)</span>, sans dimension. <img alt="" src="../assets/Thermo10.png" /></li>
+</ul>
 </li>
-<li>D'après <strong>Loi de Dalton</strong>, 
+</ul>
+<h2 id="enthalpie-standard-et-entropie-standard-de-reaction">Enthalpie standard et Entropie standard de réaction</h2>
+<ul>
+<li>
+<p><strong>Enthalpie molaire standard</strong> : L'enthalpie molaire <span class="arithmatex">\(H_m\)</span> d'un composé physico-chimique dans l'état standard, notée <span class="arithmatex">\(H_m^\circ(T)\)</span>, s'exprime en <span class="arithmatex">\(J/mol\)</span></p>
+<ul>
+<li>Pour les GP et phases condensées idéales purs, <span class="arithmatex">\(H_m\)</span> ne dépend que <span class="arithmatex">\(T\)</span> : 
     <script type="math/tex; mode=display">
-    P = \sum_{i}P_{i}
-    </script>
-</li>
-<li>En mélange Idéal : 
-    <script type="math/tex; mode=display">
-    \mu_{i}= \mu_{i}^\circ(T) + RT\ln(\frac{P_{i}}{P^\circ})
+    H_m(T, P) = H_m(T, P^\circ) = H_m^\circ(T)
     </script>
 </li>
 </ul>
+</li>
+<li>
+<p><strong>Capacité thermique standard</strong> à pression constante, s'exprime en <span class="arithmatex">\(J/K .mol\)</span>: <script type="math/tex; mode=display">
+    C_{P,m}^\circ (T) = \frac{\mathrm dH_m^\circ(T)}{\mathrm d  T}
+    </script>
+</p>
+</li>
+<li>
+<p><strong>Entropie molaire standard</strong>, s'exprime en <span class="arithmatex">\(J/K .mol\)</span> : <span class="arithmatex">\(S_m\)</span></p>
+<ul>
+<li>Variation en fonction de <span class="arithmatex">\(T\)</span> :
+    <script type="math/tex; mode=display">
+    \frac{\mathrm d S_m^\circ(T)}{\mathrm d T} = \frac{C_{P,m}^\circ(T)}{T}
+    </script>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Deux Relations de Kirchhoff</strong> : Variations avec la température :
+    <script type="math/tex; mode=display">
+    \begin{align}
+    \Delta_rH^\circ(T) &= \sum_i \nu_i H_{m,i} ^\circ (T), \\
+    \Delta_rS^\circ(T) &= \sum_i \nu_i S_{m,i} ^\circ (T) \end{align}\implies\boxed{ \begin{align}
+    \frac{\mathrm d \Delta_r H^\circ}{\mathrm d T} &= \Delta_r C_p^\circ\\ 
+    \frac{\mathrm d \Delta_r S^\circ}{\mathrm d T} &=\frac{ \Delta_r C_p^\circ}{T}\end{align}}
+    </script>
+</p>
+<ul>
+<li>
+<p><strong>Approximation d'Ellingham</strong> : </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\Delta_r H^\circ (T)\)</span> et <span class="arithmatex">\(\Delta_r S^\circ(T)\)</span> ne dépendent pas de <span class="arithmatex">\(T\)</span>, les dérivations sont considérées nulles.</p>
+</li>
+<li>
+<p>Calculation de l'<strong>enthalpie libre standard de réaction</strong> :
+    <script type="math/tex; mode=display">
+    \boxed{
+    \Delta_r G^\circ(T) = \Delta_r H^\circ(T) - T \times \Delta_r S^\circ(T)}
+    </script> 
+    est une fonction affine de la <span class="arithmatex">\(T\)</span>.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Réaction standard de formation</strong> (théorique, pas réalisable) : 
+    Un corps formé à partir de corps simples, et le cœfficient stœchiométrique du corps <span class="arithmatex">\(\nu = +1\)</span></p>
+<ul>
+<li><strong>État standard de référence</strong> d'un élément chimique à <span class="arithmatex">\(T\)</span> : Le corps simple dans l'état physique le plus stable.<blockquote>
+<p>Exemple : <span class="arithmatex">\(H\)</span> à <span class="arithmatex">\(298K\)</span> est <span class="arithmatex">\(H_2(g)\)</span></p>
+</blockquote>
+</li>
+<li><strong>État standard d'agrégation</strong> le plus stable à <span class="arithmatex">\(T\)</span> et à <span class="arithmatex">\(P\)</span> standard.</li>
+<li>La <strong>grandeur standard de formation</strong> : <span class="arithmatex">\(\Delta_f X^\circ\)</span> est la <span class="arithmatex">\(\Delta_r X^\circ\)</span> appliquée à l'équation bilan de formation du composée.</li>
+</ul>
+</li>
+<li>
+<p><strong>Loi de Hess</strong> : Pour l'équation <span class="arithmatex">\(0 = \sum_i \nu_iC_i\)</span>,
+    <script type="math/tex; mode=display">
+    \boxed{
+    \Delta_r X^\circ(E) = \sum_i \nu_i \Delta_f X^\circ (C_i)}
+    </script>
+</p>
+<blockquote>
+<p>Exemple : <img alt="" src="../assets/Thermo22.png" /></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="enthalpie-libre-de-reaction">Enthalpie libre de réaction</h2>
+<ul>
+<li>
+<p><strong>Enthalpie libre de réaction</strong>, s'exprime en <span class="arithmatex">\(J.mol^{-1}\)</span> :
+    <script type="math/tex; mode=display">
+    \boxed{
+    \Delta_rG = \left(\frac{\partial G}{\partial \xi}\right)_{T,P}
+    }
+    </script>
+</p>
+<ul>
+<li>
+<p>En réaction équilibrée (si <span class="arithmatex">\(\exists\)</span>): <span class="arithmatex">\(\Delta_rG(\xi_{eq}) = 0\)</span>, mais l'inverse est FAUX.</p>
+</li>
+<li>
+<p>Q.q.s. <span class="arithmatex">\(\xi\)</span>, on a :
+    <script type="math/tex; mode=display">
+    \Delta_r G(\xi)<0 \implies \mathrm{d}\xi >0, \; \text{ evolue } \rightarrow
+    </script>
+<script type="math/tex; mode=display">
+    \Delta_r G(\xi)>0 \implies \mathrm{d}\xi <0, \; \text{ evolue } \leftarrow
+    </script>
+</p>
+<blockquote>
+<p>Preuve : <span class="arithmatex">\(G\)</span> diminue, donc :
+<script type="math/tex; mode=display">
+\begin{align}
+&G(T,P, \xi + d\xi) - G(T,P, \xi) < 0 \\
+\iff &d\xi \times \left(\frac{\partial G}{\partial \xi}\right)_{T,P} = d\xi \times \Delta_r G(\xi)<0
+\end{align}
+</script>
+</p>
+</blockquote>
+</li>
+<li>
+<p>Évolution spontannée irréversible, car 
+    <script type="math/tex; mode=display">
+    \delta S_{creee}  = - \frac{\mathrm {d} \xi \times \Delta _r G(\xi)} {T}>0
+    </script>
+</p>
+</li>
+<li>
+<p>Dans une réaction, expression générale :
+    <script type="math/tex; mode=display">
+    \boxed{
+    0 = \sum_i \nu_i C_i \implies \Delta_r G(\xi) = \sum_i \nu_i \mu_i
+    }
+    </script>
+</p>
+<blockquote>
+<p>Preuve :
+<script type="math/tex; mode=display">
+\left(\frac{\partial G}{\partial \xi}\right)_{T,P} = \left(\frac{\partial G}{\partial n_i}\right)_{T,P} \times  \left(\frac{\partial n_i}{\partial \xi}\right)
+</script>
+</p>
+</blockquote>
+</li>
+<li>
+<p><strong>L'enthalpie libre standard de réaction</strong> <span class="arithmatex">\(\Delta_r G^\circ(T)\)</span>, <strong>Le quotient réactionnel</strong> <span class="arithmatex">\(Q\)</span> : 
+    <script type="math/tex; mode=display">
+    \Delta_r G = \underbrace{\Delta_r \nu_i \mu_i^\circ(T)}_{\Delta_r G^\circ(T)} + RT\underbrace{\sum_i \nu_i\ln(a_i)}_{\ln(Q) = \ln(\prod_i a_i^{\nu_i})} = \Delta_r G^\circ(T) + RT\ln(Q)
+    </script>
+    avec 
+    <script type="math/tex; mode=display">
+    \boxed{
+    \Delta_r G^\circ(T) = \Delta_r \nu_i \mu_i^\circ(T),\quad Q = \prod_i a_i^{\nu_i}}
+    </script>
+    car 
+    <script type="math/tex; mode=display">
+    \mu_i = \mu_i^\circ + RT \ln(a_i)
+    </script>
+</p>
+<ul>
+<li>Rappelle que 
+    <script type="math/tex; mode=display">
+    \boxed{
+    \Delta_r G^\circ(T) = \Delta_r H^\circ(T) - T\Delta_r S^\circ(T)}
+    </script>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>La constante de réaction</strong> :
+    <script type="math/tex; mode=display">
+    \boxed{K^\circ(T) = \exp\left(- \frac{\Delta_r G^\circ(T)}{RT}\right)} \implies \Delta_r G = RT\ln\left(\frac{Q}{K^\circ(T)}\right)
+    </script>
+</p>
+<ul>
+<li><strong>Loi d'action des masses</strong> ou <strong>Loi de Guldberg Waage</strong> : à l'équilibre,
+    <script type="math/tex; mode=display">
+    Q_{eq} = K^\circ(T)
+    </script>
+</li>
+<li>Si <span class="arithmatex">\(Q &lt; K^\circ(T)\)</span>, <span class="arithmatex">\(\Delta_rG(\xi)&lt;0\)</span>, l'évolution <span class="arithmatex">\((\to)\)</span></li>
+<li>Si <span class="arithmatex">\(Q &gt;K^\circ(T)\)</span>, <span class="arithmatex">\(\Delta_rG(\xi)&gt;0\)</span>, l'évolution <span class="arithmatex">\((\leftarrow)\)</span></li>
+</ul>
+</li>
+<li>
+<p><strong>Le quotient de réaction</strong> dépend de l'avancement et de la pression, mais la constante d'équilibre ne dépend que de la <span class="arithmatex">\(T\)</span>. <img alt="" src="../assets/Thermo11.png" /></p>
+</li>
+<li>
+<p><strong>Le relation de Van't Hoff</strong> :
+    <script type="math/tex; mode=display">
+    \frac{\mathrm d \ln K^\circ (T)}{\mathrm dT} = \frac{\Delta_r H^\circ (T)}{RT^2}
+    </script>
+</p>
+</li>
+</ul>
+<h2 id="effets-thermiques-dune-reaction-chimique">Effets Thermiques d'une réaction chimique</h2>
+<ul>
+<li>
+<p>Cas d'un mélange idéal :
+    <script type="math/tex; mode=display">
+    H(T,P, \xi) - H(T,P, 0) = \sum_i  \nu_i \xi H_{m,i}^\circ (T) = \xi \Delta_r H_{m,i}^\circ (T)
+    </script>
+    et l'énergie interne :
+    <script type="math/tex; mode=display">
+    U(T, \xi) - U(T, 0) = \xi H^\circ(T) - (n_g(\xi)-n_g(0)) RT
+    </script>
+</p>
+</li>
+<li>
+<p>Dans une transformation MTMB, la chaleur reçue par le système au cours de la réaction est :
+    <script type="math/tex; mode=display">
+    Q = [H]_i^f = \xi_\text{fin} \Delta_rH^\circ(T)
+    </script>
+</p>
+<ul>
+<li><span class="arithmatex">\(\Delta_R H^\circ &gt;0\)</span>, <strong>réaction endothermique</strong>, le milieu reçoit une chaleur positive</li>
+<li><span class="arithmatex">\(\Delta_R H^\circ &lt;0\)</span>, <strong>réaction exothermique</strong>, le milieu donne une chaleur positive</li>
+<li><span class="arithmatex">\(\Delta_R H^\circ =0\)</span>, <strong>réaction athermique</strong> </li>
+</ul>
+</li>
+<li>
+<p>Dans une transformation MT, la chaleur reçue sera : 
+    <script type="math/tex; mode=display">
+    Q = [U]_i^f=\xi_\text{fin} \Delta_rH^\circ(T) - [n_\text{gaz}]_i^f RT
+    </script>
+</p>
+</li>
+<li>
+<p>Dans une transformation MB adiabatique, [TBD]</p>
+</li>
+</ul>
+<h2 id="references">Références</h2>
+<ul>
+<li><a href="https://www.f-legrand.fr/scidoc/docmml/sciphys/thermochim/transchimique/transchimique.html">Thermodynamique de la transformation chimique</a></li>
+</ul>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-04-14T09:29:19+08:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-04-14</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2023-04-14T09:29:19+08:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2023-04-14</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -1098,6 +1457,10 @@
     
     
       <script src="../../../assets/javascripts/bundle.407015b8.min.js"></script>
+      
+        <script src="../../../js/timeago.min.js"></script>
+      
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
