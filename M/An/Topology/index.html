@@ -661,10 +661,58 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          Ondes Ondulatoires
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Ondes Ondulatoires
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../P/Ondes%20Ondulatoires/" class="md-nav__link">
-        Ondes Ondulatoires
+      <a href="../../../P/Optique/Interferences/" class="md-nav__link">
+        Interferences
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../P/Optique/Diffraction/" class="md-nav__link">
+        Diffraction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -894,7 +942,9 @@
 
 <h1 id="topologie">Topologie</h1>
 <ul>
-<li>Définitions :<ul>
+<li>
+<p>Définitions :</p>
+<ul>
 <li>espace métrique</li>
 <li>espace normée</li>
 <li>distance<ul>
@@ -902,7 +952,10 @@
 <li>distance produit</li>
 </ul>
 </li>
-<li>diamètre</li>
+<li>diamètre<ul>
+<li>partie bornée</li>
+</ul>
+</li>
 <li>norme<ul>
 <li>norme induite</li>
 <li>exemples des normes</li>
@@ -912,6 +965,16 @@
 <li>partie fermée, ouverte</li>
 <li>adhérence</li>
 <li>partie dense</li>
+</ul>
+</li>
+<li>
+<p>Exercices : </p>
+<ul>
+<li>Démontrer une application est une distance, une norme.</li>
+<li>Normes et boules ouvertes.</li>
+<li>Démontrer qu'une partie est bornée.</li>
+<li>Calculer le diamètre</li>
+<li></li>
 </ul>
 </li>
 </ul>
@@ -1090,7 +1153,10 @@
     <script type="math/tex; mode=display">
     \forall x\in E,\;[x\in F] \iff [d(x,F)=0]
     </script>
-    &gt; Preuve : Soit <span class="arithmatex">\(x\in E\)</span>, <span class="arithmatex">\(d(x,F) = 0\)</span>, donc <span class="arithmatex">\(\exists(x_n)\in F^\mathbb N\)</span>, <span class="arithmatex">\(d(x_n,x) \underset{n \to +\infty}{\longrightarrow}d(x,F) = 0\)</span>, donc <span class="arithmatex">\(x_n \underset{n\to +\infty}{\longrightarrow} x\)</span>. Sachant que <span class="arithmatex">\(F\)</span> est fermé, <span class="arithmatex">\(x\in F\)</span>.</p>
+</p>
+<blockquote>
+<p>Preuve : Soit <span class="arithmatex">\(x\in E\)</span>, <span class="arithmatex">\(d(x,F) = 0\)</span>, donc <span class="arithmatex">\(\exists(x_n)\in F^\mathbb N\)</span>, <span class="arithmatex">\(d(x_n,x) \underset{n \to +\infty}{\longrightarrow}d(x,F) = 0\)</span>, donc <span class="arithmatex">\(x_n \underset{n\to +\infty}{\longrightarrow} x\)</span>. Sachant que <span class="arithmatex">\(F\)</span> est fermé, <span class="arithmatex">\(x\in F\)</span>.</p>
+</blockquote>
 <ul>
 <li>
 <p>Exemples :</p>
@@ -1110,7 +1176,9 @@
 <p><strong>Propriétés</strong> :</p>
 <ul>
 <li><span class="arithmatex">\((F_i)\)</span> une famille q.q. de fermés de <span class="arithmatex">\(E\)</span>, alors <span class="arithmatex">\(\bigcap F_i\)</span> est fermée dans <span class="arithmatex">\(E\)</span></li>
-<li><span class="arithmatex">\((F_i)\)</span> une famille finie de fermés de <span class="arithmatex">\(E\)</span>, alors <span class="arithmatex">\(\bigcup F_i\)</span> est fermée dans <span class="arithmatex">\(E\)</span><ul>
+<li>
+<p><span class="arithmatex">\((F_i)\)</span> une famille finie de fermés de <span class="arithmatex">\(E\)</span>, alors <span class="arithmatex">\(\bigcup F_i\)</span> est fermée dans <span class="arithmatex">\(E\)</span></p>
+<ul>
 <li>Contre-exemple : <span class="arithmatex">\(F_i = [-1+ 1/i, 1-1/i]\)</span></li>
 </ul>
 </li>

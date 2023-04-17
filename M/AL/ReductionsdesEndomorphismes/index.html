@@ -641,10 +641,58 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          Ondes Ondulatoires
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Ondes Ondulatoires
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../../P/Ondes%20Ondulatoires/" class="md-nav__link">
-        Ondes Ondulatoires
+      <a href="../../../P/Optique/Interferences/" class="md-nav__link">
+        Interferences
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../P/Optique/Diffraction/" class="md-nav__link">
+        Diffraction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -890,18 +938,23 @@
     </script>
 </p>
 <ul>
-<li>Propriété : Si <span class="arithmatex">\(A \in \mathrm{M}_{n,p}(\mathbb K)\)</span>,
+<li>
+<p>Propriété : Si <span class="arithmatex">\(A \in \mathrm{M}_{n,p}(\mathbb K)\)</span>,
     <script type="math/tex; mode=display">
     A.T_{k,e}(\lambda) :C_p \leftarrow C_p + \lambda.C_k,\quad T_{k,e}(\lambda).A: L_k \leftarrow L_k + \lambda. L_p
     </script>
-    &gt; Démonstration : 
-    &gt;    <script type="math/tex; mode=display">
-        A.T_{k,e}(\lambda) = A+ \lambda.A.E_{k,p} = A+\lambda.\sum_u a_{u,k} E_{u,p}
-    >    </script>
-    &gt;    car
-    &gt;    <script type="math/tex; mode=display">
-    >   E_{u,v}E_{k,p} = \left[\sum_{s}\delta_{iu}\delta_{sv}\delta_{sk}\delta_{je}\right] = \delta_{v,k}.E_{u,p}
-    >    </script>
+</p>
+<blockquote>
+<p>Démonstration : 
+   <script type="math/tex; mode=display">
+    A.T_{k,e}(\lambda) = A+ \lambda.A.E_{k,p} = A+\lambda.\sum_u a_{u,k} E_{u,p}
+   </script>
+   car
+   <script type="math/tex; mode=display">
+  E_{u,v}E_{k,p} = \left[\sum_{s}\delta_{iu}\delta_{sv}\delta_{sk}\delta_{je}\right] = \delta_{v,k}.E_{u,p}
+   </script>
+</p>
+</blockquote>
 </li>
 </ul>
 </li>
@@ -935,13 +988,15 @@ P_\sigma = \left[\delta_{i,\sigma(j)}\right]_{(i,j)\in [\![1,n]\!]^2}
 </li>
 </ul>
 <blockquote>
-<p>Preuve : <span class="arithmatex">\(P_\sigma .P_{\sigma'} = \left[ \sum_s \delta_{i, \sigma(s)}\delta_{s,\sigma'(j)} \right]= [\delta_{i,\sigma \circ \sigma'(j)}]\)</span>
-    - <strong>Propriétés</strong> :
-<script type="math/tex; mode=display">
-A.P_{(k,p)}: C_k \leftrightarrow C_p,\quad P_{(k,p)}.A : L_k \leftrightarrow L_p
-</script>
-</p>
+<p>Preuve : <span class="arithmatex">\(P_\sigma .P_{\sigma'} = \left[ \sum_s \delta_{i, \sigma(s)}\delta_{s,\sigma'(j)} \right]= [\delta_{i,\sigma \circ \sigma'(j)}]\)</span></p>
 </blockquote>
+</li>
+<li>
+<p><strong>Propriétés</strong> :
+    <script type="math/tex; mode=display">
+    A.P_{(k,p)}: C_k \leftrightarrow C_p,\quad P_{(k,p)}.A : L_k \leftrightarrow L_p
+    </script>
+</p>
 </li>
 </ul>
 </li>
@@ -1014,7 +1069,7 @@ A.P_{(k,p)}: C_k \leftrightarrow C_p,\quad P_{(k,p)}.A : L_k \leftrightarrow L_p
 <p>Trouver <span class="arithmatex">\(\lambda\)</span> : 
     <script type="math/tex; mode=display">
     \begin{align}
-    \lambda \in [\mathrm{Sp}(u)] &\iff [\mathrm{Ker}(u-\lambda. \mathrm{id}_E)=0] \\ 
+    \lambda \in [\mathrm{Sp}(u)] &\iff [\mathrm{Ker}(u-\lambda. \mathrm{id}_E)\ne \{0_E\}] \\ 
     &\iff [u - \lambda. \mathrm{id}_E \text{ n'est pas injective, alors non bijective}] \\ 
     &\iff [\mathrm{rang}(u-\lambda. \mathrm{id}_E)<n] \\
     &\iff [\mathrm{det}(u - \lambda. \mathrm{id}_E) = 0] 
@@ -1029,6 +1084,12 @@ A.P_{(k,p)}: C_k \leftrightarrow C_p,\quad P_{(k,p)}.A : L_k \leftrightarrow L_p
     </script>
 </p>
 </li>
+</ul>
+</li>
+<li>
+<p>On peut parfois trouver des valeurs propres et les vecteurs propres directement. (TBD)</p>
+<ul>
+<li>Exemple : <span class="arithmatex">\(A = \begin{bmatrix} a &amp; b &amp; \ldots &amp; b \\ b &amp; \ddots  \\ \vdots &amp;&amp;a  \\ b &amp;b &amp; \ldots &amp; a\end{bmatrix}\)</span> possède les valeurs propres <span class="arithmatex">\(a+(n-1)b\)</span> et <span class="arithmatex">\(a-b\)</span>.</li>
 </ul>
 </li>
 </ul>
