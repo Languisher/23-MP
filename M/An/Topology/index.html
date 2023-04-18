@@ -577,6 +577,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#suites-et-fonctions-continues" class="md-nav__link">
+    Suites et fonctions continues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    Références
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -973,8 +987,8 @@
 <li>Démontrer une application est une distance, une norme.</li>
 <li>Normes et boules ouvertes.</li>
 <li>Démontrer qu'une partie est bornée.</li>
-<li>Calculer le diamètre</li>
-<li></li>
+<li>Calculer le diamètre.</li>
+<li>Démontrer qu'une partie est fermée, ouverte.</li>
 </ul>
 </li>
 </ul>
@@ -1187,6 +1201,15 @@
 <p>Preuve : Considérons une suite <span class="arithmatex">\((x_n)\)</span> et une famille <span class="arithmatex">\(F_j\)</span> contient une infini nombre des termes de <span class="arithmatex">\((x_n)\)</span>. On construit une fonction <span class="arithmatex">\(\varphi\)</span> et ensuite fabriquer une sous-suite qui concentre sur <span class="arithmatex">\(F_j\)</span>, il contient sûrment une infinité d'éléments. </p>
 </blockquote>
 </li>
+<li>
+<p><strong>Montrer qu'une partie est fermée</strong> : Soit <span class="arithmatex">\(X\)</span> une partie de <span class="arithmatex">\(E\)</span>. Voici les methodes classiques pour montrer que <span class="arithmatex">\(X\)</span> est un ferme.</p>
+<ul>
+<li>On utilise la caracterisation sequentielle. Precisement, pour montrer que <span class="arithmatex">\(X\)</span> est fermé, il suffit de montrer que toute suite <span class="arithmatex">\((x_n)\)</span> d’ ́elements de <span class="arithmatex">\(X\)</span> qui converge (donc qui a une limite <span class="arithmatex">\(l ∈ E\)</span>) a sa limite dans <span class="arithmatex">\(X\)</span>.</li>
+<li>Intersection q.q. de parties fermées ou une union finie de fermés.</li>
+<li>L'image réciproque d'un fermé par une application continue.</li>
+<li>Montrer que son complémentaire est ouvert.</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -1246,23 +1269,146 @@
 <li>
 <p><strong>Parties Ouvertes</strong> : Soit <span class="arithmatex">\(O \subset (E,d)\)</span>, on dit que <span class="arithmatex">\(O\)</span> est <strong>ouvert dans</strong> <span class="arithmatex">\(E\)</span> si <span class="arithmatex">\(E\backslash O\)</span> est fermé dans <span class="arithmatex">\(E\)</span>.</p>
 <ul>
-<li>Remarque : C'est FAUX de dire que <span class="arithmatex">\(A\)</span> est ouvert dans <span class="arithmatex">\(E\)</span> car <span class="arithmatex">\(A\)</span> n'est pas fermé.</li>
-</ul>
+<li>
+<p>Remarque : C'est FAUX de dire que <span class="arithmatex">\(A\)</span> est ouvert dans <span class="arithmatex">\(E\)</span> car <span class="arithmatex">\(A\)</span> n'est pas fermé.</p>
+</li>
+<li>
+<p>Caractérisation des <strong>ouverts</strong> : 
+    <script type="math/tex; mode=display">
+    [O \text{ ouvert dans } E] \iff [\forall x\in O, \; \exists \varepsilon >0, \; BO(x, \varepsilon)\subset O]
+    </script>
+</p>
+<blockquote>
+<p>Preuve : [TBD, pas difficle]</p>
+</blockquote>
 </li>
 <li>
 <p><strong>Propriétés</strong> :</p>
 <ul>
 <li><span class="arithmatex">\(\bigcup_{i\in I} O_i\)</span> est ouvert.</li>
-<li>
-<p>Si <span class="arithmatex">\(I\)</span> est fini, alors <span class="arithmatex">\(\bigcap_{i\in I}O_i\)</span> est ouvert.</p>
+<li>Si <span class="arithmatex">\(I\)</span> est fini, alors <span class="arithmatex">\(\bigcap_{i\in I}O_i\)</span> est ouvert.</li>
+</ul>
 </li>
 <li>
-<p>Caractérisation des ouverts : 
+<p><strong>Montrer qu'une partie est ouverte</strong> : Soit <span class="arithmatex">\(X\)</span> une partie de <span class="arithmatex">\(E\)</span>. Voici les méthodes classiques pour montrer que <span class="arithmatex">\(X\)</span> est un ouvert.</p>
+<ul>
+<li>On revient à la definition. Une partie <span class="arithmatex">\(X\)</span> de $E est ouverte si et seulement si pour tout élement <span class="arithmatex">\(x\)</span> de <span class="arithmatex">\(X\)</span>, il existe un reel <span class="arithmatex">\(δ &gt; 0\)</span> tel que <span class="arithmatex">\(BO(x,δ) ⊂ X\)</span>.</li>
+<li>Réunion q.q. de parties ouvertes ou intersection finie d'ouverts.</li>
+<li>Réciproque d'un <strong>ouvert</strong> par une application continue.</li>
+<li>Son complémentaire est fermé.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Intérieur d'un ensemble</strong> : On appelle <strong>intérieur de <span class="arithmatex">\(A\)</span></strong> le plus grand ouvert de <span class="arithmatex">\(E\)</span> contenu dans <span class="arithmatex">\(A\)</span>. On le note 
     <script type="math/tex; mode=display">
-    [O \text{ ouvert dans } E] \iff [\forall x\in O, \; \exists \varepsilon >0, \; BO(x, \varepsilon)\subset O]
+    \mathring {A} \text{ ou } \mathrm{Int}(A) 
+    </script>
+    Un point de l'intérfieur de <span class="arithmatex">\(A\)</span> est dit <strong>intérieur</strong> à <span class="arithmatex">\(A\)</span>.</p>
+<ul>
+<li>
+<p><strong>Caractérisation de l'intérieur d'unsemble</strong> :
+    <script type="math/tex; mode=display">
+    \mathring A = \{x\in A, \exists \varepsilon >0, \; BO(x, \varepsilon) \subset A\}
     </script>
 </p>
 </li>
+<li>
+<p>Remarque :
+    <script type="math/tex; mode=display">
+    \mathrm{Int}(BF(a,r)) \supset BO(a,r) 
+    </script>
+</p>
+<ul>
+<li>L'égalité n'est pas toujours vérifée.</li>
+<li>Dans les espaces vectoriels normés, il y a toujours égalité   .<ul>
+<li>Propriétés : 
+$$
+\begin{align*}
+\mathring A&amp;\subset A \
+A = \mathring A &amp;\iff [A \text{ ouvert de }E] \
+\overline{E\backslash A} &amp;= E \backslash \mathring A \
+A \subset B &amp;\implies \mathring A \subset \mathring B \ 
+\mathrm{Int} (A \cap B) &amp;= \mathring A \cap \mathring B</li>
+</ul>
+</li>
+</ul>
+<p>.\end{align*}
+$$
+    - Exemple :
+- Dans <span class="arithmatex">\(\mathbb{R}\)</span> muni de la distance <span class="arithmatex">\(| |\)</span>, on a $\mathring A $</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Frontière</strong> :
+    On appelle <strong>frontière</strong> de <span class="arithmatex">\(A\)</span> dans <span class="arithmatex">\(E\)</span> l'ensemble
+    <script type="math/tex; mode=display">
+    \mathrm{Fr} (A) = \overline{A} \backslash \mathring A = \overline{A} \cap \overline{E \backslash A}
+    </script>
+</p>
+</li>
+<li>
+<p><strong>Isolé, Accumulation</strong> :</p>
+<ul>
+<li>
+<p>Les <strong>points isolés</strong> de <span class="arithmatex">\(A\)</span> une partie de <span class="arithmatex">\((E,d)\)</span> :
+    <script type="math/tex; mode=display">
+    a \in \mathrm{Isol} (A) \iff \exists r \in \mathbb{R} _+^* ,\; A \cap BO(a,r) = \{a\}
+    </script>
+</p>
+</li>
+<li>
+<p>Les <strong>points d'accumulation</strong> de <span class="arithmatex">\(A\)</span> sont tels que 
+    <script type="math/tex; mode=display">
+    a \in \mathrm{Ac cu}(A) \iff \forall r \in \mathbb{R} _+^* ,\; A \cap BO(a,r) \text{ est infini}
+    </script>
+</p>
+</li>
+<li><strong>Voisinage de <span class="arithmatex">\(a\)</span> dans <span class="arithmatex">\(E\)</span></strong> : On dit que <span class="arithmatex">\(V\)</span> est un <strong>voisinage de <span class="arithmatex">\(a\)</span> dans <span class="arithmatex">\(E\)</span></strong> si :
+<script type="math/tex; mode=display">
+V \in \mathscr{V} (a) \iff \exists  \varepsilon >0,\; BO(a, \varepsilon) \subset V
+</script>
+</li>
+</ul>
+<h2 id="suites-et-fonctions-continues">Suites et fonctions continues</h2>
+</li>
+<li>
+<p><strong>Extraction d'une suite</strong> :
+    Soit <span class="arithmatex">\((u_n)\)</span> une suite de <span class="arithmatex">\(E^\mathbb{N}\)</span>. On dit que <span class="arithmatex">\(\varphi\)</span> est une <strong>extraction</strong> et que la suite <span class="arithmatex">\((u_{\varphi(n)})\)</span> est <strong>extraite</strong> de <span class="arithmatex">\((u_n)\)</span>.</p>
+</li>
+<li>
+<p><strong>Valeur d'adhérence</strong> :
+    On dit que <span class="arithmatex">\(\alpha \in E\)</span> est une <strong>valeur d'adhérence</strong> de <span class="arithmatex">\((u_n)\)</span> s'il existe une suite extraite de <span class="arithmatex">\((u_n)\)</span> qui converge vers <span class="arithmatex">\(\alpha\)</span>. On le note :<br />
+<script type="math/tex; mode=display">
+    \mathrm{Adh}((u_n)) = \{l \in E, \; l \text{ est une valeur d'adhérence de } (u_n)\}
+    </script>
+</p>
+<ul>
+<li>
+<p>Exemple :</p>
+<ul>
+<li><span class="arithmatex">\((-1)^n\)</span> a pour valeurs d'adhérence <span class="arithmatex">\(-1\)</span> et <span class="arithmatex">\(1\)</span>.</li>
+<li>Une suite convergente a pour <em>seule</em> valeur d'adhérence sa limite.</li>
+<li><span class="arithmatex">\(\tan(h)\)</span> a pour valeur d'adhérence <span class="arithmatex">\(\mathbb{R}\)</span>.</li>
+</ul>
+</li>
+<li>
+<p>Propriété :
+    Soit <span class="arithmatex">\(u, \; a\in E\)</span>, alors :
+    <script type="math/tex; mode=display">
+    [a\in \mathrm{Adh} (u) ] \iff [\forall \varepsilon >0,\; \{n\in \mathbb{N} ,\; u_n \in BO(a, \varepsilon)\} \text{ est infini}]
+    </script>
+</p>
+</li>
+<li>
+<p>Propriété : <span class="arithmatex">\(\forall u \in E\)</span>, <span class="arithmatex">\(\mathrm{Adh} (u)\)</span> est fermé dans <span class="arithmatex">\(E\)</span>.</p>
+</li>
+</ul>
+<h2 id="references">Références</h2>
+<ul>
+<li><a href="https://www.mp2-chato.fr/wp-content/uploads/2020/02/Methodes-topos-2.pdf">Méthodes en topologie</a></li>
 </ul>
 </li>
 </ul>

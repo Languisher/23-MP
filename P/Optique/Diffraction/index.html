@@ -703,6 +703,26 @@
     Notions d'Optique de Fourier
   </a>
   
+    <nav class="md-nav" aria-label="Notions d'Optique de Fourier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reconstruction-montage-4f" class="md-nav__link">
+    Reconstruction : Montage 4f'
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtrage" class="md-nav__link">
+    Filtrage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -946,7 +966,7 @@
   <h1>Diffraction</h1>
 
 <h2 id="diffraction">Diffraction</h2>
-<p><img alt="" src="../assets/Diffraction01.png" /></p>
+<p><img alt="" src="../assets/Diffraction01.jpg" /></p>
 <ul>
 <li>
 <p><strong>Principe de Huyghens</strong> : Lorsqu'une source ponctuelle émet une onde, tout se passe comme si chaque point de la surface se comportait comme <em>une source ponctuelle secondaire émettant des ondes sphériques</em>*.</p>
@@ -1206,7 +1226,6 @@ I(M) \propto I_{\text{interferences}} \times  I_{\text{diffraction de 1 seule fe
 <li><span class="arithmatex">\(\Lambda\)</span> est la période spatiale (unité : <span class="arithmatex">\(m\)</span>)</li>
 <li>On appelle <strong>fréquence spatiale</strong> : <span class="arithmatex">\(\Sigma = \frac{1}{\Lambda}\)</span></li>
 </ul>
-<p>Donc, on en déduire que :</p>
 </li>
 <li>
 <p>L'amplitude diffractée dans le plan de Fourier :
@@ -1217,12 +1236,91 @@ I(M) \propto I_{\text{interferences}} \times  I_{\text{diffraction de 1 seule fe
 <ul>
 <li>Chaque point <span class="arithmatex">\(x_F\)</span> du plan de Fourier est assoicé à une fréquence spatiale :
     <script type="math/tex; mode=display">
-    x_F \to \Sigma = \frac{|x_F|}{\lambda f'}
+    x_F = \pm \frac{\lambda f'}{\Lambda},\quad x_F \to \Sigma = \frac{|x_F|}{\lambda f'}
     </script>
 </li>
 </ul>
 </li>
 </ul>
+<h3 id="reconstruction-montage-4f">Reconstruction : Montage 4f'</h3>
+<p><img alt="" src="../assets/Diffraction11.png" /></p>
+<ul>
+<li>
+<p><strong>Objet de transmission uniform</strong> : <span class="arithmatex">\(\underline{\tau}(x) = 1\)</span>,
+    <script type="math/tex; mode=display">
+    \underset{\text{plan de Fourier}}{I(M)} \propto \mathrm{si nc}^2\left(\frac{\pi}{\lambda_0}bx_F\right) = 1 \iff x_F = 0 
+    </script>
+</p>
+</li>
+<li>
+<p><strong>Objet de transmission sinusoïdale</strong>
+    $$
+    \begin{align*}</p>
+<p>\underline{a}<em S_1="S_1">S &amp;= K \underline{a}_0 \left[\exp(-jk_0 \vec{u}</em>\cdot \vec{OM})+ \exp(-jk_0 \vec{u}<em -1="-1">{S</em>}\cdot  \vec{OM})\right] \ 
+&amp;= 
+\end{align*}
+$$</p>
+</li>
+<li>
+<p><strong>Point de décalé</strong> : Si nous prenons un écran <span class="arithmatex">\(\tau(x)\)</span> centré en <span class="arithmatex">\(x_S \ne 0\)</span>, l'amplitude dans le plan de Fourier,
+    <script type="math/tex; mode=display">
+    \underline{a}_F = K\underline{a}_0 \exp\left( -jk_0 \left( -\frac{x_Sx_F}{f'}+z \right)  \right) 
+    </script>
+</p>
+</li>
+</ul>
+<h3 id="filtrage">Filtrage</h3>
+<blockquote>
+<p>Analogue au filtrage d'un signal électronique.</p>
+</blockquote>
+<p>Prenons un signal :
+<script type="math/tex; mode=display">
+\underline{u}_e = \frac{4a}{c} \sum_{n=2p+1}^\infty \frac{\sin(n \omega t)}{n}
+</script>
+</p>
+<p>On le développe en série de Fourier, et on obtient : <span class="arithmatex">\(n=1,\; n=3,\; n=5\)</span>, respectivement <span class="arithmatex">\(u_{e_1}, \; u_{e_3},\; u_{e_5}\)</span>.</p>
+<p>Ensuite, par <strong>passage au travers d'un filtre</strong> : 
+<script type="math/tex; mode=display">
+\underline{u}_{s_1} = \underline{H}_1 \underline{u}_{e_1},\; \underline{u}_{s_5}=\underline{H}_5 \underline{u}_{e_5} = |\underline{H}_5| \frac{4a}{\pi} \frac{\sin(5 \omega t + \varphi _5)}{5}
+</script>
+</p>
+<p>Enfin, par <strong>synthèse de Fourier</strong>,</p>
+<div class="arithmatex">\[
+\underline{u}_s = \sum_{n=1}^\infty \underline{H}_n \underline{u}_{s_n}
+\]</div>
+<ul>
+<li>
+<p><strong>Filtrage passe-bas</strong></p>
+<ul>
+<li>
+<p>Prenons 
+    <script type="math/tex; mode=display">
+    \tau(x) = \frac{1}{2}\left( 1+ \cos\left( 2\pi \frac{x}{\Lambda} \right)  \right) 
+    </script>
+    on a trois points dans le plan de Fourier : <span class="arithmatex">\(x_F = 0,\; x_F = \pm \lambda f'/ \Lambda\)</span>
+    Supposons que le filtre ne laisse passer 
+    <script type="math/tex; mode=display">
+    \underline{H}(x_F) = \begin{cases}
+        1 \text { si } |x_F|< \delta \\
+        0 \text{ sinon }
+    \end{cases}
+    </script>
+</p>
+<p>Ce filtre ne laisse passer que les faibles fréquences </p>
+<div class="arithmatex">\[
+\Sigma &lt; \frac{\delta}{\lambda f'}
+\]</div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Filtrage passe-haut - Strioscopie</strong></p>
+</li>
+</ul>
+<p>Pour déterminer les composantes de Fourier on réalise un DL de <span class="arithmatex">\(\underline{\tau}\)</span> à l'ordre 1.</p>
+<div class="arithmatex">\[
+\underline{\tau}(x_P) \approxeq 1 + j \varphi(x_P),\; \underline{\tau}(x_P) \approxeq 1 + j \varepsilon \cos(\frac{2\pi}{\Lambda}x_P)
+\]</div>
 
 
 
