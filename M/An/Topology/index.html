@@ -857,6 +857,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../P/Optique/Proprietes-Ondulatoires/" class="md-nav__link">
+        Proprietes Ondulatoires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../P/Optique/Interferences/" class="md-nav__link">
         Interferences
       </a>
@@ -1183,45 +1197,16 @@
 
 
 <h1 id="topologie">Topologie</h1>
-<ul>
-<li>
-<p>Définitions :</p>
-<ul>
-<li>espace métrique</li>
-<li>espace normée</li>
-<li>distance<ul>
-<li>distance induite</li>
-<li>distance produit</li>
-</ul>
-</li>
-<li>diamètre<ul>
-<li>partie bornée</li>
-</ul>
-</li>
-<li>norme<ul>
-<li>norme induite</li>
-<li>exemples des normes</li>
-</ul>
-</li>
-<li>boule fermée, ouverte</li>
-<li>partie fermée, ouverte</li>
-<li>adhérence</li>
-<li>partie dense</li>
-</ul>
-</li>
-<li>
-<p>Exercices : </p>
-<ul>
-<li>Démontrer une application est une distance, une norme.</li>
-<li>Normes et boules ouvertes.</li>
-<li>Démontrer qu'une partie est bornée.</li>
-<li>Calculer le diamètre.</li>
-<li>Démontrer qu'une partie est fermée, ouverte.</li>
-</ul>
-</li>
-</ul>
 <h2 id="espace-metriques">Espace métriques</h2>
 <h3 id="distance-diametre-norme">Distance, Diamètre, Norme</h3>
+<details>
+<summary>Espace Métrique</summary>
+<ul>
+<li>Un <strong>espace métrique</strong> noté <span class="arithmatex">\((E,d)\)</span> est un ensemble <span class="arithmatex">\(E\)</span> muni d'une distance <span class="arithmatex">\(d\)</span> (on va le définir !)</li>
+</ul>
+</details>
+<details class="distance">
+<summary>Distance</summary>
 <ul>
 <li>
 <p>Soit <span class="arithmatex">\(E\)</span> un ensemble non vide, on dit qu'une application <span class="arithmatex">\(d\)</span> définit une <strong>distance</strong> sur <span class="arithmatex">\(E\)</span>, si <span class="arithmatex">\(d\)</span> vérfie</p>
@@ -1256,9 +1241,6 @@
 </blockquote>
 </li>
 <li>
-<p>Un <strong>espace métrique</strong> noté <span class="arithmatex">\((E,d)\)</span> est un ensemble <span class="arithmatex">\(E\)</span> muni d'une distance <span class="arithmatex">\(d\)</span></p>
-</li>
-<li>
 <p>Soit <span class="arithmatex">\((E,d)\)</span>, et <span class="arithmatex">\(A \subset E\)</span> une partie non vide. Alors, <span class="arithmatex">\((A, d|_{A\times A})\)</span> est un espace métrique. On dit <span class="arithmatex">\(d|_{A\times A}\)</span> la distance sur <span class="arithmatex">\(A\)</span> est <strong>induite par la distance sur <span class="arithmatex">\(E\)</span></strong>.</p>
 </li>
 <li>
@@ -1268,17 +1250,25 @@
         E \times E \to  \mathbb R \\
         ((x_1,\ldots,x_n),(y_1,\ldots,y_n)) \mapsto \max(d_1(x,y), \cdots, d_n(x,y))
     \end{cases}
-    </script>
+</script>
 </p>
 </li>
-<li>
-<p>On appelle <strong>diamètre de</strong> <span class="arithmatex">\(A\)</span> pour <span class="arithmatex">\((E,d)\)</span> et <span class="arithmatex">\(A\)</span> est une partie non vide de <span class="arithmatex">\(E\)</span> : 
+</ul>
+</details>
+<details class="diamètre">
+<summary>Diamètre</summary>
+<ul>
+<li>On appelle <strong>diamètre de</strong> <span class="arithmatex">\(A\)</span> pour <span class="arithmatex">\((E,d)\)</span> et <span class="arithmatex">\(A\)</span> est une partie non vide de <span class="arithmatex">\(E\)</span> : 
     <script type="math/tex; mode=display">
     \boxed{
     \mathrm{diam}(A) = \mathrm{sup}(\{d(x,y),\; (x,y)\in A^2\})\in \mathbb{R}_+ \cap \{+\infty\}}
     </script>
-</p>
 </li>
+</ul>
+</details>
+<details class="norme">
+<summary>Norme</summary>
+<ul>
 <li>
 <p>Soit <span class="arithmatex">\(E\)</span> un <span class="arithmatex">\(\mathbb K\)</span>-<em>espace vectoriel</em>, on dit que l'application <span class="arithmatex">\(N\)</span> définit une <strong>norme sur</strong> <span class="arithmatex">\(E\)</span>, si elle vérifie :</p>
 <ul>
@@ -1321,48 +1311,64 @@
 </p>
 </li>
 </ul>
+</details>
 <h3 id="boules">Boules</h3>
+<p><img alt="" src="../assets/BOBF.png" /></p>
 <blockquote>
 <p>On soit <span class="arithmatex">\((E,d)\)</span> un espace métrique.</p>
 </blockquote>
+<details>
+<summary>Boule Fermée</summary>
 <ul>
-<li>
-<p>Soit <span class="arithmatex">\(a ∈ E\)</span> et <span class="arithmatex">\(r ∈ R_+\)</span>. On appelle <strong>boule fermée de centre <span class="arithmatex">\(a\)</span> et de rayon <span class="arithmatex">\(r\)</span></strong> l’ensemble
+<li>Soit <span class="arithmatex">\(a ∈ E\)</span> et <span class="arithmatex">\(r ∈ R_+\)</span>. On appelle <strong>boule fermée de centre <span class="arithmatex">\(a\)</span> et de rayon <span class="arithmatex">\(r\)</span></strong> l’ensemble
     <script type="math/tex; mode=display">
     BF(a,r) = \{x ∈ E, d(a,x) ≤ r\}
     </script>
-</p>
 </li>
-<li>
-<p>On appelle <strong>boule ouverte de centre <span class="arithmatex">\(a\)</span> et de rayon <span class="arithmatex">\(r\)</span></strong> l’ensemble
+</ul>
+</details>
+<details>
+<summary>Boule Ouverte</summary>
+<ul>
+<li>On appelle <strong>boule ouverte de centre <span class="arithmatex">\(a\)</span> et de rayon <span class="arithmatex">\(r\)</span></strong> l’ensemble
     <script type="math/tex; mode=display">  
     BO(a,r) = \{x ∈ E, d(a,x) < r\}
     </script>
-</p>
 </li>
-<li>
-<p>On appelle <strong>sphère de centre <span class="arithmatex">\(a\)</span> et de rayon <span class="arithmatex">\(r\)</span></strong> l’ensemble
+</ul>
+</details>
+<details class="sphère">
+<summary>Sphère</summary>
+<ul>
+<li>On appelle <strong>sphère de centre <span class="arithmatex">\(a\)</span> et de rayon <span class="arithmatex">\(r\)</span></strong> l’ensemble
     <script type="math/tex; mode=display">
     S(a,r) = \{x ∈ E, d(a,x) = r\}
     </script>
-</p>
-</li>
-<li>
-<p>On parle de <strong>boule (ou de sphère) unité</strong> si <span class="arithmatex">\(r=1\)</span>.</p>
 </li>
 </ul>
-<p><img alt="" src="../assets/BOBF.png" /></p>
+</details>
+<details>
+<summary>Boule ou Sphère Unité</summary>
+<ul>
+<li>On parle de <strong>boule (ou de sphère) unité</strong> si <span class="arithmatex">\(r=1\)</span>.</li>
+</ul>
+</details>
 <h3 id="parties">Parties</h3>
 <blockquote>
 <p>Soit <span class="arithmatex">\((E,d)\)</span> un espace métrique, Soit <span class="arithmatex">\(A\)</span> une partie de <span class="arithmatex">\((E,d)\)</span>.</p>
 </blockquote>
+<details>
+<summary>Partie bornée</summary>
 <ul>
 <li>
 <p><span class="arithmatex">\(A\)</span> est <strong>partie bornée</strong> si
     <script type="math/tex; mode=display">
     \exists x \in E,\; \exists r \in \mathbb R_+^*,\; A \subset BO(x,r)
     </script>
-    C'est équivalent de dire que :</p>
+</p>
+</li>
+<li>
+<p>C'est équivalent de dire que :</p>
 <ul>
 <li><span class="arithmatex">\(\forall x\in E, \exists r \in \mathbb R_+^*,\; A \subset BO(x,r)\)</span></li>
 <li><span class="arithmatex">\(\mathrm{diam}(A) &lt; + \infty\)</span></li>
@@ -1371,12 +1377,15 @@
 <p>Preuve : (<span class="arithmatex">\(1\to 3\)</span>) <span class="arithmatex">\(d(x,y) \le d(x, x_0)+d(x_0,y) \le 2r\)</span></p>
 </blockquote>
 </li>
-<li>
-<p>Soit <span class="arithmatex">\((x_n)\)</span> une suite d'éléments de <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\lambda \in E\)</span>. On dit que <strong>la suite converge vers</strong> <span class="arithmatex">\(\lambda\)</span> si 
+</ul>
+</details>
+<details class="tip">
+<summary>Suite convergente</summary>
+<ul>
+<li>Soit <span class="arithmatex">\((x_n)\)</span> une suite d'éléments de <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(\lambda \in E\)</span>. On dit que <strong>la suite converge vers</strong> <span class="arithmatex">\(\lambda\)</span> si 
     <script type="math/tex; mode=display">
     d(x_n,\lambda) \underset{n \to +\infty}{\longrightarrow}0
     </script>
-</p>
 <ul>
 <li><span class="arithmatex">\(\lambda\)</span> est appelée <strong>limite de la suite</strong>.</li>
 <li>On note :
@@ -1386,14 +1395,22 @@
 </li>
 </ul>
 </li>
+</ul>
+</details>
+<details>
+<summary>Partie fermée</summary>
+<ul>
 <li>
+<ul>
+<li>Ainsi, si, et seulement si
+    <script type="math/tex; mode=display">
+    \forall x\in E,\;[x\in F] \iff [d(x,F)=0]
+    </script>
+</li>
+</ul>
 <p>Soit <span class="arithmatex">\(F\subset E\)</span>. On dit <span class="arithmatex">\(F\)</span> est <strong>fermé</strong> dans <span class="arithmatex">\(E\)</span> si
     <script type="math/tex; mode=display">
     \forall (x_n) \in F^\mathbb N,\;\forall \lambda \in E, \; [x_n \underset{n\to +\infty}{\longrightarrow} \lambda] \iff [\lambda \in F]
-    </script>
-    Ainsi, si, et seulement si
-    <script type="math/tex; mode=display">
-    \forall x\in E,\;[x\in F] \iff [d(x,F)=0]
     </script>
 </p>
 <blockquote>
@@ -1411,7 +1428,7 @@
 <p>Remarque :
     <span class="arithmatex">\(E\)</span> est important pour dire <span class="arithmatex">\(F\)</span> est fermé ou non.</p>
 <ul>
-<li>Exemple : <span class="arithmatex">\(]0,1]\)</span> non fermé dans <span class="arithmatex">\(\mathbb R\)</span> car <span class="arithmatex">\(x_n = \frac{1}{n}\)</span>, mais fermé dans <span class="arithmatex">\(]0, +\infty[\)</span>.</li>
+<li>Exemple : <span class="arithmatex">\(]0,1]\)</span> non fermé dans <span class="arithmatex">\(\mathbb R\)</span> car le contre-exemple <span class="arithmatex">\(x_n = \frac{1}{n}\)</span>, mais fermé dans <span class="arithmatex">\(]0, +\infty[\)</span>.</li>
 </ul>
 </li>
 <li>
@@ -1440,19 +1457,31 @@
 </li>
 </ul>
 </li>
+</ul>
+</details>
+<details class="adhérence">
+<summary>Adhérence</summary>
+<ul>
+<li>Soit <span class="arithmatex">\(A \subset E\)</span>, on appelle <strong>adhérence de <span class="arithmatex">\(A\)</span> dans <span class="arithmatex">\(E\)</span></strong> le <em>plus petit fermé de</em> <span class="arithmatex">\(E\)</span> <em>contenant</em> <span class="arithmatex">\(A\)</span>, et on le note <span class="arithmatex">\(\bar A\)</span>. </li>
 <li>
-<p>Soit <span class="arithmatex">\(A \subset E\)</span>, on appelle <strong>adhérence de <span class="arithmatex">\(A\)</span> dans <span class="arithmatex">\(E\)</span></strong> le <em>plus petit fermé de</em> <span class="arithmatex">\(E\)</span> <em>contenant</em> <span class="arithmatex">\(A\)</span>, et on le note <span class="arithmatex">\(\bar A\)</span>. L'ensemble <span class="arithmatex">\(\overline{A}\)</span> est l'ensemble des limites des suites d'éléments de <span class="arithmatex">\(A\)</span>.
+<p><mark>L'ensemble <span class="arithmatex">\(\overline{A}\)</span> est l'ensemble des limites des suites d'éléments de <span class="arithmatex">\(A\)</span>.</mark>
     <script type="math/tex; mode=display">
     x \in \bar{A} \iff x\in E, \exists \;(x_n)\in A^\mathbb N,\; x_n \underset{n \to +\infty}{\longrightarrow} x
     </script>
 </p>
-<ul>
+</li>
+<li>
+<p>L'adhérence dépend de la <em>distance</em> et de l'ensemble <span class="arithmatex">\(E\)</span>.</p>
+</li>
 <li>
 <p><strong>Propriétés : adhérence et boule</strong>
     <script type="math/tex; mode=display">
     x \in \bar{A} \iff \forall \varepsilon>0,\; \exists \;a\in A,\; a\in BO(x, \varepsilon) 
     </script>
-    &gt; Preuve : Constuire <span class="arithmatex">\(a_n \in A \cap BO(x, 1/n)\)</span></p>
+</p>
+<blockquote>
+<p>Preuve : Constuire <span class="arithmatex">\(a_n \in A \cap BO(x, 1/n)\)</span></p>
+</blockquote>
 </li>
 <li>
 <p>L'ensemble <span class="arithmatex">\(\bar A\)</span> est donc l'ensemble des limites des suites d'éléments de <span class="arithmatex">\(A\)</span>. Il dépend de <span class="arithmatex">\(E\)</span> et <span class="arithmatex">\(d\)</span>.</p>
@@ -1463,15 +1492,13 @@
 <li><span class="arithmatex">\(A \subset \bar{A}\)</span></li>
 <li><span class="arithmatex">\(\overline{\overline{A}} = \bar{A}\)</span></li>
 <li><span class="arithmatex">\(A = \bar{A} \iff A\)</span> est fermé.</li>
-<li><span class="arithmatex">\(A \subset \bar A \implies \bar A \subset \bar B\)</span></li>
+<li><span class="arithmatex">\(A \subset B  \implies \bar A \subset \bar B\)</span></li>
 <li><span class="arithmatex">\(\overline{A \cup B} = \bar{A} \cup \bar{B}\)</span></li>
 <li><span class="arithmatex">\(\overline{A \cap B} \subset \bar{A} \cap \bar{B}\)</span></li>
 </ul>
 </li>
-</ul>
-</li>
 <li>
-<p>Soit <span class="arithmatex">\((E,d)\)</span> un espace <em>métrique</em>, alors :
+<p><strong>Adhérence d'une boule ouverte</strong> : Soit <span class="arithmatex">\((E,d)\)</span> un espace <em>métrique</em>, alors :
     <script type="math/tex; mode=display">
     \forall (a,r)\in(E, \mathbb R_+^*),\; \overline{BO(a,r)} \subset BF(a,r)
     </script>
@@ -1485,30 +1512,38 @@
 <span class="arithmatex">\((\impliedby)\)</span>, <span class="arithmatex">\(x \in BF(a,r)\)</span>, alors la suite <span class="arithmatex">\(x_n = \lambda a+(1-\lambda)x\)</span> suffit, ici <span class="arithmatex">\(\lambda = 1/n \in ]0, 1[\)</span>. Il faut vérifier que, par homogénéité de norme, <span class="arithmatex">\(| | x_n - a| | = ( 1-\lambda)| | x - a  | | &lt;r\)</span> et <span class="arithmatex">\(x_n \to x\)</span>.</p>
 </blockquote>
 </li>
+</ul>
+</details>
+<details>
+<summary>Partie Dense</summary>
+<ul>
 <li>
 <p><strong>Partie Dense</strong>: Soit <span class="arithmatex">\((E,d)\)</span> un espace métrique et <span class="arithmatex">\(A\)</span> une partie de <span class="arithmatex">\(E\)</span>. <span class="arithmatex">\(A\)</span> est <strong>dense</strong> dans <span class="arithmatex">\(E\)</span> si <span class="arithmatex">\(\overline{A}=E\)</span>.</p>
-<ul>
-<li>Exemple : <span class="arithmatex">\(\mathbb Q\)</span> dans <span class="arithmatex">\(\mathbb R\)</span>.</li>
+</li>
+<li>
+<p>Exemple : <span class="arithmatex">\(\mathbb Q\)</span> dans <span class="arithmatex">\(\mathbb R\)</span>.</p>
+</li>
 </ul>
 <blockquote>
 <p>Preuve : <span class="arithmatex">\(x\in \mathbb R\)</span>, on peut trouver <span class="arithmatex">\(x + \sqrt{2}/n \underset{n \to \infty}{\longrightarrow}x\)</span>. Donc, <span class="arithmatex">\(x\in \overline{\mathbb Q}\)</span>.</p>
 </blockquote>
-</li>
+</details>
+<details>
+<summary>Partie Ouverte</summary>
+<ul>
 <li>
 <p><strong>Parties Ouvertes</strong> : Soit <span class="arithmatex">\(O \subset (E,d)\)</span>, on dit que <span class="arithmatex">\(O\)</span> est <strong>ouvert dans</strong> <span class="arithmatex">\(E\)</span> si <span class="arithmatex">\(E\backslash O\)</span> est fermé dans <span class="arithmatex">\(E\)</span>.</p>
 <ul>
-<li>
-<p>Remarque : C'est FAUX de dire que <span class="arithmatex">\(A\)</span> est ouvert dans <span class="arithmatex">\(E\)</span> car <span class="arithmatex">\(A\)</span> n'est pas fermé.</p>
-</li>
-<li>
-<p>Caractérisation des <strong>ouverts</strong> : 
+<li>Remarque : C'est FAUX de dire que <span class="arithmatex">\(A\)</span> est ouvert dans <span class="arithmatex">\(E\)</span> car <span class="arithmatex">\(A\)</span> n'est pas fermé. (Exemple : Dans <span class="arithmatex">\((\mathbb R, |.|)\)</span>, <span class="arithmatex">\(]0,1]\)</span> n'est ni fermé ni ouvert)</li>
+<li>Caractérisation des <strong>ouverts</strong> : 
     <script type="math/tex; mode=display">
     [O \text{ ouvert dans } E] \iff [\forall x\in O, \; \exists \varepsilon >0, \; BO(x, \varepsilon)\subset O]
     </script>
-</p>
 <blockquote>
 <p>Preuve : [TBD, pas difficle]</p>
 </blockquote>
+</li>
+</ul>
 </li>
 <li>
 <p><strong>Propriétés</strong> :</p>
@@ -1527,14 +1562,18 @@
 </ul>
 </li>
 </ul>
-</li>
+</details>
+<p><img alt="" src="../assets/adherent-interieur-frontier.png" /></p>
+<details class="intérieur">
+<summary>Intérieur</summary>
+<ul>
 <li>
 <p><strong>Intérieur d'un ensemble</strong> : On appelle <strong>intérieur de <span class="arithmatex">\(A\)</span></strong> le plus grand ouvert de <span class="arithmatex">\(E\)</span> contenu dans <span class="arithmatex">\(A\)</span>. On le note 
     <script type="math/tex; mode=display">
     \mathring {A} \text{ ou } \mathrm{Int}(A) 
     </script>
     Un point de l'intérfieur de <span class="arithmatex">\(A\)</span> est dit <strong>intérieur</strong> à <span class="arithmatex">\(A\)</span>.</p>
-<ul>
+</li>
 <li>
 <p><strong>Caractérisation de l'intérieur d'unsemble</strong> :
     <script type="math/tex; mode=display">
@@ -1550,78 +1589,81 @@
 </p>
 <ul>
 <li>L'égalité n'est pas toujours vérifée.</li>
-<li>Dans les espaces vectoriels normés, il y a toujours égalité   .<ul>
-<li>Propriétés : 
-$$
-\begin{align*}
-\mathring A&amp;\subset A \
-A = \mathring A &amp;\iff [A \text{ ouvert de }E] \
-\overline{E\backslash A} &amp;= E \backslash \mathring A \
-A \subset B &amp;\implies \mathring A \subset \mathring B \ 
-\mathrm{Int} (A \cap B) &amp;= \mathring A \cap \mathring B</li>
-</ul>
-</li>
-</ul>
-<p>.\end{align*}
-$$
-    - Exemple :
-- Dans <span class="arithmatex">\(\mathbb{R}\)</span> muni de la distance <span class="arithmatex">\(| |\)</span>, on a $\mathring A $</p>
-</li>
+<li>Dans les espaces vectoriels normés, il y a toujours égalité   .</li>
 </ul>
 </li>
 <li>
-<p><strong>Frontière</strong> :
-    On appelle <strong>frontière</strong> de <span class="arithmatex">\(A\)</span> dans <span class="arithmatex">\(E\)</span> l'ensemble
+<p>Propriétés : 
     <script type="math/tex; mode=display">
-    \mathrm{Fr} (A) = \overline{A} \backslash \mathring A = \overline{A} \cap \overline{E \backslash A}
+    \begin{align*}
+        \mathring A&\subset A \\
+        A = \mathring A &\iff [A \text{ ouvert de }E] \\
+        \overline{E\backslash A} &= E \backslash \mathring A \\
+        A \subset B &\implies \mathring A \subset \mathring B \\ 
+        \mathrm{Int} (A \cap B) &= \mathring A \cap \mathring B
+    .\end{align*}
     </script>
 </p>
 </li>
-<li>
-<p><strong>Isolé, Accumulation</strong> :</p>
-<ul>
-<li>
-<p>Les <strong>points isolés</strong> de <span class="arithmatex">\(A\)</span> une partie de <span class="arithmatex">\((E,d)\)</span> :
+<li>Exemple :<ul>
+<li>Dans <span class="arithmatex">\(\mathbb{R}\)</span> muni de la distance <span class="arithmatex">\(| |\)</span>, on a $\mathring A $</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="frontière">
+<summary>Frontière</summary>
+<p>On appelle <strong>frontière</strong> de <span class="arithmatex">\(A\)</span> dans <span class="arithmatex">\(E\)</span> l'ensemble
+<script type="math/tex; mode=display">
+\mathrm{Fr} (A) = \overline{A} \backslash \mathring A = \overline{A} \cap \overline{E \backslash A}
+</script>
+- La frontière de <span class="arithmatex">\(A\)</span> est aussi celle de <span class="arithmatex">\(E \backslash A\)</span>.
+- La frontière d'un ensemble est fermé.</p>
+</details>
+<details class="isolé">
+<summary>Isolé</summary>
+<p>Soit <span class="arithmatex">\(A\)</span> une partie q.q. de <span class="arithmatex">\((E.d)\)</span>. Les <strong>points isolés</strong> de <span class="arithmatex">\(A\)</span> :
     <script type="math/tex; mode=display">
     a \in \mathrm{Isol} (A) \iff \exists r \in \mathbb{R} _+^* ,\; A \cap BO(a,r) = \{a\}
     </script>
 </p>
-</li>
-<li>
-<p>Les <strong>points d'accumulation</strong> de <span class="arithmatex">\(A\)</span> sont tels que 
+</details>
+<details class="accumulation">
+<summary>Accumulation</summary>
+<ul>
+<li>Les <strong>points d'accumulation</strong> de <span class="arithmatex">\(A\)</span> sont tels que 
     <script type="math/tex; mode=display">
     a \in \mathrm{Ac cu}(A) \iff \forall r \in \mathbb{R} _+^* ,\; A \cap BO(a,r) \text{ est infini}
     </script>
-</p>
 </li>
+</ul>
+</details>
+<details class="voisinage">
+<summary>Voisinage</summary>
+<ul>
 <li><strong>Voisinage de <span class="arithmatex">\(a\)</span> dans <span class="arithmatex">\(E\)</span></strong> : On dit que <span class="arithmatex">\(V\)</span> est un <strong>voisinage de <span class="arithmatex">\(a\)</span> dans <span class="arithmatex">\(E\)</span></strong> si :
-<script type="math/tex; mode=display">
-V \in \mathscr{V} (a) \iff \exists  \varepsilon >0,\; BO(a, \varepsilon) \subset V
-</script>
-</li>
-</ul>
-<h2 id="suites-et-fonctions-continues">Suites et fonctions continues</h2>
-</li>
-<li>
-<p><strong>Extraction d'une suite</strong> :
-    Soit <span class="arithmatex">\((u_n)\)</span> une suite de <span class="arithmatex">\(E^\mathbb{N}\)</span>. On dit que <span class="arithmatex">\(\varphi\)</span> est une <strong>extraction</strong> et que la suite <span class="arithmatex">\((u_{\varphi(n)})\)</span> est <strong>extraite</strong> de <span class="arithmatex">\((u_n)\)</span>.</p>
-</li>
-<li>
-<p><strong>Valeur d'adhérence</strong> :
-    On dit que <span class="arithmatex">\(\alpha \in E\)</span> est une <strong>valeur d'adhérence</strong> de <span class="arithmatex">\((u_n)\)</span> s'il existe une suite extraite de <span class="arithmatex">\((u_n)\)</span> qui converge vers <span class="arithmatex">\(\alpha\)</span>. On le note :<br />
-<script type="math/tex; mode=display">
-    \mathrm{Adh}((u_n)) = \{l \in E, \; l \text{ est une valeur d'adhérence de } (u_n)\}
+    <script type="math/tex; mode=display">
+    V \in \mathscr{V} (a) \iff \exists  \varepsilon >0,\; BO(a, \varepsilon) \subset V
     </script>
-</p>
-<ul>
-<li>
-<p>Exemple :</p>
-<ul>
-<li><span class="arithmatex">\((-1)^n\)</span> a pour valeurs d'adhérence <span class="arithmatex">\(-1\)</span> et <span class="arithmatex">\(1\)</span>.</li>
-<li>Une suite convergente a pour <em>seule</em> valeur d'adhérence sa limite.</li>
-<li><span class="arithmatex">\(\tan(h)\)</span> a pour valeur d'adhérence <span class="arithmatex">\(\mathbb{R}\)</span>.</li>
-</ul>
 </li>
+</ul>
+</details>
+<h2 id="suites-et-fonctions-continues">Suites et fonctions continues</h2>
+<details class="tip">
+<summary>Extraction d'une suite</summary>
+<p>Soit <span class="arithmatex">\((u_n)\)</span> une suite de <span class="arithmatex">\(E^\mathbb{N}\)</span>. On dit que <span class="arithmatex">\(\varphi\)</span> est une <strong>extraction</strong> et que la suite <span class="arithmatex">\((u_{\varphi(n)})\)</span> est <strong>extraite</strong> de <span class="arithmatex">\((u_n)\)</span>.</p>
+</details>
+<details>
+<summary>Valeur d'adhérence</summary>
+<p>On dit que <span class="arithmatex">\(\alpha \in E\)</span> est une <strong>valeur d'adhérence</strong> de <span class="arithmatex">\((u_n)\)</span> s'il existe une suite extraite de <span class="arithmatex">\((u_n)\)</span> qui converge vers <span class="arithmatex">\(\alpha\)</span>. On le note :<br />
+<script type="math/tex; mode=display">
+\mathrm{Adh}((u_n)) = \{l \in E, \; l \text{ est une valeur d'adhérence de } (u_n)\}
+</script>
+- Exemple :
+    - <span class="arithmatex">\((-1)^n\)</span> a pour valeurs d'adhérence <span class="arithmatex">\(-1\)</span> et <span class="arithmatex">\(1\)</span>.
+    - Une suite convergente a pour <em>seule</em> valeur d'adhérence sa limite.
+    - <span class="arithmatex">\(\tan(h)\)</span> a pour valeur d'adhérence <span class="arithmatex">\(\mathbb{R}\)</span>.</p>
+<ul>
 <li>
 <p>Propriété :
     Soit <span class="arithmatex">\(u, \; a\in E\)</span>, alors :
@@ -1634,11 +1676,10 @@ V \in \mathscr{V} (a) \iff \exists  \varepsilon >0,\; BO(a, \varepsilon) \subset
 <p>Propriété : <span class="arithmatex">\(\forall u \in E\)</span>, <span class="arithmatex">\(\mathrm{Adh} (u)\)</span> est fermé dans <span class="arithmatex">\(E\)</span>.</p>
 </li>
 </ul>
+</details>
 <h2 id="references">Références</h2>
 <ul>
 <li><a href="https://www.mp2-chato.fr/wp-content/uploads/2020/02/Methodes-topos-2.pdf">Méthodes en topologie</a></li>
-</ul>
-</li>
 </ul>
 
 

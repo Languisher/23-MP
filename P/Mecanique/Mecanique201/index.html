@@ -12,7 +12,7 @@
         <link rel="prev" href="../../../M/An/Calcul-Diff%C3%A9rentielle/">
       
       
-        <link rel="next" href="../../Optique/Interferences/">
+        <link rel="next" href="../../Optique/Proprietes-Ondulatoires/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
@@ -775,6 +775,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#moment-cinetique" class="md-nav__link">
+    Moment cinétique
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -822,6 +829,20 @@
           Ondes Ondulatoires
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Optique/Proprietes-Ondulatoires/" class="md-nav__link">
+        Proprietes Ondulatoires
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -1106,6 +1127,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#moment-cinetique" class="md-nav__link">
+    Moment cinétique
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1235,7 +1263,77 @@
 </ol>
 </li>
 <li>
-<p>Ce sont les conditions <em>nécessaires</em>, mais pas suffisantes. Il faut aussi que les vitesses initiales sont aussi nulles.</p>
+<p>Ce sont les conditions <em>nécessaires</em>, mais pas suffisantes. Il faut aussi que les vitesses initiales soient aussi nulles.</p>
+</li>
+</ul>
+</details>
+<h3 id="moment-cinetique">Moment cinétique</h3>
+<details class="notes">
+<summary>Moment cinétique</summary>
+<ul>
+<li>Pour un point matérial <span class="arithmatex">\(M\)</span>, le <strong>Moment Cinétique d'un point matérial</strong> relativement à <span class="arithmatex">\(O\)</span> est :
+    <script type="math/tex; mode=display">
+    \overrightarrow{L}_O(M) = \overrightarrow{OM} \wedge \overrightarrow{p}(M) = \overrightarrow{OM} \wedge m\overrightarrow{v}_R(M)
+    .</script>
+<img alt="" src="../assets/mec04.png" /></li>
+<li>
+<p>Unité SI : <span class="arithmatex">\(kg.m^2.s^{-1}\)</span></p>
+</li>
+<li>
+<p>Cas particuliers :</p>
+<ul>
+<li>Mouvement rectiligne passant par <span class="arithmatex">\(O\)</span> : <span class="arithmatex">\(\overrightarrow{L}_{O}(M) = \overrightarrow{0}\)</span></li>
+<li>
+<p>Mouvement circulaire de rayon <span class="arithmatex">\(R\)</span> et de centre <span class="arithmatex">\(O\)</span> : 
+    <script type="math/tex; mode=display">
+    \overrightarrow{L}_{O} = mR^2 \frac{\mathrm{d}\theta}{\mathrm{d}t}\overrightarrow{e_z}
+    .</script>
+</p>
+<blockquote>
+<p>Preuve : <img alt="" src="../assets/mec03.png" /></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>Moment cinétique par rapport à un axe orienté <span class="arithmatex">\(\Delta = (O,\overrightarrow{u_\Delta})\)</span> :
+    <script type="math/tex; mode=display">
+    L_\Delta = \overrightarrow{L_O}. \overrightarrow{u_\Delta} = m(\overrightarrow{OM}\wedge \overrightarrow{v}).\overrightarrow{u_\Delta}
+    .</script>
+</p>
+</li>
+</ul>
+</details>
+<details>
+<summary>TMC : Théorème du moment cinétique</summary>
+<ul>
+<li>
+<p><strong>TMC : Théorème du moment cinétique</strong> 角动量定理 : Dans un référentiel galiléen, la dérivée du <em>moment cinétique</em> d'un système est égale à la somme des <em>moments des forces</em> qui s'appliquent à ce système :
+    <script type="math/tex; mode=display">
+    \frac{\mathrm{d}\overrightarrow{L}_{O,(R)}(\Sigma)}{\mathrm{d}t} = \overrightarrow{M_O}(\overrightarrow{F}_{\text{ext} \to \Sigma})
+    </script>
+</p>
+<blockquote>
+<p>Preuve : <img alt="" src="../assets/mec04p.png" /></p>
+</blockquote>
+</li>
+<li>
+<p>Exemple : <img alt="" src="../assets/mec05.png" /> </p>
+</li>
+</ul>
+</details>
+<details>
+<summary>Cas de conservation du moment cinétique</summary>
+<ul>
+<li>
+<p>On obtient 
+    <script type="math/tex; mode=display">
+    \overrightarrow{L_O} = \overrightarrow{\text{cte}} = m r^2 \dot{\theta} \overrightarrow{e_z}
+    .</script>
+</p>
+</li>
+<li>
+<p>Exemple : 因万有引力围绕恒星公转，万有引力力矩为0，因此角动量守恒，对应着空间旋转不变性。</p>
 </li>
 </ul>
 </details>

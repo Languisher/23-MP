@@ -775,6 +775,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Proprietes-Ondulatoires/" class="md-nav__link">
+        Proprietes Ondulatoires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Interferences/" class="md-nav__link">
         Interferences
       </a>
@@ -795,6 +809,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Diffraction
@@ -811,6 +827,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -819,19 +837,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#diffraction" class="md-nav__link">
-    Diffraction
+  <a href="#le-principe-de-huygens-fresnel" class="md-nav__link">
+    Le principe de Huygens-Fresnel
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#diffraction-de-frauhofer-pupilles-fondamentales" class="md-nav__link">
-    Diffraction de Frauhofer, Pupilles Fondamentales
+  <a href="#diffraction-de-frauhofer" class="md-nav__link">
+    Diffraction de Frauhofer
   </a>
   
-    <nav class="md-nav" aria-label="Diffraction de Frauhofer, Pupilles Fondamentales">
+    <nav class="md-nav" aria-label="Diffraction de Frauhofer">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#construction-etape-par-etape" class="md-nav__link">
+    Construction étape par étape
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#ouverture-rectangulaire" class="md-nav__link">
@@ -842,7 +867,7 @@
         
           <li class="md-nav__item">
   <a href="#ouverture-circulaire" class="md-nav__link">
-    Ouverture Circulaire
+    Ouverture circulaire
   </a>
   
 </li>
@@ -1126,6 +1151,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1134,19 +1161,26 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#diffraction" class="md-nav__link">
-    Diffraction
+  <a href="#le-principe-de-huygens-fresnel" class="md-nav__link">
+    Le principe de Huygens-Fresnel
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#diffraction-de-frauhofer-pupilles-fondamentales" class="md-nav__link">
-    Diffraction de Frauhofer, Pupilles Fondamentales
+  <a href="#diffraction-de-frauhofer" class="md-nav__link">
+    Diffraction de Frauhofer
   </a>
   
-    <nav class="md-nav" aria-label="Diffraction de Frauhofer, Pupilles Fondamentales">
+    <nav class="md-nav" aria-label="Diffraction de Frauhofer">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#construction-etape-par-etape" class="md-nav__link">
+    Construction étape par étape
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#ouverture-rectangulaire" class="md-nav__link">
@@ -1157,7 +1191,7 @@
         
           <li class="md-nav__item">
   <a href="#ouverture-circulaire" class="md-nav__link">
-    Ouverture Circulaire
+    Ouverture circulaire
   </a>
   
 </li>
@@ -1216,10 +1250,9 @@
                   
 
 
-  <h1>Diffraction</h1>
-
-<h2 id="diffraction">Diffraction</h2>
+<h1 id="diffraction">Diffraction</h1>
 <p><img alt="" src="../assets/Diffraction01.jpg" /></p>
+<h2 id="le-principe-de-huygens-fresnel">Le principe de Huygens-Fresnel</h2>
 <details>
 <summary>Principe de Huyghens-Fresnel</summary>
 <ul>
@@ -1228,10 +1261,10 @@
 </li>
 <li>
 <p>Le phénomène de <strong>diffraction</strong> : une petite ouverture ne laisse passer que le signal généré par une seule des sources secondaires fictives dans un secteur angulaire d'angle, avec <span class="arithmatex">\(\lambda\)</span> longueur d'onde et <span class="arithmatex">\(a\)</span> la dimension de l'ouverture :
-.<script type="math/tex; mode=display"> 
-    </script>
+    <script type="math/tex; mode=display">
     \theta \approx \frac{\lambda}{a}
-    $$</p>
+    </script>
+</p>
 <blockquote>
 <p>Preuve : On va le montrer.</p>
 </blockquote>
@@ -1253,15 +1286,23 @@
 </li>
 </ul>
 </details>
-<ul>
-<li>
-<p>Intégrale de Fourier d'une porte :</p>
+<h2 id="diffraction-de-frauhofer">Diffraction de Frauhofer</h2>
+<h3 id="construction-etape-par-etape">Construction étape par étape</h3>
+<details class="tip">
+<summary>Calculation des exponentielles complexes</summary>
+<div class="arithmatex">\[
+\begin{align*}
+    e^{ja}+ e^{jb} &amp;= 2 \cos\left( \frac{a-b}{2} \right) \exp\left( j \frac{a+b}{2}\right)\\
+    e^{ja} - e^ {jb} &amp;= 2j \sin(\frac{a-b}{2}) \exp\left(j \frac{a+b}{2}\right)
+.\end{align*}
+\]</div>
+</details>
+<details class="tip">
+<summary>Intégrale de Fourier d'une porte</summary>
 <p><img alt="" src="../assets/Diffraction02.png" /></p>
-</li>
-</ul>
 <p>
 <script type="math/tex; mode=display">
-  \boxed{\int_{x_0-a/2}^{x_0+a/2}\exp(j\kappa x)\;\mathrm{d}x = a\exp(j \kappa x_0) \;\mathrm{sinc}(\frac{\kappa a}{2})}
+  \boxed{\int_{x_0-a/2}^{x_0+a/2}\exp(j\kappa x)\;\mathrm{d}x = a\exp(j \kappa x_0) \;\mathrm{sinc}\left(\frac{\kappa a}{2}\right)}
   </script>
 </p>
 <blockquote>
@@ -1276,13 +1317,13 @@
 </script>
 </p>
 </blockquote>
-<h2 id="diffraction-de-frauhofer-pupilles-fondamentales">Diffraction de Frauhofer, Pupilles Fondamentales</h2>
+</details>
 <details>
 <summary>Configuration de Frauhofer</summary>
 <ul>
-<li><strong>Configuration de Frauhofer</strong> : Source <span class="arithmatex">\(S\)</span> et observateur <span class="arithmatex">\(M\)</span> sont à l'infini. On exprime 
+<li><strong>Configuration de Frauhofer</strong> : Source <span class="arithmatex">\(S\)</span> et observateur <span class="arithmatex">\(M\)</span> sont à l'infini. Pour des angles petits, on les exprime 
     <script type="math/tex; mode=display">
-    \overrightarrow{u_{obs}} = \alpha e_x + \beta e_y +\gamma e_z, \text{ avec } \alpha = \frac{x'}{f'},\; \beta = \frac{y'}{f'}, \gamma = 1
+    \overrightarrow{u_{obs}} = \alpha \overrightarrow{e_x} + \beta \overrightarrow{e_y} +\gamma \overrightarrow{e_z}, \text{ avec } \alpha = \frac{x'}{f'},\; \beta = \frac{y'}{f'}, \gamma \approxeq 1
     .</script>
 </li>
 </ul>
@@ -1302,7 +1343,7 @@
 \underline{A}_{SPM} &= \underline{a} \times \exp(-jk_0(SPM)),\quad \underline{A}_{SOM} = \underline{a} \times \exp(-jk_0(SOM))  \\
 &=\underbrace{\underline{a} \times \exp(-jk_0(SOM))}_{\underline{a}_0} \times \exp(-j k_0 \left((SPM)-(SOM\right))\\
 &=\underline{a}_0 \exp(-jk_0 \delta_{P/O})\\
-&= -OH = - \vec{u}_{\text{obs}} \times \vec{OP} \\
+\delta_{P/O}&= -OH = - \vec{u}_{\text{obs}} \times \vec{OP} \\
 &= - \begin{bmatrix}\alpha \\\beta \\ 1\end{bmatrix} \times \begin{bmatrix}x_P \\y_P \\ 0\end{bmatrix} \\
 &= - \alpha x_P - \beta y_P \\
 \underline{A}_\text{diff}(M) &= K\underline{a}_0\iint_{(T)}\exp(jk_0(\alpha x_P+\beta y_P)) \;\underbrace{\mathrm{d} x_P \;\mathrm{d} y_P}_{\mathrm{d} \Sigma}
@@ -1336,11 +1377,19 @@
 <summary>Objet de transparence variable</summary>
 <ul>
 <li>
-<p>On place maintenant devant l'ouverture <span class="arithmatex">\((T)\)</span> un objet de transparence <span class="arithmatex">\(\tau(P)\)</span> variable, définie par <span class="arithmatex">\(\underline{A}(P)= \tau(P)\times \underline{A}(P^-)\)</span> <img alt="" src="../assets/Diffraction06.png" />
-    Donc, la <strong>formule générale de l'amplitude diffractée par un objet</strong> : 
+<p>On place maintenant devant l'ouverture <span class="arithmatex">\((T)\)</span> un objet de transparence <span class="arithmatex">\(\tau(P)\)</span> variable, définie par 
     <script type="math/tex; mode=display">
-    \boxed{\underline{A}_{\text{diff}}(M) = K \underline{a}_0 \iint_{(T)} \underline{\tau}(x_P,y_P)\exp(jk_0(\alpha x_P + \beta y_P)) \;\mathrm{d} \Sigma_P}
+    \underline{A}(P)= \tau(P)\times \underline{A}(P^-)
     </script>
+</p>
+<ul>
+<li><span class="arithmatex">\(|\tau(P)|=0\)</span> pour un objet opaque, et pour un objet parfaitement transparent : <span class="arithmatex">\(|\tau(P)|=1\)</span></li>
+</ul>
+<p><img alt="" src="../assets/Diffraction06.png" />
+Donc, la <strong>formule générale de l'amplitude diffractée par un objet</strong> : 
+<script type="math/tex; mode=display">
+\boxed{\underline{A}_{\text{diff}}(M) = K \underline{a}_0 \iint_{(T)} \underline{\tau}(x_P,y_P)\exp(jk_0(\alpha x_P + \beta y_P)) \;\mathrm{d} \Sigma_P}
+</script>
 </p>
 <ul>
 <li>
@@ -1369,15 +1418,14 @@
     <script type="math/tex; mode=display">
     -\frac{a}{2}\le  x_P \le \frac{a}{2}, \quad -\frac{b}{2}\le  y_P \le  \frac{b}{2}
     </script>
-</p>
-<p>L'éclairement diffracté a pour expression<br />
+    L'éclairement diffracté a pour expression<br />
 <script type="math/tex; mode=display">
-\boxed{
-\begin{align*}
-\underline{A}_\text{diff}(M) &= Kab \times  \underline{a}_0 \times  \mathrm{si nc}\left( \frac{\pi \alpha a}{\lambda_0} \right)\times \mathrm{si nc}\left( \frac{\pi \beta b}{\lambda_0} \right)    \\
-I_{\text{diff}}(M) &= I_0\; \mathrm{sinc}^2 \left( \frac{\pi \alpha a}{\lambda_0}\right) \mathrm{sinc}^2\left( \frac{\pi\beta b}{\lambda_0}\right)
-\end{align*}}
-</script>
+    \boxed{
+    \begin{align*}
+    \underline{A}_\text{diff}(M) &= Kab \times  \underline{a}_0 \times  \mathrm{si nc}\left( \frac{\pi \alpha a}{\lambda_0} \right)\times \mathrm{si nc}\left( \frac{\pi \beta b}{\lambda_0} \right)    \\
+    I_{\text{diff}}(M) &= I_0\; \mathrm{sinc}^2 \left( \frac{\pi \alpha a}{\lambda_0}\right) \mathrm{sinc}^2\left( \frac{\pi\beta b}{\lambda_0}\right)
+    \end{align*}}
+    </script>
 </p>
 <blockquote>
 <p>Preuve :
@@ -1388,7 +1436,7 @@ I_{\text{diff}}(M) &= I_0\; \mathrm{sinc}^2 \left( \frac{\pi \alpha a}{\lambda_0
    &= K \underline{a_{0}} \frac{a}{2} \frac{b}{2 }\left[  \frac{2j \sin(k_{0}\alpha a/2)}{jk_{0} \alpha a/2} \right]\left[  \frac{2j \sin(k_{0}\beta b/2)}{jk_{0} \beta b/2} \right]  \\
    &\text{car } \exp(jx)- \exp(jy) = 2j\sin\left(\frac{x-y}2\right) \exp\left(j \frac{x+y}2\right)\\
    I_{\text{diff}}(M) &= |\underline{A}_{\text{diff}}|^2 \\
-   &=|K^2\underline{a_{0} }ab|^2\mathrm{sinc}^2\left(  \frac{2\pi}{\lambda_{0} } \alpha \frac{a}{2} \right) \mathrm{sinc}^2\left(  \frac{2\pi }{\lambda_{0}} \beta  \frac{b}{2} \right)
+   &=|K\underline{a_{0} }ab|^2\mathrm{sinc}^2\left(  \frac{2\pi}{\lambda_{0} } \alpha \frac{a}{2} \right) \mathrm{sinc}^2\left(  \frac{2\pi }{\lambda_{0}} \beta  \frac{b}{2} \right)
    \end{align}
    </script>
 </p>
@@ -1418,16 +1466,19 @@ I_{\text{diff}}(M) &= I_0\; \mathrm{sinc}^2 \left( \frac{\pi \alpha a}{\lambda_0
 <li>
 <p>Limite de l'optique géométrique : Si <span class="arithmatex">\(\lambda \ll a\)</span> et <span class="arithmatex">\(\lambda \ll b\)</span>, la figure de diffraction donne un éclairement qui est nul presque partout sauf en <span class="arithmatex">\(x'= y'=0\)</span></p>
 </li>
-<li>
-<p><strong>Diffraction par une fent très allongée</strong> : Si par exemple, une des longueurs <span class="arithmatex">\(b\)</span> devient très grande, la diffraction se produit dans un plan perpendiculaire à la fente. On a :
-    <script type="math/tex; mode=display">
-    \underline{A}_\text{diff}(M) = Kb\underline{a}_0 \int_{x_P \in (T)} \tau(x_P)\exp(jk_0 \alpha x_P) \mathrm {d} x_P
-    </script>
-</p>
-</li>
 </ul>
 </details>
-<h3 id="ouverture-circulaire">Ouverture Circulaire</h3>
+<details>
+<summary>Diffraction par une fent très allongée</summary>
+<p>Si par exemple, une des longueurs <span class="arithmatex">\(b\)</span> devient très grande, la diffraction se produit dans un plan perpendiculaire à la fente. On a :
+<script type="math/tex; mode=display">
+\underline{A}_\text{diff}(M) = Kb\underline{a}_0 \int_{x_P \in (T)} \tau(x_P)\exp(jk_0 \alpha x_P) \mathrm {d} x_P
+</script>
+</p>
+</details>
+<h3 id="ouverture-circulaire">Ouverture circulaire</h3>
+<details class="ouverture circulaire">
+<summary>Ouverture</summary>
 <ul>
 <li>
 <p>En notant <span class="arithmatex">\(P(\rho, \varphi)\)</span> et <span class="arithmatex">\(M(\rho',\varphi')\)</span> en coordonnées polaires,
@@ -1460,12 +1511,15 @@ r_\text{Airy} = \frac{1,22\lambda f'}{D_\text{lentille}},\quad\alpha_{\lim} = 1,
 </p>
 </li>
 </ul>
+</details>
 <h3 id="diffraction-par-des-fentes-dyoung">Diffraction par des fentes d'Young</h3>
+<details>
+<summary>Diffraction par des fentes d'Young</summary>
 <ul>
 <li>
-<p><strong>Fentes d'Young</strong> : <img alt="" src="../assets/Diffraction09.png" />
+<p>Deux <strong>Fentes d'Young</strong> de largueur <span class="arithmatex">\(b\)</span> et espacées de <span class="arithmatex">\(a\)</span> peuvent être considérées comme : <img alt="" src="../assets/Diffraction09.png" />
     <script type="math/tex; mode=display">
-    \underline{\tau}(x_p) = 1, \quad x_p \in [-\frac{a}{2}-\frac{b}{2},\; -\frac{a}{2}+ \frac{b}{2}] \text{ et } x_p \in [\frac{a}{2}-\frac{b}{2}, \frac{a}{2}+\frac{b}{2}] \text{ sinon } 0
+    \underline{\tau}(x_p) = 1, \quad x_p \in [-\frac{a}{2}-\frac{b}{2},\; -\frac{a}{2}+ \frac{b}{2}] \text{ et } x_p \in [\frac{a}{2}-\frac{b}{2}, \frac{a}{2}+\frac{b}{2}] \text{ sinon } \underline{\tau}(x_p)=0
     </script>
     L'amplitude observée dans la dirction <span class="arithmatex">\(\alpha\)</span> est :
     <script type="math/tex; mode=display">
@@ -1474,32 +1528,40 @@ r_\text{Airy} = \frac{1,22\lambda f'}{D_\text{lentille}},\quad\alpha_{\lim} = 1,
     &= K \underline{a}_0 b \times \mathrm{sinc} \left( \frac{k_0 \alpha b}{2} \right)\left( e^{jk_0\alpha a /2} +e^{-jk_0 \alpha a / 2}\right)  
     .\end{align*}
     </script>
-</p>
-<p>Ensuite, en déduire 
-<script type="math/tex; mode=display">
-\boxed{
-I_{\text{diff}}(M ) = 2I_0 \times \left( 1 + \cos \left( \frac{2\pi}{\lambda}\frac{ax}{f'} \right)  \right)    \times \mathrm{sinc}^2\left(\frac{\pi xb}{\lambda f'}\right)}
-</script>
-- Cas général :
-<script type="math/tex; mode=display">
-I(M) \propto I_{\text{interferences}} \times  I_{\text{diffraction de 1 seule fente}}
+    Ensuite, en déduire 
+    <script type="math/tex; mode=display">
+    \boxed{
+    I_{\text{diff}}(M ) = 2I_0 \times \left( 1 + \cos \left( \frac{2\pi}{\lambda}\frac{ax}{f'} \right)  \right)    \times \mathrm{sinc}^2\left(\frac{\pi xb}{\lambda f'}\right)}
+    </script>
+    avec <span class="arithmatex">\(I_0 = |K\underline{a_0}b|^2\)</span></p>
+</li>
+<li>
+<p>Cas général :
+    <script type="math/tex; mode=display">
+    I(M) \propto I_{\text{interferences}} \times  I_{\text{diffraction de 1 seule fente}}
 </script>
 </p>
 </li>
 <li>
-<p>Représentation : <img alt="" src="../assets/Diffraction10.png" /> <img alt="" src="../assets/DiffractionYoung.png" /></p>
+<p>Représentation : <img alt="" src="../assets/Diffraction10.png" /> </p>
+</li>
+<li>
+<p>Figure de diffraction de deux trous carrés distants de <span class="arithmatex">\(a\)</span> : <img alt="" src="../assets/DiffractionYoung.png" /></p>
 </li>
 </ul>
+</details>
 <h2 id="notions-doptique-de-fourier">Notions d'Optique de Fourier</h2>
 <blockquote>
 <p>Etude de la diffraction par des transparence <span class="arithmatex">\(\underline\tau(x_P)\)</span> q.q.</p>
 </blockquote>
 <ul>
-<li>Dans le <strong>plan de Fourier</strong> (plan focal image de la lentille), on a pour <span class="arithmatex">\(\tau(x_P) = \underline{\tau}_0\)</span>, donc :
+<li>
+<p>Dans le <strong>plan de Fourier</strong> (plan focal image de la lentille), on a pour <span class="arithmatex">\(\tau(x_P) = \underline{\tau}_0\)</span>, en supposant la largeur <span class="arithmatex">\(L\)</span> est très grande, donc :
     <script type="math/tex; mode=display">
     \underline{A}_\text{diff}(M) = K \underline{a}_0 \underline\tau_0 L \mathrm{sinc}\left( \frac{\pi L}{\lambda_0} \frac{x_F}{f'} \right)  \implies I_\text{plan de Fourier} = I_0 \mathrm{sinc}^2 \left( \frac{\pi L x_F}{\lambda_0 f'} \right) 
     </script>
-    &gt; Preuve : Considérons <span class="arithmatex">\(\alpha = x_F / f'\)</span></li>
+</p>
+</li>
 <li>
 <p><strong>Diffraction par un objet de transparence sinusoïdale</strong> : 
     <script type="math/tex; mode=display">
@@ -1538,12 +1600,13 @@ I(M) \propto I_{\text{interferences}} \times  I_{\text{diffraction de 1 seule fe
 </li>
 <li>
 <p><strong>Objet de transmission sinusoïdale</strong>
-    $$
-    \begin{align*}</p>
-<p>\underline{a}<em S_1="S_1">S &amp;= K \underline{a}_0 \left[\exp(-jk_0 \vec{u}</em>\cdot \vec{OM})+ \exp(-jk_0 \vec{u}<em -1="-1">{S</em>}\cdot  \vec{OM})\right] \ 
-&amp;= 
-\end{align*}
-$$</p>
+    <script type="math/tex; mode=display">
+    \begin{align*}
+    \underline{a}_S &= K \underline{a}_0 \left[\exp(-jk_0 \vec{u}_{S_1}\cdot \vec{OM})+ \exp(-jk_0 \vec{u}_{S_{-1}}\cdot  \vec{OM})\right] \\ 
+    &= 
+    \end{align*}
+    </script>
+</p>
 </li>
 <li>
 <p><strong>Point de décalé</strong> : Si nous prenons un écran <span class="arithmatex">\(\tau(x)\)</span> centré en <span class="arithmatex">\(x_S \ne 0\)</span>, l'amplitude dans le plan de Fourier,
