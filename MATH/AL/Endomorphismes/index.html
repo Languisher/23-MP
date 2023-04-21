@@ -1,0 +1,1958 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../../CS/CV/ImageNet/">
+      
+      
+        <link rel="next" href="../ReductionsdesEndomorphismes/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
+    
+    
+      
+        <title>Endomorphismes - Brandon Lin</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7a7fce14.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#endomorphismes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Brandon Lin" class="md-header__button md-logo" aria-label="Brandon Lin" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Brandon Lin
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Endomorphismes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../CS/ML/basics/" class="md-tabs__link">
+        Computer Science
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Maths (French)
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../PHY/Mecanique/Mecanique201/" class="md-tabs__link">
+        Physiques (French)
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Cookbooks/Git/" class="md-tabs__link">
+        Cookbooks
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Brandon Lin" class="md-nav__button md-logo" aria-label="Brandon Lin" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Brandon Lin
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Computer Science
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Computer Science
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Machine Learning
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Machine Learning
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/ML/basics/" class="md-nav__link">
+        Fundamentals of Machine Learning
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          CNN
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          CNN
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/CV/CNN/" class="md-nav__link">
+        Convolutional Network
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/CV/Brain-Inspired-CNN/" class="md-nav__link">
+        Brain-inspired CNN
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          Adversarial Attack
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Adversarial Attack
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/AA/Adversarial-Attack/" class="md-nav__link">
+        Adversarial Attack
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CS/CV/ImageNet/" class="md-nav__link">
+        ImageNet
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Maths (French)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Maths (French)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          Algèbre
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Algèbre
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Endomorphismes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Endomorphismes
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    Résumé
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endomorphismes-auto-ajoints" class="md-nav__link">
+    Endomorphismes auto-ajoints
+  </a>
+  
+    <nav class="md-nav" aria-label="Endomorphismes auto-ajoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theoreme-de-reduction-des-endomorphismes-auto-adjointes" class="md-nav__link">
+    Théorème de réduction des endomorphismes auto-adjointes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automorphismes-orthogonaux" class="md-nav__link">
+    Automorphismes Orthogonaux
+  </a>
+  
+    <nav class="md-nav" aria-label="Automorphismes Orthogonaux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decomposition-dun-automorphisme-orthogonaux-en-un-produit-de-reflexions" class="md-nav__link">
+    Décomposition d'un automorphisme orthogonaux en un produit de réflexions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endomorphismes-antisymetriques" class="md-nav__link">
+    Endomorphismes Antisymétriques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decompositions" class="md-nav__link">
+    Décompositions
+  </a>
+  
+    <nav class="md-nav" aria-label="Décompositions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decomposition-polaire" class="md-nav__link">
+    Décomposition Polaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decomposition-de-cholesky" class="md-nav__link">
+    Décomposition de Cholesky
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decomposition-qr" class="md-nav__link">
+    Décomposition QR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrice-de-gram" class="md-nav__link">
+    Matrice de Gram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    Références
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ReductionsdesEndomorphismes/" class="md-nav__link">
+        Réductions des endomorphismes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Analyse
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Analyse
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../An/Topology/" class="md-nav__link">
+        Topologie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../An/Convexit%C3%A9/" class="md-nav__link">
+        Convexité
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../An/Calcul-Diff%C3%A9rentielle/" class="md-nav__link">
+        Calcul Différentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Physiques (French)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Physiques (French)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          Mécanique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Mécanique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PHY/Mecanique/Mecanique201/" class="md-nav__link">
+        Théorèmes Généraux de la Dynamique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Ondes Ondulatoires
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Ondes Ondulatoires
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PHY/Optique/Proprietes-Ondulatoires/" class="md-nav__link">
+        Proprietes Ondulatoires
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PHY/Optique/Interferences/" class="md-nav__link">
+        Interferences
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PHY/Optique/Diffraction/" class="md-nav__link">
+        Diffraction
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          Thermodynamique
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Thermodynamique
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PHY/Thermo/Thermo01/" class="md-nav__link">
+        Mélange et Potentiel Chimique
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PHY/Thermo/CinetiqueChimie/" class="md-nav__link">
+        Cinétique Chimie
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Cookbooks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Cookbooks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cookbooks/Git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cookbooks/Mkdocs/" class="md-nav__link">
+        Mkdocs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Vim & Markdown
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Vim & Markdown
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cookbooks/vim-md/Markdown/" class="md-nav__link">
+        Markdown
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cookbooks/vim-md/Vim/" class="md-nav__link">
+        Vim
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cookbooks/Manim/" class="md-nav__link">
+        Manim
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    Résumé
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endomorphismes-auto-ajoints" class="md-nav__link">
+    Endomorphismes auto-ajoints
+  </a>
+  
+    <nav class="md-nav" aria-label="Endomorphismes auto-ajoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theoreme-de-reduction-des-endomorphismes-auto-adjointes" class="md-nav__link">
+    Théorème de réduction des endomorphismes auto-adjointes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automorphismes-orthogonaux" class="md-nav__link">
+    Automorphismes Orthogonaux
+  </a>
+  
+    <nav class="md-nav" aria-label="Automorphismes Orthogonaux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decomposition-dun-automorphisme-orthogonaux-en-un-produit-de-reflexions" class="md-nav__link">
+    Décomposition d'un automorphisme orthogonaux en un produit de réflexions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endomorphismes-antisymetriques" class="md-nav__link">
+    Endomorphismes Antisymétriques
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decompositions" class="md-nav__link">
+    Décompositions
+  </a>
+  
+    <nav class="md-nav" aria-label="Décompositions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decomposition-polaire" class="md-nav__link">
+    Décomposition Polaire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decomposition-de-cholesky" class="md-nav__link">
+    Décomposition de Cholesky
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decomposition-qr" class="md-nav__link">
+    Décomposition QR
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrice-de-gram" class="md-nav__link">
+    Matrice de Gram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    Références
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="endomorphismes">Endomorphismes</h1>
+<blockquote>
+<p><a href="../Exercices-Endomorphismes/">Exercices</a></p>
+</blockquote>
+<p>Notations :</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(E\)</span> est un <strong>espace vectoriel euclidien</strong> de dimension <span class="arithmatex">\(n\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathscr E = (e_1,\cdots, e_n)\)</span>, <span class="arithmatex">\(\mathscr B=(b_1,\cdots, b_n)\)</span> deux <strong>bases orthonormées</strong> de <span class="arithmatex">\(E\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(x = \sum_{i=1}^n x_i e_n\)</span>, <span class="arithmatex">\(\mathrm{Mat} (x, \mathscr{E} )= \begin{bmatrix} &lt;x,e_1&gt; \\ \vdots\\ &lt;x,e_n&gt; \end{bmatrix}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(P_{\mathscr B}^{\mathscr E}\)</span> le <strong>matrice de passage</strong> d'une matrice muni d'une base <span class="arithmatex">\(\mathscr E\)</span> dans celle d'une base <span class="arithmatex">\(\mathscr B\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathscr F=(f_1,\cdots,f_n)\)</span> une <strong>base quelconque</strong> de <span class="arithmatex">\(E\)</span>.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\phi:(x,y) \mapsto &lt;x,y&gt;\)</span> le <strong>produit scalaire</strong> de <span class="arithmatex">\(E\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\Phi=\mathrm{Mat}_\mathscr{F}(\phi)= [\phi(f_i,f_j)]_{(i,j)\in [\![1,n]\!]}\in \mathrm{S}_n(\mathbb R)\)</span> la <strong>matrice</strong> de <span class="arithmatex">\(\phi\)</span> dans la base <span class="arithmatex">\(\mathscr F\)</span>.</p>
+</li>
+</ul>
+<blockquote>
+<p>Démonstration : 
+<script type="math/tex; mode=display">
+<x,y> = <\sum_{i=1}^nx_if_i, \sum_{j=1}^ny_jf_j> = \sum_{i=1}^n\sum_{j=1}^nx_iy_j\;\phi(f_i,f_j)
+</script>
+</p>
+</blockquote>
+<h2 id="resume">Résumé</h2>
+<ul>
+<li>
+<div class="arithmatex">\[
+  x\in E \iff \begin{cases}\mathrm{Mat}_{\mathscr E}(x) = [&lt;e_i,x&gt;]_i\in \mathrm{M}_{m,1}\\\mathrm{Mat}_{\mathscr{B}}(x) = \;^tP_{\mathscr E}^\mathscr B\cdot \mathrm{Mat}_\mathscr E(x)\end{cases}
+  \]</div>
+</li>
+<li>
+<div class="arithmatex">\[
+  u \in \mathscr{L}(E) \iff \begin{cases}\mathrm{Mat}_\mathscr E(u) = [&lt;e_i,u(e_j)&gt;]_{(i,j)} \\ \mathrm{Mat}_\mathscr B(u) = \;^tP_\mathscr{E}^{\mathscr{B}}.\mathrm{Mat}_\mathscr{E}(u).P_\mathscr E^\mathscr B\\ \boxed{\mathrm{Mat}_\mathscr E(u^\star)=\;^t\mathrm{Mat}_\mathscr E(u)}\end{cases}
+  \]</div>
+</li>
+<li>
+<div class="arithmatex">\[
+  u \in \mathscr S(E) \iff \begin{cases} \;^t\mathrm{Mat}_\mathscr E(u) = \mathrm{Mat}_\mathscr E(u)\\\mathrm{Mat}_\mathscr E(u) \in \mathrm{S}_n(\mathbb R)\end{cases}
+  \]</div>
+</li>
+<li>
+<div class="arithmatex">\[
+  u \in \mathscr O(E) \iff \begin{cases} \;^t\mathrm{Mat}_\mathscr E(u) =( \mathrm{Mat}_\mathscr E(u))^{-1}\\\mathrm{Mat}_\mathscr E(u) \in \mathrm{O}_n(\mathbb R)\end{cases}
+  \]</div>
+</li>
+<li>
+<div class="arithmatex">\[
+  u \in \mathscr A(E) \iff \begin{cases} \;^t\mathrm{Mat}_\mathscr E(u) =- \mathrm{Mat}_\mathscr E(u)\\\mathrm{Mat}_\mathscr E(u) \in \mathrm{A}_n(\mathbb R)\end{cases}
+  \]</div>
+</li>
+<li>
+<p><em>Si on a le choix de la base dans un espace euclidien, on choisit prequement toujours de travailler en base orthonormée !</em></p>
+</li>
+</ul>
+<h2 id="endomorphismes-auto-ajoints">Endomorphismes auto-ajoints</h2>
+<ul>
+<li>
+<p><span class="arithmatex">\(f\)</span> est <strong>auto-adjoint</strong> ou <strong>symétrique</strong> si
+    <script type="math/tex; mode=display">
+    f^\star =f
+    </script>
+</p>
+</li>
+<li>
+<p>On note
+    <script type="math/tex; mode=display">
+    \mathscr S(E) = \{f\in \mathscr L(E),\;f^\star = f\}
+    </script>
+    en même temps, 
+    <script type="math/tex; mode=display">
+    u \in \mathscr S(E)\iff \mathrm{Mat}(u,\mathscr E )\in \mathrm{S}_n(\mathbb R) = \{A\in \mathrm{M}_n(\mathbb R) ,\; ^tA = A\}
+    </script>
+</p>
+</li>
+<li>
+<p>Exemples :</p>
+<ul>
+<li>
+<p>Les projecteurs orthogonaux sont les projecteurs auto-adjoints.</p>
+</li>
+<li>
+<p>Si <span class="arithmatex">\(\exists \; \mathscr E, \; \exists \Lambda = (\lambda_1,\cdots,\lambda_n) \in \mathbb R^n\)</span>, tel que :
+<script type="math/tex; mode=display">
+\forall k\in[\![1,n]\!],\;f(e_k) = \lambda_k.e_k
+</script>
+Alors, <span class="arithmatex">\(f\)</span> est <strong>auto-adjoint</strong>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(f\)</span> est un <strong>endomorphismes auto-adjoint positif</strong> s'il vérfie de plus 
+    <script type="math/tex; mode=display">
+    f \in \mathscr{S}^ + \iff f\in \mathscr{S},\;\forall x\in E,\; <x,f(x)> \ge 0
+    </script>
+    Version Matricielle : 
+    <script type="math/tex; mode=display">
+    \forall X,\;^tX.A.X \ge 0
+    </script>
+</p>
+</li>
+<li><span class="arithmatex">\(f\)</span> est un <strong>endomorphismes auto-adjoint définis positif</strong> s'il vérfie de plus 
+    <script type="math/tex; mode=display">
+    f \in \mathscr{S}^ {++} \iff f\in \mathscr{S},\;\forall x\in E,\; <x,f(x)> > 0
+    </script>
+    Version Matricielle :
+    <script type="math/tex; mode=display">
+    \forall X,\; ^tX.A.X > 0
+    </script>
+<ul>
+<li>Remarque : 
+    <script type="math/tex; mode=display">
+    \mathscr{S}^{++} = \mathscr{S}^+ \cap \mathscr{GL}
+    </script>
+</li>
+</ul>
+</li>
+<li>
+<p>Propriétés :</p>
+<ul>
+<li>
+<p>Si <span class="arithmatex">\(n = \dim E\)</span>,
+<script type="math/tex; mode=display">
+\dim \mathscr S(E) = \frac{n(n+1)}{2}
+</script>
+</p>
+</li>
+<li>
+<p>Pour n'import quelle <span class="arithmatex">\(f\)</span>,
+<script type="math/tex; mode=display">
+\begin{cases}
+f^ \star \circ f \in \mathscr S^ +(E)\\ 
+f \circ f^\star \in \mathscr S^+(E)
+\end{cases}
+</script>
+De plus, 
+<script type="math/tex; mode=display">
+f^\star \circ f \in \mathscr S^ {++}(E) \iff f \in \mathscr{GL}(E) 
+</script>
+</p>
+</li>
+</ul>
+<blockquote>
+<p>Preuve : 
+    <script type="math/tex; mode=display">
+    <f^\star \circ f(x),x> = <f(x),f(x)> = ||f(x)||^ 2
+    </script>
+</p>
+</blockquote>
+<ul>
+<li>Pour n'import quelle <span class="arithmatex">\(f\)</span>,
+<script type="math/tex; mode=display">
+\mathrm{Ker}(f^ \star \circ f) = \mathrm{Ker}(f)
+</script>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="theoreme-de-reduction-des-endomorphismes-auto-adjointes">Théorème de réduction des endomorphismes auto-adjointes</h3>
+<ul>
+<li>
+<p>Énoncé :
+    <script type="math/tex; mode=display">
+    f\in \mathscr S(E) \implies \exists (\mathscr E, \Lambda) \in (E ^ n, \mathbb R^n),\; \forall k\in [\![1,n]\!],\; f(e_k)=\lambda_k.e_k
+    </script>
+</p>
+</li>
+<li>
+<p>Verison Matricielle :
+    <script type="math/tex; mode=display">
+    f\in \mathscr S(E) \implies \exists \mathscr E \in E ^ n,\;  \mathrm {Mat}(f,\mathscr E) = \mathrm{diag}(\lambda_1,\cdots,\lambda_n)
+    </script>
+</p>
+<blockquote>
+<p><a href="../assets/Theoreme-de-reduction.png">Preuve</a></p>
+</blockquote>
+</li>
+<li>
+<p>Remarque :
+    <script type="math/tex; mode=display">
+    <u(x),x> = \sum \lambda_k <e_k,x>^ 2
+    </script>
+</p>
+<blockquote>
+<p><a href="../assets/Theoreme-de-reduction-1.png">Preuve</a></p>
+</blockquote>
+</li>
+<li>
+<p>Remarque : <img alt="" src="../assets/Theoreme-de-reduction-2.png" /></p>
+</li>
+<li>
+<p><strong>Proposition</strong> : Soit <span class="arithmatex">\(f\in \mathscr S^ +(E)\)</span>, alors :
+    <script type="math/tex; mode=display">
+    \exists ! g\in \mathscr S^ +(E) \text{ t.q. } f= g\circ g
+    </script>
+</p>
+<blockquote>
+<p><a href="../assets/f%3Dgcircg.png">Preuve</a></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="automorphismes-orthogonaux">Automorphismes Orthogonaux</h2>
+<ul>
+<li><span class="arithmatex">\(f \in \mathscr{GL}(E)\)</span> est appellée <strong>automorphisme orthogonal</strong> si elle vérifie :
+<script type="math/tex; mode=display">
+f\in \mathscr{O}(E) \iff f^\star \circ f = f\circ f^\star = \mathrm{id}_E \iff f^\star = f^{-1}
+</script>
+</li>
+<li>
+<p><span class="arithmatex">\(f\in \mathscr{GL}(E)\)</span> est appellée <strong>isométrie</strong> si :
+    <script type="math/tex; mode=display">
+    \forall (x,y) \in E^2, \;  \mid u(x), u(y)  \mid  =  \mid x  \mid 
+    </script>
+</p>
+</li>
+<li>
+<p><strong>Automorphisme Orthogonale</strong> <span class="arithmatex">\(\iff\)</span> <strong>Isométrie</strong>.</p>
+</li>
+<li>
+<p><strong>Déterminant d'une matrice orthogonale</strong> :
+    <script type="math/tex; mode=display">
+    u \in \mathscr{O}(E) \implies \mathrm{det}(u)= \pm 1
+    </script>
+    &gt; Preuve : <span class="arithmatex">\(\det(u)^2 = \det(u) \times \det(u^\star) = \det(u \times u^\star) = \det(\mathrm{id}_E)\)</span></p>
+</li>
+<li>
+<p>Exemple : une matrice orthogonale
+    <script type="math/tex; mode=display">
+    R = \frac{1}{2} \begin{bmatrix} \sqrt{2} & -\sqrt{2} \\ \sqrt{2} & \sqrt{2}  \end{bmatrix} 
+    </script>
+</p>
+</li>
+<li>
+<p><strong>Propriétés</strong> : Équivalence de</p>
+<ul>
+<li><span class="arithmatex">\(f\in \mathscr O(E)\)</span></li>
+<li><span class="arithmatex">\(\forall x\in E, \;||f(x)||=||x||\)</span></li>
+<li><span class="arithmatex">\(\forall(x,y)\in E ^ 2,\; &lt;f(x),f(y) = &lt;x,y&gt;\)</span></li>
+<li><span class="arithmatex">\(\exists \text{ et } \forall \mathscr E\)</span> t.q. 
+    <script type="math/tex; mode=display">
+    f(e_1),\cdots,f(e_n) \text{ encore une base orthonormée}
+    </script>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Propriétés</strong> : Équivalance de </p>
+<ul>
+<li><span class="arithmatex">\(M \in O(E)\)</span></li>
+<li>Les vecteurs colonnes de <span class="arithmatex">\(M\)</span> forment une <em>base orthonormale</em> de <span class="arithmatex">\(M_{n,1}(\mathbb{R} )\)</span>.</li>
+<li><span class="arithmatex">\(M\)</span> est la matrice de passage entre deux bases orthonormales de <span class="arithmatex">\(\mathbb{R}^n\)</span>.</li>
+</ul>
+<blockquote>
+<p>Preuve :
+<script type="math/tex; mode=display">
+\delta_{i,j} = [^tM.M]_{i,j} = \sum_{k=1}^n[^tM]_{i,k}.[M]_{k,j} = \sum_{k=1}^n[M]_{k,i}[M]_{k,j} = <([M]_{k,i}, [M]_{k,j})>
+</script>
+</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Propriétés</strong> : Équivalence de</p>
+<ul>
+<li><span class="arithmatex">\(M \in O_n(\mathbb{R} )\)</span></li>
+<li><span class="arithmatex">\(\forall (X,Y) \in M_{n,1}(\mathbb{R})^2,\; ^t(MX)(MY) = \;^tXY\)</span></li>
+</ul>
+</li>
+<li>
+<p>On appelle <strong>symétrie orthogonale</strong> tout élément de 
+    <script type="math/tex; mode=display">
+    s \in \mathscr{S}(E) \cap \mathscr{O}(E)
+    </script>
+</p>
+<ul>
+<li>Son projecteur associé est <span class="arithmatex">\(s = 2p-\mathrm{id}_E\)</span> est un projecteur orthogonale.</li>
+</ul>
+</li>
+<li>
+<p><strong>Interprétation géométrique de la matrice orthogonale</strong> :</p>
+<ul>
+<li>
+<p>On appelle <strong>rotation</strong> de <span class="arithmatex">\(E\)</span> :
+    <script type="math/tex; mode=display">
+    \mathscr{SO}(E) = \{u\in \mathscr{O}(E),\;\det(u) = 1\}
+    </script>
+</p>
+</li>
+<li>
+<p>On appelle <strong>réflexion</strong> de <span class="arithmatex">\(E\)</span> :
+    <script type="math/tex; mode=display">
+    \mathscr{O}(E) \backslash \mathscr{SO}(E)
+    </script>
+</p>
+<ul>
+<li>
+<p>C'est une <strong>symétrie orthogonale</strong> de <span class="arithmatex">\(E_1\)</span>, l'hyperplan sur lequelle une projection orthogonale. <span class="arithmatex">\(E_1\)</span> est définie par  </p>
+<p>
+<script type="math/tex; mode=display">
+E_1 = \{x, \;u(x)=x\} = \mathrm{Ker}(u-\mathrm{id}_E)
+</script>
+- On a aussi le droite représenté par <span class="arithmatex">\(\mathrm{Ker}(u+\mathrm{id}_E)\)</span></p>
+</li>
+</ul>
+<p><img alt="" src="../assets/reflexion-1.png" /></p>
+</li>
+<li>
+<p>Exemple de dimension 2 : <img alt="" src="../assets/orthogonal-1.png" /></p>
+</li>
+<li>
+<p>Exemple de dimension 3 : <img alt="" src="../assets/orthogonal-2.png" /></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="decomposition-dun-automorphisme-orthogonaux-en-un-produit-de-reflexions">Décomposition d'un automorphisme orthogonaux en un produit de réflexions</h3>
+<ul>
+<li>
+<p>Soit <span class="arithmatex">\(f\in \mathscr{O}(E)\)</span>,
+    <script type="math/tex; mode=display">
+    \exists p = \mathrm{codim}(\mathrm{Ker}(f-\mathrm{id}_E)),\; \exists (s_1,\cdots,s_p) \in (\mathscr{O}(E)\backslash\mathscr{SO}(E))^p,\; f = s_1\circ\cdots \circ s_p
+    </script>
+</p>
+<blockquote>
+<p><a href="../assets/orthogonal-3.png">Preuve</a></p>
+</blockquote>
+</li>
+<li>
+<p><strong>Forme Canonique des automorphismes orthogonaux</strong> : <img alt="" src="../assets/orthogonal-4.png" /></p>
+</li>
+</ul>
+<h2 id="endomorphismes-antisymetriques">Endomorphismes Antisymétriques</h2>
+<ul>
+<li>
+<p>On dit que <span class="arithmatex">\(f\)</span> est <strong>anti-symétrique</strong> s'il vérifie 
+    <script type="math/tex; mode=display">
+    f\in \mathscr A(E) \iff f^ \star = -f
+    </script>
+</p>
+</li>
+<li>
+<p><strong>Propriétés</strong> :</p>
+<ul>
+<li>Décomposition en somme directe
+<script type="math/tex; mode=display">
+\mathscr{L}(E) = \mathscr{S}(E) \oplus \mathscr{A}(E)
+</script>
+</li>
+<li>Dimension :
+<script type="math/tex; mode=display">
+\dim(\mathscr{A}(E)) = \frac{n(n-1)}{2}
+</script>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Propriété</strong> :
+    <script type="math/tex; mode=display">
+    \forall x\in E,\; [u \in \mathscr{A}(E)] \iff [<u(x),x> =0]
+    </script>
+</p>
+</li>
+<li>
+<p><strong>Forme Canonique d'un endomorphisme anti-symétrique</strong> : 
+    <script type="math/tex; mode=display">
+    \begin{bmatrix} 0&&&&&0 \\ & 0 \\ && \ddots \\ &&&   0 & \alpha_1 \\&&&-\alpha_1&0    \\0 &&&&& \ddots \end{bmatrix} 
+    </script>
+</p>
+<p><img alt="" src="../assets/anti-symetrique.png" /></p>
+<blockquote>
+<p><a href="../assets/anti-symetrique-1.png">Preuve</a></p>
+</blockquote>
+</li>
+<li>
+<p><strong>Propriétés</strong> : Dans <span class="arithmatex">\(E= \mathbb R^ 3\)</span>, pour toutes les <span class="arithmatex">\(f \in \mathscr{A}(\mathbb{R} ^3)\)</span>, alors il existe un unique <span class="arithmatex">\(\underline w\in \mathbb{R} ^3\)</span>.
+    <script type="math/tex; mode=display">
+    f: x \mapsto w \wedge x \in \mathscr{A}(E)
+    </script>
+    et on peut trouver une b.o.n. telle que 
+    <script type="math/tex; mode=display">
+    f(e_1) = 0_E,\; f(e_2) = ||w|||.e_3, f(e_3) = ||w||.e_2
+    </script>
+    Sa forme canonique basée sur <span class="arithmatex">\((c_1,c_2,c_3)\)</span> est 
+    <script type="math/tex; mode=display">
+    f = \begin{bmatrix}
+    0 & -r & q\\ 
+    r&0&-p\\ 
+    -q & p &0
+    \end{bmatrix}
+    </script>
+    associé à <span class="arithmatex">\(w= pc_1+qc_2+rc_3\)</span>.</p>
+</li>
+</ul>
+<h2 id="decompositions">Décompositions</h2>
+<h3 id="decomposition-polaire">Décomposition Polaire</h3>
+<ul>
+<li>
+<p>Soit <span class="arithmatex">\(f \in \mathscr{GL}(E)\)</span>, 
+    <script type="math/tex; mode=display">
+    \exists ! \; (\rho, \theta) \in ( \mathscr S ^{++}(E) \times \mathscr O(E)), \; f= \rho \times \theta
+    </script>
+</p>
+<blockquote>
+<p><a href="../assets/Decomposition-polaire.png">Preuve</a></p>
+</blockquote>
+<ul>
+<li>
+<p>Trouver le racine de <span class="arithmatex">\(\;^tA.A\)</span> demande de savoir trouver une base du théorème spectral, donc en général : </p>
+<ul>
+<li>impossible de faire le calcul exact</li>
+<li>difficile de faire le calcul numérique</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="decomposition-de-cholesky">Décomposition de Cholesky</h3>
+<ul>
+<li>
+<p>Si <span class="arithmatex">\(A \in \mathrm{S}_n^{++}(\mathbb R)\)</span>, il existe une <em>unique</em> matrice <span class="arithmatex">\(T\in \mathrm{T}_n^+ \cap \mathrm{GL}_n(\mathbb R)\)</span> à coefficients diagonaux <span class="arithmatex">\(&gt;0\)</span> tel que : 
+  <script type="math/tex; mode=display">
+  \boxed{A = \;^t T.T}
+  </script>
+</p>
+</li>
+<li>
+<p>En ce cas, <span class="arithmatex">\(AX = Y \iff \begin{cases} \;^tT.Z = Y\\ T.X = Z\end{cases}\)</span></p>
+</li>
+</ul>
+<blockquote>
+<p>Démonstration :</p>
+<ul>
+<li>
+<p>Analyse : Soit <span class="arithmatex">\(u \in \mathscr{S}^{++}(\mathbb R^n)\)</span>, <span class="arithmatex">\(A = \mathrm{Mat}(u, \mathscr C)\)</span>, l'orthomalisation de Gram-Schimidt appliqué à <span class="arithmatex">\(\mathscr{B}=(b_1, \cdots, b_n)\)</span> donne <span class="arithmatex">\(\mathscr{E} = (e_1,\cdots, e_n)\)</span>. On trouvera 
+  <script type="math/tex; mode=display">
+  <c_i,u(c_j)> = A=\underbrace{[<e_j,b_i>]}_{^tT}\underbrace{[<e_i,b_j>]}_{T}=[\sum_k<e_k,b_i><e_k, b_j>]=[<b_i, b_j>]
+  </script>
+  On sait que <span class="arithmatex">\(u \in \mathscr{S}^{++}\)</span>, donc <span class="arithmatex">\(\exists ! v\in \mathscr{S}^{++}\)</span> tel que <span class="arithmatex">\(u=v \circ v\)</span>, en même temps <span class="arithmatex">\(&lt;c_i,u(c_j)&gt; = &lt;v(c_i),v(c_j)&gt;\)</span></p>
+</li>
+<li>
+<p>Synthèse : (1) Existence : <span class="arithmatex">\(T = [&lt;e_i,b_j&gt;]\)</span>, où <span class="arithmatex">\((e_1,\cdots,e_n)\)</span> orthonormée de <span class="arithmatex">\((b_1, \cdots,b_n)\)</span> bien suffit. (2) Unicité : Si <span class="arithmatex">\(A = \;^tT_1.T_1 = \;^tT_2.T_2\)</span>, donc <span class="arithmatex">\(\Delta=T_1.T_2^{-1} = \;^tT_1^{-1}.^tT_2\)</span>, appartient respectivement à <span class="arithmatex">\(\mathrm{T}^+\)</span> et <span class="arithmatex">\(\mathrm{T}^-\)</span>. Dsonc <span class="arithmatex">\(\Delta\)</span> est diagonale. Or, 
+  <script type="math/tex; mode=display">
+  A = \;^tT_1.T_1 = \;^tT_2.(^t\Delta.\Delta).T_2=\;^tT_2.T_2
+  </script>
+  Cela implique que <span class="arithmatex">\(\Delta = \mathrm{id}_E\)</span>.</p>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>Outile théorique / pratique.</li>
+</ul>
+<h3 id="decomposition-qr">Décomposition QR</h3>
+<ul>
+<li>
+<p>Soit <span class="arithmatex">\(A \in \mathrm{GL}_n(\mathbb R)\)</span>, il existe une unique <span class="arithmatex">\((O,T)\in (\mathrm O_n(\mathbb R),\mathrm T_n^+(\mathbb{R}))\)</span>, tel que :
+    <script type="math/tex; mode=display">
+    \boxed{A = O.T}
+    </script>
+</p>
+<blockquote>
+<p><a href="../assets/DecompositionQR.png">Preuve</a></p>
+</blockquote>
+</li>
+<li>
+<p>Si on veut résoudre <span class="arithmatex">\(AX = B\)</span>, cela devient <span class="arithmatex">\(O.T.X=B\)</span>, ensuite
+    <script type="math/tex; mode=display">
+    T.X = \;^tO.B
+    </script>
+    car <span class="arithmatex">\(^tO=O^{-1}\)</span></p>
+</li>
+</ul>
+<h2 id="matrice-de-gram">Matrice de Gram</h2>
+<ul>
+<li>
+<p>Soit <span class="arithmatex">\(E\)</span> un <em>espace préhilbertien réel</em>, et <span class="arithmatex">\(\mathscr X=(x_1,\cdots,x_n)\)</span> une famille <em>finie</em> de vecteurs de <span class="arithmatex">\(E\)</span>. On appelle <strong>matrice de Gram de <span class="arithmatex">\(\mathscr X\)</span></strong> la matrice 
+    <script type="math/tex; mode=display">
+    G_\mathscr X = [<x_i,x_j>]_{(i,j)\in[\![1,n]\!]}
+    </script>
+</p>
+</li>
+<li>
+<p><span class="arithmatex">\(G_\mathscr X \in \mathrm{S}_n^+(\mathbb R)\)</span>.</p>
+</li>
+</ul>
+<blockquote>
+<p>Preuve : Soit <span class="arithmatex">\(X_a = \;^t[a_1,\cdots,a_n]\)</span> avec la base <span class="arithmatex">\((e_1,\cdots,e_n)\)</span>
+   <script type="math/tex; mode=display">
+   ^tX_a.G_\mathscr X .X_a = \sum_{i,j}a_ia_j<x_i,x_j> = || \sum_i a_ix_i ||^2
+   </script>
+</p>
+</blockquote>
+<ul>
+<li>
+<p><span class="arithmatex">\(G_\mathscr X \in \mathrm S_n^{++}(\mathbb R) \iff [(x_1,\cdots,x_n) \text { indépendants} ]\)</span></p>
+<ul>
+<li>C'est équivalent de dire <span class="arithmatex">\(G_\mathscr X\)</span> est de plus inversible.</li>
+</ul>
+</li>
+<li>
+<p>Plus précisément,
+    <script type="math/tex; mode=display">
+    \mathrm{rang}(\mathscr X) = \mathrm{rang}(G_\mathscr X)
+    </script>
+</p>
+</li>
+<li>
+<p>Application : Pour montrer que <span class="arithmatex">\((x_1,\cdots,x_n)\)</span> indépendants ou non, il faut et il suffit de calculer <span class="arithmatex">\(<span class="arithmatex">\(\det(G_\mathscr X)\)</span>\)</span></p>
+</li>
+<li>
+<p>Soit <span class="arithmatex">\(E\)</span> préhilbertien réel, <span class="arithmatex">\(\mathscr X = (x_1,\cdots, x_n)\in E^n\)</span>, on appellera <strong>volume de l'objet</strong> construit sur <span class="arithmatex">\((x_1,\cdots,x_p)\)</span> :
+    <script type="math/tex; mode=display">
+    v(x_1,\cdots,x_p) = \sqrt{\det(G_\mathscr X)}
+    </script>
+</p>
+</li>
+</ul>
+<h2 id="references">Références</h2>
+<ul>
+<li><a href="http://www.dblottiere.org/mp2122/EndomorphismesRemarquablesEspacesEuclidiens.pdf">ENDOMORPHISMES REMARQUABLES D’UN ESPACE EUCLIDIEN</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/Languisher"  target="_blank" rel="noopener">Brandon Lin</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Languisher" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "naviagation.sections", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.407015b8.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>
