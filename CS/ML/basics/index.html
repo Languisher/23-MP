@@ -37,8 +37,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Averia Serif Libre";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -228,18 +228,11 @@
   
   
   
-    
-
-  
-  
-  
     <li class="md-tabs__item">
-      <a href="../../../MATH/AL/Endomorphismes/" class="md-tabs__link">
+      <a href="../../../MATH/bilan/" class="md-tabs__link">
         Maths (French)
       </a>
     </li>
-  
-
   
 
       
@@ -622,58 +615,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
-          Algèbre
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_3_1">
-          <span class="md-nav__icon md-icon"></span>
-          Algèbre
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../../../MATH/AL/Endomorphismes/" class="md-nav__link">
-        Endomorphismes
+      <a href="../../../MATH/bilan/" class="md-nav__link">
+        Contenu
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../MATH/AL/ReductionsdesEndomorphismes/" class="md-nav__link">
-        Réductions des endomorphismes
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -742,6 +687,68 @@
     <li class="md-nav__item">
       <a href="../../../MATH/An/Calcul-Diff%C3%A9rentielle/" class="md-nav__link">
         Calcul Différentiel
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          Algèbre
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Algèbre
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MATH/AL/Endomorphismes/" class="md-nav__link">
+        Endomorphismes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MATH/AL/ReductionsdesEndomorphismes/" class="md-nav__link">
+        Réductions des endomorphismes
       </a>
     </li>
   
@@ -1228,20 +1235,20 @@
 <summary>评估方法</summary>
 <ul>
 <li>
-<p>需要使用 <strong>Testing set</strong> 测试学习其对新样本的判别能力。 </p>
-</li>
-<li>
-<p><strong>Hold-out</strong> : 留出法，直接将数据集划分
+<ul>
+<li><strong>Hold-out</strong> : 留出法，直接将数据集划分
     <script type="math/tex; mode=display">
     D = S \cup T, \; S \cap T = \emptyset
     .</script>
-</p>
 <ul>
 <li>应尽量保证数据分布的一致性，不然会因其差异而产生偏差</li>
 <li>划分比率问题：没有完美解决方案，大约 2/3 ~ 4/5，因为或模型不够稳定；或评估结果不稳定</li>
 <li>一般采用若干次随机划分、重复实验取平均值</li>
 </ul>
 </li>
+</ul>
+<p>需要使用 <strong>Testing set</strong> 测试学习其对新样本的判别能力。 </p>
+<ul>
 <li>
 <p><strong>k-fold cross validation</strong> : 交叉验证法 <img alt="K-fold cross validation" src="../assets/kfcv.png" /></p>
 <ul>
@@ -1254,6 +1261,11 @@
     \lim_{m \to \infty} (1- 1/m)^ m = 1 / e \approx 0.368
     </script>
     未被提取进新数据集，采用 <span class="arithmatex">\(D'\)</span> 作训练集，<span class="arithmatex">\(D \backslash D'\)</span> 作测试集。问题：改变了初始数据集的分布，引入估计偏差。<img alt="" src="../assets/boottrap.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>需要使用 <strong>Validation set</strong> 比较学得的不同模型的效果。</p>
 </li>
 </ul>
 </details>
