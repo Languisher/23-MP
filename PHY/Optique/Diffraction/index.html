@@ -605,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../MATH/An/Topology/" class="md-nav__link">
+      <a href="../../../MATH/Analyse/Topology/" class="md-nav__link">
         Topologie
       </a>
     </li>
@@ -619,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../MATH/An/Convexit%C3%A9/" class="md-nav__link">
+      <a href="../../../MATH/Analyse/Convexit%C3%A9/" class="md-nav__link">
         Convexité
       </a>
     </li>
@@ -633,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../MATH/An/Calcul-Diff%C3%A9rentielle/" class="md-nav__link">
+      <a href="../../../MATH/Analyse/Calcul-Diff%C3%A9rentielle/" class="md-nav__link">
         Calcul Différentiel
       </a>
     </li>
@@ -681,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../MATH/AL/Endomorphismes/" class="md-nav__link">
+      <a href="../../../MATH/Algebre/Endomorphismes/" class="md-nav__link">
         Endomorphismes
       </a>
     </li>
@@ -695,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../MATH/AL/ReductionsdesEndomorphismes/" class="md-nav__link">
+      <a href="../../../MATH/Algebre/ReductionsdesEndomorphismes/" class="md-nav__link">
         Réductions des endomorphismes
       </a>
     </li>
@@ -1383,11 +1383,11 @@
 </li>
 </ul>
 </details>
-<p><img alt="" src="../assets/Diffraction05.png" /></p>
+<p><img alt="" src="../assets/Diffraction12.png" /></p>
 <details>
 <summary>Cas d'une pupille plane en incidence normale</summary>
-<p>
-<script type="math/tex; mode=display">
+<p><img alt="" src="../assets/Diffraction05.png" />
+  <script type="math/tex; mode=display">
   \boxed{\underline{A}_{\text{diff}}(M) = K \underline{a}_0 \iint_{(T)} \exp(jk_0(\alpha x_P + \beta y_P)) \;\mathrm{d} \Sigma_P}
   </script>
 </p>
@@ -1532,8 +1532,8 @@ Donc, la <strong>formule générale de l'amplitude diffractée par un objet</str
 </p>
 </details>
 <h3 id="ouverture-circulaire">Ouverture circulaire</h3>
-<details class="ouverture circulaire">
-<summary>Ouverture</summary>
+<details>
+<summary>Ouverture circulaire, Tache d'Airy, Critère de Rayleigh</summary>
 <ul>
 <li>
 <p>En notant <span class="arithmatex">\(P(\rho, \varphi)\)</span> et <span class="arithmatex">\(M(\rho',\varphi')\)</span> en coordonnées polaires,
@@ -1546,6 +1546,7 @@ Donc, la <strong>formule générale de l'amplitude diffractée par un objet</str
     J_0(x) = \frac{1}{2\pi} \int_0^{2\pi} e^{jx \cos \varphi} \mathrm{d}\varphi,\; xJ_0(x) = \frac{\mathrm{d}(xJ_1(x))}{\mathrm{d}(x)}
     </script>
 </p>
+<p>et <span class="arithmatex">\(a\)</span> le rayon de la <em>pupille circulaire</em>.</p>
 <blockquote>
 <p><a href="../assets/Diffraction08.png">Preuve</a></p>
 </blockquote>
@@ -1555,10 +1556,14 @@ Donc, la <strong>formule générale de l'amplitude diffractée par un objet</str
     <script type="math/tex; mode=display">
     r_\text{Airy} = \frac{0,61 \lambda f'}{a}
     </script>
-</p>
+<img alt="" src="../assets/Diffraction13.png" /></p>
 </li>
 <li>
-<p><strong>Critère de Rayleigh</strong>(?) : Deux tâches lumineuses sont séparées si leurs centres sont distants de plus du rayon de la tâche d’Airy.</p>
+<p><strong>Critère de Rayleigh</strong> : Deux tâches lumineuses sont séparées si leurs centres sont distants de plus du rayon de la tâche d’Airy, c'est-à-dire,
+    <script type="math/tex; mode=display">
+    \alpha f' \ge \alpha_\text{lim} f' = r_\text{Airy}
+    </script>
+</p>
 <p>Considérons une lentille de diamètre <span class="arithmatex">\(D_\text{lentille}\)</span>.
 <script type="math/tex; mode=display">
 r_\text{Airy} = \frac{1,22\lambda f'}{D_\text{lentille}},\quad\alpha_{\lim} = 1,22 \frac{\lambda}{D_\text{lentille}}
@@ -1723,17 +1728,6 @@ r_\text{Airy} = \frac{1,22\lambda f'}{D_\text{lentille}},\quad\alpha_{\lim} = 1,
 <div class="arithmatex">\[
 \underline{\tau}(x_P) \approxeq 1 + j \varphi(x_P),\; \underline{\tau}(x_P) \approxeq 1 + j \varepsilon \cos(\frac{2\pi}{\Lambda}x_P)
 \]</div>
-
-  <hr>
-<div class="md-source-file">
-  <small>
-    
-      Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2023</span>
-      
-    
-  </small>
-</div>
 
 
 

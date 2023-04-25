@@ -605,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../MATH/An/Topology/" class="md-nav__link">
+      <a href="../../../MATH/Analyse/Topology/" class="md-nav__link">
         Topologie
       </a>
     </li>
@@ -619,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../MATH/An/Convexit%C3%A9/" class="md-nav__link">
+      <a href="../../../MATH/Analyse/Convexit%C3%A9/" class="md-nav__link">
         Convexité
       </a>
     </li>
@@ -633,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../MATH/An/Calcul-Diff%C3%A9rentielle/" class="md-nav__link">
+      <a href="../../../MATH/Analyse/Calcul-Diff%C3%A9rentielle/" class="md-nav__link">
         Calcul Différentiel
       </a>
     </li>
@@ -681,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../MATH/AL/Endomorphismes/" class="md-nav__link">
+      <a href="../../../MATH/Algebre/Endomorphismes/" class="md-nav__link">
         Endomorphismes
       </a>
     </li>
@@ -695,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../MATH/AL/ReductionsdesEndomorphismes/" class="md-nav__link">
+      <a href="../../../MATH/Algebre/ReductionsdesEndomorphismes/" class="md-nav__link">
         Réductions des endomorphismes
       </a>
     </li>
@@ -882,8 +882,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sources-a-spectre-discret" class="md-nav__link">
-    Sources à spectre discret
+  <a href="#interferences-a-2-ondes-spectre-discret" class="md-nav__link">
+    Interférences à 2 ondes, spectre discret
   </a>
   
 </li>
@@ -1170,8 +1170,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#sources-a-spectre-discret" class="md-nav__link">
-    Sources à spectre discret
+  <a href="#interferences-a-2-ondes-spectre-discret" class="md-nav__link">
+    Interférences à 2 ondes, spectre discret
   </a>
   
 </li>
@@ -1206,7 +1206,7 @@
   <h1>Interferences</h1>
 
 <h2 id="interferences-spectrosocopie">Interférences - Spectrosocopie</h2>
-<h3 id="sources-a-spectre-discret">Sources à spectre discret</h3>
+<h3 id="interferences-a-2-ondes-spectre-discret">Interférences à 2 ondes, spectre discret</h3>
 <ul>
 <li>
 <p>Une source à spectre discret est considérée comme la superpostion d'un ensemble discret de sources parfaitement monochromatiques.</p>
@@ -1214,15 +1214,19 @@
 <li>
 <p>Une source monochromatique :
     <script type="math/tex; mode=display">
-    I = 2I_0(1+\cos(k_0\delta))
+    I = 2I_0(1+\cos(k_0\delta)) = 2I_0 \left( 1+ \cos\left( \frac{\omega}{c}\delta  \right)  \right) 
     </script>
 </p>
 </li>
-<li>
-<p>Doublet spectral :</p>
+</ul>
+<details>
+<summary>Doublet spectral</summary>
+<ul>
+<li>La source est supposée être composée de 2 sources monochromatique, de pulsation différentes.</li>
+</ul>
 <p><img alt="image-20230406191246359" src="../assets/Doublet-Spectral.png" />
 <script type="math/tex; mode=display">
-\boxed{I(\delta)=4I_0\left(1+\cos\left(\frac{\omega_1+\omega_2}{2c}\delta\right)\;\cos\left(\frac{\omega_2-\omega_1}{2c}\delta\right)\right)}
+\boxed{I(\delta)=4I_0\left(1+\cos\left(\frac{\omega_1+\omega_2}{2c}\delta\right)\;\cos\left(\frac{\omega_2-\omega_1}{2c}\delta\right)\right) = 4I_0 \left( 1 + \cos \left( \frac{\omega_m}{c}\delta \right) \cos ( \frac{\Delta \omega}{2c} \delta) \right) }
 </script>
 </p>
 <blockquote>
@@ -1251,9 +1255,10 @@ I_\text{max} \approxeq 4I_0\left(1+\left|\cos\left(\frac{\Delta \omega}{2c}\righ
 </blockquote>
 </li>
 </ul>
-</li>
-</ul>
+</details>
 <h3 id="sources-reelles-a-spectre-continue">Sources réelles à spectre continue</h3>
+<details>
+<summary>Densité spectrale, largeur spectrale</summary>
 <ul>
 <li>
 <p>La puissance émise par la source dans <span class="arithmatex">\([\omega , \omega +\mathrm{d}\omega]\)</span>, avec <span class="arithmatex">\(\mathrm d\omega &gt;0\)</span> est : 
@@ -1275,35 +1280,43 @@ I_\text{max} \approxeq 4I_0\left(1+\left|\cos\left(\frac{\Delta \omega}{2c}\righ
     </script>
 </p>
 </li>
+</ul>
+</details>
+<details>
+<summary>Source de densité spectrale rectangulaire</summary>
+<ul>
 <li>
-<p>L'<strong>éclairement global</strong> est la somme des éclairements de chaque intervalle spectral : 
+<p>L'<strong>éclairement global</strong> est la somme des éclairements de chaque intervalle spectral, d'après la <strong>transformation de Fourier</strong> en cosinus : 
     <script type="math/tex; mode=display">
     \boxed{\begin{align*}
-    I(\delta) &= 2K \int_0^\infty B_\omega(\omega) \left(1+\cos\left(\frac{\omega}{c}\delta\right)\mathrm d\omega\right) \\ 
+    I(\delta) &= 2K \int_0^\infty B_\omega(\omega) \left(1+\cos\left(\frac{\omega}{c}\delta\right)\right)\mathrm d\omega \\ 
     &= 2I_0\left(1+\mathrm{sinc}\left(\frac{\Delta \omega}{2c}\delta\right)\cos\left(\frac{\omega_0}{c}\delta\right)\right)
     \end{align*}}
     </script>
 <img alt="image-20230406192830777" src="../assets/image-20230406192830777.png" /></p>
+</li>
+<li>
+<p>Contrast : 
+<script type="math/tex; mode=display">
+\boxed{\gamma = \left|\mathrm{sinc}\left(\frac{\Delta\omega}{2c}\delta\right)\right|}
+</script>
+</p>
+</li>
+</ul>
+</details>
+<details>
+<summary>Description spectrale et modèle des trains d'onde</summary>
 <ul>
-<li>Contrast : 
-  <script type="math/tex; mode=display">
-  \boxed{\gamma = \left|\mathrm{sinc}\left(\frac{\Delta\omega}{2c}\delta\right)\right|}
-  </script>
+<li>Pour une source réelle, les interférences ne sont visibles que si la différence de marche n'est pas trop grande. <ul>
+<li>Dans la description spectrale et dans la description par le modèle des trains d'ondes, on obtient respectivement :
+    <script type="math/tex; mode=display">
+    |\delta| \le \frac{2\pi c}{\Delta \omega},\; |\delta| \le l_c \implies l_c = \frac{2\pi c}{\Delta \omega}, \tau_c = \frac{2\pi}{\Delta \omega}  
+    </script>
 </li>
 </ul>
 </li>
 </ul>
-
-  <hr>
-<div class="md-source-file">
-  <small>
-    
-      Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2023</span>
-      
-    
-  </small>
-</div>
+</details>
 
 
 
