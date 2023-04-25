@@ -842,6 +842,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#systeme-de-deux-points-materiels" class="md-nav__link">
+    Système de deux points matériels
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1194,6 +1201,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#systeme-de-deux-points-materiels" class="md-nav__link">
+    Système de deux points matériels
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1418,6 +1432,147 @@
 </li>
 </ul>
 </details>
+<h2 id="systeme-de-deux-points-materiels">Système de deux points matériels</h2>
+<p><img alt="" src="../assets/mec07.png" /></p>
+<details>
+<summary>Référentiel barycentrique</summary>
+<ul>
+<li><strong>Définition</strong> : Référentiel d'origine <span class="arithmatex">\(G\)</span> barycentre en <em>translation</em> par rapport au référentiel galiléen <span class="arithmatex">\((R)\)</span>, on le note <span class="arithmatex">\((R^*)\)</span></li>
+</ul>
+</details>
+<details>
+<summary>Le barycentre</summary>
+<ul>
+<li>
+<p>Position du barycentre
+<script type="math/tex; mode=display">
+\sum_i m_i \overrightarrow{GM_i} = \overrightarrow{_0} \implies \begin{cases}
+    \overrightarrow{GM_1} = - \frac{m_2}{m_1+m_2}\overrightarrow{M_1M_2} \\ \overrightarrow{GM_2}= \frac{m_1}{m_1+m_2} \overrightarrow{M_1M_2}
+\end{cases}
+.</script>
+</p>
+</li>
+<li>
+<p>Mouvement du barycentre</p>
+<ul>
+<li>
+<p><strong>Théorème de Barycentre</strong> : Le barycentre est : soit au repos, soit en mouvement rectiligne uniforme dans <span class="arithmatex">\((R)\)</span>, comme ici <span class="arithmatex">\(\overrightarrow{F}_{\text{ext} \to \Sigma} = \overrightarrow{0}\)</span></p>
+<blockquote>
+<p>Preuve : 
+<script type="math/tex; mode=display">
+\left( \frac{\mathrm{d}\overrightarrow{p}_{(R)}}{\mathrm{d}t} \right) _{(R)} = \overrightarrow{F}  _{ext \to  \Sigma} \implies m_{\text{tot}} \overrightarrow{a_{(R)}}(G) = \overrightarrow{F}_{ext \to \Sigma}
+</script>
+</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+<details>
+<summary>Quantité de mouvement dans le référentiel barycentrique</summary>
+<ul>
+<li>
+<p>La <strong>quantité de mouvement totale</strong> dans le référentiel barycentrique est <strong>nulle</strong>.
+    <script type="math/tex; mode=display">
+    \overrightarrow{p^*} = m_1 \overrightarrow{v^*}(M_1) + m_2 \overrightarrow{v^*}(M_2) = \frac{\mathrm{d}}{\mathrm{d}t}(m_1 \overrightarrow{GM_1}+ m_2 \overrightarrow{GM_2}) = \overrightarrow{0}
+    .</script>
+</p>
+</li>
+<li>
+<p><strong>Loi de conservation</strong> : La <strong>quantité de mouvement totale</strong> est conservée.</p>
+<blockquote>
+<p>Preuve : Le système <span class="arithmatex">\((\Sigma)\)</span> est isolé, 
+    <script type="math/tex; mode=display">
+    \sum \overrightarrow{F_\text{ext}}= \overrightarrow{0} \implies \frac{\mathrm{d}\overrightarrow{p_\text{tot}}}{\mathrm{d}t} = \overrightarrow{0}
+    .</script>
+</p>
+</blockquote>
+</li>
+</ul>
+</details>
+<details>
+<summary>Moment cinétique dans le référentiel barycentrique</summary>
+<ul>
+<li>
+<p>Le moment cinétique du système est <strong>indépendant</strong> du point où on l'évalue.</p>
+<blockquote>
+<p>Preuve : 
+<script type="math/tex; mode=display">
+\overrightarrow{L}_{O',(R^*)}(\Sigma) = \overrightarrow{L}_{O,(R^*)} (\Sigma) + \sum_i \overrightarrow{O'O} \wedge m \overrightarrow{v}_{R^*}(M_i) \implies \overrightarrow{L}_{O',(R^*)}(\Sigma) = \overrightarrow{L}_{O,(R^*)}(\Sigma) = \overrightarrow{L^*}(\Sigma)
+.</script>
+</p>
+</blockquote>
+</li>
+<li>
+<p><strong>2nd Théorème de Kœnig</strong>
+    <script type="math/tex; mode=display">
+    \overrightarrow{L}_{O,(R)}(\Sigma) = \overrightarrow{L^*}(\Sigma) + \overrightarrow{OG} \wedge m_\text{totale} \overrightarrow{v}_R(G)
+    .</script>
+</p>
+<blockquote>
+<p>Démonstration :
+<script type="math/tex; mode=display">
+\overrightarrow{L}_{O,R}(\Sigma) = \overrightarrow{OM_1} \wedge m_1 \overrightarrow{v_R}(M_1) + \overrightarrow{OM_2} \wedge \overrightarrow{v_R}(M_2)  = (\overrightarrow{OG}  + \overrightarrow{GM_1}) \wedge m_1(\overrightarrow{v^*}(M_1) + \overrightarrow{v_R}(G)) + \cdots
+</script>
+</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Loi de conservation</strong> :
+    <script type="math/tex; mode=display">
+    \overrightarrow{M_O}\left( \overrightarrow{F}_{\text{ext}\to \Sigma} \right)  = \overrightarrow{0},\; \frac{\mathrm{d}\overrightarrow{L}_{O,(R)}(M)}{\mathrm{d}t} = \overrightarrow{0}
+    .</script>
+</p>
+</li>
+</ul>
+</details>
+<p><img alt="" src="../assets/mec08.png" /></p>
+<details>
+<summary>Réduction du problème à deux corps</summary>
+<ul>
+<li>
+<p><strong>Réduction du problème - masse réduite</strong> : 
+    <script type="math/tex; mode=display">
+    \mu \frac{\mathrm d^2\overrightarrow{M_1M_2}}{\mathrm{d}t^2} = \overrightarrow{F}_{(M_1 \to M_2)}
+    .</script> 
+    avec <span class="arithmatex">\(\mu = \frac{m_1m_2}{m_1+m_2}\)</span></p>
+<blockquote>
+<p>Preuve : D'après le PFD,
+<script type="math/tex; mode=display">
+\begin{cases}
+    m_1 \times  \frac{\mathrm{d}^2\overrightarrow{GM_1}}{\mathrm{d}t^2} &= \overrightarrow{F_{2 \to 1}} = - \overrightarrow{F_{1 \to 2}}\\ m_2 \times  \frac{\mathrm{d}^2\overrightarrow{GM_2}}{\mathrm{d}t^2} &= \overrightarrow{F_{1 \to 2}} 
+\end{cases} \implies \frac{\mathrm{d}^2 \overrightarrow{M_1M_2}}{\mathrm{d}t^2} = (\frac{1}{m_2}+\frac{1}{m_1}) \overrightarrow{F_{1 \to 2}}
+</script>
+</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Particule fictive</strong> :
+    Le problème à 2 corps <span class="arithmatex">\(\implies\)</span> le mouvement dans le référentiel barycentrique d'une particule unique, appelée <strong>particule fictive</strong>, de :</p>
+<ul>
+<li>position <span class="arithmatex">\(M\)</span>, relative à <span class="arithmatex">\(G\)</span>, avec <span class="arithmatex">\(\overrightarrow{GM} = \overrightarrow{M_1M_2}\)</span></li>
+<li>masse <span class="arithmatex">\(\mu = \frac{m_1m_2}{m_1+m_2}\)</span></li>
+<li>soumise à la <strong>force centrale</strong> <span class="arithmatex">\(\overrightarrow{F}_{(M_1 \to M_2)}\)</span>
+<script type="math/tex; mode=display">
+\mu \frac{\mathrm{d}^2 \overrightarrow{r}}{\mathrm{d}t^2} = \overrightarrow{F}
+.</script> 
+En connisant <span class="arithmatex">\(M\)</span>, on peut en déduire <span class="arithmatex">\(M_1\)</span> et <span class="arithmatex">\(M_2\)</span>.</li>
+</ul>
+</li>
+</ul>
+</details>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 

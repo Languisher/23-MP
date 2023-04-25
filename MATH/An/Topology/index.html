@@ -671,14 +671,21 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#suites-et-fonctions-continues" class="md-nav__link">
+    Suites et fonctions continues
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suites-et-fonctions-continues" class="md-nav__link">
-    Suites et fonctions continues
+  <a href="#ensembles-compacts" class="md-nav__link">
+    Ensembles compacts
   </a>
   
 </li>
@@ -1217,14 +1224,21 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#suites-et-fonctions-continues" class="md-nav__link">
+    Suites et fonctions continues
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#suites-et-fonctions-continues" class="md-nav__link">
-    Suites et fonctions continues
+  <a href="#ensembles-compacts" class="md-nav__link">
+    Ensembles compacts
   </a>
   
 </li>
@@ -1703,7 +1717,7 @@
 </li>
 </ul>
 </details>
-<h2 id="suites-et-fonctions-continues">Suites et fonctions continues</h2>
+<h3 id="suites-et-fonctions-continues">Suites et fonctions continues</h3>
 <details class="tip">
 <summary>Extraction d'une suite</summary>
 <p>Soit <span class="arithmatex">\((u_n)\)</span> une suite de <span class="arithmatex">\(E^\mathbb{N}\)</span>. On dit que <span class="arithmatex">\(\varphi\)</span> est une <strong>extraction</strong> et que la suite <span class="arithmatex">\((u_{\varphi(n)})\)</span> est <strong>extraite</strong> de <span class="arithmatex">\((u_n)\)</span>.</p>
@@ -1739,10 +1753,130 @@
 </li>
 </ul>
 </details>
+<details>
+<summary>Limite d'une fonction</summary>
+<ul>
+<li>Soit <span class="arithmatex">\((E,d), \; (E',d'),\; A\subset E,\; f: A \to E'\)</span>, <span class="arithmatex">\(f(x)\)</span> tend vers <span class="arithmatex">\(l'\)</span> quand <span class="arithmatex">\(x\)</span> tend vers <span class="arithmatex">\(a\)</span> :
+    <script type="math/tex; mode=display">
+    f(x)\underset{x \buildrel d \over\to a}{\buildrel d'\over\longrightarrow} l' \iff \forall \varepsilon >0, \exists \eta \in \mathbb{R}_+^*,\; \forall x\in A,\; [d(x,a) \le \eta] \implies [d'(f(x), l') \le  \varepsilon] 
+    .</script>
+</li>
+<li>
+<p>On le dit alors que <span class="arithmatex">\(l'\)</span> est la limite de <span class="arithmatex">\(f\)</span> en <span class="arithmatex">\(a\)</span>.</p>
+</li>
+<li>
+<p><strong>Caractérisation séquentielle des limites</strong>
+    <script type="math/tex; mode=display">
+    f(x)\underset{x \buildrel d \over\to a}{\buildrel d'\over\longrightarrow} l' \iff \left[\forall (x_n)\in A^\mathbb{N},\; \left[ x_n \underset{n \to +\infty}{\buildrel d \over \longrightarrow}a \right]\implies \left[ f(x_n) \underset{n \to +\infty}{\buildrel d' \over \longrightarrow} l'\right]\right] 
+    </script>
+</p>
+<blockquote>
+<p>Preuve : <span class="arithmatex">\((\impliedby)\)</span> Contraposition par <span class="arithmatex">\(\exists (x_n),\; d(x_n,a) \le 1/(n+1), d'(f(x_n,l') &gt; \varepsilon\)</span></p>
+</blockquote>
+</li>
+</ul>
+</details>
+<details>
+<summary>Continue d'une fonction</summary>
+<ul>
+<li>
+<p><strong>Fonction continue en un point</strong> <span class="arithmatex">\(a\in E\)</span>, si : 
+    <script type="math/tex; mode=display">
+    f(x)\underset{x \buildrel d \over\to a}{\buildrel d'\over\longrightarrow} f(a)
+    .</script>
+</p>
+</li>
+<li>
+<p><strong>Fonction continue sur <span class="arithmatex">\(E\)</span></strong>, si : elle est continue pour n'importe quel point <span class="arithmatex">\(a\in E\)</span>.</p>
+</li>
+<li>
+<p><strong>Fonction uniformément continue sur <span class="arithmatex">\(E\)</span></strong>, si :
+    <script type="math/tex; mode=display">
+    \forall \varepsilon >0, \exists \eta \in \mathbb{R}_+^*,\; \forall (x,y)\in A,\; [d(x,y) \le \eta] \implies [d'(f(x), f(y)) \le  \varepsilon] 
+    .</script>
+</p>
+</li>
+<li>
+<p><strong>Fonction lipschitizienne sur <span class="arithmatex">\(E\)</span></strong>
+    <script type="math/tex; mode=display">
+    \exists k \in \mathbb{R}_+^*,\; \forall (x,y)\in E^2, \; d'(f(x),f(y)) \le k(d(x,y))
+    .</script>
+</p>
+<ul>
+<li>Lorsque <span class="arithmatex">\(k \in [0, 1[\)</span>, <span class="arithmatex">\(f\)</span> est <strong>contractante</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Propriété</strong> : 
+    <script type="math/tex; mode=display">
+    [f \text{ lipschitzienne}] \iff [f \text{ uniformement continue}] \iff [f \text{ continue}]
+    .</script>
+</p>
+</li>
+</ul>
+<p><mark>Caractérisation topologique de la continuité</mark></p>
+<ul>
+<li>
+<p><strong>Fonction continue en un point <span class="arithmatex">\(a\)</span></strong> :
+    <script type="math/tex; mode=display">
+    [f \text{ est continue en } a\in E] \iff [\forall V \in \mathcal V(f(a)), \; f^{-1}(V) \in \mathcal{V}(a)]
+    .</script>
+</p>
+</li>
+<li>
+<p><strong>Fonction continue sur <span class="arithmatex">\(E\)</span></strong> : </p>
+<ul>
+<li>L'image réciproque d'un <strong>ouvert</strong> q.q. de <span class="arithmatex">\(E'\)</span> est un <strong>ouvert</strong> de <span class="arithmatex">\(E\)</span></li>
+<li>L'image réciproque d'un <strong>fermé</strong> q.q. de <span class="arithmatex">\(E'\)</span> est un <strong>fermé</strong> de <span class="arithmatex">\(E\)</span>
+<script type="math/tex; mode=display">
+[f \text{ continue sur }E] \iff \begin{cases}
+\forall O' \text{ ouvert de } E', \; f^{-1} (O') \text{ ouvert de } E \\
+\forall  F' \text{ ferme de } E',\; f^{-1}(F') \text{ ferme de } E
+\end{cases}
+.</script>
+</li>
+</ul>
+</li>
+<li>Remarque : L'image directe d'un ouvert n'est pas forcément un ouvert.</li>
+<li>Attention : La notion d'ouvert, de fermé, et de voisinage est relative à <span class="arithmatex">\(E\)</span>.</li>
+</ul>
+<blockquote>
+<p>Exemple : <span class="arithmatex">\(f:x \mapsto x^2\)</span>, on a <span class="arithmatex">\([0, 4]\)</span> correspond à <span class="arithmatex">\([-2, 2]\)</span></p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Composées de fonctions continues</strong> : Soit <span class="arithmatex">\(f: (E,d) \to  (E',d'),\; g':(E',d') \to (E", d")\)</span></p>
+<ul>
+<li><span class="arithmatex">\(g \circ f\)</span> continue en <span class="arithmatex">\(a\)</span>, si <span class="arithmatex">\(f\)</span> continue en <span class="arithmatex">\(a\)</span> et <span class="arithmatex">\(g\)</span> continue en <span class="arithmatex">\(f(a)\)</span></li>
+<li><span class="arithmatex">\(g \circ f\)</span> continue sur <span class="arithmatex">\(E\)</span>, si <span class="arithmatex">\(f\)</span> continue sur <span class="arithmatex">\(E\)</span>, et <span class="arithmatex">\(g\)</span> continue sur <span class="arithmatex">\(E'\)</span></li>
+</ul>
+</li>
+<li>
+<p><strong>Fonctions continues sur une partie dense</strong> :
+    Soit <span class="arithmatex">\(A\)</span> une partie dense de <span class="arithmatex">\(E\)</span>, <span class="arithmatex">\(f\)</span> et <span class="arithmatex">\(g\)</span> des fonctions continues de <span class="arithmatex">\(E\)</span> dans <span class="arithmatex">\(E'\)</span> qui coïncident sur <span class="arithmatex">\(A\)</span> :
+    <script type="math/tex; mode=display">
+    f_{|A} = g_{|A} \implies f=g 
+    .</script>
+</p>
+</li>
+</ul>
+</details>
+<h2 id="ensembles-compacts">Ensembles compacts</h2>
 <h2 id="references">Références</h2>
 <ul>
 <li><a href="https://www.mp2-chato.fr/wp-content/uploads/2020/02/Methodes-topos-2.pdf">Méthodes en topologie</a></li>
 </ul>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2023</span>
+      
+    
+  </small>
+</div>
 
 
 
