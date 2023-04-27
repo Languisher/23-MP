@@ -865,14 +865,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#point-materiel-soumis-a-une-force-centrale" class="md-nav__link">
-    Point matériel soumis à une force centrale
+  <a href="#force-centrale" class="md-nav__link">
+    Force centrale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-centrale-conservative" class="md-nav__link">
+    Force centrale conservative
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    ??
+  </a>
   
 </li>
       
@@ -1244,14 +1258,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#point-materiel-soumis-a-une-force-centrale" class="md-nav__link">
-    Point matériel soumis à une force centrale
+  <a href="#force-centrale" class="md-nav__link">
+    Force centrale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force-centrale-conservative" class="md-nav__link">
+    Force centrale conservative
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    ??
+  </a>
   
 </li>
       
@@ -1272,7 +1300,7 @@
 
 <h1 id="theoremes-generaux-de-la-dynamique">Théorèmes Généraux de la Dynamique</h1>
 <blockquote>
-<p>26 Avril 2023</p>
+<p>27 Avril 2023</p>
 </blockquote>
 <details class="tip">
 <summary>Coordonnées Cylindriques</summary>
@@ -1448,13 +1476,13 @@
 \frac{\mathrm{d}}{\mathrm{d}t}(\overrightarrow{a}\wedge \overrightarrow{b}) = \frac{\mathrm{d}}{\mathrm{d}t} \overrightarrow{a} \wedge \overrightarrow{b} + \overrightarrow a \wedge \frac{\mathrm{d}}{\mathrm{d}t} \overrightarrow b
 .\]</div>
 </details>
-<details>
+<details class="warning">
 <summary>TMC : Théorème du moment cinétique</summary>
 <ul>
 <li>
 <p><strong>TMC : Théorème du moment cinétique</strong> 角动量定理 : Dans un référentiel galiléen, la dérivée du <em>moment cinétique</em> d'un système est égale à la somme des <em>moments des forces</em> qui s'appliquent à ce système :
     <script type="math/tex; mode=display">
-    \frac{\mathrm{d}\overrightarrow{L}_{O,(R)}(\Sigma)}{\mathrm{d}t} = \overrightarrow{M_O}(\overrightarrow{F}_{\text{ext} \to \Sigma})
+    \frac{\mathrm{d}\overrightarrow{L}_{O,(R)}(\Sigma)}{\mathrm{d}t} = \overrightarrow{M_O}(\overrightarrow{F}_{\text{ext} \to \Sigma}) = \sum_i \overrightarrow{OM_i} \wedge \overrightarrow{F}_\text{i, ext}
     </script>
 </p>
 <blockquote>
@@ -1462,23 +1490,9 @@
 </blockquote>
 </li>
 <li>
-<p>Exemple : <img alt="" src="../assets/mec05.png" /> </p>
+<p><mark>TMC est appliqué par rapport à point <span class="arithmatex">\(A\)</span> fixe ou l'axe <span class="arithmatex">\(Oz\)</span> fixe. (Remplace <span class="arithmatex">\(O\)</span> par <span class="arithmatex">\(\Delta\)</span>)</mark></p>
 </li>
-</ul>
-</details>
-<details>
-<summary>Cas de conservation du moment cinétique</summary>
-<ul>
-<li>
-<p>On obtient 
-    <script type="math/tex; mode=display">
-    \overrightarrow{L_O} = \overrightarrow{\text{cte}} = m r^2 \dot{\theta} \overrightarrow{e_z}
-    .</script>
-</p>
-</li>
-<li>
-<p>Exemple : 因万有引力围绕恒星公转，万有引力力矩为0，因此角动量守恒，对应着空间旋转不变性。</p>
-</li>
+<li>Exemple : <img alt="" src="../assets/mec05.png" /> </li>
 </ul>
 </details>
 <h2 id="systeme-de-deux-points-materiels">Système de deux points matériels</h2>
@@ -1486,7 +1500,7 @@
 <details>
 <summary>Référentiel barycentrique</summary>
 <ul>
-<li><strong>Définition</strong> : Référentiel d'origine <span class="arithmatex">\(G\)</span> barycentre en <em>translation</em> par rapport au référentiel galiléen <span class="arithmatex">\((R)\)</span>, on le note <span class="arithmatex">\((R^*)\)</span></li>
+<li><strong>Définition</strong> : 质心静止的平动参考系 Référentiel d'origine <span class="arithmatex">\(G\)</span> barycentre en <em>translation</em> par rapport au référentiel galiléen <span class="arithmatex">\((R)\)</span>, on le note <span class="arithmatex">\((R^*)\)</span></li>
 </ul>
 </details>
 <details>
@@ -1543,8 +1557,8 @@
 </li>
 </ul>
 </details>
-<details>
-<summary>Moment cinétique dans le référentiel barycentrique</summary>
+<details class="warning">
+<summary>Théorèmes de Koenig, moment cinétique du système</summary>
 <ul>
 <li>
 <p>Le moment cinétique du système est <strong>indépendant</strong> du point où on l'évalue.</p>
@@ -1575,6 +1589,13 @@
 <p><strong>Loi de conservation</strong> :
     <script type="math/tex; mode=display">
     \overrightarrow{M_O}\left( \overrightarrow{F}_{\text{ext}\to \Sigma} \right)  = \overrightarrow{0},\; \frac{\mathrm{d}\overrightarrow{L}_{O,(R)}(M)}{\mathrm{d}t} = \overrightarrow{0}
+    .</script>
+</p>
+</li>
+<li>
+<p><strong>1er Théorème de Koenig</strong> :
+    <script type="math/tex; mode=display">
+    E_c = E_c^* + \frac{1}{2}M_\text{tot} v^2(G)
     .</script>
 </p>
 </li>
@@ -1618,9 +1639,9 @@ En connisant <span class="arithmatex">\(M\)</span>, on peut en déduire <span cl
 </li>
 </ul>
 </details>
-<h3 id="point-materiel-soumis-a-une-force-centrale">Point matériel soumis à une force centrale</h3>
+<h3 id="force-centrale">Force centrale</h3>
 <details>
-<summary>Force centrale, Force centrale conservative</summary>
+<summary>Force centrale</summary>
 <ul>
 <li>
 <p><strong>Définition - Force centrale</strong> : C'est une force toujours dirigée vers le même point (noté <span class="arithmatex">\(O\)</span>)
@@ -1636,59 +1657,34 @@ En connisant <span class="arithmatex">\(M\)</span>, on peut en déduire <span cl
     .</script>
 </p>
 </li>
+</ul>
+</details>
+<p><img alt="" src="../assets/mec10.png" /></p>
+<details class="warning">
+<summary>Mouvement à force centrale, Loi des aires</summary>
+<ul>
 <li>
-<p><strong>Définition - Force centrale conservative</strong> : Une force est conservative si : on peut lui associer une énergie potentielle qui ne dépend que <span class="arithmatex">\(r\)</span>, noté <span class="arithmatex">\(E_p(r)\)</span>
+<p>Le moment cinétique d'un point matériel dans un champ de force central est un vecteur constant.</p>
+</li>
+<li>
+<p><strong>Conservation du moment cinétique</strong>
     <script type="math/tex; mode=display">
-    \overrightarrow{F}(M).\mathrm{d}\overrightarrow{OM} = - \mathrm{d}E_p = \delta W( \overrightarrow{F}), \quad \overrightarrow{F}(M) = - \overrightarrow{grad}(E_p(M))
+    \overrightarrow{L_O} = \overrightarrow{\text{cte}} = m r^2 \dot{\theta} \overrightarrow{e_z}
     .</script>
 </p>
 </li>
 </ul>
 <blockquote>
-<p>Exemple : 
-    <script type="math/tex; mode=display">
-    \overrightarrow{F_{A/B}} =  - G \frac{m_Am_B}{r^2} \overrightarrow{u} \implies E_{p, grav} = - G \frac{m_Am_B}{r} = - \frac{K}{r}
-    .</script>
-</p>
-</blockquote>
-</details>
-<details>
-<summary>Énergie potentielle effective</summary>
-<ul>
-<li>Pour une force conservative, l'<strong>énergie potentiell effective</strong> :
-    <script type="math/tex; mode=display">
-    E_\text{p, eff}(r) = E_p(r) + \frac{L_O^2}{2mr^2}
-    .</script>
-<blockquote>
-<p>Preuve :
-    <script type="math/tex; mode=display">
-    \begin{align*}
-        \quad &\text{soumise a une force conservative, l'energie mecanique est constante} \\
-        \iff &E_m = \frac{1}{2}mv_{(R)} ^2 (M) + E_p(r), \; v_{(R)}^2(M) = \dot r^2 + r^2 \dot \theta^2, \; L_O = mr^\dot \theta \\ 
-        \iff &E_m = \frac{1}{2}m\dot r^2 + \frac{L_O^2}{2mr^2}+ E_p(r) = \frac{1}{2}m\dot r^2 + E_\text{p, eff}(r) \\
-        \iff &E_\text{p, eff}(r) = E_p(r) + \frac{L_O^2}{2mr^2}
-    \end{align*}
-    .</script>
-</p>
-</blockquote>
-</li>
-</ul>
-</details>
-<details>
-<summary>Mouvement plan et constante des aires</summary>
-<ul>
-<li>Le moment cinétique d'un point matériel dans un champ de force central est un vecteur constant.</li>
-<li>Le mouvement vérifie donc la condition : 
+<p>Exemple : 因万有引力围绕恒星公转，万有引力力矩为0，因此角动量守恒，对应着空间旋转不变性。
+- Le mouvement vérifie donc la condition : 
     <script type="math/tex; mode=display">
     r^2 \dot \theta = \text{cte}
     .</script>
-</li>
-</ul>
-<blockquote>
+</p>
 <p>Preuve : Conservation de <span class="arithmatex">\(\overrightarrow{L_O} = \text{cte} = \overrightarrow{OM} \wedge m \overrightarrow{v} = r \overrightarrow{e_r} \wedge m(\dot{r} \overrightarrow{e_r}+ r\dot{\theta} \overrightarrow{e_\theta})\)</span></p>
 </blockquote>
 <ul>
-<li><span class="arithmatex">\(\dot\theta\)</span> garde un signe constant.</li>
+<li><span class="arithmatex">\(\dot\theta\)</span> garde un signe constant. Donc, dans un champe de force centrale, un point matérial décrit une <strong>trajectoire plane</strong>.</li>
 <li>
 <p><strong>Loi des aires</strong> :
     <script type="math/tex; mode=display">
@@ -1701,6 +1697,71 @@ En connisant <span class="arithmatex">\(M\)</span>, on peut en déduire <span cl
 </li>
 </ul>
 </details>
+<h3 id="force-centrale-conservative">Force centrale conservative</h3>
+<details>
+<summary>Force centrale conservative</summary>
+<ul>
+<li><strong>Définition - Force centrale conservative</strong> : Une force est conservative si : on peut lui associer une énergie potentielle qui ne dépend que <span class="arithmatex">\(r\)</span>, noté <span class="arithmatex">\(E_p(r)\)</span>
+    <script type="math/tex; mode=display">
+    \overrightarrow{F}(M).\mathrm{d}\overrightarrow{OM} = - \mathrm{d}E_p = \delta W( \overrightarrow{F}), \quad \overrightarrow{F}(M) = - \overrightarrow{grad}(E_p(M))
+    .</script>
+</li>
+</ul>
+<blockquote>
+<p>Exemple : 
+    <script type="math/tex; mode=display">
+    \overrightarrow{F_{A/B}} =  - G \frac{m_Am_B}{r^2} \overrightarrow{u} \implies E_{p, grav} = - G \frac{m_Am_B}{r} = - \frac{K}{r}
+    .</script>
+</p>
+</blockquote>
+</details>
+<p><img alt="" src="../assets/mec11.jpeg" /></p>
+<details>
+<summary>Énergie potentielle effective</summary>
+<ul>
+<li>Pour une force conservative, l'<strong>énergie potentielle effective</strong> :
+    <script type="math/tex; mode=display">
+    E_\text{p, eff}(r) = E_p(r) + \frac{L_O^2}{2mr^2} = E_p(r) + \frac{mC^2}{2r^2}
+    .</script> 
+    donc
+    <script type="math/tex; mode=display">
+    E_m = E_\text{p, eff}(r) + \frac{1}{2}m\dot{r}^2
+    .</script>
+<blockquote>
+<p>Preuve :
+    <script type="math/tex; mode=display">
+    \begin{align*}
+        \quad &\text{Soumise a une force conservative, l'energie mecanique est constante} \\
+        \iff &E_m = \frac{1}{2}mv_{(R)} ^2 (M) + E_p(r), \; v_{(R)}^2(M) = \dot r^2 + r^2 \dot \theta^2, \; L_O = mr^2\dot \theta \\ 
+        \iff &E_m = \frac{1}{2}m\dot r^2 + \frac{L_O^2}{2mr^2}+ E_p(r) = \frac{1}{2}m\dot r^2 + E_\text{p, eff}(r) \\
+        \iff &E_\text{p, eff}(r) = E_p(r) + \frac{L_O^2}{2mr^2}
+    \end{align*}
+    .</script>
+</p>
+</blockquote>
+</li>
+</ul>
+</details>
+<p><img alt="" src="http://www.astrosurf.com/luxorion/Physique/lois-kepler.jpg" /></p>
+<details>
+<summary>Lois de Kepler</summary>
+<ul>
+<li><strong>1ère loi : loi des orbites</strong>
+    Un satellite orbitant autour d'un astre suit une trajectoir <strong>conique</strong>, soit <strong>parabolique</strong>, <strong>hyperbolique</strong> ou <strong>elliptique</strong> dont l'astre occupe l'un des foyers.<ul>
+<li><span class="arithmatex">\(E_m &lt;0\)</span>, ellipse</li>
+<li><span class="arithmatex">\(E_m&gt;0\)</span>, hyperbole</li>
+<li><span class="arithmatex">\(E_m = 0\)</span>, parabole</li>
+</ul>
+</li>
+<li><strong>2ème loi : loi des aires</strong></li>
+<li><strong>3ème loi : loi des périodes</strong>
+    <script type="math/tex; mode=display">
+    \frac{T^2}{a^3} = \frac{4\pi^2}{GM}
+    .</script>
+</li>
+</ul>
+</details>
+<h2 id="_1">??</h2>
 <details>
 <summary>Formule de Binet</summary>
 <ul>
@@ -1723,26 +1784,6 @@ En connisant <span class="arithmatex">\(M\)</span>, on peut en déduire <span cl
     .</script>
 </p>
 </blockquote>
-</details>
-<details>
-<summary>Première vitesse cosmique</summary>
-<ul>
-<li>Cela vaut :
-    <script type="math/tex; mode=display">
-    v = \sqrt{\frac{GM}{r}} 
-    .</script>
-</li>
-</ul>
-<blockquote>
-<p>Preuve : 
-    <script type="math/tex; mode=display">
-    \overrightarrow{F} = m \overrightarrow{a} \implies m \times \frac{v^2}{R_T} \overrightarrow{e_r} = \frac{GMm}{R_T^2}\overrightarrow{e_r}
-    </script>
-</p>
-</blockquote>
-<ul>
-<li>Application Numérique : <span class="arithmatex">\(v = 7,9 km.s^{-1}\)</span></li>
-</ul>
 </details>
 <details>
 <summary>Énergie Mécanique totale</summary>
