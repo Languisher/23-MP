@@ -19,7 +19,7 @@
     
     
       
-        <title>Théorèmes Généraux de la Dynamique - Brandon Lin</title>
+        <title>Moment Cinétique, Force Centrale - Brandon Lin</title>
       
     
     
@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#theoremes-generaux-de-la-dynamique" class="md-skip">
+        <a href="#moment-cinetique-force-centrale" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Théorèmes Généraux de la Dynamique
+              Moment Cinétique, Force Centrale
             
           </span>
         </div>
@@ -799,12 +799,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Théorèmes Généraux de la Dynamique
+          Moment Cinétique, Force Centrale
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Théorèmes Généraux de la Dynamique
+        Moment Cinétique, Force Centrale
       </a>
       
         
@@ -840,6 +840,13 @@
           <li class="md-nav__item">
   <a href="#moment-cinetique" class="md-nav__link">
     Moment cinétique
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#equilibre" class="md-nav__link">
+    Équilibre
   </a>
   
 </li>
@@ -880,13 +887,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    ??
-  </a>
   
 </li>
       
@@ -1237,6 +1237,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#equilibre" class="md-nav__link">
+    Équilibre
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1276,13 +1283,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    ??
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1298,7 +1298,7 @@
                   
 
 
-<h1 id="theoremes-generaux-de-la-dynamique">Théorèmes Généraux de la Dynamique</h1>
+<h1 id="moment-cinetique-force-centrale">Moment Cinétique, Force Centrale</h1>
 <blockquote>
 <p>27 Avril 2023</p>
 </blockquote>
@@ -1312,7 +1312,15 @@
 .\end{align*}
 \]</div>
 </details>
+<details class="tip">
+<summary>右手定则判定叉乘方向</summary>
+<p><img alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXIODaGJgWJoJsiKj1jycekZbZNA1ybIaaKJOmjb2Jl1ki-Qob9Eexb758A4Yg45dtXFg&amp;usqp=CAU" /></p>
+</details>
 <h2 id="theoreme-du-moment-cinetique">Théorème du Moment Cinétique</h2>
+<details class="quote">
+<summary>Exercices</summary>
+<p><a href="../assets/exo%201.pdf">exo 1</a></p>
+</details>
 <h3 id="actions-subies">Actions subies</h3>
 <details class="note">
 <summary>Moment</summary>
@@ -1393,9 +1401,11 @@
     .</script>
 </p>
 </li>
-<li>
-<p><strong>Bras de levier</strong> 杠杆力臂
-    <img alt="" src="../assets/mec02.png" /> </p>
+</ul>
+</details>
+<details class="warning">
+<summary>Bras de levier 杠杆力臂</summary>
+<p><img alt="" src="../assets/mec02.png" /> </p>
 <ul>
 <li>
 <p>Pour une force <span class="arithmatex">\(\overrightarrow{F}_{(M)}\)</span> <em>perpendiculaire</em> à l'axe <span class="arithmatex">\(\Delta\)</span> :
@@ -1408,8 +1418,6 @@
 </blockquote>
 </li>
 </ul>
-</li>
-</ul>
 </details>
 <details class="couples">
 <summary>Couples</summary>
@@ -1418,57 +1426,13 @@
 <img alt="" src="../assets/mec06.png" /></li>
 </ul>
 </details>
-<details class="notes">
-<summary>Équilibre d'un système</summary>
-<ul>
-<li>
-<p>Il faut que </p>
-<ol>
-<li>La <em>résultante des forces</em> extérieures qui agissent sur le système soit nulle </li>
-<li>Le <em>moment</em> résultant de ces forces soit nul également.</li>
-</ol>
-</li>
-<li>
-<p>Ce sont les conditions <em>nécessaires</em>, mais pas suffisantes. Il faut aussi que les vitesses initiales soient aussi nulles.</p>
-</li>
-</ul>
-</details>
 <h3 id="moment-cinetique">Moment cinétique</h3>
 <details class="notes">
 <summary>Moment cinétique</summary>
-<ul>
-<li>Pour un point matérial <span class="arithmatex">\(M\)</span>, le <strong>Moment Cinétique d'un point matérial</strong> relativement à <span class="arithmatex">\(O\)</span> est :
-    <script type="math/tex; mode=display">
-    \overrightarrow{L}_O(M) = \overrightarrow{OM} \wedge \overrightarrow{p}(M) = \overrightarrow{OM} \wedge m\overrightarrow{v}_R(M)
-    .</script>
-<img alt="" src="../assets/mec04.png" /></li>
-<li>
-<p>Unité SI : <span class="arithmatex">\(kg.m^2.s^{-1}\)</span></p>
-</li>
-<li>
-<p>Cas particuliers :</p>
-<ul>
-<li>Mouvement rectiligne passant par <span class="arithmatex">\(O\)</span> : <span class="arithmatex">\(\overrightarrow{L}_{O}(M) = \overrightarrow{0}\)</span></li>
-<li>
-<p>Mouvement circulaire de rayon <span class="arithmatex">\(R\)</span> et de centre <span class="arithmatex">\(O\)</span> : 
-    <script type="math/tex; mode=display">
-    \overrightarrow{L}_{O} = mR^2 \frac{\mathrm{d}\theta}{\mathrm{d}t}\overrightarrow{e_z}
-    .</script>
-</p>
+<p><img alt="" src="../assets/mec14.png" /></p>
 <blockquote>
-<p>Preuve : <img alt="" src="../assets/mec03.png" /></p>
+<p>Exemple : <img alt="" src="../assets/mec03.png" /></p>
 </blockquote>
-</li>
-</ul>
-</li>
-<li>
-<p>Moment cinétique par rapport à un axe orienté <span class="arithmatex">\(\Delta = (O,\overrightarrow{u_\Delta})\)</span> :
-    <script type="math/tex; mode=display">
-    L_\Delta = \overrightarrow{L_O}. \overrightarrow{u_\Delta} = m(\overrightarrow{OM}\wedge \overrightarrow{v}).\overrightarrow{u_\Delta}
-    .</script>
-</p>
-</li>
-</ul>
 </details>
 <details class="tip">
 <summary>les maths ...</summary>
@@ -1493,6 +1457,22 @@
 <p><mark>TMC est appliqué par rapport à point <span class="arithmatex">\(A\)</span> fixe ou l'axe <span class="arithmatex">\(Oz\)</span> fixe. (Remplace <span class="arithmatex">\(O\)</span> par <span class="arithmatex">\(\Delta\)</span>)</mark></p>
 </li>
 <li>Exemple : <img alt="" src="../assets/mec05.png" /> </li>
+</ul>
+</details>
+<h3 id="equilibre">Équilibre</h3>
+<details class="warning">
+<summary>Équilibre d'un système</summary>
+<ul>
+<li>
+<p>Il faut que </p>
+<ol>
+<li>La <em>résultante des forces</em> extérieures qui agissent sur le système soit nulle </li>
+<li>Le <em>moment</em> résultant de ces forces soit nul également.</li>
+</ol>
+</li>
+<li>
+<p>Ce sont les conditions <em>nécessaires</em>, mais pas suffisantes. Il faut aussi que les vitesses initiales soient aussi nulles.</p>
+</li>
 </ul>
 </details>
 <h2 id="systeme-de-deux-points-materiels">Système de deux points matériels</h2>
@@ -1701,25 +1681,48 @@ En connisant <span class="arithmatex">\(M\)</span>, on peut en déduire <span cl
 <details>
 <summary>Force centrale conservative</summary>
 <ul>
-<li><strong>Définition - Force centrale conservative</strong> : Une force est conservative si : on peut lui associer une énergie potentielle qui ne dépend que <span class="arithmatex">\(r\)</span>, noté <span class="arithmatex">\(E_p(r)\)</span>
+<li>
+<p><strong>Définition - Force centrale conservative</strong> : une force est dite centrale quand la droite support de cette force passe constamment par un point fixe <span class="arithmatex">\(O\)</span>. Si l'on repère la position de <span class="arithmatex">\(M\)</span> à l'aide d'un système de coordonnées sphériques d'origine <span class="arithmatex">\(O\)</span>, on a
     <script type="math/tex; mode=display">
-    \overrightarrow{F}(M).\mathrm{d}\overrightarrow{OM} = - \mathrm{d}E_p = \delta W( \overrightarrow{F}), \quad \overrightarrow{F}(M) = - \overrightarrow{grad}(E_p(M))
+    \overrightarrow{F} = F(r, \theta, \varphi) \overrightarrow{u_r}  
     .</script>
+</p>
+<p>La force est <strong>conservative</strong> alors <span class="arithmatex">\(F(r,\theta,\varphi)\)</span> ne peut dépendre que de <span class="arithmatex">\(r\)</span>.</p>
+</li>
+<li>
+<p>Une force est conservative si : on peut lui associer une énergie potentielle qui ne dépend que <span class="arithmatex">\(r\)</span>, noté <span class="arithmatex">\(E_p(r)\)</span>
+    <script type="math/tex; mode=display">
+    \mathrm{d}E_p = - {F}{(r)}. \mathrm{d}r \quad \overrightarrow{F}(M) = - \overrightarrow{grad}(E_p(M))
+    .</script>
+</p>
 </li>
 </ul>
 <blockquote>
-<p>Exemple : 
+<p>Exemple : Interaction gravitationnelle
     <script type="math/tex; mode=display">
     \overrightarrow{F_{A/B}} =  - G \frac{m_Am_B}{r^2} \overrightarrow{u} \implies E_{p, grav} = - G \frac{m_Am_B}{r} = - \frac{K}{r}
     .</script>
 </p>
+<p>Exemple : Interaction coulombienne
+    <script type="math/tex; mode=display">
+    \overrightarrow{F_{12}} = - \frac{q_1q_2}{4 \pi\varepsilon_0 r^2} \overrightarrow{u_r}, \quad E_p = \frac{q_1q_2}{4\pi \varepsilon r} + \mathrm{cte}
+    .</script>
+</p>
 </blockquote>
 </details>
-<p><img alt="" src="../assets/mec11.jpeg" /></p>
 <details>
 <summary>Énergie potentielle effective</summary>
+<p><img alt="" src="../assets/mec11.jpeg" /></p>
 <ul>
-<li>Pour une force conservative, l'<strong>énergie potentielle effective</strong> :
+<li>
+<p>Pour une force conservative, l'énergie mécanique se conserve :
+    <script type="math/tex; mode=display">
+    \frac{1}{2} mv^2 + E_p(r) = E_m = \mathrm{cte}
+    .</script>
+</p>
+</li>
+<li>
+<p>Pour une force conservative, l'<strong>énergie potentielle effective</strong> :
     <script type="math/tex; mode=display">
     E_\text{p, eff}(r) = E_p(r) + \frac{L_O^2}{2mr^2} = E_p(r) + \frac{mC^2}{2r^2}
     .</script> 
@@ -1727,6 +1730,7 @@ En connisant <span class="arithmatex">\(M\)</span>, on peut en déduire <span cl
     <script type="math/tex; mode=display">
     E_m = E_\text{p, eff}(r) + \frac{1}{2}m\dot{r}^2
     .</script>
+</p>
 <blockquote>
 <p>Preuve :
     <script type="math/tex; mode=display">
@@ -1743,10 +1747,11 @@ En connisant <span class="arithmatex">\(M\)</span>, on peut en déduire <span cl
 </ul>
 </details>
 <p><img alt="" src="http://www.astrosurf.com/luxorion/Physique/lois-kepler.jpg" /></p>
-<details>
-<summary>Lois de Kepler</summary>
+<details class="warning">
+<summary>Lois de Kepler 开普勒三大定律</summary>
 <ul>
 <li><strong>1ère loi : loi des orbites</strong>
+    <img alt="" src="../assets/mec13.png" />
     Un satellite orbitant autour d'un astre suit une trajectoir <strong>conique</strong>, soit <strong>parabolique</strong>, <strong>hyperbolique</strong> ou <strong>elliptique</strong> dont l'astre occupe l'un des foyers.<ul>
 <li><span class="arithmatex">\(E_m &lt;0\)</span>, ellipse</li>
 <li><span class="arithmatex">\(E_m&gt;0\)</span>, hyperbole</li>
@@ -1760,40 +1765,16 @@ En connisant <span class="arithmatex">\(M\)</span>, on peut en déduire <span cl
     .</script>
 </li>
 </ul>
-</details>
-<h2 id="_1">??</h2>
-<details>
-<summary>Formule de Binet</summary>
-<ul>
-<li><strong>Théorème</strong> :
-    <script type="math/tex; mode=display">
-    \begin{align*}
-    \overrightarrow{v} &= -C \frac{\mathrm{d}u}{\mathrm{d}\theta} \overrightarrow{e_r}+ Cu \overrightarrow{e_\theta} \\
-    \overrightarrow{a_r} &= -C^2 u^2 \left( \frac{\mathrm{d}^2u}{\mathrm{d}\theta^2} + u \right) \overrightarrow{e_r}
-    .\end{align*}
-    .</script>
-</li>
-</ul>
 <blockquote>
 <p>Preuve : 
     <script type="math/tex; mode=display">
     \begin{align*}
-    \dot{r} &= \frac{\mathrm{d}r}{\mathrm{d}t} = \frac{\mathrm{d}r}{\mathrm{d}v} \times  \frac{\mathrm{d}v}{\mathrm{d}\theta} \times \frac{\mathrm{d}\theta}{\mathrm{d}t} = -r^2 \times \frac{\mathrm{d}u}{\mathrm{d}\theta}.\theta \\
-    \ddot{r} &= \frac{\mathrm{d}\dot{r}}{\mathrm{d}t} = - C \frac{\mathrm{d}}{\mathrm{d}t} \left( \frac{\mathrm{d}u}{\mathrm{d}\theta} \right)  = -C \frac{\mathrm{d}^2u}{\mathrm{d}\theta^2} \times  \frac{\mathrm{d}\theta}{\mathrm{d}t} = - C^2u^2 \frac{\mathrm{d}^2 u}{\mathrm{d}\theta^2},\; r\dot{\theta}^2 = \frac{C^2}{r^3}= C^2u^3
+        \frac{1}{2} m \dot{r}^2 + \frac{mC^2}{2r^2} - \frac{Gmm_\star}{r} &= E_m \\ 
+        r^2 \dot{\theta} &= C
     .\end{align*}
     .</script>
-</p>
+<img alt="" src="../assets/mec12.png" /></p>
 </blockquote>
-</details>
-<details>
-<summary>Énergie Mécanique totale</summary>
-<ul>
-<li>La loi :
-    <script type="math/tex; mode=display">
-    E_m  = \frac{1}{2}mv^2(M) + E_p(r) = \frac{1}{2}mv^2(M) - G \frac{mM}{r}
-    .</script>
-</li>
-</ul>
 </details>
 
 

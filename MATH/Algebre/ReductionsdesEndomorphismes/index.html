@@ -746,6 +746,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#trigonalisation" class="md-nav__link">
+    Trigonalisation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reduction-simultanee" class="md-nav__link">
+    Réduction simultanée
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -845,7 +859,7 @@
   
     <li class="md-nav__item">
       <a href="../../../PHY/Mecanique/Mecanique201/" class="md-nav__link">
-        Théorèmes Généraux de la Dynamique
+        Moment Cinétique, Force Centrale
       </a>
     </li>
   
@@ -1189,6 +1203,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#trigonalisation" class="md-nav__link">
+    Trigonalisation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reduction-simultanee" class="md-nav__link">
+    Réduction simultanée
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1310,7 +1338,7 @@ D_k(\lambda)  = I_n + (\lambda-1)E_{k,k} = \mathrm{Diag}(1, \ldots, 1, \lambda, 
 </p>
 <ul>
 <li><span class="arithmatex">\(\lambda\)</span> est une <strong>valeur propre</strong> de <span class="arithmatex">\(u\)</span> (associé à <span class="arithmatex">\(e\)</span>)</li>
-<li><span class="arithmatex">\(e\)</span> est une <strong>valeur propre</strong> de <span class="arithmatex">\(u\)</span> (associé à <span class="arithmatex">\(u\)</span>)</li>
+<li><span class="arithmatex">\(e\)</span> est une <strong>vecteur propre</strong> de <span class="arithmatex">\(u\)</span> (associé à <span class="arithmatex">\(u\)</span>)</li>
 <li>
 <p><strong>Spectre de <span class="arithmatex">\(u\)</span></strong>, l'ensemble des valeurs propres de <span class="arithmatex">\(u\)</span> :<br />
 <script type="math/tex; mode=display">
@@ -1356,9 +1384,8 @@ D_k(\lambda)  = I_n + (\lambda-1)E_{k,k} = \mathrm{Diag}(1, \ldots, 1, \lambda, 
 </li>
 </ul>
 </details>
-<ul>
-<li>Cherchons : en connaisant <span class="arithmatex">\(u\in \mathscr{L}(E)\)</span>, alors <span class="arithmatex">\(\lambda\)</span> ? </li>
-</ul>
+<p><img alt="" src="../assets/42501.png" />
+- Cherchons : en connaisant <span class="arithmatex">\(u\in \mathscr{L}(E)\)</span>, alors <span class="arithmatex">\(\lambda\)</span> ? </p>
 <details>
 <summary>Polynome Caractéristique</summary>
 <ul>
@@ -1380,21 +1407,48 @@ D_k(\lambda)  = I_n + (\lambda-1)E_{k,k} = \mathrm{Diag}(1, \ldots, 1, \lambda, 
     \chi_u(\lambda) = \det(u - \lambda. \mathrm{id}_E),\quad \chi_A(\lambda) = \det(A- \lambda.I_n)
     </script>
 </p>
+</li>
+<li>
+<p><strong>Propriété</strong> : </p>
 <ul>
-<li><strong>Propriété</strong> : <ul>
 <li><span class="arithmatex">\(\chi_u\)</span> est une fonction polynomiale de degré <span class="arithmatex">\(n = \mathrm{dim}(E)\)</span>.<blockquote>
 <p>Preuve : 
 <script type="math/tex; mode=display">
-\det([m_{i,j}]) = \sum_{\sigma} \varepsilon(\sigma) \prod_{i=1}^nm_{i,\sigma(i)}
+\det([m_{i,j}]) = \sum_{\sigma} \varepsilon(\sigma) \prod_{i=1}^nm_{i,\sigma(i)} = \prod_{i=1}^n m_{i,i} + \sum_{\sigma \in \mathfrak S_n \backslash \mathrm{id}} \varepsilon(\sigma) \prod_{i=1}^n m_{i,\sigma(i)}
 </script>
 </p>
 </blockquote>
 </li>
+<li>
+<p><span class="arithmatex">\(\chi_u\)</span> peut s'écrire : 
+    <script type="math/tex; mode=display">
+    \chi_u = (-1)^n \lambda^n + (-1)^{n-1} \lambda^{n-1} \mathrm{tr}(u) + \cdots + \det(u)
+    .</script>
+</p>
+<blockquote>
+<p>Preuve : Rappel que <span class="arithmatex">\(m_{i,i} = \alpha_{i,i} - \lambda\)</span>, on tire les nombres avec le même degré.    </p>
+</blockquote>
+</li>
+<li>
+<p><strong>Proposition</strong> :
+    <script type="math/tex; mode=display">
+    \mathrm{trace}(u) = \sum_{j=1}^s n_j \lambda_j
+    .</script>
+</p>
+</li>
+</ul>
+<blockquote>
+<p>Preuve : <span class="arithmatex">\(\mathrm{trace}(u) = \sum_i \alpha_{i,i}\)</span></p>
+</blockquote>
+<ul>
 <li>Si <span class="arithmatex">\(n= \dim(E)\)</span>, donc
     <script type="math/tex; mode=display">
     \mathrm{car d}(\mathrm{Sp}(u)) \le n
-    .</script> 
-    car une fonction polynomiale de degré <span class="arithmatex">\(n\)</span> a au plus <span class="arithmatex">\(n\)</span> racines.</li>
+    .</script>
+<blockquote>
+<p>Preuve : Une fonction polynomiale de degré <span class="arithmatex">\(n\)</span> a au plus <span class="arithmatex">\(n\)</span> racines.</p>
+</blockquote>
+</li>
 <li><span class="arithmatex">\(\lambda\)</span> est une valeur propre de <span class="arithmatex">\(u\)</span> si, et seulement si, <span class="arithmatex">\(\chi_u(\lambda)=0\)</span>, c'est-à-dire,
     <script type="math/tex; mode=display">
     \mathrm{Sp}(u) = (\chi_u)^{-1}(\{0\})
@@ -1403,6 +1457,50 @@ D_k(\lambda)  = I_n + (\lambda-1)E_{k,k} = \mathrm{Diag}(1, \ldots, 1, \lambda, 
 </ul>
 </li>
 </ul>
+</details>
+<details>
+<summary>Théorème de d'Alembert, Factorisation de Gauss</summary>
+<ul>
+<li>
+<p><strong>Théorème de d'Alembert</strong> (dans <span class="arithmatex">\(\mathbb C\)</span>) : Si <span class="arithmatex">\(P\)</span> une fonction polynomiale de degré <span class="arithmatex">\(n\)</span> dans <span class="arithmatex">\(\mathbb{C}\)</span>, elle peut se factoriser comme
+    <script type="math/tex; mode=display">
+    P = K \prod_{k=1}^s (X - \lambda_k)^{n_k}
+    </script>
+</p>
+<ul>
+<li><span class="arithmatex">\(\left( \lambda_1, \ldots, \lambda_s \right)\in \mathbb{C}^s\)</span> distinct 2 à 2. </li>
+<li><span class="arithmatex">\((n_1, \ldots, n_s) \in (\mathbb N^*)^s\)</span></li>
+<li><span class="arithmatex">\(K \in \mathbb C^*\)</span></li>
+</ul>
+</li>
+<li>
+<p><strong>Factorisation de Gauss</strong> (dans <span class="arithmatex">\(\mathbb R\)</span>) 将复数转化为实数 : dans <span class="arithmatex">\(\mathbb{R}\)</span>, si <span class="arithmatex">\(P\)</span> une fonction polynomiale de degré <span class="arithmatex">\(n\)</span>,
+    <script type="math/tex; mode=display">
+    P = K \prod_{k=1}^{s} (X - \lambda_k)^{n_k} \times \prod_{j=1}^{t}(X^2- \alpha_j X + \beta_j)^{m_j}, \text{ où } \alpha_j^2 - 4\beta_j < 0
+    .</script>
+    où <span class="arithmatex">\((s,t)\in \mathbb{N}^2,\; \left( \lambda_1, \ldots, \lambda_s \right) \in \mathbb{R}^s,\; (\alpha_1, \cdots, \alpha_t, \beta_1, \cdots, \beta_t) \in \mathbb{R}^{2t}\)</span>, <span class="arithmatex">\(K \in \mathbb R^*\)</span></p>
+<ul>
+<li>Remarque : pour tout <span class="arithmatex">\(P\)</span> dans <span class="arithmatex">\(\mathbb R\)</span>,
+    <script type="math/tex; mode=display">
+    \lambda \in \mathbb C, \; P(\lambda) = 0 \implies P(\bar{\lambda}) = 0
+    .</script>
+</li>
+</ul>
+<blockquote>
+<p>Exemple : <span class="arithmatex">\(P = X^3-1\)</span>, les racines sont <span class="arithmatex">\(1,j,j^2\)</span> où <span class="arithmatex">\(j= e^{2i\pi/ 3}\)</span>, rappel que <span class="arithmatex">\(j^2 = \bar{j}\)</span></p>
+<ul>
+<li>Dans <span class="arithmatex">\(\mathbb{C}\)</span> : <span class="arithmatex">\(P= (X-1)(X-j)(X-j^2)\)</span></li>
+<li>Dans <span class="arithmatex">\(\mathbb{R}\)</span> : <span class="arithmatex">\(P = (X-1)(X^2-(j+j^2)X+ j.j^2) = (X-1)(X^2+X+1)\)</span></li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>Algorithme : <span class="arithmatex">\(A \in \mathrm{M}_n(\mathbb{K})\)</span>,</p>
+<ul>
+<li><span class="arithmatex">\(\chi_A\)</span> on le calcule</li>
+<li>On factorise <span class="arithmatex">\(\chi_A\)</span> dans <span class="arithmatex">\(\mathbb{K}\)</span> (<mark>Mais on ne sait pas comment faire en général !!</mark>)</li>
+<li>Les racines sont les <span class="arithmatex">\(\lambda_1,\cdots,\lambda_s\)</span></li>
+</ul>
 </li>
 </ul>
 </details>
@@ -1410,13 +1508,23 @@ D_k(\lambda)  = I_n + (\lambda-1)E_{k,k} = \mathrm{Diag}(1, \ldots, 1, \lambda, 
 <li>Cherchons : en connaisant <span class="arithmatex">\(u\in \mathscr{L}(E)\)</span> et <span class="arithmatex">\(\lambda\)</span>, alors <span class="arithmatex">\(E_u(\lambda)\)</span> ?</li>
 </ul>
 <details>
-<summary>Résoudre les vecteurs propres...</summary>
+<summary>Les vecteurs propres, et ses dimensions</summary>
 <ul>
 <li>
 <p>Soit <span class="arithmatex">\(\lambda \in \mathrm{Sp}(u)\)</span>,
     <script type="math/tex; mode=display">
     [e \in E_u(\lambda)] \iff [(u-\lambda. \mathrm{id}_E)(e)=0]
     </script>
+</p>
+</li>
+<li>
+<p>Essayer de résoudre <span class="arithmatex">\(E_u(\lambda) = \mathrm{Ker}(u-\lambda. \mathrm{id}_E)\)</span></p>
+</li>
+<li>
+<p>Ses dimensions sont donnés par :
+    <script type="math/tex; mode=display">
+    \dim E_u(\lambda) = \dim E - \mathrm{rg}(u-\lambda. \mathrm{id}_E)
+    .</script>
 </p>
 </li>
 <li>
@@ -1436,7 +1544,7 @@ On construit :
         \lambda_1^{p-1}x_1+\cdots + \lambda_p^{p-1}x_p &= 0_E
     .\end{align*}
     .</script> 
-Enfin, sachant que le déterminant de la matrice de Vandermonde vaut <span class="arithmatex">\(\prod_{j,i}(\lambda_j - \lambda_i)\)</span>, il existe une unique solution, qui est <span class="arithmatex">\((0, \cdots, 0)\)</span></p>
+Enfin, sachant que le déterminant de la matrice de Vandermonde vaut <span class="arithmatex">\(\prod_{j,i}(\lambda_j - \lambda_i)\ne 0\)</span>, il existe une unique solution, qui est <span class="arithmatex">\((0, \cdots, 0)\)</span></p>
 </blockquote>
 </li>
 <li>
@@ -1444,73 +1552,8 @@ Enfin, sachant que le déterminant de la matrice de Vandermonde vaut <span class
 </li>
 </ul>
 </details>
-<ul>
-<li>
-<p><strong>Bilan</strong> :</p>
-<ul>
-<li>
-<p><strong>La difficulité majeure</strong> : Savoir si la question est algébrique ou géométrique.</p>
-</li>
-<li>
-<p>Liens entre les deux visions</p>
-<ul>
-<li>Points Communs :<ul>
-<li><span class="arithmatex">\(E_A(\lambda)\)</span> ? On peut calculer <span class="arithmatex">\(A.X = \lambda.X\)</span></li>
-<li><span class="arithmatex">\(\mathrm{dim} E_A(\lambda)\)</span> ? On peut calculer <span class="arithmatex">\(\mathrm{rg}(A-\lambda.I_n) = n - \dim E_A(\lambda)\)</span></li>
-<li><span class="arithmatex">\(\mathrm{Sp}(\lambda)\)</span> ? On doit résoudre <span class="arithmatex">\(\mathrm{det}(A- \lambda.I_n) = 0\)</span></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><img alt="" src="../assets/42501.png" /></p>
-</li>
-</ul>
 <details>
-<summary>Théorème de d'Alembert, Factorisation de Gauss</summary>
-<ul>
-<li>
-<p><strong>Théorème de d'Alembert</strong> : Si <span class="arithmatex">\(P\)</span> une fonction polynomiale de degré <span class="arithmatex">\(n\)</span> dans <span class="arithmatex">\(\mathbb{C}\)</span>, <script type="math/tex; mode=display">
-    P = K \prod_{k=1}^s (X - \lambda_k)^{n_k}
-    </script>
-</p>
-<ul>
-<li><span class="arithmatex">\(\left( \lambda_1, \ldots, \lambda_k \right)\in \mathbb{C}^s\)</span> distinct 2 à 2. </li>
-<li><span class="arithmatex">\(K \in \mathbb C^*\)</span></li>
-</ul>
-</li>
-<li>
-<p><strong>Factorisation de Gauss</strong> 将复数转化为实数 : dans <span class="arithmatex">\(\mathbb{R}\)</span>, si <span class="arithmatex">\(P\)</span> une fonction polynomiale de degré <span class="arithmatex">\(n\)</span>,
-    <script type="math/tex; mode=display">
-    P = K \prod_{k=1}^{s} (X - \lambda_k)^{n_k} \times \prod_{j=1}^{t}(X^2- \alpha_j X + \beta_j)^{m_j}
-    .</script>
-    où <span class="arithmatex">\((s,t)\in \mathbb{N}^2,\; \Lambda \in \mathbb{R}^s,\; (\alpha_1, \cdots, \alpha_t, \beta_1, \cdots, \beta_t) \in \mathbb{R}^{2t}\)</span></p>
-<ul>
-<li>Remarque : <ul>
-<li>Si <span class="arithmatex">\(\lambda \in \mathbb{C},\; P(\lambda) = 0\)</span>, alora comme <span class="arithmatex">\(P\)</span> est réel, <span class="arithmatex">\(f(\overline{\lambda})=0\)</span> où <span class="arithmatex">\(f = \sum_{k=0}^n a_k.(x \mapsto x^k)\)</span>, <span class="arithmatex">\(K \in \mathbb R^*\)</span>.</li>
-</ul>
-</li>
-<li>
-<p>Exemple : <span class="arithmatex">\(P = X^3-1\)</span>, les racines sont <span class="arithmatex">\(1,j,j^2\)</span> où <span class="arithmatex">\(j= e^{2i\pi/ 3}\)</span></p>
-<ul>
-<li>Dans <span class="arithmatex">\(\mathbb{C}\)</span> : <span class="arithmatex">\(P= (X-1)(X-j)(X-j^2)\)</span></li>
-<li>Dans <span class="arithmatex">\(\mathbb{R}\)</span> : <span class="arithmatex">\(P = (X-1)(X^2-(j+j^2)X+ j.j^2) = (X-1)(X^2+X+1)\)</span></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Algorithme : <span class="arithmatex">\(A \in \mathrm{M}_n(\mathbb{K)}\)</span>,</p>
-<ul>
-<li><span class="arithmatex">\(\chi_A\)</span> on le calcule</li>
-<li>On factorise <span class="arithmatex">\(\chi_A\)</span> dans <span class="arithmatex">\(\mathbb{K}\)</span> (<mark>Mais on ne sait pas comment faire en général !!</mark>)</li>
-<li>Les racines sont les <span class="arithmatex">\(\lambda_1,\cdots,\lambda_s\)</span></li>
-</ul>
-</li>
-</ul>
-</details>
-<details>
-<summary>Multiplicité</summary>
+<summary>Multiplicité, Relation géométrique et algébrique</summary>
 <ul>
 <li>
 <p><strong>Multiplicité d'une valeur propre</strong> : Si <span class="arithmatex">\(\lambda \in \mathrm{Sp}(u)\)</span> racine de <span class="arithmatex">\(P=\chi_u\)</span> de multiplicité <span class="arithmatex">\(\alpha\)</span>, alors
@@ -1545,36 +1588,16 @@ Enfin, sachant que le déterminant de la matrice de Vandermonde vaut <span class
 </p>
 </li>
 <li>
-<p><strong>Proposition</strong> :
+<p>Soit <span class="arithmatex">\(A \in \mathrm{M}_n(\mathbb R)\)</span>, <span class="arithmatex">\(\lambda \in \mathrm{Sp}_\mathbb C(A)\)</span>, alors <span class="arithmatex">\(\bar{\lambda} \in \mathrm{Sp}_\mathbb C(A)\)</span>, si <span class="arithmatex">\(X \in E_A(\lambda)\)</span>, alors :
     <script type="math/tex; mode=display">
-    \chi_u(\lambda)= (-1)^n\left( \lambda^n- \mathrm{tr}(u)\lambda^{n-1}+\cdots + (-1)^n \det(u) \right) 
+    \bar{X} \in E_A(\bar{\lambda}), \quad\left( \frac{X+\bar{X}}{2}, \; \frac{X - \bar{X}}{2i}\right) \text{ indépendents}
     .</script>
 </p>
 </li>
-<li>
-<p><strong>Exemple</strong> : <span class="arithmatex">\(E,\; \dim E=2\)</span>, <span class="arithmatex">\(u\)</span> est une rotation d'angle <span class="arithmatex">\(\theta\)</span>.</p>
-<ul>
-<li>
-<p>Soit <span class="arithmatex">\(B\)</span> une base orthonormée de <span class="arithmatex">\(E\)</span>, constitué de <span class="arithmatex">\((e_1,e_2)\)</span>.
-    <script type="math/tex; mode=display">
-    \mathrm{Mat}(u, B) = \begin{bmatrix} \cos \theta & - \sin \theta \\ \sin \theta & \cos \theta \end{bmatrix} \in \mathrm{M}_2(\mathbb{R})
-    </script>
-</p>
-</li>
-<li>
-<p>On passe dans <span class="arithmatex">\(\mathbb{C}\)</span>, soit <span class="arithmatex">\(\lambda \in \mathbb{C}\)</span>. On va chercher les espaces propres.
-    <script type="math/tex; mode=display">
-    \mathrm{rg}\begin{bmatrix} \cos \theta - \lambda & -\sin\theta \\ \sin \theta & \cos \theta - \lambda \end{bmatrix} \underset{\theta \ne \pi \mathbb{Z}}= \mathrm{rg} \begin{bmatrix} 0 & P=-\lambda^2+2\lambda \cos \theta - 1 \\ \sin \theta & \cos \theta - \lambda \end{bmatrix} 
-    .</script>
-</p>
-<ul>
-<li>Si <span class="arithmatex">\(P \ne 0\)</span>, donc <span class="arithmatex">\(\mathrm{rg}(A- \lambda I_2) =2\)</span>, <span class="arithmatex">\(\lambda \not \in \mathrm{Sp}(u)\)</span>.</li>
-<li>Si <span class="arithmatex">\(P = 0\)</span>, donc <span class="arithmatex">\(\mathrm{rg}(A - \lambda I_2 ) =1\)</span>, <span class="arithmatex">\(\lambda \in \mathrm{Sp}(u),\; \dim E_u(\lambda) = 1\)</span>. On trouve <span class="arithmatex">\(\mathrm{Sp}_\mathbb{C}(A) = \{e^{i\theta}, e^{-i\theta}\}\)</span>, enfin <span class="arithmatex">\(E_A(e^{i\theta}) = \mathrm{Vect}\left(\begin{bmatrix} i \\ 1 \end{bmatrix}\right)\)</span> et <span class="arithmatex">\(E_A(e^{-i\theta}) = \mathrm{Vect}\left(\begin{bmatrix} -i \\ 1 \end{bmatrix}\right)\)</span></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
+<blockquote>
+<p>Exemple : <img alt="" src="../assets/red01.png" /></p>
+</blockquote>
 </details>
 <details class="tip">
 <summary>Équivalence</summary>
@@ -1649,17 +1672,32 @@ Enfin, sachant que le déterminant de la matrice de Vandermonde vaut <span class
     </script>
 </p>
 </li>
-</ul>
-</details>
+<li>
+<p><strong>Proposition</strong> : Si <span class="arithmatex">\(A\)</span> est diagonalisable dans <span class="arithmatex">\(\mathbb{C}\)</span>, alors :
+    <script type="math/tex; mode=display">
+    \mathrm{M}_{n,1}(\mathbb C) = \bigoplus_{\lambda \in \mathrm{Sp}_\mathbb C(A)} E_A(\lambda)
+    .</script>
+</p>
 <ul>
-<li>Exemple de ce lien entre algèbre et géometrie :<ul>
-<li><span class="arithmatex">\(\chi_u\)</span> scindé et toutes ses racines sont simples : <span class="arithmatex">\(\forall \lambda \in \mathrm{Sp}(u),\; \mathrm{mult}_u(\lambda)=\)</span> </li>
-<li>TBD</li>
-</ul>
+<li>Pour tout <span class="arithmatex">\(\lambda \in \mathrm{Sp}_\mathbb R(A)\)</span> ou <span class="arithmatex">\(\lambda \in \mathrm{Sp}_\mathbb C(A)\)</span>, on a :
+    <script type="math/tex; mode=display">
+    \mathrm{M}_{n,1}(\mathbb R) = \left(\bigoplus_{\lambda \in  \mathrm{Sp}_\mathbb R(A)}E_A(\lambda)\right) \oplus \left(\bigoplus_{\lambda \in \mathrm{Sp}_\mathbb C(A)}\begin{bmatrix} \mathrm{Re}(\lambda) & \mathrm{Im}(\lambda) \\ - \mathrm{Im}(\lambda) & \mathrm{Re}(\lambda) \end{bmatrix} \right)
+    .</script>
 </li>
 </ul>
 <blockquote>
-<p>Qu'est-ce que l'on fait lorsque la matrice n'est pas diagnoalisable ? Existe-t-il une base <span class="arithmatex">\(\mathscr{ B} de E\)</span> où <span class="arithmatex">\(\mathrm{Mat}(u, \mathscr{B}) = \mathrm{T}_n^+(\mathbb{K})\)</span> ? </p>
+<p>Exemple : 
+    <script type="math/tex; mode=display">
+    A \sim \begin{bmatrix} 1\\ 0 & j \\ 0& 0&j^2 \end{bmatrix} \sim \begin{bmatrix} 1 \\ 0 & -1/2 & \sqrt{3}/2 \\ 0 & - \sqrt{3}/2 & -1/2 \end{bmatrix} 
+    .</script>
+</p>
+</blockquote>
+</li>
+</ul>
+</details>
+<h2 id="trigonalisation">Trigonalisation</h2>
+<blockquote>
+<p>Qu'est-ce que l'on fait lorsque la matrice n'est pas diagnoalisable ? Existe-t-il une base <span class="arithmatex">\(\mathscr{ B}\)</span> de <span class="arithmatex">\(E\)</span> où <span class="arithmatex">\(\mathrm{Mat}(u, \mathscr{B}) = \mathrm{T}_n^+(\mathbb{K})\)</span> ? </p>
 </blockquote>
 <ul>
 <li>Si <span class="arithmatex">\(0 \subset V_1 \subset \ldots \subset V_n = E\)</span> où <span class="arithmatex">\(n = \mathrm{dim} E\)</span>, <span class="arithmatex">\(o&lt; \mathrm{dim}V_1 &lt; \ldots &lt; \mathrm{dim} V_n= \mathrm{dim}E\)</span>, donc <span class="arithmatex">\(\forall  k\in [\![1, n]\!], \; \mathrm{dim}(V_k) =k\)</span></li>
@@ -1667,19 +1705,10 @@ Enfin, sachant que le déterminant de la matrice de Vandermonde vaut <span class
 <details>
 <summary>Trigonalisable</summary>
 <ul>
-<li>
-<p><strong>Définition</strong> : <span class="arithmatex">\(u\in \mathscr{L}(E)\)</span> est <strong>trigonalisable</strong> si, et seulement si, il existe une base <span class="arithmatex">\(\mathscr{B} = (b_1, \ldots, b_n) \in E\)</span>, pour que 
-    <script type="math/tex; mode=display">
-    \exists \mathscr{B}=(b_1, \ldots, b_n) \in E, \; \mathrm{Mat}(u, \mathscr{B}) \in \mathrm{T}_n^+(\mathbb{K})
-    .</script>
-</p>
-</li>
-<li>
-<p><strong>Théorème - Caractérisation des endomorphismes trigonalisable</strong> :
+<li><strong>Théorème - Caractérisation des endomorphismes trigonalisable</strong> :
     <script type="math/tex; mode=display">
     u \text{ trigonalisable } \iff \chi_u \text{ scinde }
     .</script>
-</p>
 </li>
 </ul>
 <blockquote>
@@ -1694,6 +1723,35 @@ Enfin, sachant que le déterminant de la matrice de Vandermonde vaut <span class
 </p>
 </blockquote>
 </details>
+<h2 id="reduction-simultanee">Réduction simultanée</h2>
+<ul>
+<li>
+<p>Proposition :</p>
+<ul>
+<li>
+<p>Il existe une base <span class="arithmatex">\(\mathscr{B}\)</span>, <span class="arithmatex">\(\forall i \in I, \mathrm{Mat}(u_i, \mathscr B) \in \mathrm{D}_n(\mathbb K)\)</span> ssi tous les <span class="arithmatex">\((u_i) \in \mathscr L(E)\)</span> est diagonalisable, et en même temps :
+    <script type="math/tex; mode=display">
+    \forall (i,j) \in I^2, \; u_i \circ u_j = u_j \circ u_i
+    .</script>
+</p>
+</li>
+<li>
+<p>Il existe une base <span class="arithmatex">\(\mathscr{B}\)</span>, <span class="arithmatex">\(\forall i \in I, \mathrm{Mat}(u_i, \mathscr B) \in \mathrm{T}^{+}_{n}(\mathbb K)\)</span> ssi tous les <span class="arithmatex">\((u_i) \in \mathscr L(E)\)</span> est trigonalisable, et en même temps :
+    <script type="math/tex; mode=display">
+    \forall (i,j) \in I^2, \; u_i \circ u_j = u_j \circ u_i
+    .</script>
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Lemme :</p>
+<ul>
+<li>Si <span class="arithmatex">\(u\)</span> est diagonalisable, alors <span class="arithmatex">\(u|_F^F\)</span> est diagnoalisable.</li>
+<li>Si <span class="arithmatex">\(u\)</span> est trigonalisable, alors <span class="arithmatex">\(u|_F^F\)</span> est trigonalisable.</li>
+</ul>
+</li>
+</ul>
 
 
 
